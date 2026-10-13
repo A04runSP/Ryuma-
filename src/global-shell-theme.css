@@ -141,3 +141,13 @@
   color: #20E3E6;
   -webkit-text-fill-color: #20E3E6;
 }
+
+/* Home wordmark: replace the legacy multicolour gradient with solid Primary Violet. */
+.home-shell .brand-name {
+  background: none;
+  color: #B388FF;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #B388FF;
+  text-shadow: none;
+}
