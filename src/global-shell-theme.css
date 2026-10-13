@@ -108,3 +108,36 @@
 .home-shell .motion-dot.three { background: #B388FF; }
 
 /* Preserve original live-preview artwork and each design language's palette. */
+
+/* Soft Ivory (#F5F1FA): readable Home body copy and supporting text. */
+.home-shell .hero p,
+.home-shell .definition-copy p,
+.home-shell .anatomy-item p,
+.home-shell .anatomy-item .description,
+.home-shell .preview-section p,
+.home-shell .definition-process {
+  color: #F5F1FA;
+  -webkit-text-fill-color: #F5F1FA;
+}
+.home-shell .definition-close span {
+  color: #F5F1FA;
+  -webkit-text-fill-color: #F5F1FA;
+}
+
+/* Aqua Cyan (#20E3E6): restrained solid accent for interactive details. */
+.home-shell .section-kicker,
+.home-shell .anatomy-intro .section-kicker,
+.home-shell .preview-section .section-kicker {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
+.home-shell .jump-button:focus-visible,
+.home-shell .jump-button.secondary:focus-visible {
+  outline: 2px solid #20E3E6;
+  outline-offset: 4px;
+}
+.home-shell .anatomy-item:hover .anatomy-note,
+.home-shell .anatomy-item:focus-visible .anatomy-note {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
