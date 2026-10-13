@@ -132,3 +132,119 @@
 .library-shell .library-card-info > span { color: #20E3E6; }
 
 /* Preserve card-art previews and all independent Style World environments. */
+
+
+/* Final accent replacement: remove the legacy pink/magenta-led accents
+   from the global shells, rather than layering the new palette over them.
+   Keep the rotating style previews and all independent Style Worlds intact. */
+.home-shell .hero h1 span,
+.home-shell .anatomy-definition h2 span,
+.home-shell .anatomy-intro h2,
+.home-shell .anatomy-intro strong,
+.home-shell .section-kicker,
+.home-shell .preview-counter strong {
+  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.home-shell .section-kicker,
+.home-shell .definition-process,
+.home-shell .anatomy-note {
+  color: #20E3E6;
+}
+.home-shell .jump-button,
+.home-shell .jump-button.secondary {
+  color: #0D0D1F;
+  background: linear-gradient(100deg, #B388FF 0%, #20E3E6 100%);
+}
+.home-shell .anatomy-colour,
+.home-shell .anatomy-type,
+.home-shell .anatomy-form,
+.home-shell .anatomy-space,
+.home-shell .anatomy-motion {
+  background: linear-gradient(135deg, rgba(179, 136, 255, .16), rgba(32, 227, 230, .09));
+  border-color: rgba(179, 136, 255, .24);
+}
+.home-shell .colour-visual .colour-wheel {
+  background: conic-gradient(#B388FF 0deg, #D6A4FF 90deg, #20E3E6 180deg, #6A2C91 270deg, #B388FF 360deg);
+  box-shadow: 0 0 24px rgba(32, 227, 230, .16);
+}
+.home-shell .colour-visual i:nth-child(1),
+.home-shell .colour-visual i:nth-child(2),
+.home-shell .colour-visual i:nth-child(3),
+.home-shell .colour-visual i:nth-child(4) {
+  background: #B388FF;
+}
+.home-shell .form-triangle { border-bottom-color: #20E3E6; }
+.home-shell .form-circle { border-color: rgba(32, 227, 230, .72); }
+.home-shell .form-square { border-color: rgba(179, 136, 255, .8); }
+.home-shell .motion-dot { box-shadow: 0 0 18px rgba(32, 227, 230, .55); }
+.home-shell .motion-dot.one { background: #B388FF; }
+.home-shell .motion-dot.two { background: #20E3E6; }
+.home-shell .motion-dot.three { background: #D6A4FF; }
+
+.dashboard-shell .dashboard-kicker,
+.dashboard-shell .system-no,
+.dashboard-shell .history-no,
+.dashboard-shell .foundation-no,
+.dashboard-shell .reading-step > span,
+.dashboard-shell .principle-card > span,
+.dashboard-shell .history-copy strong {
+  color: #20E3E6;
+}
+.dashboard-shell .influence-line,
+.dashboard-shell .history-thread,
+.dashboard-shell .foundation-formula,
+.dashboard-shell .language-chain {
+  color: #20E3E6;
+}
+.dashboard-shell .influence-line b,
+.dashboard-shell .foundation-formula b,
+.dashboard-shell .language-chain b,
+.dashboard-shell .history-thread b {
+  background: linear-gradient(90deg, #B388FF, #20E3E6);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.dashboard-shell .system-panel-copy > span,
+.dashboard-shell .system-chevron,
+.dashboard-shell .history-chevron,
+.dashboard-shell .history-era,
+.dashboard-shell .system-panel-copy button {
+  color: #B388FF;
+}
+.dashboard-shell .foundation-card h3,
+.dashboard-shell .reading-step h3,
+.dashboard-shell .principle-card h3,
+.dashboard-shell .preview-placeholder b {
+  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.dashboard-shell .dashboard-back:hover { color: #20E3E6; }
+
+.library-shell .library-kicker,
+.library-shell .library-number,
+.library-shell .library-card-info > span,
+.library-shell .library-meta i {
+  color: #20E3E6;
+}
+.library-shell .library-hero h1,
+.library-shell .library-group-head h2,
+.library-shell .library-end h2 {
+  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.library-shell .library-card {
+  border-color: rgba(179, 136, 255, .16);
+  background: linear-gradient(145deg, rgba(179, 136, 255, .08), rgba(32, 227, 230, .025));
+}
+.library-shell .library-card:hover {
+  border-color: rgba(32, 227, 230, .34);
+  background: linear-gradient(145deg, rgba(179, 136, 255, .13), rgba(32, 227, 230, .05));
+}
+/* Library card-art and Home rotating style previews remain style examples,
+   not global brand accents; their artwork is intentionally preserved. */
