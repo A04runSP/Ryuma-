@@ -640,3 +640,110 @@
     opacity: .26;
   }
 }
+
+
+/* Mobile Anatomy refinement: keep copy clear and separate the two middle cards. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-stage {
+    min-height: 980px;
+  }
+  .home-shell .anatomy-item {
+    height: 142px;
+    min-height: 142px;
+    max-height: 142px;
+    padding: 13px 12px;
+  }
+  .home-shell .anatomy-colour { top: 2.5%; }
+  .home-shell .anatomy-type { top: 19%; }
+  .home-shell .anatomy-motion { top: 36%; }
+  .home-shell .anatomy-form { top: 53%; }
+  .home-shell .anatomy-space { top: 70%; }
+
+  /* Keep text in the left portion; illustrations occupy the right/bottom corner. */
+  .home-shell .anatomy-item p {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  .home-shell .anatomy-colour .colour-visual {
+    width: 70px;
+    height: 70px;
+    right: 0;
+    top: auto;
+    bottom: 2px;
+    transform: none;
+    opacity: .22;
+  }
+  .home-shell .anatomy-colour .colour-wheel {
+    width: 52px;
+    height: 52px;
+    right: 4px;
+    top: 8px;
+  }
+  .home-shell .anatomy-colour .colour-wheel::after { inset: 9px; }
+  .home-shell .anatomy-colour .colour-wheel-core {
+    right: 26px;
+    top: 29px;
+    width: 7px;
+    height: 7px;
+  }
+  .home-shell .anatomy-type .type-visual {
+    width: 68px;
+    height: 58px;
+    right: 0;
+    top: auto;
+    bottom: 1px;
+    transform: none;
+    opacity: .18;
+  }
+  .home-shell .anatomy-type .type-visual span {
+    font-size: 42px;
+    right: 3px;
+    top: 4px;
+  }
+  .home-shell .anatomy-type .type-visual b {
+    font-size: 24px;
+    right: 1px;
+    top: 24px;
+  }
+  .home-shell .anatomy-form .form-visual {
+    width: 78px;
+    height: 66px;
+    right: 0;
+    top: auto;
+    bottom: 1px;
+    transform: none;
+    opacity: .22;
+  }
+  .home-shell .anatomy-form .form-circle { width: 38px; height: 38px; right: 7px; top: 5px; }
+  .home-shell .anatomy-form .form-square { width: 30px; height: 30px; right: 34px; top: 17px; }
+  .home-shell .anatomy-form .form-triangle {
+    right: 0;
+    top: 31px;
+    border-left-width: 13px;
+    border-right-width: 13px;
+    border-bottom-width: 23px;
+  }
+  .home-shell .anatomy-space p { max-width: 100%; }
+  .home-shell .anatomy-space .space-visual {
+    width: 72px;
+    height: 52px;
+    right: 2px;
+    bottom: 3px;
+    top: auto;
+    transform: none;
+    opacity: .20;
+  }
+  .home-shell .anatomy-space .space-layout-frame { width: 66px; height: 48px; }
+  .home-shell .anatomy-motion .motion-visual {
+    width: 72px;
+    height: 48px;
+    right: 0;
+    bottom: 0;
+    opacity: .20;
+  }
+  .home-shell .anatomy-motion .motion-object-y { left: 5px; top: 19px; }
+  .home-shell .anatomy-motion .motion-object-x { left: 33px; top: 25px; }
+  .home-shell .anatomy-motion .motion-object-z { left: 49px; top: 32px; }
+  .home-shell .anatomy-motion .motion-axis-x { top: 29px; }
+  .home-shell .anatomy-motion .motion-axis-z { left: 38px; }
+}
