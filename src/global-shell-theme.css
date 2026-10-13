@@ -151,3 +151,58 @@
   -webkit-text-fill-color: #B388FF;
   text-shadow: none;
 }
+
+/* Emphasize the learning journey and brand closing line on Home.
+   Solid palette colours only; no gradients or changes to other pages. */
+.home-shell .definition-process {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  padding: 18px 20px;
+  border-left: 3px solid #20E3E6;
+  border-radius: 0 12px 12px 0;
+  background: #17152A;
+  color: #F5F1FA;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+.home-shell .definition-process span {
+  color: #F5F1FA;
+  font-weight: 800;
+}
+.home-shell .definition-process i {
+  color: #20E3E6;
+  font-style: normal;
+  font-weight: 800;
+}
+.home-shell .definition-close {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #343247;
+  border-radius: 12px;
+  background: #17152A;
+}
+.home-shell .definition-close strong {
+  color: #B388FF;
+  font-weight: 800;
+}
+.home-shell .definition-close span {
+  color: #F5F1FA;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .home-shell .definition-process {
+    gap: 8px 10px;
+    padding: 16px;
+    font-size: .94rem;
+    line-height: 1.65;
+  }
+  .home-shell .definition-close {
+    margin-top: 20px;
+    padding: 18px 16px;
+  }
+}
