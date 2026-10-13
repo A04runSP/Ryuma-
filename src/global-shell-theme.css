@@ -1,0 +1,134 @@
+/* Global product-shell colour application.
+   Scope is deliberately limited to Home, Dashboard and Design Library.
+   Do not add selectors for Minimalism or any independent Style World here.
+*/
+.home-shell {
+  background:
+    radial-gradient(62% 48% at 8% 7%, rgba(179, 136, 255, .26), transparent 70%),
+    radial-gradient(54% 48% at 92% 22%, rgba(32, 227, 230, .13), transparent 70%),
+    radial-gradient(65% 56% at 50% 78%, rgba(106, 44, 145, .22), transparent 72%),
+    linear-gradient(145deg, #0D0D1F 0%, #111027 48%, #0D1729 100%);
+}
+.home-shell .aurora-one { background: #6A2C91; opacity: .42; }
+.home-shell .aurora-two { background: #20E3E6; opacity: .20; }
+.home-shell .aurora-three { background: #B388FF; opacity: .28; }
+.home-shell .brand-mark {
+  border-color: rgba(179, 136, 255, .42);
+  background: rgba(179, 136, 255, .10);
+}
+.home-shell .hero h1 span,
+.home-shell .anatomy-intro h2 span {
+  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.home-shell .jump-button {
+  color: #0D0D1F;
+  background: linear-gradient(100deg, #D6A4FF, #20E3E6);
+  box-shadow: 0 12px 36px rgba(32, 227, 230, .10);
+}
+.home-shell .jump-button:hover { box-shadow: 0 16px 44px rgba(179, 136, 255, .22); }
+.home-shell .anatomy-colour {
+  background: linear-gradient(135deg, rgba(179, 136, 255, .18), rgba(32, 227, 230, .08));
+  border-color: rgba(179, 136, 255, .24);
+}
+.home-shell .anatomy-type {
+  background: linear-gradient(135deg, rgba(106, 44, 145, .28), rgba(32, 227, 230, .08));
+  border-color: rgba(214, 164, 255, .24);
+}
+.home-shell .anatomy-form {
+  background: linear-gradient(135deg, rgba(32, 227, 230, .13), rgba(179, 136, 255, .12));
+  border-color: rgba(32, 227, 230, .22);
+}
+.home-shell .anatomy-space {
+  background: linear-gradient(135deg, rgba(32, 227, 230, .10), rgba(106, 44, 145, .20));
+  border-color: rgba(32, 227, 230, .20);
+}
+.home-shell .anatomy-motion {
+  background: linear-gradient(135deg, rgba(106, 44, 145, .24), rgba(32, 227, 230, .12));
+  border-color: rgba(214, 164, 255, .24);
+}
+.home-shell .anatomy-item:hover { border-color: rgba(32, 227, 230, .38); }
+
+.dashboard-shell {
+  background:
+    radial-gradient(55% 42% at 8% 5%, rgba(179, 136, 255, .20), transparent 70%),
+    radial-gradient(48% 40% at 94% 20%, rgba(32, 227, 230, .10), transparent 70%),
+    linear-gradient(145deg, #0D0D1F, #141329 48%, #0D1729);
+  color: #F5F1FA;
+}
+.dashboard-shell .glow-a { background: rgba(179, 136, 255, .16); }
+.dashboard-shell .glow-b { background: rgba(32, 227, 230, .08); }
+.dashboard-shell .dashboard-kicker,
+.dashboard-shell .system-no,
+.dashboard-shell .history-no,
+.dashboard-shell .foundation-formula,
+.dashboard-shell .language-chain { color: #20E3E6; }
+.dashboard-shell .dashboard-nav-title { color: rgba(245, 241, 250, .54); }
+.dashboard-shell .dashboard-back:hover,
+.dashboard-shell .system-panel-copy button { color: #20E3E6; }
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-hero span,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2 span,
+.dashboard-shell .system-toggle h3,
+.dashboard-shell .history-toggle h3,
+.dashboard-shell .preview-placeholder b {
+  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.dashboard-shell .dashboard-cta {
+  color: #0D0D1F;
+  background: linear-gradient(100deg, #D6A4FF, #20E3E6);
+  box-shadow: 0 14px 32px rgba(179, 136, 255, .18);
+}
+.dashboard-shell .system-row:hover,
+.dashboard-shell .history-card:hover,
+.dashboard-shell .history-card.is-open {
+  border-color: rgba(32, 227, 230, .24);
+}
+.dashboard-shell .system-no,
+.dashboard-shell .history-no { color: #20E3E6; }
+.dashboard-shell .system-chevron,
+.dashboard-shell .history-chevron,
+.dashboard-shell .history-era { color: #B388FF; }
+.dashboard-shell .system-panel > .system-preview,
+.dashboard-shell .history-image-wrap { border-color: rgba(179, 136, 255, .18); }
+
+.library-shell {
+  background:
+    radial-gradient(50% 40% at 8% 8%, rgba(179, 136, 255, .20), transparent 70%),
+    radial-gradient(45% 38% at 92% 20%, rgba(32, 227, 230, .09), transparent 70%),
+    linear-gradient(145deg, #0D0D1F, #141329 48%, #0D1729);
+  color: #F5F1FA;
+}
+.library-shell .library-glow-a { background: rgba(179, 136, 255, .12); }
+.library-shell .library-glow-b { background: rgba(32, 227, 230, .07); }
+.library-shell .library-kicker,
+.library-shell .library-number { color: #20E3E6; }
+.library-shell .library-hero h1,
+.library-shell .library-group-head h2,
+.library-shell .library-end h2 {
+  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.library-shell .library-meta i { color: #20E3E6; }
+.library-shell .library-card {
+  border-color: rgba(179, 136, 255, .16);
+  background: linear-gradient(145deg, rgba(179, 136, 255, .09), rgba(32, 227, 230, .025));
+}
+.library-shell .library-card:hover {
+  border-color: rgba(32, 227, 230, .34);
+  background: linear-gradient(145deg, rgba(179, 136, 255, .14), rgba(32, 227, 230, .05));
+}
+.library-shell .library-card-info > span { color: #20E3E6; }
+
+/* Preserve card-art previews and all independent Style World environments. */
