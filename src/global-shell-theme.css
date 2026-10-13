@@ -339,3 +339,59 @@
 @media (prefers-reduced-motion: reduce) {
   .home-shell .space-layout-frame { animation: none; }
 }
+
+/* Fix Space diagram clipping inside the floating card on narrow screens. */
+.home-shell .anatomy-space {
+  min-height: 210px;
+}
+.home-shell .anatomy-space .space-visual {
+  width: 112px;
+  height: 82px;
+  right: 10px;
+  bottom: 10px;
+  top: auto;
+  overflow: visible;
+}
+.home-shell .anatomy-space .space-layout-frame {
+  box-sizing: border-box;
+  width: 100px;
+  height: 72px;
+  padding: 6px;
+  grid-template-columns: 29px 1fr;
+  grid-template-rows: 6px 22px 1fr;
+  column-gap: 7px;
+  row-gap: 5px;
+}
+.home-shell .anatomy-space .space-layout-header {
+  height: 4px;
+}
+.home-shell .anatomy-space .space-layout-copy {
+  gap: 3px;
+}
+.home-shell .anatomy-space .space-layout-copy i {
+  height: 2px;
+}
+.home-shell .anatomy-space .space-layout-gap {
+  min-height: 16px;
+}
+.home-shell .anatomy-space p {
+  max-width: 125px;
+}
+@media (max-width: 600px) {
+  .home-shell .anatomy-space {
+    min-height: 224px;
+  }
+  .home-shell .anatomy-space .space-visual {
+    width: 108px;
+    height: 78px;
+    right: 8px;
+    bottom: 9px;
+  }
+  .home-shell .anatomy-space .space-layout-frame {
+    width: 96px;
+    height: 68px;
+  }
+  .home-shell .anatomy-space p {
+    max-width: 132px;
+  }
+}
