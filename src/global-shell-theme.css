@@ -395,3 +395,47 @@
     max-width: 132px;
   }
 }
+
+/* Keep the Space card consistent with its siblings; place the diagram beside the copy. */
+.home-shell .anatomy-space {
+  min-height: 0;
+  height: auto;
+  padding-bottom: 17px;
+}
+.home-shell .anatomy-space p {
+  max-width: calc(100% - 116px);
+}
+.home-shell .anatomy-space .space-visual {
+  width: 106px;
+  height: 76px;
+  right: 10px;
+  bottom: 50%;
+  top: auto;
+  transform: translateY(50%);
+}
+.home-shell .anatomy-space .space-layout-frame {
+  width: 96px;
+  height: 68px;
+}
+@media (max-width: 600px) {
+  .home-shell .anatomy-space {
+    min-height: 0;
+    height: auto;
+    padding-bottom: 17px;
+  }
+  .home-shell .anatomy-space p {
+    max-width: calc(100% - 112px);
+  }
+  .home-shell .anatomy-space .space-visual {
+    width: 100px;
+    height: 72px;
+    right: 8px;
+    bottom: 50%;
+    top: auto;
+    transform: translateY(50%);
+  }
+  .home-shell .anatomy-space .space-layout-frame {
+    width: 92px;
+    height: 64px;
+  }
+}
