@@ -1,23 +1,23 @@
-/* Home-page-only restrained accent system.
-   Replaces legacy pink/magenta and high-saturation brand accents with muted tones.
-   Dashboard, Design Library, preview artwork, and independent Style Worlds are untouched. */
+/* Home-only refined violet theme.
+   Balanced contrast and depth: neither neon nor washed out.
+   Dashboard, Library, preview artwork and independent Style Worlds are untouched. */
 
 .home-shell {
   background:
-    radial-gradient(62% 48% at 8% 7%, rgba(155, 133, 196, .13), transparent 72%),
-    radial-gradient(54% 48% at 92% 22%, rgba(129, 153, 173, .055), transparent 72%),
-    radial-gradient(65% 56% at 50% 78%, rgba(33, 27, 48, .16), transparent 74%),
+    radial-gradient(60% 48% at 7% 8%, rgba(137, 103, 185, .22), transparent 72%),
+    radial-gradient(48% 42% at 92% 25%, rgba(103, 126, 157, .10), transparent 72%),
+    radial-gradient(62% 56% at 48% 80%, rgba(57, 43, 82, .20), transparent 74%),
     linear-gradient(145deg, #10101C 0%, #151321 48%, #101622 100%);
 }
-.home-shell .aurora-one { background: #6A587F; opacity: .24; }
-.home-shell .aurora-two { background: #8199AD; opacity: .075; }
-.home-shell .aurora-three { background: #9B85C4; opacity: .12; }
+.home-shell .aurora-one { background: #765A9A; opacity: .30; }
+.home-shell .aurora-two { background: #748DA6; opacity: .10; }
+.home-shell .aurora-three { background: #A18AC8; opacity: .17; }
 .home-shell .brand-mark {
-  border-color: rgba(181, 165, 206, .30);
-  background: rgba(155, 133, 196, .06);
+  border-color: rgba(177, 153, 213, .36);
+  background: rgba(137, 103, 185, .10);
 }
 
-/* Home headings use muted lilac, never the former pink/magenta gradient. */
+/* Clearer violet typography with a restrained lilac highlight. */
 .home-shell .hero h1,
 .home-shell .hero h1 span,
 .home-shell .definition-copy h2,
@@ -25,7 +25,7 @@
 .home-shell .anatomy-intro h2,
 .home-shell .anatomy-intro h2 span,
 .home-shell .preview-section h2 {
-  background: linear-gradient(100deg, #9B85C4 0%, #B5A5CE 100%);
+  background: linear-gradient(105deg, #A98BD7 0%, #B9A5D8 60%, #A3B6CA 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -33,53 +33,56 @@
 }
 .home-shell .hero h1 span,
 .home-shell .definition-copy h2 span { background: inherit; }
-
 .home-shell .section-kicker,
 .home-shell .anatomy-intro .section-kicker,
 .home-shell .preview-section .section-kicker {
-  color: #8199AD;
-  -webkit-text-fill-color: #8199AD;
+  color: #9CAFC3;
+  -webkit-text-fill-color: #9CAFC3;
 }
-.home-shell .anatomy-note { color: #8199AD; -webkit-text-fill-color: #8199AD; }
-.home-shell .definition-process { color: rgba(230, 226, 235, .78); }
-.home-shell .definition-process i { color: #9B85C4; }
-.home-shell .definition-close span { color: rgba(230, 226, 235, .62); }
+.home-shell .anatomy-note { color: #9CAFC3; -webkit-text-fill-color: #9CAFC3; }
+.home-shell .definition-process { color: rgba(230, 226, 235, .86); }
+.home-shell .definition-process i { color: #B19AD5; }
+.home-shell .definition-close span { color: rgba(230, 226, 235, .70); }
 
+/* Stronger CTA definition without a neon finish. */
 .home-shell .jump-button,
 .home-shell .jump-button.secondary {
-  color: #10101C;
-  background: linear-gradient(100deg, #B5A5CE 0%, #8199AD 100%);
-  border: 1px solid rgba(181, 165, 206, .18);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+  color: #12101B;
+  background: linear-gradient(105deg, #B9A5D8 0%, #9BAFC3 100%);
+  border: 1px solid rgba(225, 215, 241, .22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .20), inset 0 1px 0 rgba(255, 255, 255, .24);
 }
-.home-shell .jump-button svg { color: #10101C; }
-.home-shell .jump-button:hover { box-shadow: 0 10px 28px rgba(155, 133, 196, .14); }
+.home-shell .jump-button svg { color: #12101B; }
+.home-shell .jump-button:hover {
+  box-shadow: 0 12px 32px rgba(137, 103, 185, .22), inset 0 1px 0 rgba(255, 255, 255, .28);
+}
 
-/* Subdued Home Anatomy cards. */
+/* More legible Anatomy cards: distinct surfaces, low-saturation borders. */
 .home-shell .anatomy-colour,
 .home-shell .anatomy-type,
 .home-shell .anatomy-form,
 .home-shell .anatomy-space,
 .home-shell .anatomy-motion {
-  background: linear-gradient(135deg, rgba(155, 133, 196, .10), rgba(129, 153, 173, .045));
-  border-color: rgba(181, 165, 206, .18);
+  background: linear-gradient(140deg, rgba(49, 42, 67, .88), rgba(29, 31, 47, .90));
+  border-color: rgba(177, 153, 213, .24);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, .20), inset 0 1px 0 rgba(255, 255, 255, .055);
 }
-.home-shell .anatomy-item:hover { border-color: rgba(181, 165, 206, .32); }
+.home-shell .anatomy-item:hover { border-color: rgba(177, 153, 213, .40); }
 .home-shell .colour-visual .colour-wheel {
-  background: conic-gradient(#9B85C4 0deg, #B5A5CE 120deg, #8199AD 240deg, #6A587F 300deg, #9B85C4 360deg);
-  box-shadow: 0 0 18px rgba(155, 133, 196, .10);
+  background: conic-gradient(#8E74B5 0deg, #B9A5D8 120deg, #8FA5BA 240deg, #6B557F 300deg, #8E74B5 360deg);
+  box-shadow: 0 0 22px rgba(137, 103, 185, .16);
 }
 .home-shell .colour-visual i:nth-child(1),
 .home-shell .colour-visual i:nth-child(2),
 .home-shell .colour-visual i:nth-child(3),
-.home-shell .colour-visual i:nth-child(4) { background: #9B85C4; }
-.home-shell .colour-visual i { box-shadow: 0 0 18px rgba(155, 133, 196, .10); }
-.home-shell .form-triangle { border-bottom-color: #8199AD; }
-.home-shell .form-circle { border-color: rgba(129, 153, 173, .62); }
-.home-shell .form-square { border-color: rgba(155, 133, 196, .66); }
-.home-shell .motion-dot { box-shadow: 0 0 12px rgba(129, 153, 173, .22); }
-.home-shell .motion-dot.one { background: #9B85C4; }
-.home-shell .motion-dot.two { background: #8199AD; }
-.home-shell .motion-dot.three { background: #B5A5CE; }
+.home-shell .colour-visual i:nth-child(4) { background: #A18AC8; }
+.home-shell .colour-visual i { box-shadow: 0 0 18px rgba(137, 103, 185, .15); }
+.home-shell .form-triangle { border-bottom-color: #8FA5BA; }
+.home-shell .form-circle { border-color: rgba(143, 165, 186, .72); }
+.home-shell .form-square { border-color: rgba(161, 138, 200, .78); }
+.home-shell .motion-dot { box-shadow: 0 0 13px rgba(143, 165, 186, .28); }
+.home-shell .motion-dot.one { background: #A18AC8; }
+.home-shell .motion-dot.two { background: #8FA5BA; }
+.home-shell .motion-dot.three { background: #B9A5D8; }
 
-/* The live style carousel retains its original artwork palettes by design. */
+/* Preserve original live-preview artwork and each design language's palette. */
