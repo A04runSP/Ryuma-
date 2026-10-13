@@ -5,3 +5,7 @@
   .dashboard-hero .dashboard-cta + .dashboard-cta { margin: 12px 0 0; }
 }
 @media(max-width:480px){.dashboard-hero h1{font-size:clamp(36px,9.5vw,48px)}.dashboard-story h2,.dashboard-systems h2,.dashboard-history h2,.dashboard-foundations h2,.dashboard-reading h2,.dashboard-principles h2,.dashboard-language h2,.dashboard-end h2{font-size:clamp(26px,7.5vw,38px)}}
+
+
+/* Dashboard branding: solid Deep Violet, matching the approved Ryūma palette. */
+.dashboard-brand b { color: #6A2C91; }
