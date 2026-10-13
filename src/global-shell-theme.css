@@ -1,23 +1,23 @@
-/* Home-page-only accent reset.
-   Remove legacy pink/magenta brand accents before applying Deep Violet & Aqua.
-   Dashboard, Design Library and all independent Style Worlds are intentionally untouched. */
+/* Home-page-only restrained accent system.
+   Replaces legacy pink/magenta and high-saturation brand accents with muted tones.
+   Dashboard, Design Library, preview artwork, and independent Style Worlds are untouched. */
 
 .home-shell {
   background:
-    radial-gradient(62% 48% at 8% 7%, rgba(179, 136, 255, .22), transparent 70%),
-    radial-gradient(54% 48% at 92% 22%, rgba(32, 227, 230, .10), transparent 70%),
-    radial-gradient(65% 56% at 50% 78%, rgba(106, 44, 145, .18), transparent 72%),
-    linear-gradient(145deg, #0D0D1F 0%, #111027 48%, #0D1729 100%);
+    radial-gradient(62% 48% at 8% 7%, rgba(155, 133, 196, .13), transparent 72%),
+    radial-gradient(54% 48% at 92% 22%, rgba(129, 153, 173, .055), transparent 72%),
+    radial-gradient(65% 56% at 50% 78%, rgba(33, 27, 48, .16), transparent 74%),
+    linear-gradient(145deg, #10101C 0%, #151321 48%, #101622 100%);
 }
-.home-shell .aurora-one { background: #6A2C91; opacity: .42; }
-.home-shell .aurora-two { background: #20E3E6; opacity: .16; }
-.home-shell .aurora-three { background: #B388FF; opacity: .24; }
+.home-shell .aurora-one { background: #6A587F; opacity: .24; }
+.home-shell .aurora-two { background: #8199AD; opacity: .075; }
+.home-shell .aurora-three { background: #9B85C4; opacity: .12; }
 .home-shell .brand-mark {
-  border-color: rgba(179, 136, 255, .42);
-  background: rgba(179, 136, 255, .10);
+  border-color: rgba(181, 165, 206, .30);
+  background: rgba(155, 133, 196, .06);
 }
 
-/* Main headline and editorial headings: explicitly override legacy gradients. */
+/* Home headings use muted lilac, never the former pink/magenta gradient. */
 .home-shell .hero h1,
 .home-shell .hero h1 span,
 .home-shell .definition-copy h2,
@@ -25,7 +25,7 @@
 .home-shell .anatomy-intro h2,
 .home-shell .anatomy-intro h2 span,
 .home-shell .preview-section h2 {
-  background: linear-gradient(100deg, #B388FF 0%, #D6A4FF 52%, #20E3E6 100%);
+  background: linear-gradient(100deg, #9B85C4 0%, #B5A5CE 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -33,53 +33,53 @@
 }
 .home-shell .hero h1 span,
 .home-shell .definition-copy h2 span { background: inherit; }
+
 .home-shell .section-kicker,
 .home-shell .anatomy-intro .section-kicker,
 .home-shell .preview-section .section-kicker {
-  color: #20E3E6;
-  -webkit-text-fill-color: #20E3E6;
+  color: #8199AD;
+  -webkit-text-fill-color: #8199AD;
 }
-.home-shell .anatomy-note { color: #20E3E6; -webkit-text-fill-color: #20E3E6; }
-.home-shell .definition-process { color: rgba(245, 241, 250, .88); }
-.home-shell .definition-process i { color: #20E3E6; }
-.home-shell .definition-close span { color: rgba(245, 241, 250, .68); }
+.home-shell .anatomy-note { color: #8199AD; -webkit-text-fill-color: #8199AD; }
+.home-shell .definition-process { color: rgba(230, 226, 235, .78); }
+.home-shell .definition-process i { color: #9B85C4; }
+.home-shell .definition-close span { color: rgba(230, 226, 235, .62); }
 
 .home-shell .jump-button,
 .home-shell .jump-button.secondary {
-  color: #0D0D1F;
-  background: linear-gradient(100deg, #B388FF 0%, #20E3E6 100%);
-  border: 1px solid rgba(214, 164, 255, .25);
-  box-shadow: 0 12px 36px rgba(32, 227, 230, .10);
+  color: #10101C;
+  background: linear-gradient(100deg, #B5A5CE 0%, #8199AD 100%);
+  border: 1px solid rgba(181, 165, 206, .18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
 }
-.home-shell .jump-button svg { color: #0D0D1F; }
-.home-shell .jump-button:hover { box-shadow: 0 16px 44px rgba(179, 136, 255, .22); }
+.home-shell .jump-button svg { color: #10101C; }
+.home-shell .jump-button:hover { box-shadow: 0 10px 28px rgba(155, 133, 196, .14); }
 
-/* Home Anatomy cards only. */
+/* Subdued Home Anatomy cards. */
 .home-shell .anatomy-colour,
 .home-shell .anatomy-type,
 .home-shell .anatomy-form,
 .home-shell .anatomy-space,
 .home-shell .anatomy-motion {
-  background: linear-gradient(135deg, rgba(179, 136, 255, .16), rgba(32, 227, 230, .08));
-  border-color: rgba(179, 136, 255, .24);
+  background: linear-gradient(135deg, rgba(155, 133, 196, .10), rgba(129, 153, 173, .045));
+  border-color: rgba(181, 165, 206, .18);
 }
-.home-shell .anatomy-item:hover { border-color: rgba(32, 227, 230, .38); }
+.home-shell .anatomy-item:hover { border-color: rgba(181, 165, 206, .32); }
 .home-shell .colour-visual .colour-wheel {
-  background: conic-gradient(#B388FF 0deg, #D6A4FF 90deg, #20E3E6 180deg, #6A2C91 270deg, #B388FF 360deg);
-  box-shadow: 0 0 24px rgba(32, 227, 230, .16);
+  background: conic-gradient(#9B85C4 0deg, #B5A5CE 120deg, #8199AD 240deg, #6A587F 300deg, #9B85C4 360deg);
+  box-shadow: 0 0 18px rgba(155, 133, 196, .10);
 }
 .home-shell .colour-visual i:nth-child(1),
 .home-shell .colour-visual i:nth-child(2),
 .home-shell .colour-visual i:nth-child(3),
-.home-shell .colour-visual i:nth-child(4) { background: #B388FF; }
-.home-shell .colour-visual i { box-shadow: 0 0 22px rgba(179, 136, 255, .18); }
-.home-shell .form-triangle { border-bottom-color: #20E3E6; }
-.home-shell .form-circle { border-color: rgba(32, 227, 230, .72); }
-.home-shell .form-square { border-color: rgba(179, 136, 255, .8); }
-.home-shell .motion-dot { box-shadow: 0 0 18px rgba(32, 227, 230, .45); }
-.home-shell .motion-dot.one { background: #B388FF; }
-.home-shell .motion-dot.two { background: #20E3E6; }
-.home-shell .motion-dot.three { background: #D6A4FF; }
+.home-shell .colour-visual i:nth-child(4) { background: #9B85C4; }
+.home-shell .colour-visual i { box-shadow: 0 0 18px rgba(155, 133, 196, .10); }
+.home-shell .form-triangle { border-bottom-color: #8199AD; }
+.home-shell .form-circle { border-color: rgba(129, 153, 173, .62); }
+.home-shell .form-square { border-color: rgba(155, 133, 196, .66); }
+.home-shell .motion-dot { box-shadow: 0 0 12px rgba(129, 153, 173, .22); }
+.home-shell .motion-dot.one { background: #9B85C4; }
+.home-shell .motion-dot.two { background: #8199AD; }
+.home-shell .motion-dot.three { background: #B5A5CE; }
 
-/* The rotating style preview is intentionally excluded: it demonstrates
-   each design language and is not part of the Home page's brand accent system. */
+/* The live style carousel retains its original artwork palettes by design. */
