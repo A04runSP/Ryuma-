@@ -820,3 +820,204 @@
   .home-shell .anatomy-motion .motion-object-x { background: #6A2C91; border-color: #D6A4FF; }
   .home-shell .anatomy-motion .motion-object-z { border-bottom-color: #20E3E6; }
 }
+
+
+/* Dashboard shell theme: solid Deep Night surfaces and restrained violet/aqua accents.
+   Scoped exclusively to Dashboard; independent Style Worlds and Library artwork are untouched. */
+.dashboard-shell {
+  background: #0D0D1F;
+  color: #F5F1FA;
+}
+.dashboard-shell .dashboard-glow,
+.dashboard-shell .dashboard-grain {
+  display: none;
+}
+.dashboard-shell .dashboard-brand,
+.dashboard-shell .dashboard-library,
+.dashboard-shell .dashboard-back {
+  color: #F5F1FA;
+}
+.dashboard-shell .dashboard-brand:hover,
+.dashboard-shell .dashboard-library:hover,
+.dashboard-shell .dashboard-back:hover {
+  color: #20E3E6;
+}
+.dashboard-shell .dashboard-nav-title {
+  color: rgba(245, 241, 250, .52);
+}
+.dashboard-shell .dashboard-kicker,
+.dashboard-shell .system-no,
+.dashboard-shell .history-no,
+.dashboard-shell .foundation-no,
+.dashboard-shell .reading-step > span,
+.dashboard-shell .principle-card > span {
+  color: #20E3E6;
+}
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-hero h1 span,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2,
+.dashboard-shell .dashboard-end h2 span,
+.dashboard-shell .system-toggle h3,
+.dashboard-shell .history-toggle h3,
+.dashboard-shell .foundation-card h3,
+.dashboard-shell .reading-step h3,
+.dashboard-shell .principle-card h3,
+.dashboard-shell .preview-placeholder b,
+.dashboard-shell .influence-line b,
+.dashboard-shell .foundation-formula b,
+.dashboard-shell .language-chain b,
+.dashboard-shell .history-thread b {
+  background: none;
+  color: #B388FF;
+  -webkit-text-fill-color: #B388FF;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  text-shadow: none;
+}
+.dashboard-shell .dashboard-hero p,
+.dashboard-shell .story-copy p,
+.dashboard-shell .systems-heading > p,
+.dashboard-shell .history-heading > p,
+.dashboard-shell .foundations-heading > p,
+.dashboard-shell .reading-heading > p,
+.dashboard-shell .principles-heading > p,
+.dashboard-shell .system-panel-copy p,
+.dashboard-shell .history-copy p,
+.dashboard-shell .foundation-card p,
+.dashboard-shell .reading-step p,
+.dashboard-shell .principle-card p,
+.dashboard-shell .language-copy p,
+.dashboard-shell .dashboard-end > p {
+  color: rgba(245, 241, 250, .78);
+}
+.dashboard-shell .story-copy strong,
+.dashboard-shell .language-copy strong {
+  color: #F5F1FA;
+}
+.dashboard-shell .dashboard-cta {
+  background: #B388FF;
+  border: 1px solid #B388FF;
+  color: #0D0D1F;
+  box-shadow: none;
+}
+.dashboard-shell .dashboard-cta:hover {
+  background: #D6A4FF;
+  border-color: #D6A4FF;
+}
+.dashboard-shell .dashboard-cta:focus-visible,
+.dashboard-shell .dashboard-back:focus-visible,
+.dashboard-shell .dashboard-library:focus-visible,
+.dashboard-shell .dashboard-brand:focus-visible,
+.dashboard-shell .system-toggle:focus-visible,
+.dashboard-shell .history-toggle:focus-visible,
+.dashboard-shell .system-panel-copy button:focus-visible {
+  outline: 2px solid #20E3E6;
+  outline-offset: 4px;
+}
+.dashboard-shell .dashboard-story,
+.dashboard-shell .dashboard-history,
+.dashboard-shell .dashboard-foundations,
+.dashboard-shell .dashboard-reading,
+.dashboard-shell .dashboard-principles,
+.dashboard-shell .dashboard-language,
+.dashboard-shell .dashboard-footer {
+  border-color: rgba(245, 241, 250, .12);
+}
+.dashboard-shell .influence-line,
+.dashboard-shell .foundation-formula,
+.dashboard-shell .language-chain,
+.dashboard-shell .history-thread {
+  color: #20E3E6;
+}
+.dashboard-shell .influence-line i,
+.dashboard-shell .foundation-formula i,
+.dashboard-shell .language-chain i,
+.dashboard-shell .history-thread i {
+  color: #B388FF;
+}
+.dashboard-shell .system-row,
+.dashboard-shell .history-card,
+.dashboard-shell .foundation-card,
+.dashboard-shell .principle-card {
+  background: #17152A;
+  border-color: rgba(245, 241, 250, .14);
+  box-shadow: inset 0 1px 0 rgba(245, 241, 250, .035);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.dashboard-shell .system-row:hover,
+.dashboard-shell .history-card:hover,
+.dashboard-shell .history-card.is-open {
+  transform: translateY(-2px);
+  border-color: rgba(179, 136, 255, .65);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+}
+.dashboard-shell .system-chevron,
+.dashboard-shell .history-chevron {
+  color: #B388FF;
+}
+.dashboard-shell .system-preview {
+  background: #0D0D1F;
+  border-color: rgba(245, 241, 250, .16);
+  box-shadow: none;
+}
+.dashboard-shell .system-preview > span,
+.dashboard-shell .system-panel-copy > span,
+.dashboard-shell .history-era {
+  color: #D6A4FF;
+}
+.dashboard-shell .system-panel-copy button {
+  color: #20E3E6;
+}
+.dashboard-shell .preview-placeholder small {
+  color: rgba(245, 241, 250, .58);
+}
+.dashboard-shell .history-image-wrap {
+  background: #0D0D1F;
+  border-color: rgba(245, 241, 250, .16);
+}
+.dashboard-shell .history-image-wrap img {
+  filter: saturate(.96) contrast(1.04);
+}
+.dashboard-shell .history-image-wrap span {
+  background: rgba(13, 13, 31, .92);
+  color: #F5F1FA;
+  backdrop-filter: none;
+}
+.dashboard-shell .history-copy strong,
+.dashboard-shell .foundation-card strong {
+  color: #20E3E6;
+}
+.dashboard-shell .reading-list,
+.dashboard-shell .reading-step {
+  border-color: rgba(245, 241, 250, .12);
+}
+.dashboard-shell .foundation-formula em {
+  color: rgba(245, 241, 250, .54);
+}
+.dashboard-shell .dashboard-footer {
+  color: rgba(245, 241, 250, .52);
+}
+.dashboard-shell .system-row.is-open {
+  border-color: rgba(179, 136, 255, .65);
+}
+.dashboard-shell .system-row.is-open .system-panel {
+  border-top: 1px solid rgba(245, 241, 250, .08);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-shell *,
+  .dashboard-shell *::before,
+  .dashboard-shell *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
