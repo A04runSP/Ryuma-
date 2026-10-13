@@ -206,3 +206,54 @@
     padding: 18px 16px;
   }
 }
+
+/* Home Anatomy visuals: subtly animate geometry to make motion meaningful. */
+.home-shell .form-square {
+  animation: homeFormSquare 5s ease-in-out infinite;
+  transform-origin: center;
+}
+.home-shell .form-circle {
+  animation: homeFormCircle 5s ease-in-out infinite;
+  transform-origin: center;
+}
+.home-shell .form-triangle {
+  animation: homeFormTriangle 5s ease-in-out infinite;
+  transform-origin: center;
+}
+.home-shell .motion-dot.one { animation: homeMotionDotOne 3.2s ease-in-out infinite; }
+.home-shell .motion-dot.two { animation: homeMotionDotTwo 3.2s ease-in-out infinite; }
+.home-shell .motion-dot.three { animation: homeMotionDotThree 3.2s ease-in-out infinite; }
+@keyframes homeFormSquare {
+  0%, 100% { transform: rotate(-12deg) translate(0, 0); }
+  50% { transform: rotate(4deg) translate(4px, -3px); }
+}
+@keyframes homeFormCircle {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -2px); }
+}
+@keyframes homeFormTriangle {
+  0%, 100% { transform: rotate(0deg) translate(0, 0); }
+  50% { transform: rotate(9deg) translate(-3px, -4px); }
+}
+@keyframes homeMotionDotOne {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(12px); }
+}
+@keyframes homeMotionDotTwo {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-7px); }
+}
+@keyframes homeMotionDotThree {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, 4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .form-square,
+  .home-shell .form-circle,
+  .home-shell .form-triangle,
+  .home-shell .motion-dot.one,
+  .home-shell .motion-dot.two,
+  .home-shell .motion-dot.three {
+    animation: none !important;
+  }
+}
