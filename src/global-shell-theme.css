@@ -273,3 +273,69 @@
     #F04468 360deg
   );
 }
+
+/* Space card: diagram layout, alignment and deliberate negative space. */
+.home-shell .space-visual {
+  width: 142px;
+  height: 112px;
+  right: 4px;
+  bottom: 1px;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-shell .space-layout-frame {
+  position: relative;
+  width: 112px;
+  height: 82px;
+  border: 1px solid #8FA5BA;
+  border-radius: 5px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  grid-template-rows: 8px 27px 1fr;
+  column-gap: 9px;
+  row-gap: 7px;
+  background: #0D0D1F;
+}
+.home-shell .space-layout-header {
+  grid-column: 1 / -1;
+  width: 45%;
+  height: 5px;
+  border-radius: 2px;
+  background: #B388FF;
+}
+.home-shell .space-layout-feature {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  border-radius: 3px;
+  background: #6A2C91;
+}
+.home-shell .space-layout-copy {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4px;
+}
+.home-shell .space-layout-copy i {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background: #F5F1FA;
+  opacity: .78;
+}
+.home-shell .space-layout-copy i:nth-child(2) { width: 72%; }
+.home-shell .space-layout-copy i:nth-child(3) { width: 86%; }
+.home-shell .space-layout-gap {
+  grid-column: 2;
+  grid-row: 3;
+  border: 1px dashed #20E3E6;
+  border-radius: 3px;
+  opacity: .85;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .space-layout-frame { animation: none; }
+}
