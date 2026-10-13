@@ -1,22 +1,21 @@
-/* Home-only refined violet theme.
-   Dashboard, Library, preview artwork and independent Style Worlds are untouched. */
+/* Home-only solid-colour theme.
+   No gradients in the global Home shell.
+   Dashboard, Library, live preview artwork and independent Style Worlds are untouched. */
 
 .home-shell {
-  background:
-    radial-gradient(60% 48% at 7% 8%, rgba(137, 103, 185, .22), transparent 72%),
-    radial-gradient(48% 42% at 92% 25%, rgba(103, 126, 157, .10), transparent 72%),
-    radial-gradient(62% 56% at 48% 80%, rgba(57, 43, 82, .20), transparent 74%),
-    linear-gradient(145deg, #0D0D1F 0%, #151321 48%, #101622 100%);
+  background: #0D0D1F;
 }
-.home-shell .aurora-one { background: #765A9A; opacity: .30; }
-.home-shell .aurora-two { background: #748DA6; opacity: .10; }
-.home-shell .aurora-three { background: #A18AC8; opacity: .17; }
+.home-shell .aurora-one,
+.home-shell .aurora-two,
+.home-shell .aurora-three {
+  display: none;
+}
 .home-shell .brand-mark {
-  border-color: rgba(177, 153, 213, .36);
-  background: rgba(137, 103, 185, .10);
+  border-color: #6A2C91;
+  background: #17152A;
 }
 
-/* Primary Violet (#B388FF): solid heading colour, no gradient text. */
+/* Primary Violet (#B388FF): solid headings, never gradient text. */
 .home-shell .hero h1,
 .home-shell .hero h1 span,
 .home-shell .definition-copy h2,
@@ -36,89 +35,76 @@
   color: #9CAFC3;
   -webkit-text-fill-color: #9CAFC3;
 }
-.home-shell .anatomy-note { color: #9CAFC3; -webkit-text-fill-color: #9CAFC3; }
-.home-shell .definition-process { color: rgba(230, 226, 235, .86); }
-.home-shell .definition-process i { color: #B19AD5; }
-.home-shell .definition-close span { color: rgba(230, 226, 235, .70); }
+.home-shell .anatomy-note {
+  color: #9CAFC3;
+  -webkit-text-fill-color: #9CAFC3;
+}
+.home-shell .definition-process { color: #E6E2EB; }
+.home-shell .definition-process i { color: #6A2C91; }
+.home-shell .definition-close span { color: #B8B3C4; }
 
-/* Existing CTA treatment retained for this heading-colour step. */
+/* Solid CTA fills. */
 .home-shell .jump-button,
 .home-shell .jump-button.secondary {
-  color: #12101B;
-  background: linear-gradient(105deg, #B9A5D8 0%, #9BAFC3 100%);
-  border: 1px solid rgba(225, 215, 241, .22);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .20), inset 0 1px 0 rgba(255, 255, 255, .24);
+  color: #0D0D1F;
+  background: #B388FF;
+  border: 1px solid #B388FF;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .20);
 }
-.home-shell .jump-button svg { color: #12101B; }
+.home-shell .jump-button svg { color: #0D0D1F; }
 .home-shell .jump-button:hover {
-  box-shadow: 0 12px 32px rgba(137, 103, 185, .22), inset 0 1px 0 rgba(255, 255, 255, .28);
+  background: #6A2C91;
+  border-color: #6A2C91;
+  color: #F5F1FA;
 }
+.home-shell .jump-button:hover svg { color: #F5F1FA; }
 
-/* Anatomy cards keep their existing layered resting surfaces. */
+/* Solid Anatomy card surfaces. */
 .home-shell .anatomy-colour,
 .home-shell .anatomy-type,
 .home-shell .anatomy-form,
 .home-shell .anatomy-space,
 .home-shell .anatomy-motion {
-  background: linear-gradient(140deg, rgba(49, 42, 67, .88), rgba(29, 31, 47, .90));
-  border-color: rgba(177, 153, 213, .24);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, .20), inset 0 1px 0 rgba(255, 255, 255, .055);
+  background: #17152A;
+  border-color: #343247;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .20);
 }
 
-/* Deep Night Surface (#17152A) for focused/active card states. */
+/* Deep Night Surface for interactive states, with solid violet feedback. */
 .home-shell .anatomy-item:hover,
-.home-shell .anatomy-item:focus-visible,
 .home-shell .anatomy-item:active {
   background: #17152A;
-  border-color: #B388FF;
+  border-color: #6A2C91;
+  box-shadow: inset 3px 0 0 #6A2C91;
 }
 .home-shell .anatomy-item:focus-visible {
+  background: #17152A;
+  border-color: #B388FF;
   outline: 2px solid #B388FF;
   outline-offset: 3px;
 }
-
-/* Solid Primary Violet marks selected/focused UI; artwork colours stay independent. */
 .home-shell .anatomy-item[aria-selected="true"],
 .home-shell .anatomy-item[aria-pressed="true"] {
   border-color: #B388FF;
   box-shadow: 0 0 0 1px #B388FF;
 }
 
+/* Decorative anatomy artwork uses solid fills; preview artwork is not targeted. */
 .home-shell .colour-visual .colour-wheel {
-  background: conic-gradient(#8E74B5 0deg, #B9A5D8 120deg, #8FA5BA 240deg, #6B557F 300deg, #8E74B5 360deg);
-  box-shadow: 0 0 22px rgba(137, 103, 185, .16);
+  background: #6A2C91;
+  box-shadow: 0 0 18px rgba(106, 44, 145, .16);
 }
 .home-shell .colour-visual i:nth-child(1),
 .home-shell .colour-visual i:nth-child(2),
 .home-shell .colour-visual i:nth-child(3),
-.home-shell .colour-visual i:nth-child(4) { background: #A18AC8; }
-.home-shell .colour-visual i { box-shadow: 0 0 18px rgba(137, 103, 185, .15); }
-.home-shell .form-triangle { border-bottom-color: #8FA5BA; }
-.home-shell .form-circle { border-color: rgba(143, 165, 186, .72); }
-.home-shell .form-square { border-color: rgba(161, 138, 200, .78); }
-.home-shell .motion-dot { box-shadow: 0 0 13px rgba(143, 165, 186, .28); }
-.home-shell .motion-dot.one { background: #A18AC8; }
+.home-shell .colour-visual i:nth-child(4) { background: #B388FF; }
+.home-shell .colour-visual i { box-shadow: 0 0 12px rgba(179, 136, 255, .12); }
+.home-shell .form-triangle { border-bottom-color: #6A2C91; }
+.home-shell .form-circle { border-color: #8FA5BA; }
+.home-shell .form-square { border-color: #B388FF; }
+.home-shell .motion-dot { box-shadow: 0 0 10px rgba(179, 136, 255, .18); }
+.home-shell .motion-dot.one { background: #6A2C91; }
 .home-shell .motion-dot.two { background: #8FA5BA; }
-.home-shell .motion-dot.three { background: #B9A5D8; }
+.home-shell .motion-dot.three { background: #B388FF; }
 
 /* Preserve original live-preview artwork and each design language's palette. */
-
-/* Deep Violet (#6A2C91): solid secondary accent, scoped to Home only. */
-.home-shell .brand-mark {
-  border-color: #6A2C91;
-}
-.home-shell .definition-process i {
-  color: #6A2C91;
-}
-.home-shell .anatomy-item:hover,
-.home-shell .anatomy-item:active {
-  box-shadow: inset 3px 0 0 #6A2C91;
-}
-.home-shell .anatomy-item[aria-selected="true"],
-.home-shell .anatomy-item[aria-pressed="true"] {
-  border-color: #6A2C91;
-  box-shadow: 0 0 0 1px #6A2C91;
-}
-.home-shell .jump-button.secondary {
-  border-color: #6A2C91;
-}
