@@ -57,7 +57,7 @@
   box-shadow: 0 12px 32px rgba(137, 103, 185, .22), inset 0 1px 0 rgba(255, 255, 255, .28);
 }
 
-/* More legible Anatomy cards: distinct surfaces, low-saturation borders. */
+/* Anatomy cards keep their existing layered resting surfaces. */
 .home-shell .anatomy-colour,
 .home-shell .anatomy-type,
 .home-shell .anatomy-form,
@@ -67,7 +67,19 @@
   border-color: rgba(177, 153, 213, .24);
   box-shadow: 0 22px 48px rgba(0, 0, 0, .20), inset 0 1px 0 rgba(255, 255, 255, .055);
 }
-.home-shell .anatomy-item:hover { border-color: rgba(177, 153, 213, .40); }
+
+/* Deep Night Surface (#17152A) is reserved for focused/active card states.
+   This gives interaction a clear darker state without flattening the resting cards. */
+.home-shell .anatomy-item:hover,
+.home-shell .anatomy-item:focus-visible,
+.home-shell .anatomy-item:active {
+  background: #17152A;
+  border-color: rgba(177, 153, 213, .40);
+}
+.home-shell .anatomy-item:focus-visible {
+  outline: 2px solid rgba(185, 165, 216, .72);
+  outline-offset: 3px;
+}
 .home-shell .colour-visual .colour-wheel {
   background: conic-gradient(#8E74B5 0deg, #B9A5D8 120deg, #8FA5BA 240deg, #6B557F 300deg, #8E74B5 360deg);
   box-shadow: 0 0 22px rgba(137, 103, 185, .16);
