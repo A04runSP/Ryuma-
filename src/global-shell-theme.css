@@ -257,3 +257,19 @@
     animation: none !important;
   }
 }
+
+/* The Colour card's wheel represents a full colour spectrum, not the UI palette.
+   Keep the wheel multicolour while all surrounding Home surfaces stay solid. */
+.home-shell .colour-visual .colour-wheel {
+  background: conic-gradient(
+    #F04468 0deg,
+    #FF9B45 48deg,
+    #F4D35E 92deg,
+    #67C96B 140deg,
+    #20C9C9 188deg,
+    #4388E8 232deg,
+    #7657D8 278deg,
+    #B45BD4 320deg,
+    #F04468 360deg
+  );
+}
