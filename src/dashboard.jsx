@@ -56,7 +56,7 @@ export default function Dashboard({ onNavigate }) {
     <header className="dashboard-nav">
       <button className="dashboard-brand" onClick={goHome}><span>R</span><b>RYUMA</b><em>リューマ</em></button>
       <div className="dashboard-nav-title">DESIGN ANATOMY</div>
-      <div className="dashboard-nav-actions"><button className="dashboard-back" onClick={goHome}><ArrowLeft size={15}/> BACK TO HOME</button><button className="dashboard-library" onClick={goLibrary}>LIBRARY <ArrowRight size={15}/></button></div>
+      <div className="dashboard-nav-actions"><button className="dashboard-back" onClick={goHome}><ArrowLeft size={15}/> BACK TO HOME</button></div>
     </header>
 
     <section className="dashboard-hero">
