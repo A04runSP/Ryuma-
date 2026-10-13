@@ -1021,3 +1021,10 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* Home process sequence: cyan emphasis for the four learning verbs only. */
+.home-shell .definition-process span {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
