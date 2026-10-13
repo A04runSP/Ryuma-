@@ -1,5 +1,4 @@
 /* Home-only refined violet theme.
-   Balanced contrast and depth: neither neon nor washed out.
    Dashboard, Library, preview artwork and independent Style Worlds are untouched. */
 
 .home-shell {
@@ -17,7 +16,7 @@
   background: rgba(137, 103, 185, .10);
 }
 
-/* Clearer violet typography with a restrained lilac highlight. */
+/* Primary Violet (#B388FF): solid heading colour, no gradient text. */
 .home-shell .hero h1,
 .home-shell .hero h1 span,
 .home-shell .definition-copy h2,
@@ -25,14 +24,12 @@
 .home-shell .anatomy-intro h2,
 .home-shell .anatomy-intro h2 span,
 .home-shell .preview-section h2 {
-  background: linear-gradient(105deg, #A98BD7 0%, #B9A5D8 60%, #A3B6CA 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  background: none;
+  color: #B388FF;
+  -webkit-text-fill-color: #B388FF;
+  -webkit-background-clip: initial;
+  background-clip: initial;
 }
-.home-shell .hero h1 span,
-.home-shell .definition-copy h2 span { background: inherit; }
 .home-shell .section-kicker,
 .home-shell .anatomy-intro .section-kicker,
 .home-shell .preview-section .section-kicker {
@@ -44,7 +41,7 @@
 .home-shell .definition-process i { color: #B19AD5; }
 .home-shell .definition-close span { color: rgba(230, 226, 235, .70); }
 
-/* Stronger CTA definition without a neon finish. */
+/* Existing CTA treatment retained for this heading-colour step. */
 .home-shell .jump-button,
 .home-shell .jump-button.secondary {
   color: #12101B;
@@ -68,18 +65,25 @@
   box-shadow: 0 22px 48px rgba(0, 0, 0, .20), inset 0 1px 0 rgba(255, 255, 255, .055);
 }
 
-/* Deep Night Surface (#17152A) is reserved for focused/active card states.
-   This gives interaction a clear darker state without flattening the resting cards. */
+/* Deep Night Surface (#17152A) for focused/active card states. */
 .home-shell .anatomy-item:hover,
 .home-shell .anatomy-item:focus-visible,
 .home-shell .anatomy-item:active {
   background: #17152A;
-  border-color: rgba(177, 153, 213, .40);
+  border-color: #B388FF;
 }
 .home-shell .anatomy-item:focus-visible {
-  outline: 2px solid rgba(185, 165, 216, .72);
+  outline: 2px solid #B388FF;
   outline-offset: 3px;
 }
+
+/* Solid Primary Violet marks selected/focused UI; artwork colours stay independent. */
+.home-shell .anatomy-item[aria-selected="true"],
+.home-shell .anatomy-item[aria-pressed="true"] {
+  border-color: #B388FF;
+  box-shadow: 0 0 0 1px #B388FF;
+}
+
 .home-shell .colour-visual .colour-wheel {
   background: conic-gradient(#8E74B5 0deg, #B9A5D8 120deg, #8FA5BA 240deg, #6B557F 300deg, #8E74B5 360deg);
   box-shadow: 0 0 22px rgba(137, 103, 185, .16);
