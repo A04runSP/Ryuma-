@@ -605,3 +605,38 @@
 @media (prefers-reduced-motion: reduce) {
   .home-shell .anatomy-item { animation: none !important; }
 }
+
+
+/* Mobile Anatomy content repair: preserve card positions, give copy a real text column.
+   The legacy global rules reserve too much width for decorative illustrations and can
+   force words to break into single-character stacks on narrow cards. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-item > .anatomy-mark,
+  .home-shell .anatomy-item > div:not(.anatomy-visual),
+  .home-shell .anatomy-item h3,
+  .home-shell .anatomy-item p {
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .home-shell .anatomy-item p {
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+  .home-shell .anatomy-item .anatomy-visual {
+    pointer-events: none;
+  }
+  .home-shell .anatomy-colour .colour-visual,
+  .home-shell .anatomy-type .type-visual,
+  .home-shell .anatomy-form .form-visual,
+  .home-shell .anatomy-space .space-visual,
+  .home-shell .anatomy-motion .motion-visual {
+    opacity: .30;
+  }
+  .home-shell .anatomy-motion .anatomy-visual {
+    opacity: .26;
+  }
+}
