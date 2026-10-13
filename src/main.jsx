@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { createRoot } from 'react-dom/client';
+import './design-tokens.css';
 import './styles.css';
 import './ryuma-brand.css';
 import './glass-preview.css';
