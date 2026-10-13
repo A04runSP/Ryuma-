@@ -1041,3 +1041,13 @@
   -webkit-text-fill-color: #6A2C91;
   font-style: normal;
 }
+
+
+/* Improve contrast for the Dashboard formula result while retaining Deep Violet. */
+.dashboard-shell .foundation-formula em {
+  color: #B388FF;
+  -webkit-text-fill-color: #B388FF;
+  font-weight: 800;
+  opacity: 1;
+  text-shadow: 0 0 14px rgba(179, 136, 255, .16);
+}
