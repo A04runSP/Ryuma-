@@ -515,3 +515,93 @@
   .home-shell .motion-object-x,
   .home-shell .motion-object-z { animation: none !important; }
 }
+
+/* Home Anatomy cards: retain the floating composition while protecting text readability. */
+.home-shell .anatomy-item {
+  z-index: 1;
+  min-width: 0;
+}
+.home-shell .anatomy-item .anatomy-mark,
+.home-shell .anatomy-item h3,
+.home-shell .anatomy-item p {
+  position: relative;
+  z-index: 2;
+}
+.home-shell .anatomy-item p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.home-shell .anatomy-item .anatomy-visual {
+  z-index: 0;
+  opacity: .62;
+}
+@media (max-width: 680px) {
+  .home-shell .anatomy-stage {
+    min-height: 900px;
+    overflow: hidden;
+  }
+  .home-shell .anatomy-item {
+    width: 46%;
+    max-width: 46%;
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 13px 12px;
+  }
+  .home-shell .anatomy-item .anatomy-mark {
+    margin-bottom: 7px;
+    font-size: 7px;
+  }
+  .home-shell .anatomy-item h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .home-shell .anatomy-item p {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .home-shell .anatomy-item .anatomy-visual {
+    opacity: .42;
+  }
+  .home-shell .anatomy-colour { left: 4%; right: auto; top: 3%; }
+  .home-shell .anatomy-type { left: auto; right: 4%; top: 19%; }
+  .home-shell .anatomy-motion { left: 4%; right: auto; top: 35%; width: 46%; }
+  .home-shell .anatomy-form { left: auto; right: 4%; top: 51%; bottom: auto; }
+  .home-shell .anatomy-space { left: 4%; right: auto; top: 67%; bottom: auto; }
+  .home-shell .anatomy-space p { max-width: calc(100% - 78px); }
+  .home-shell .anatomy-space .space-visual {
+    width: 74px;
+    height: 60px;
+    right: 3px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  .home-shell .anatomy-space .space-layout-frame {
+    width: 70px;
+    height: 52px;
+    padding: 4px;
+    grid-template-columns: 21px 1fr;
+    grid-template-rows: 5px 17px 1fr;
+    column-gap: 4px;
+    row-gap: 3px;
+  }
+  .home-shell .anatomy-motion .motion-visual {
+    width: 82px;
+    height: 58px;
+    right: 0;
+    bottom: 0;
+  }
+  .home-shell .motion-axis-y { left: 7px; top: 0; }
+  .home-shell .motion-axis-x { right: 0; top: 31px; }
+  .home-shell .motion-axis-z { left: 42px; bottom: 0; }
+  .home-shell .motion-axis-line-y { left: 13px; top: 10px; height: 37px; }
+  .home-shell .motion-axis-line-x { left: 14px; top: 32px; width: 65px; }
+  .home-shell .motion-axis-line-z { left: 21px; top: 39px; width: 38px; }
+  .home-shell .motion-object-y { left: 6px; top: 21px; width: 12px; height: 12px; }
+  .home-shell .motion-object-x { left: 38px; top: 27px; width: 11px; height: 11px; }
+  .home-shell .motion-object-z { left: 54px; top: 35px; border-left-width: 7px; border-right-width: 7px; border-bottom-width: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .anatomy-item { animation: none !important; }
+}
