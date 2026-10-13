@@ -81,3 +81,40 @@ html.glass-route-html,body.glass-route-body,body.glass-route-body #root{backgrou
   .glass-composition .demo-orb.red { width: 64px; height: 64px; }
   .glass-composition .demo-orb.purple { width: 78px; height: 78px; }
 }
+
+
+/* Final mobile composition polish: quieter background, clearer card hierarchy. */
+.glass-composition .glass-demo {
+  background:
+    linear-gradient(112deg, transparent 0 28%, rgba(255,255,255,.48) 28.2%, transparent 29% 63%, rgba(118,80,199,.08) 63.2%, transparent 64%),
+    repeating-linear-gradient(0deg, rgba(118,80,199,.032) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(118,80,199,.032) 0 1px, transparent 1px 28px),
+    radial-gradient(ellipse at 78% 24%, rgba(198,176,255,.8) 0 8%, transparent 28%),
+    radial-gradient(ellipse at 18% 78%, rgba(255,182,196,.72) 0 7%, transparent 25%),
+    linear-gradient(135deg, #f7f2ff 0%, #fffafd 48%, #f5eaff 100%);
+}
+.glass-composition .glass-card.demo-card {
+  width: 58%;
+  left: 21%;
+  top: 19%;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(255,255,255,.64), rgba(255,255,255,.32) 52%, rgba(230,218,255,.26));
+  box-shadow: 0 20px 44px rgba(89,64,118,.16), inset 0 1px 0 rgba(255,255,255,.96), inset 0 -1px 0 rgba(118,80,199,.1);
+}
+.glass-composition .demo-orb { opacity: .72; }
+.glass-composition .demo-orb.red { left: 9%; bottom: 12%; }
+.glass-composition .demo-orb.purple { right: 10%; top: 15%; }
+@media(max-width:800px) {
+  .glass-composition { padding-bottom: 66px; }
+  .glass-composition .glass-demo { height: 350px; }
+  .glass-composition .glass-card.demo-card {
+    width: 76%;
+    left: 12%;
+    top: 20%;
+    padding: 24px;
+  }
+  .glass-composition .demo-card strong { font-size: clamp(34px, 9vw, 48px); }
+  .glass-composition .demo-card small { font-size: 8px; line-height: 1.5; }
+  .glass-composition .ring-red { width: 300px; height: 300px; left: -105px; top: -85px; }
+  .glass-composition .ring-purple { width: 245px; height: 245px; right: -75px; bottom: -70px; }
+}
