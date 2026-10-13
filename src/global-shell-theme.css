@@ -102,3 +102,23 @@
 .home-shell .motion-dot.three { background: #B9A5D8; }
 
 /* Preserve original live-preview artwork and each design language's palette. */
+
+/* Deep Violet (#6A2C91): solid secondary accent, scoped to Home only. */
+.home-shell .brand-mark {
+  border-color: #6A2C91;
+}
+.home-shell .definition-process i {
+  color: #6A2C91;
+}
+.home-shell .anatomy-item:hover,
+.home-shell .anatomy-item:active {
+  box-shadow: inset 3px 0 0 #6A2C91;
+}
+.home-shell .anatomy-item[aria-selected="true"],
+.home-shell .anatomy-item[aria-pressed="true"] {
+  border-color: #6A2C91;
+  box-shadow: 0 0 0 1px #6A2C91;
+}
+.home-shell .jump-button.secondary {
+  border-color: #6A2C91;
+}
