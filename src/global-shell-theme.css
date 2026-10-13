@@ -1028,3 +1028,16 @@
   color: #20E3E6;
   -webkit-text-fill-color: #20E3E6;
 }
+
+
+/* Dashboard foundation formula: all five terms in Aqua Cyan; final result in Deep Violet. */
+.dashboard-shell .foundation-formula span,
+.dashboard-shell .foundation-formula b {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
+.dashboard-shell .foundation-formula em {
+  color: #6A2C91;
+  -webkit-text-fill-color: #6A2C91;
+  font-style: normal;
+}
