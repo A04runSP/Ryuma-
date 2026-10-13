@@ -5,8 +5,6 @@
    until a component explicitly consumes these variables.
 */
 :root {
-  color-scheme: dark;
-
   /* Global shell surfaces */
   --ryuma-shell-bg: #0D0D1F;
   --ryuma-shell-surface: #17152A;
