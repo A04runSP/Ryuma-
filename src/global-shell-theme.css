@@ -439,3 +439,79 @@
     height: 64px;
   }
 }
+
+/* Motion card: independent X/Y/Z movement with staggered starts and separate timing. */
+.home-shell .motion-visual {
+  width: 148px;
+  height: 100px;
+  right: 2px;
+  bottom: 0;
+  top: auto;
+  overflow: visible;
+}
+.home-shell .motion-axis {
+  position: absolute;
+  z-index: 2;
+  color: #8FA5BA;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.home-shell .motion-axis-y { left: 13px; top: 3px; }
+.home-shell .motion-axis-x { right: 7px; top: 53px; }
+.home-shell .motion-axis-z { left: 75px; bottom: 2px; color: #20E3E6; }
+.home-shell .motion-axis-line {
+  position: absolute;
+  display: block;
+  opacity: .45;
+  border-color: #8FA5BA;
+}
+.home-shell .motion-axis-line-y {
+  left: 22px; top: 16px; height: 66px; border-left: 1px dashed #8FA5BA;
+}
+.home-shell .motion-axis-line-x {
+  left: 24px; top: 55px; width: 112px; border-top: 1px dashed #8FA5BA;
+}
+.home-shell .motion-axis-line-z {
+  left: 37px; top: 68px; width: 67px; border-top: 1px dashed #20E3E6;
+  transform: rotate(-28deg); transform-origin: left center;
+}
+.home-shell .motion-object {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.home-shell .motion-object-y {
+  width: 18px; height: 18px; left: 14px; top: 35px;
+  border-radius: 50%; background: #B388FF;
+  animation: homeAxisY 2.1s ease-in-out infinite;
+}
+.home-shell .motion-object-x {
+  width: 16px; height: 16px; left: 65px; top: 47px;
+  background: #6A2C91; border: 1px solid #B388FF;
+  animation: homeAxisX 2.8s ease-in-out .55s infinite;
+}
+.home-shell .motion-object-z {
+  width: 0; height: 0; left: 94px; top: 61px;
+  border-left: 10px solid transparent; border-right: 10px solid transparent;
+  border-bottom: 17px solid #20E3E6;
+  animation: homeAxisZ 3.4s ease-in-out 1.05s infinite;
+}
+@keyframes homeAxisY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22px); }
+}
+@keyframes homeAxisX {
+  0%, 100% { transform: translateX(-15px); }
+  50% { transform: translateX(25px); }
+}
+@keyframes homeAxisZ {
+  0%, 100% { transform: translateZ(0) scale(.72); opacity: .55; }
+  50% { transform: translateZ(0) scale(1.2); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .motion-object-y,
+  .home-shell .motion-object-x,
+  .home-shell .motion-object-z { animation: none !important; }
+}
