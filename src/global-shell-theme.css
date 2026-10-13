@@ -747,3 +747,76 @@
   .home-shell .anatomy-motion .motion-axis-x { top: 29px; }
   .home-shell .anatomy-motion .motion-axis-z { left: 38px; }
 }
+
+
+/* Restore illustrative contrast on mobile without changing the restrained shell palette. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-colour .colour-visual,
+  .home-shell .anatomy-type .type-visual,
+  .home-shell .anatomy-form .form-visual,
+  .home-shell .anatomy-space .space-visual,
+  .home-shell .anatomy-motion .motion-visual {
+    opacity: 1;
+  }
+
+  .home-shell .anatomy-colour .colour-wheel {
+    box-shadow: 0 0 0 1px rgba(245, 241, 250, .20), 0 5px 18px rgba(32, 227, 230, .14);
+  }
+  .home-shell .anatomy-colour .colour-wheel::after {
+    background: #17152A;
+    border-color: rgba(245, 241, 250, .24);
+  }
+  .home-shell .anatomy-colour .colour-wheel-core {
+    background: #F5F1FA;
+    box-shadow: 0 0 0 2px rgba(13, 13, 31, .6);
+  }
+
+  .home-shell .anatomy-type .type-visual span {
+    color: rgba(179, 136, 255, .36);
+    -webkit-text-fill-color: rgba(179, 136, 255, .36);
+  }
+  .home-shell .anatomy-type .type-visual b {
+    color: #F5F1FA;
+    -webkit-text-fill-color: #F5F1FA;
+    text-shadow: 0 1px 8px rgba(13, 13, 31, .9);
+  }
+
+  .home-shell .anatomy-form .form-circle {
+    border-color: #8FA5BA;
+    border-width: 2px;
+  }
+  .home-shell .anatomy-form .form-square {
+    border-color: #B388FF;
+    border-width: 2px;
+    background: rgba(106, 44, 145, .18);
+  }
+  .home-shell .anatomy-form .form-triangle {
+    border-bottom-color: #6A2C91;
+    filter: drop-shadow(0 2px 5px rgba(106, 44, 145, .35));
+  }
+
+  .home-shell .anatomy-space .space-layout-frame {
+    border-color: #8FA5BA;
+    background: #0D0D1F;
+    box-shadow: 0 0 0 1px rgba(143, 165, 186, .12);
+  }
+  .home-shell .anatomy-space .space-layout-header { background: #B388FF; }
+  .home-shell .anatomy-space .space-layout-feature { background: #6A2C91; }
+  .home-shell .anatomy-space .space-layout-copy i { background: #F5F1FA; opacity: .9; }
+  .home-shell .anatomy-space .space-layout-gap { border-color: #20E3E6; opacity: 1; }
+
+  .home-shell .anatomy-motion .motion-axis {
+    color: #B8C5D6;
+    text-shadow: 0 1px 4px #0D0D1F;
+  }
+  .home-shell .anatomy-motion .motion-axis-z { color: #20E3E6; }
+  .home-shell .anatomy-motion .motion-axis-line-y,
+  .home-shell .anatomy-motion .motion-axis-line-x {
+    opacity: .8;
+    border-color: #8FA5BA;
+  }
+  .home-shell .anatomy-motion .motion-axis-line-z { opacity: .9; border-color: #20E3E6; }
+  .home-shell .anatomy-motion .motion-object-y { background: #B388FF; }
+  .home-shell .anatomy-motion .motion-object-x { background: #6A2C91; border-color: #D6A4FF; }
+  .home-shell .anatomy-motion .motion-object-z { border-bottom-color: #20E3E6; }
+}
