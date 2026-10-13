@@ -63,7 +63,7 @@ export default function Dashboard({ onNavigate }) {
       <span className="dashboard-kicker">DESIGN ANATOMY / 01</span>
       <h1>Design is a<br/><span>system.</span></h1>
       <p>Look beyond the surface. Explore the decisions, influences and visual languages that make design feel the way it does.</p>
-      <button className="dashboard-cta" onClick={goLibrary}>EXPLORE THE LIBRARY <ArrowRight size={18}/></button>
+      <button className="dashboard-cta" onClick={goLibrary}>EXPLORE THE LIBRARY <ArrowRight size={18}/></button><button className="dashboard-cta" onClick={()=>onNavigate?.("practice-studio")}>OPEN PRACTICE STUDIO <ArrowRight size={18}/></button>
     </section>
 
     <section className="dashboard-story">
