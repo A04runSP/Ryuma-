@@ -140,3 +140,165 @@
   .lamp-ground { bottom: 15%; }
   .composition-caption { left: 6%; right: 6%; bottom: 5%; font-size: 6.5px; letter-spacing: .08em; }
 }
+
+
+/* Minimalism reference pass: improve mobile scale and spacing without changing other styles. */
+.minimal-page .minimal-hero {
+  gap: 64px;
+}
+.minimal-page .minimal-poster {
+  min-height: 560px;
+}
+.minimal-page .minimal-poster .form-one {
+  width: clamp(190px, 28vw, 270px);
+  height: clamp(190px, 28vw, 270px);
+  right: 13%;
+  top: 32%;
+}
+.minimal-page .minimal-poster .form-two {
+  width: clamp(130px, 20vw, 190px);
+  height: clamp(130px, 20vw, 190px);
+  right: 25%;
+  bottom: 19%;
+}
+.minimal-page .minimal-poster .poster-line {
+  bottom: 25%;
+}
+@media (max-width: 800px) {
+  .minimal-page .minimal-hero {
+    gap: 48px;
+    padding-top: 76px;
+    padding-bottom: 90px;
+  }
+  .minimal-page .minimal-copy h1 {
+    font-size: clamp(66px, 17.5vw, 104px);
+    line-height: .98;
+    letter-spacing: -.07em;
+  }
+  .minimal-page .style-lead {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: clamp(19px, 5.2vw, 23px);
+    line-height: 1.5;
+  }
+  .minimal-page .minimal-copy > p:not(.style-lead) {
+    font-size: clamp(16px, 4.4vw, 19px);
+    line-height: 1.75;
+  }
+  .minimal-page .minimal-palette {
+    gap: 10px;
+    margin-top: 34px;
+  }
+  .minimal-page .swatch {
+    width: clamp(30px, 7.8vw, 38px);
+    height: clamp(30px, 7.8vw, 38px);
+    flex: 0 0 auto;
+  }
+  .minimal-page .minimal-poster {
+    height: 500px;
+    min-height: 500px;
+    padding: 34px;
+    box-shadow: 0 18px 42px rgba(54, 48, 37, .08);
+  }
+  .minimal-page .minimal-poster strong {
+    font-size: clamp(49px, 12vw, 68px);
+    margin-top: 22px;
+    white-space: nowrap;
+  }
+  .minimal-page .minimal-poster .form-one {
+    width: clamp(190px, 44vw, 245px);
+    height: clamp(190px, 44vw, 245px);
+    top: 34%;
+    right: 13%;
+  }
+  .minimal-page .minimal-poster .form-two {
+    width: clamp(130px, 28vw, 165px);
+    height: clamp(130px, 28vw, 165px);
+    right: 25%;
+    bottom: 19%;
+  }
+  .minimal-page .minimal-poster .poster-line {
+    width: 48%;
+    bottom: 25%;
+    left: 9%;
+  }
+  .minimal-page .minimal-poster small {
+    left: 34px;
+    bottom: 30px;
+  }
+  .minimal-page .style-section {
+    gap: 26px;
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+  .minimal-page .style-section h2 {
+    line-height: .99;
+  }
+  .minimal-page .minimal-anatomy-grid {
+    margin-top: 42px;
+  }
+  .minimal-page .minimal-anatomy-grid article {
+    padding-top: 25px;
+    padding-bottom: 29px;
+  }
+  .minimal-page .minimal-anatomy-grid h3 {
+    margin-top: 21px;
+  }
+  .minimal-page .minimal-composition .composition-canvas {
+    height: 410px;
+    margin-top: 42px;
+  }
+  .minimal-page .minimal-composition .composition-copy {
+    top: 11%;
+    width: 45%;
+  }
+  .minimal-page .minimal-composition .composition-copy strong {
+    font-size: clamp(31px, 8.2vw, 44px);
+  }
+  .minimal-page .lamp-stage {
+    top: 18%;
+    right: 3%;
+    width: 44%;
+    height: 65%;
+  }
+  .minimal-page .lamp-shade {
+    height: 24%;
+  }
+  .minimal-page .lamp-stem {
+    height: 30%;
+  }
+  .minimal-page .composition-caption {
+    bottom: 5%;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .minimal-page .minimal-poster {
+    height: 455px;
+    min-height: 455px;
+    padding: 26px;
+  }
+  .minimal-page .minimal-poster strong {
+    font-size: clamp(43px, 11.5vw, 49px);
+  }
+  .minimal-page .minimal-poster .form-one {
+    width: 184px;
+    height: 184px;
+    right: 10%;
+  }
+  .minimal-page .minimal-poster .form-two {
+    width: 128px;
+    height: 128px;
+    right: 23%;
+  }
+  .minimal-page .minimal-poster small {
+    left: 26px;
+    bottom: 26px;
+  }
+  .minimal-page .minimal-composition .composition-canvas {
+    height: 380px;
+  }
+  .minimal-page .minimal-composition .composition-copy {
+    width: 47%;
+  }
+}
