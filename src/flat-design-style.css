@@ -29,3 +29,31 @@
 .flat-weather-top button:focus-visible,.flat-weather-bottom button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @media(max-width:800px){.flat-canvas{padding:12px}.flat-weather-top{align-items:flex-start;font-size:8px}.flat-weather-main{min-height:200px;padding:18px}.flat-weather-main strong{font-size:clamp(76px,20vw,110px)}.flat-sun-cloud{width:92px;height:100px;transform:scale(.78);transform-origin:center right;margin-left:-20px}.flat-weather-main span{font-size:10px}.flat-weather-strip>div{padding:14px 3px;gap:8px}.flat-weather-strip small{font-size:8px}.flat-weather-strip b{font-size:21px}.flat-weather-bottom{align-items:flex-start;flex-direction:column}.flat-weather-bottom button{align-self:flex-start}}
 @media(max-width:360px){.flat-weather-main{padding:14px}.flat-sun-cloud{transform:scale(.62);margin-left:-32px}.flat-weather-main span{max-width:190px}.flat-weather-strip strong{font-size:17px}}
+
+
+/* Mobile composition correction: keep the headline legible and prevent the cyan circle from covering it. */
+@media(max-width:800px){
+ .flat-canvas{position:relative;padding:12px;min-height:0}
+ .flat-weather-main{display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:0;padding:18px 14px;min-height:205px;overflow:hidden}
+ .flat-weather-main>div:first-child{min-width:0}
+ .flat-weather-main strong{font-size:clamp(72px,19vw,104px);letter-spacing:-.075em}
+ .flat-sun-cloud{width:88px;height:100px;transform:scale(.72);transform-origin:center right;margin-left:-8px}
+ .flat-weather-strip{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .flat-weather-strip>div{min-width:0}
+ .flat-weather-bottom{font-size:8px}
+}
+@media(max-width:420px){
+ .flat-canvas{padding:9px}
+ .flat-weather-main{grid-template-columns:minmax(0,1fr) 62px;padding:15px 10px;min-height:190px}
+ .flat-weather-main small{font-size:8px;letter-spacing:.08em}
+ .flat-weather-main strong{font-size:clamp(66px,18vw,82px);margin:12px 0}
+ .flat-weather-main b{font-size:9px;letter-spacing:.06em}
+ .flat-weather-main span{font-size:9px;line-height:1.4}
+ .flat-sun-cloud{transform:scale(.52);transform-origin:center right;margin-left:-22px}
+ .flat-weather-strip>div{padding:12px 2px;gap:7px}
+ .flat-weather-strip small{font-size:7px}
+ .flat-weather-strip b{font-size:18px}
+ .flat-weather-strip strong{font-size:16px}
+ .flat-weather-top{font-size:7px;gap:6px}
+ .flat-weather-top button{padding:7px 6px;font-size:7px}
+}
