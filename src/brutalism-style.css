@@ -84,3 +84,29 @@
 .project-status{font-size:6px;padding:4px 2px}
 .collage-bottomline{font-size:6px}
 }
+
+
+/* Raw web brutalism: browser-like typography, plain links, native controls, little decoration. */
+.brutal-collage{display:block;height:auto;min-height:0;padding:16px;background:#fff;color:#111;border:2px solid #111;font-family:Arial,Helvetica,sans-serif;overflow-wrap:anywhere}
+.raw-browser-note{font:12px/1.4 monospace;border-bottom:1px solid #111;padding-bottom:8px}
+.raw-site-title{font:bold 32px/1.05 Arial,Helvetica,sans-serif;letter-spacing:-.04em;margin:22px 0 12px;text-transform:uppercase}
+.raw-site-intro{font:16px/1.5 Arial,Helvetica,sans-serif;max-width:600px;margin:0 0 18px}
+.brutal-collage>hr{border:0;border-top:2px solid #111;margin:18px 0}
+.raw-site-columns{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px}
+.raw-site-nav{font:14px/1.5 Arial,Helvetica,sans-serif;border-right:1px solid #111;padding-right:18px}
+.raw-site-nav>b{font-family:monospace}
+.raw-site-nav ul,.raw-site-main ul{padding-left:22px}
+.raw-site-nav li,.raw-site-main li{margin:7px 0}
+.brutal-collage a{color:#00e;text-decoration:underline;cursor:pointer}
+.brutal-collage a:visited{color:#551a8b}
+.raw-site-nav mark{background:#ffef00;color:#111}
+.raw-site-main h4{font:bold 18px/1.2 Arial,Helvetica,sans-serif;margin:20px 0 8px;text-transform:uppercase}
+.raw-site-main p,.raw-site-main li{font:15px/1.55 Arial,Helvetica,sans-serif}
+.raw-site-main p{margin:8px 0}
+.raw-form{display:grid;grid-template-columns:1fr;gap:7px;max-width:380px;font:14px Arial,Helvetica,sans-serif}
+.raw-form label{margin-top:5px}
+.raw-form input:not([type=checkbox]),.raw-form textarea{width:100%;border:1px solid #777;border-radius:0;background:#fff;color:#111;padding:8px;font:14px Arial,Helvetica,sans-serif}
+.raw-form .raw-check{display:flex;align-items:center;gap:7px}
+.raw-form button{justify-self:start;border:2px outset buttonborder;border-radius:0;background:#eee;color:#111;padding:5px 12px;font:13px Arial,Helvetica,sans-serif;cursor:pointer}
+.raw-footnote{border-top:1px solid #111;padding-top:9px;margin-top:24px!important;font:11px/1.4 monospace!important}
+@media(max-width:800px){.brutal-collage{padding:12px}.raw-site-title{font-size:28px}.raw-site-columns{grid-template-columns:1fr;gap:14px}.raw-site-nav{border-right:0;border-bottom:1px solid #111;padding:0 0 12px}.raw-site-nav ul{display:flex;flex-wrap:wrap;gap:5px 18px}.raw-site-nav li{margin:3px 0}.raw-site-main h4{font-size:17px}}
