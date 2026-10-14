@@ -23,3 +23,6 @@
 .metal-plate .metal-row{margin-top:20px}
 .metal-button:focus-visible,.skeu-page button:focus-visible{outline:3px solid #a94336;outline-offset:4px}
 @media(max-width:380px){.radio-dial-wrap{grid-template-columns:60px minmax(0,1fr);gap:12px}.radio-dial{width:58px;height:58px}.radio-frequency b{font-size:30px}}
+\n
+.radio-caption{margin:10px 0 0;font:9px/1.5 'DM Mono',monospace;color:#504b45;letter-spacing:.04em}
+.radio-tuning{touch-action:pan-y}
