@@ -84,39 +84,30 @@ export default function SkeuomorphismStyle({ onNavigate }) {
       <div className="skeu-label">04 / COMPOSITION</div>
       <div className="skeu-workbench">
         <div className="leather-card">
-          <small>OBJECT / 05</small>
-          <h3>PRESS.<br/><em>TURN.</em><br/>DRAG.</h3>
+          <small>OBJECT / 05 — RADIO DECK</small>
+          <h3>TUNE IN.<br/><em>FEEL IT.</em></h3>
           <div className="leather-seam"/>
-          <span>REAL WORLD / DIGITAL SPACE</span>
+          <span>TURN THE DIAL / PRESS PLAY</span>
+          <div className="radio-frequency"><span>FM</span><b>{(88 + (value / 100) * 20).toFixed(1)}</b><small>MHz</small></div>
         </div>
 
         <div className="metal-plate">
-          <div className="metal-title">TACTILE INTERFACE</div>
-          <div className="metal-row">
-            <button
-              className={`metal-button ${isPlaying ? 'is-active' : ''}`}
-              onClick={() => setIsPlaying(true)}
-              disabled={isPlaying}
-              aria-pressed={isPlaying}
-            >
-              PLAY
-            </button>
-            <button
-              className={`metal-button ${!isPlaying ? 'is-active' : ''}`}
-              onClick={() => setIsPlaying(false)}
-              disabled={!isPlaying}
-              aria-pressed={!isPlaying}
-            >
-              PAUSE
-            </button>
+          <div className="metal-title">VINTAGE RADIO / CONTROLS</div>
+          <div className="radio-dial-wrap">
+            <div className="radio-dial" style={{'--dial-angle':`${-135 + value * 2.7}deg`}} aria-hidden="true"><span/></div>
+            <div><label htmlFor="radio-tuning">TUNING</label><input id="radio-tuning" className="radio-tuning" type="range" min="0" max="100" value={value} onChange={e=>setValue(Number(e.target.value))} aria-valuetext={`${(88 + (value / 100) * 20).toFixed(1)} megahertz`}/><div className="radio-scale"><span>88 MHz</span><span>108 MHz</span></div></div>
           </div>
-          <div className="metal-meter" aria-label={`Playback progress ${value}%`}>
+          <div className="metal-row">
+            <button className={`metal-button ${isPlaying ? 'is-active' : ''}`} onClick={() => setIsPlaying(true)} disabled={isPlaying} aria-pressed={isPlaying}>▶ PLAY</button>
+            <button className={`metal-button ${!isPlaying ? 'is-active' : ''}`} onClick={() => setIsPlaying(false)} disabled={!isPlaying} aria-pressed={!isPlaying}>Ⅱ PAUSE</button>
+          </div>
+          <div className="metal-meter" role="progressbar" aria-label="Tuning position" aria-valuemin="0" aria-valuemax="100" aria-valuenow={value}>
             <span style={{width:`${value}%`}}/>
           </div>
-          <div className="metal-status">{isPlaying ? 'PLAYING / LIVE' : 'PAUSED / READY'}</div>
+          <div className="metal-status" aria-live="polite">{isPlaying ? 'RECEIVING / LIVE' : 'STANDBY / READY'}</div>
         </div>
 
-        <div className="glass-note">REALISM<br/><b>≠</b><br/>CLUTTER</div>
+        <div className="glass-note">PHYSICAL DIAL<br/><b>→</b><br/>DIGITAL TUNING</div>
       </div>
     </section>
 
