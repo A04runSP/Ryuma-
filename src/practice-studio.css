@@ -6,3 +6,47 @@
 .practice-canvas .space-copy h3.space-draggable{font-size:clamp(13px,2vw,21px);line-height:1.25}
 .practice-canvas .space-copy p.space-draggable{font-size:clamp(11px,1.5vw,15px);line-height:1.55}
 .practice-canvas .space-copy strong.space-draggable{font-size:10px;letter-spacing:.12em}
+
+/* Dark UI practice theme: focused contrast, layered surfaces, restrained indigo. */
+.practice-studio{background:#07080b;color:#f4f5f7}
+.practice-nav{border-color:rgba(255,255,255,.09)}
+.practice-nav button{color:#8994ff}
+.practice-nav b,.practice-intro h1,.practice-tools h2{color:#f4f5f7}
+.practice-nav span{color:#858da0}
+.practice-kicker{color:#8994ff}
+.practice-intro h1{background:linear-gradient(100deg,#f4f5f7 15%,#a6b0ff 68%,#6675ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.practice-intro>p,.practice-tools p{color:#a6adbb}
+.practice-progress button{border-color:#252936;color:#777f91}
+.practice-progress button.active{border-color:#6675ff;color:#9ba4ff}
+.practice-progress button.done{border-color:#5668e8;color:#9ba4ff}
+.practice-tools{border-color:#282c37;background:#101217;border-radius:18px;box-shadow:0 18px 55px #0005}
+.practice-tools h2{color:#f4f5f7}
+.practice-tools label{color:#c4c9d4}
+.colour-control,.optional-setting{border-color:#282c37}
+.practice-tools input:not([type=color]):not([type=checkbox]):not([type=range]),.practice-tools textarea{background:#090a0e;color:#f4f5f7;border-color:#343a49}
+.practice-tools input[type=color]{background:#090a0e;border-color:#343a49}
+.toggle-line input{accent-color:#6675ff}
+.shape-actions button,.tool-secondary,.axis-options button{border-color:#343a49;background:#0b0d12;color:#dce0ea}
+.shape-actions i{background:#6675ff}
+.shape-actions .triangle{border-bottom-color:#6675ff}
+.axis-options button.selected{color:#a0a8ff;border-color:#6675ff;background:#171a2d}
+.practice-tool-footer{border-color:#282c37}
+.practice-primary{background:linear-gradient(110deg,#6575ff,#8991ff);color:#080910}
+.practice-preview-wrap{border-color:#282c37;background:#101217;box-shadow:0 18px 55px #0004}
+.practice-preview-top,.practice-preview-bottom{color:#8994ff}
+.practice-canvas{background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:52px 52px}
+.canvas-orbit{box-shadow:0 0 70px #5668e822}
+.canvas-copy h2{letter-spacing:-.06em}
+.canvas-copy p{color:#a6adbb}
+.canvas-shape{box-shadow:0 0 26px #6675ff25}
+.axis-readout{color:#8994ff}
+.practice-congrats{border-color:#4a56ad;background:#111421;color:#a0a8ff}
+.practice-footer{border-color:#282c37;color:#737b8c}
+@media(max-width:760px){
+ .practice-intro{margin:26px auto 22px}
+ .practice-workspace{gap:16px}
+ .practice-tools{padding:18px}
+ .practice-canvas{min-height:390px}
+ .practice-preview-wrap{border-radius:14px}
+ .practice-progress button{padding:10px 3px}
+}
