@@ -138,3 +138,25 @@
 .raw-form-result{font:13px monospace!important}
 .raw-footnote{border-top:1px dotted #777;padding-top:6px;margin-top:18px!important;font:12px/1.4 monospace!important}
 @media(max-width:800px){.brutal-collage{padding:8px 4px 14px}.raw-site-title{font-size:32px}.raw-site-columns{grid-template-columns:1fr;gap:10px}.raw-site-nav{border-right:0;border-bottom:1px dashed #777;padding:0 0 8px}.raw-site-nav ul{display:block}.raw-site-nav li{margin:4px 0}.raw-site-main h4{font-size:21px}.raw-site-intro{font-size:17px}}
+
+
+/* Selective colour accents: retain raw web structure while adding an unruly handmade palette. */
+.brutal-collage{background:#fffdf5}
+.raw-browser-note{background:#d8f34a;color:#111;padding:6px 7px;border-bottom:2px solid #111}
+.raw-site-title{color:#ff3b30;text-shadow:2px 2px 0 #d8f34a}
+.raw-site-intro{background:#c8f3ff;padding:8px 9px;max-width:fit-content}
+.raw-sticker{background:#ffef00;color:#e11d48;border:2px dashed #e11d48}
+.brutal-collage>hr{border-top:3px solid #111}
+.raw-site-nav{background:#f1d5ff;padding:10px 12px 10px 8px;border-right:3px solid #111}
+.raw-site-nav>b{display:inline-block;background:#111;color:#fff;padding:3px 5px}
+.raw-site-nav p:nth-of-type(1){background:#ffb8a8;padding:5px}
+.raw-site-main h4{background:#ffb8a8;padding:5px 7px;border-left:5px solid #ff3b30}
+.raw-site-main ul li::marker{color:#ff3b30}
+.raw-site-main mark{background:#d8f34a;outline:1px solid #111;padding:1px 3px}
+.raw-form input:not([type=checkbox]),.raw-form textarea{background:#e8faff;border:2px solid #111}
+.raw-form input:focus,.raw-form textarea:focus{outline:3px solid #ff3b30;outline-offset:1px}
+.raw-form button{background:#d8f34a;border:2px solid #111;box-shadow:3px 3px 0 #ff3b30;padding:5px 10px}
+.raw-form button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #ff3b30}
+.raw-footnote{background:#111;color:#d8f34a;padding:8px}
+.raw-footnote a{color:#c8f3ff}
+@media(max-width:800px){.raw-site-nav{background:#f1d5ff;border-right:0;border-bottom:3px solid #111}.raw-site-main h4{background:#ffb8a8}}
