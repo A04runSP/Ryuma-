@@ -280,3 +280,92 @@
 .brutal-impact-strip b{font:30px/1 'Archivo Black';color:#ff321d}
 @media(max-width:800px){.brutal-impact-strip{width:calc(100% - 32px);margin:-12px auto 58px;padding:13px 9px;gap:6px;font-size:8px;letter-spacing:0;border-width:4px;box-shadow:6px 6px 0 #ffe500}.brutal-impact-strip b{font-size:21px}}
 @media(max-width:380px){.brutal-impact-strip{width:calc(100% - 24px);font-size:7px;padding:11px 6px;gap:4px}}
+
+
+/* HEAVY BRUTAL HOMEPAGE — composition specimen only. */
+.brutal-section.composition>.brutal-label{
+ background:#ff321d;color:#090909;border:5px solid #090909;padding:12px 14px;
+ box-shadow:7px 7px 0 #090909,12px 12px 0 #ffe500;transform:rotate(-1.2deg);
+ font-size:12px;letter-spacing:.1em;
+}
+.brutal-section.composition .brutal-collage{
+ margin-top:10px;padding:18px;background:#fffdf5;border:7px solid #090909;
+ box-shadow:12px 12px 0 #090909,18px 18px 0 #ff321d;position:relative;
+}
+.brutal-section.composition .raw-browser-note{
+ background:#d8f34a;border:4px solid #090909;padding:12px 10px;
+ box-shadow:5px 5px 0 #090909;font-weight:700;line-height:1.45;
+}
+.brutal-section.composition .raw-site-title{
+ font-size:clamp(40px,6vw,70px);line-height:.9;margin:28px 0 18px;
+ color:#ff321d;text-shadow:4px 4px 0 #d8f34a,-3px -3px 0 #090909;
+ text-transform:uppercase;transform:rotate(-1deg);overflow-wrap:anywhere;
+}
+.brutal-section.composition .raw-site-intro{
+ background:#c8f3ff;border:4px solid #090909;padding:15px;
+ box-shadow:7px 7px 0 #090909;font-weight:700;line-height:1.45;
+}
+.brutal-section.composition .raw-sticker{
+ margin:14px 0 10px;padding:10px 12px;background:#ffe500;color:#ff321d;
+ border:4px dashed #090909;box-shadow:7px 7px 0 #ff321d;
+ font-size:clamp(12px,2vw,16px);font-weight:700;transform:rotate(2deg);
+}
+.brutal-section.composition .brutal-collage>hr{border:0;border-top:7px solid #090909;margin:24px 0}
+.brutal-section.composition .raw-site-columns{grid-template-columns:minmax(0,.72fr) minmax(0,1.4fr);gap:20px;align-items:start}
+.brutal-section.composition .raw-site-nav{
+ background:#f1d5ff;border:5px solid #090909;padding:15px 12px;
+ box-shadow:8px 8px 0 #090909;transform:rotate(-1deg);
+}
+.brutal-section.composition .raw-site-nav>b{background:#090909;color:#ffe500;padding:7px 8px;font-size:13px}
+.brutal-section.composition .raw-site-nav ul{padding-left:20px}
+.brutal-section.composition .raw-site-nav li{margin:10px 0;font-weight:700}
+.brutal-section.composition .raw-site-nav p:nth-of-type(1){border:3px solid #090909;background:#ffb8a8;padding:9px;margin-top:20px}
+.brutal-section.composition .raw-site-nav p:nth-of-type(2){font-weight:700}
+.brutal-section.composition .raw-site-main h4{
+ background:#ffb8a8;border:0;border-left:9px solid #ff321d;outline:3px solid #090909;
+ box-shadow:6px 6px 0 #090909;padding:10px 9px;margin:22px 0 16px;
+ text-transform:uppercase;font-size:clamp(19px,2.4vw,27px);
+}
+.brutal-section.composition .raw-site-main>p,
+.brutal-section.composition .raw-site-main>ul{font-weight:700}
+.brutal-section.composition .raw-site-main ul{padding-left:24px}
+.brutal-section.composition .raw-site-main li{margin:10px 0}
+.brutal-section.composition .raw-site-main li::marker{color:#ff321d}
+.brutal-section.composition .raw-site-main a{font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
+.brutal-section.composition .raw-site-main mark{background:#d8f34a;outline:3px solid #090909;padding:3px 5px}
+.brutal-section.composition .raw-form{max-width:none;border:4px solid #090909;padding:13px;background:#e7e4da;box-shadow:8px 8px 0 #090909}
+.brutal-section.composition .raw-form label{font-weight:700}
+.brutal-section.composition .raw-form input:not([type=checkbox]),
+.brutal-section.composition .raw-form textarea{border:4px solid #090909;background:#c8f3ff;padding:10px;font-weight:700}
+.brutal-section.composition .raw-form .raw-check{display:flex;align-items:center;gap:9px}
+.brutal-section.composition .raw-form input[type=checkbox]{width:22px;height:22px;accent-color:#ff321d}
+.brutal-section.composition .raw-form button{border:4px solid #090909;background:#ffe500;padding:12px 14px;box-shadow:7px 7px 0 #ff321d;font-weight:700}
+.brutal-section.composition .raw-form button:active{transform:translate(5px,5px);box-shadow:2px 2px 0 #ff321d}
+.brutal-section.composition .raw-footnote{border:4px solid #090909;background:#090909;color:#d8f34a;padding:14px;font-size:12px!important;font-weight:700}
+.brutal-section.composition .raw-footnote a{color:#c8f3ff}
+@media(max-width:800px){
+ .brutal-section.composition>.brutal-label{padding:10px 11px;font-size:10px;box-shadow:5px 5px 0 #090909,9px 9px 0 #ffe500}
+ .brutal-section.composition .brutal-collage{padding:12px 10px 16px;border-width:5px;box-shadow:8px 8px 0 #090909,12px 12px 0 #ff321d}
+ .brutal-section.composition .raw-browser-note{padding:9px 8px;font-size:11px;border-width:3px;box-shadow:4px 4px 0 #090909}
+ .brutal-section.composition .raw-site-title{font-size:clamp(31px,9vw,48px);line-height:.9;margin:24px 0 15px}
+ .brutal-section.composition .raw-site-intro{padding:11px;border-width:3px;box-shadow:5px 5px 0 #090909}
+ .brutal-section.composition .raw-sticker{padding:8px;font-size:12px;border-width:3px;box-shadow:5px 5px 0 #ff321d}
+ .brutal-section.composition .brutal-collage>hr{border-top-width:5px;margin:20px 0}
+ .brutal-section.composition .raw-site-columns{grid-template-columns:1fr;gap:22px}
+ .brutal-section.composition .raw-site-nav{border:4px solid #090909;padding:12px;box-shadow:6px 6px 0 #090909;transform:rotate(.4deg)}
+ .brutal-section.composition .raw-site-nav ul{display:block;padding-left:22px}
+ .brutal-section.composition .raw-site-nav li{margin:8px 0}
+ .brutal-section.composition .raw-site-nav p:nth-of-type(1){margin-top:14px}
+ .brutal-section.composition .raw-site-main h4{font-size:22px;padding:9px 8px;margin:22px 0 15px;box-shadow:5px 5px 0 #090909}
+ .brutal-section.composition .raw-site-main>p,.brutal-section.composition .raw-site-main li{font-weight:700;line-height:1.45}
+ .brutal-section.composition .raw-form{padding:10px;box-shadow:6px 6px 0 #090909}
+ .brutal-section.composition .raw-form input:not([type=checkbox]),.brutal-section.composition .raw-form textarea{padding:8px;border-width:3px}
+ .brutal-section.composition .raw-form button{padding:10px 12px;box-shadow:5px 5px 0 #ff321d}
+ .brutal-section.composition .raw-footnote{padding:11px}
+}
+@media(max-width:380px){
+ .brutal-section.composition .brutal-collage{padding:9px 7px 13px}
+ .brutal-section.composition .raw-site-title{font-size:30px}
+ .brutal-section.composition .raw-site-intro{font-size:15px}
+ .brutal-section.composition .raw-site-main h4{font-size:19px}
+}
