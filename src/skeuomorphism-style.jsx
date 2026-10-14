@@ -80,6 +80,12 @@ export default function SkeuomorphismStyle({ onNavigate }) {
   };
 
   useEffect(() => {
+    if (isPlaying) startRj();
+    else stopRj();
+    return () => stopRj();
+  }, [isPlaying]);
+
+  useEffect(() => {
     if (!isPlaying) return;
 
     const timer = setInterval(() => {
