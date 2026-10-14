@@ -29,3 +29,58 @@
 .collage-bottomline b{color:#ffe500}
 @media(max-width:800px){.brutal-collage{height:570px;grid-template-columns:1fr 1fr .68fr;grid-template-rows:38px 1fr 1.22fr 40px}.collage-topline{padding:0 10px;font-size:8px;letter-spacing:0}.collage-headline{padding:18px 12px;font-size:clamp(37px,11vw,58px)}.collage-side-tag{font-size:10px}.collage-feature{padding:14px 12px}.collage-feature-title{font-size:clamp(42px,12vw,60px)}.collage-feature p{font-size:10px}.collage-feature-link{font-size:8px;padding:9px}.collage-stat{padding:8px}.collage-stat b{font-size:clamp(32px,9vw,46px)}.collage-stat span{font-size:7px;margin-top:10px}.collage-bottomline{padding:0 8px;font-size:7px}}
 @media(max-width:380px){.brutal-collage{height:520px;grid-template-rows:36px 1fr 1.18fr 38px}.collage-headline{font-size:clamp(34px,10.5vw,42px);padding:15px 9px}.collage-feature{padding:12px 9px}.collage-feature-title{font-size:38px}.collage-stat b{font-size:30px}.collage-stat span{font-size:6px}.collage-topline{font-size:7px}.collage-bottomline{font-size:6px}}
+
+
+/* Raw dashboard composition: visible structure, direct labels, functional-looking data rows. */
+.brutal-collage{height:auto;min-height:0;background:#f7f5ef;display:grid;grid-template-columns:1fr 1.15fr;grid-template-rows:42px auto auto auto 42px;gap:0;border:4px solid #090909}
+.collage-topline{grid-column:1/-1;grid-row:1;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px;background:#090909;color:#fff;border:0;border-bottom:4px solid #090909;font-size:10px;font-weight:700}
+.collage-dashboard-title{grid-column:1;grid-row:2;background:#ffe500;border-right:4px solid #090909;border-bottom:4px solid #090909;padding:24px 18px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.collage-dashboard-title>span{font:clamp(48px,7vw,88px)/.78 'Archivo Black';letter-spacing:-.065em}
+.collage-dashboard-title small{font:700 10px/1.5 'Space Mono',monospace;border-top:3px solid #090909;padding-top:10px}
+.collage-dashboard-stats{grid-column:2;grid-row:2;display:grid;grid-template-rows:1fr 1fr;background:#fff;border-bottom:4px solid #090909}
+.collage-dashboard-stats>div{padding:18px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.collage-dashboard-stats>div+div{border-top:4px solid #090909;background:#ff321d}
+.collage-dashboard-stats small{font:700 9px 'Space Mono',monospace}
+.collage-dashboard-stats b{font:clamp(22px,3.4vw,38px)/1 'Archivo Black';overflow-wrap:anywhere}
+.collage-project-list{grid-column:1/-1;grid-row:3/5;background:#fff}
+.collage-list-head,.collage-project-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(82px,.45fr) 30px;align-items:center;gap:8px;padding:14px 16px}
+.collage-list-head{background:#090909;color:#fff;font:700 9px 'Space Mono',monospace}
+.collage-project-row{min-height:58px;border-bottom:3px solid #090909;font:700 11px 'Space Mono',monospace}
+.collage-project-row:nth-child(odd){background:#e9e7df}
+.collage-project-row>b{overflow-wrap:anywhere}
+.collage-project-row i{font-style:normal;display:inline-block;background:#ffe500;padding:5px;margin-right:8px}
+.project-status{font-size:8px;padding:6px 5px;text-align:center;border:2px solid #090909;white-space:nowrap}
+.status-build{background:#ff6a00}.status-live{background:#b7f36b}.status-plan{background:#fff}
+.collage-project-row .project-open{font-size:20px;text-align:center}
+.collage-dashboard-action{padding:14px 16px;background:#fff;font:700 10px 'Space Mono',monospace;border-bottom:4px solid #090909}
+.collage-bottomline{grid-column:1/-1;grid-row:5;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px;background:#090909;color:#fff;font:700 9px 'Space Mono',monospace}
+.collage-bottomline b{color:#ffe500}
+@media(max-width:800px){
+.brutal-collage{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:36px auto auto auto 38px}
+.collage-topline{padding:0 8px;font-size:8px}
+.collage-dashboard-title{padding:18px 12px;min-height:245px}
+.collage-dashboard-title>span{font-size:clamp(38px,10.5vw,60px)}
+.collage-dashboard-title small{font-size:8px}
+.collage-dashboard-stats>div{padding:13px 10px;gap:10px}
+.collage-dashboard-stats small{font-size:8px}
+.collage-dashboard-stats b{font-size:clamp(20px,5vw,30px)}
+.collage-list-head,.collage-project-row{grid-template-columns:minmax(0,1fr) minmax(74px,.5fr) 22px;gap:5px;padding:12px 8px}
+.collage-list-head{font-size:7px}
+.collage-project-row{font-size:9px;min-height:54px}
+.collage-project-row i{padding:4px;margin-right:4px}
+.project-status{font-size:7px;padding:5px 3px}
+.collage-bottomline{padding:0 7px;font-size:7px}
+}
+@media(max-width:380px){
+.collage-topline{font-size:7px;gap:4px}
+.collage-dashboard-title{padding:14px 8px;min-height:220px}
+.collage-dashboard-title>span{font-size:35px}
+.collage-dashboard-stats>div{padding:10px 7px}
+.collage-dashboard-stats small{font-size:7px}
+.collage-dashboard-stats b{font-size:18px}
+.collage-list-head,.collage-project-row{grid-template-columns:minmax(0,1fr) 72px 18px;padding:10px 6px;gap:3px}
+.collage-list-head{font-size:6px}
+.collage-project-row{font-size:8px}
+.project-status{font-size:6px;padding:4px 2px}
+.collage-bottomline{font-size:6px}
+}
