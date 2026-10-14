@@ -275,3 +275,8 @@
  .console-body{padding:16px}
  .brutal-footer h2{font-size:74px}
 }
+
+.brutal-impact-strip{width:min(1180px,calc(100% - 64px));margin:-18px auto 72px;background:#090909;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border:5px solid #090909;box-shadow:8px 8px 0 #ffe500;transform:rotate(-.5deg);font:700 11px 'Space Mono',monospace;letter-spacing:.08em}
+.brutal-impact-strip b{font:30px/1 'Archivo Black';color:#ff321d}
+@media(max-width:800px){.brutal-impact-strip{width:calc(100% - 32px);margin:-12px auto 58px;padding:13px 9px;gap:6px;font-size:8px;letter-spacing:0;border-width:4px;box-shadow:6px 6px 0 #ffe500}.brutal-impact-strip b{font-size:21px}}
+@media(max-width:380px){.brutal-impact-strip{width:calc(100% - 24px);font-size:7px;padding:11px 6px;gap:4px}}
