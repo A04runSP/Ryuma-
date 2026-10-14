@@ -9,3 +9,23 @@
 .brutal-page button:focus-visible{outline:4px solid #ff321d;outline-offset:4px}
 .brutal-switch button:focus-visible,.brutal-footer button:focus-visible,.brutal-nav button:focus-visible{outline-color:#ffe500}
 @media(prefers-reduced-motion:reduce){.brutal-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Composition: a purposeful brutalist editorial interface, not a slogan-only collage. */
+.brutal-collage{height:640px;min-height:0;background:#f7f5ef;display:grid;grid-template-columns:1fr 1.15fr .72fr;grid-template-rows:42px 1fr 1.2fr 44px;gap:0;}
+.collage-topline{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 18px;background:#090909;color:#fff;border-bottom:4px solid #090909;font-size:10px;font-weight:700;letter-spacing:.06em}
+.collage-headline{grid-column:1/3;grid-row:2;background:#ffe500;border-right:5px solid #090909;border-bottom:5px solid #090909;padding:20px 18px;font:clamp(42px,6vw,76px)/.83 'Archivo Black';letter-spacing:-.055em}
+.collage-headline span{color:#ff321d}
+.collage-side-tag{grid-column:3;grid-row:2;background:#ff321d;color:#090909;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font:700 13px/1.7 'Space Mono',monospace;border-bottom:5px solid #090909}
+.collage-feature{grid-column:1/3;grid-row:3;position:relative;background:#fff;border-right:5px solid #090909;padding:20px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;}
+.collage-feature-index{font:700 10px 'Space Mono',monospace;border-bottom:3px solid #090909;padding-bottom:7px;width:100%}
+.collage-feature-title{font:clamp(45px,6.4vw,78px)/.78 'Archivo Black';letter-spacing:-.06em;margin:18px 0 8px}
+.collage-feature-title em{font-style:normal;color:#ff321d}
+.collage-feature p{font:12px/1.5 'Space Mono',monospace;max-width:260px;margin:0 0 14px}
+.collage-feature-link{display:flex;align-items:center;gap:8px;background:#090909;color:#fff;padding:11px 12px;font:700 10px 'Space Mono',monospace;box-shadow:5px 5px 0 #ff321d}
+.collage-stat{grid-column:3;grid-row:3;background:#ff6a00;border-left:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:12px;border-bottom:5px solid #090909}
+.collage-stat b{font:clamp(42px,5vw,64px)/.9 'Archivo Black';letter-spacing:-.06em}
+.collage-stat span{font:700 9px/1.55 'Space Mono',monospace;margin-top:14px}
+.collage-bottomline{grid-column:1/-1;grid-row:4;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 14px;background:#090909;color:#fff;font:700 9px 'Space Mono',monospace}
+.collage-bottomline b{color:#ffe500}
+@media(max-width:800px){.brutal-collage{height:570px;grid-template-columns:1fr 1fr .68fr;grid-template-rows:38px 1fr 1.22fr 40px}.collage-topline{padding:0 10px;font-size:8px;letter-spacing:0}.collage-headline{padding:18px 12px;font-size:clamp(37px,11vw,58px)}.collage-side-tag{font-size:10px}.collage-feature{padding:14px 12px}.collage-feature-title{font-size:clamp(42px,12vw,60px)}.collage-feature p{font-size:10px}.collage-feature-link{font-size:8px;padding:9px}.collage-stat{padding:8px}.collage-stat b{font-size:clamp(32px,9vw,46px)}.collage-stat span{font-size:7px;margin-top:10px}.collage-bottomline{padding:0 8px;font-size:7px}}
+@media(max-width:380px){.brutal-collage{height:520px;grid-template-rows:36px 1fr 1.18fr 38px}.collage-headline{font-size:clamp(34px,10.5vw,42px);padding:15px 9px}.collage-feature{padding:12px 9px}.collage-feature-title{font-size:38px}.collage-stat b{font-size:30px}.collage-stat span{font-size:6px}.collage-topline{font-size:7px}.collage-bottomline{font-size:6px}}
