@@ -15,7 +15,69 @@ export default function SkeuomorphismStyle({ onNavigate }) {
   const [active, setActive] = useState(false);
   const [value, setValue] = useState(50);
   const [volume, setVolume] = useState(62);
-  const [isPlaying, setIsPlaying] = useState(false);\n  const audioContext = useRef(null);\n  const speechTimer = useRef(null);\n\n  const getAudio = () => {\n    const AudioCtx = window.AudioContext || window.webkitAudioContext;\n    if (!AudioCtx) return null;\n    if (!audioContext.current) audioContext.current = new AudioCtx();\n    if (audioContext.current.state === 'suspended') audioContext.current.resume();\n    return audioContext.current;\n  };\n\n  const radioClick = (kind) => {\n    const ctx = getAudio();\n    if (!ctx) return;\n    const now = ctx.currentTime;\n    const osc = ctx.createOscillator();\n    const gain = ctx.createGain();\n    osc.type = kind === 'off' ? 'sine' : 'triangle';\n    osc.frequency.setValueAtTime(kind === 'off' ? 520 : 180, now);\n    osc.frequency.exponentialRampToValueAtTime(kind === 'off' ? 120 : 720, now + (kind === 'tune' ? 0.18 : 0.09));\n    gain.gain.setValueAtTime(0.0001, now);\n    gain.gain.exponentialRampToValueAtTime(0.12, now + 0.012);\n    gain.gain.exponentialRampToValueAtTime(0.0001, now + (kind === 'tune' ? 0.2 : 0.13));\n    osc.connect(gain); gain.connect(ctx.destination);\n    osc.start(now); osc.stop(now + (kind === 'tune' ? 0.21 : 0.14));\n    if (kind === 'on' || kind === 'tune') {\n      const length = Math.floor(ctx.sampleRate * (kind === 'on' ? 0.16 : 0.1));\n      const buffer = ctx.createBuffer(1, length, ctx.sampleRate);\n      const data = buffer.getChannelData(0);\n      for (let i = 0; i < length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / length) * 0.22;\n      const noise = ctx.createBufferSource(); const ng = ctx.createGain();\n      noise.buffer = buffer; ng.gain.value = kind === 'on' ? 0.13 : 0.07; noise.connect(ng); ng.connect(ctx.destination); noise.start();\n    }\n  };\n\n  const stopRj = () => {\n    if ('speechSynthesis' in window) window.speechSynthesis.cancel();\n    if (speechTimer.current) window.clearTimeout(speechTimer.current);\n    speechTimer.current = null;\n  };\n\n  const startRj = () => {\n    stopRj();\n    if (!('speechSynthesis' in window)) return;\n    const lines = [\n      'Good evening, radio lovers! You are tuned in to Ryuma FM, where every frequency has a feeling.',\n      'This is your host, RJ Nova. Stay with me, keep the dial right here, and let the music find you.',\n      'You are listening to Ryuma Radio. Turn the dial, find your frequency, and make this moment yours.'\n    ];\n    let index = 0;\n    const speakNext = () => {\n      if (!isPlaying) return;\n      const utterance = new SpeechSynthesisUtterance(lines[index % lines.length]);\n      utterance.rate = 0.92; utterance.pitch = 0.88; utterance.volume = Math.max(0.2, volume / 100);\n      const voices = window.speechSynthesis.getVoices();\n      const voice = voices.find(v => /en-IN|en-GB/i.test(v.lang)) || voices.find(v => /en/i.test(v.lang));\n      if (voice) utterance.voice = voice;\n      utterance.onend = () => { if (isPlaying) speechTimer.current = window.setTimeout(() => { index++; speakNext(); }, 1400); };\n      window.speechSynthesis.speak(utterance);\n    };\n    speakNext();\n  };
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioContext = useRef(null);
+  const speechTimer = useRef(null);
+
+  const getAudio = () => {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return null;
+    if (!audioContext.current) audioContext.current = new AudioCtx();
+    if (audioContext.current.state === 'suspended') audioContext.current.resume();
+    return audioContext.current;
+  };
+
+  const radioClick = (kind) => {
+    const ctx = getAudio();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = kind === 'off' ? 'sine' : 'triangle';
+    osc.frequency.setValueAtTime(kind === 'off' ? 520 : 180, now);
+    osc.frequency.exponentialRampToValueAtTime(kind === 'off' ? 120 : 720, now + (kind === 'tune' ? 0.18 : 0.09));
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.12, now + 0.012);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + (kind === 'tune' ? 0.2 : 0.13));
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(now); osc.stop(now + (kind === 'tune' ? 0.21 : 0.14));
+    if (kind === 'on' || kind === 'tune') {
+      const length = Math.floor(ctx.sampleRate * (kind === 'on' ? 0.16 : 0.1));
+      const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / length) * 0.22;
+      const noise = ctx.createBufferSource(); const ng = ctx.createGain();
+      noise.buffer = buffer; ng.gain.value = kind === 'on' ? 0.13 : 0.07; noise.connect(ng); ng.connect(ctx.destination); noise.start();
+    }
+  };
+
+  const stopRj = () => {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    if (speechTimer.current) window.clearTimeout(speechTimer.current);
+    speechTimer.current = null;
+  };
+
+  const startRj = () => {
+    stopRj();
+    if (!('speechSynthesis' in window)) return;
+    const lines = [
+      'Good evening, radio lovers! You are tuned in to Ryuma FM, where every frequency has a feeling.',
+      'This is your host, RJ Nova. Stay with me, keep the dial right here, and let the music find you.',
+      'You are listening to Ryuma Radio. Turn the dial, find your frequency, and make this moment yours.'
+    ];
+    let index = 0;
+    const speakNext = () => {
+      if (!isPlaying) return;
+      const utterance = new SpeechSynthesisUtterance(lines[index % lines.length]);
+      utterance.rate = 0.92; utterance.pitch = 0.88; utterance.volume = Math.max(0.2, volume / 100);
+      const voices = window.speechSynthesis.getVoices();
+      const voice = voices.find(v => /en-IN|en-GB/i.test(v.lang)) || voices.find(v => /en/i.test(v.lang));
+      if (voice) utterance.voice = voice;
+      utterance.onend = () => { if (isPlaying) speechTimer.current = window.setTimeout(() => { index++; speakNext(); }, 1400); };
+      window.speechSynthesis.speak(utterance);
+    };
+    speakNext();
+  };
 
   useEffect(() => {
     if (!isPlaying) return;
