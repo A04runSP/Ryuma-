@@ -110,3 +110,31 @@
 .raw-form button{justify-self:start;border:2px outset buttonborder;border-radius:0;background:#eee;color:#111;padding:5px 12px;font:13px Arial,Helvetica,sans-serif;cursor:pointer}
 .raw-footnote{border-top:1px solid #111;padding-top:9px;margin-top:24px!important;font:11px/1.4 monospace!important}
 @media(max-width:800px){.brutal-collage{padding:12px}.raw-site-title{font-size:28px}.raw-site-columns{grid-template-columns:1fr;gap:14px}.raw-site-nav{border-right:0;border-bottom:1px solid #111;padding:0 0 12px}.raw-site-nav ul{display:flex;flex-wrap:wrap;gap:5px 18px}.raw-site-nav li{margin:3px 0}.raw-site-main h4{font-size:17px}}
+
+
+/* Personal homepage specimen: raw, eccentric, content-led, and intentionally not a polished dashboard. */
+.brutal-collage{display:block;height:auto;min-height:0;padding:10px 8px 18px;background:#fff;color:#111;border:0;font-family:"Times New Roman",Times,serif;overflow-wrap:anywhere}
+.raw-browser-note{font:12px/1.5 monospace;border:0;border-bottom:1px dotted #555;padding-bottom:5px}
+.raw-site-title{font:bold 36px/1.05 "Times New Roman",serif;letter-spacing:-.03em;margin:16px 0 8px;text-transform:none}
+.raw-site-intro{font:17px/1.35 "Times New Roman",serif;max-width:none;margin:0 0 12px}
+.raw-sticker{display:inline-block;background:#ffff00;color:#f00;font:bold 15px/1.2 monospace;padding:4px 7px;border:1px dashed #f00;transform:rotate(-1deg);margin:2px 0 8px}
+.brutal-collage>hr{border:0;border-top:1px solid #555;margin:10px 0}
+.raw-site-columns{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px}
+.raw-site-nav{font:15px/1.4 "Times New Roman",serif;border:0;border-right:1px dashed #777;padding:0 12px 0 0}
+.raw-site-nav>b{font:bold 13px monospace}
+.raw-site-nav ul,.raw-site-main ul{padding-left:20px}
+.raw-site-nav li,.raw-site-main li{margin:4px 0}
+.brutal-collage a{color:#00e;text-decoration:underline;cursor:pointer}
+.brutal-collage a:visited{color:#551a8b}
+.raw-site-nav mark,.raw-site-main mark{background:#ff0;color:#111}
+.raw-site-main h4{font:bold 21px/1.1 "Times New Roman",serif;margin:18px 0 6px;text-transform:none}
+.raw-site-main p,.raw-site-main li{font:16px/1.4 "Times New Roman",serif}
+.raw-site-main p{margin:7px 0}
+.raw-form{display:grid;grid-template-columns:1fr;gap:5px;max-width:420px;font:15px "Times New Roman",serif}
+.raw-form label{margin-top:4px}
+.raw-form input:not([type=checkbox]),.raw-form textarea{width:100%;border:1px solid #777;border-radius:0;background:#fff;color:#111;padding:5px;font:16px "Times New Roman",serif}
+.raw-form .raw-check{display:flex;align-items:center;gap:6px}
+.raw-form button{justify-self:start;border:2px outset buttonborder;border-radius:0;background:#eee;color:#111;padding:3px 9px;font:13px Arial,sans-serif;cursor:pointer}
+.raw-form-result{font:13px monospace!important}
+.raw-footnote{border-top:1px dotted #777;padding-top:6px;margin-top:18px!important;font:12px/1.4 monospace!important}
+@media(max-width:800px){.brutal-collage{padding:8px 4px 14px}.raw-site-title{font-size:32px}.raw-site-columns{grid-template-columns:1fr;gap:10px}.raw-site-nav{border-right:0;border-bottom:1px dashed #777;padding:0 0 8px}.raw-site-nav ul{display:block}.raw-site-nav li{margin:4px 0}.raw-site-main h4{font-size:21px}.raw-site-intro{font-size:17px}}
