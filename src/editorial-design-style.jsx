@@ -1,118 +1,82 @@
 import React from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, ArrowRight } from 'lucide-react';
 import './editorial-design-style.css';
 
-const images = {
-  skyline: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1800&q=88',
-  street: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=88',
-  architecture: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=88',
-  night: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=88',
-  detail: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=88'
+const art = {
+  portrait: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1500&q=90',
+  gallery: 'https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1500&q=90',
+  frame: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=1200&q=90',
+  detail: 'https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=1400&q=90'
 };
 
-const principles = [
-  { n: '01', title: 'Grid', copy: 'A quiet structure lets very different content share one page.' },
-  { n: '02', title: 'Hierarchy', copy: 'Scale, contrast and placement tell the reader where to begin.' },
-  { n: '03', title: 'Typography', copy: 'Display type sets the voice; body type carries the story.' },
-  { n: '04', title: 'Image', copy: 'Cropping and sequence turn photography into an argument.' },
-  { n: '05', title: 'Navigation', copy: 'Captions, labels and folios keep the reader oriented.' }
-];
-
 export default function EditorialDesignStyle({ onNavigate }) {
-  return <main className="editorial-shell editorial-real ed2-editorial">
-    <nav className="ed2-nav" aria-label="Editorial navigation">
-      <button onClick={() => onNavigate?.('library')}><ArrowLeft size={16} /> <span>DESIGN LIBRARY</span></button>
-      <button className="ed2-wordmark" onClick={() => onNavigate?.('home')}>RYŪMA <i>リューマ</i></button>
-      <span className="ed2-nav-index">FIELD JOURNAL / 07</span>
+  return <main className="editorial-shell ed3-editorial">
+    <nav className="ed3-nav">
+      <button onClick={() => onNavigate?.('library')}><ArrowLeft size={16}/> DESIGN LIBRARY</button>
+      <span className="ed3-brand">RYŪMA <i>ART / CULTURE</i></span>
+      <span className="ed3-folio">EXHIBITION JOURNAL — 07</span>
     </nav>
 
-    <header className="ed2-cover">
-      <div className="ed2-issue-line"><span>THE VISUAL REVIEW</span><span>INDEPENDENT CULTURE JOURNAL</span><span>VOL. 07 — 2026</span></div>
-      <div className="ed2-cover-rule" />
-      <div className="ed2-cover-grid">
-        <div className="ed2-cover-copy">
-          <span className="ed2-eyebrow"><b>THE CITY ISSUE</b> / 01 — FEATURE</span>
-          <h1 className="ed2-photo-headline"><span>THE</span><span className="ed2-photo-type" style={{'--ed2-type-image': `url("${images.skyline}")`}}>CITY</span><span>NEVER</span><em>SLEEPS.</em></h1>
-          <p className="ed2-cover-deck">A visual field guide to the small details, changing light and restless rhythms that make a city feel alive.</p>
-          <div className="ed2-cover-byline"><span>WORDS & ART DIRECTION</span><b>THE RYŪMA EDITORIAL DESK</b></div>
+    <header className="ed3-cover">
+      <div className="ed3-masthead"><span>THE INDEPENDENT ART REVIEW</span><span>ISSUE 07 / AUTUMN 2026</span><span>EST. MMXXI</span></div>
+      <div className="ed3-cover-stage">
+        <div className="ed3-cover-title">
+          <p className="ed3-kicker"><span className="ed3-red-dot"/> A NEW LOOK AT OLD MASTERS / FEATURE 01</p>
+          <h1><span>THE</span><span className="ed3-image-word" style={{'--ed3-photo':`url("${art.portrait}")`}}>ART</span><span>THAT</span><em>STAYS.</em></h1>
+          <div className="ed3-cover-deck"><span className="ed3-deck-mark">↘</span><p>Some images refuse to stay inside their frames. A closer look at the works that follow us out of the gallery.</p></div>
+          <div className="ed3-cover-credit"><span>WORDS / LENA MORI</span><b>THE RYŪMA EDITORIAL DESK</b></div>
         </div>
-        <figure className="ed2-cover-photo">
-          <img src={images.skyline} alt="A city skyline rising into the evening sky" />
-          <span className="ed2-photo-index">FIG. 01 / CITY IN TRANSITION</span>
-          <figcaption><b>08:12 → 23:48</b><span>ONE CITY, MANY TEMPOS</span></figcaption>
+        <figure className="ed3-cover-art">
+          <div className="ed3-frame"><img src={art.portrait} alt="Expressive fine-art portrait in a gallery" /></div>
+          <span className="ed3-frame-label">PLATE 01 — THE GAZE</span>
+          <span className="ed3-art-seal">LOOK<br/>AGAIN<i>✳</i></span>
+          <figcaption><b>FIG. 01</b><span>THE IMAGE OUTLIVES THE ROOM</span></figcaption>
         </figure>
-        <div className="ed2-cover-stamp" aria-hidden="true">FIELD<br />NOTES<br /><i>№ 07</i></div>
       </div>
-      <div className="ed2-cover-bottom"><span>ARCHITECTURE</span><i>✳</i><span>PEOPLE</span><i>✳</i><span>LIGHT</span><i>✳</i><span>EVERYDAY LIFE</span><span className="ed2-cover-bottom-right">SCROLL TO EXPLORE ↓</span></div>
+      <div className="ed3-cover-footer"><span>PAINTING <b>✳</b> MEMORY <b>✳</b> MEANING</span><span>SCROLL THE EXHIBITION ↓</span></div>
     </header>
 
-    <section className="ed2-intro">
-      <div className="ed2-intro-label"><span>THE EDITOR'S NOTE</span><span>01 / 05</span></div>
-      <h2>Look closer.<br /><i>The story is already there.</i></h2>
-      <div className="ed2-intro-copy">
-        <p>A city is never one picture. It is a thousand competing details: a window catching the sun, a street filling with people, a building that changes character after dark.</p>
-        <p>This issue follows those details and shows how an editorial page can do the same thing — select, sequence and give each moment the space it deserves.</p>
-        <div className="ed2-signoff"><span>THE VISUAL REVIEW</span><b>EDITOR'S NOTE / 01</b></div>
+    <section className="ed3-opening">
+      <div className="ed3-opening-index"><span>01</span><b>THE OPENING NOTE</b><span>3 MIN READ</span></div>
+      <div className="ed3-opening-grid">
+        <h2>A picture<br/>is never <i>just</i><br/><span>a picture.</span></h2>
+        <div className="ed3-opening-copy"><p className="ed3-dropcap">The first thing you notice is rarely the whole story. A glance, a hand, a colour held just a little longer than expected — the smallest detail can keep a work alive long after you leave the room.</p><p>This issue explores how an editorial layout can borrow that same power: one image, one decisive headline, and enough quiet space for the viewer to look again.</p><span className="ed3-signature">A NOTE FROM THE EDITOR <i>↗</i></span></div>
       </div>
     </section>
 
-    <section className="ed2-feature" aria-labelledby="ed2-feature-title">
-      <div className="ed2-section-rail"><span>01</span><span>THE FEATURE</span><span>READING TIME / 4 MIN</span></div>
-      <div className="ed2-feature-heading">
-        <div><span className="ed2-eyebrow">URBAN CULTURE / OBSERVATION</span><h2 id="ed2-feature-title">A city is a<br /><i>moving composition.</i></h2></div>
-        <p>Every street has a visual rhythm. The trick is learning what to notice — and what to leave out.</p>
-      </div>
-      <figure className="ed2-wide-photo">
-        <img src={images.street} alt="A dense city street framed by buildings and changing light" />
-        <figcaption><span>FIG. 02 — THE STREET AS A LIVING GRID</span><span>OBSERVED / 17:26</span></figcaption>
-      </figure>
-      <div className="ed2-article-grid">
-        <div className="ed2-margin-note"><span>IN THE FRAME</span><b>01—03</b><i>↘</i></div>
-        <div className="ed2-article-copy">
-          <p className="ed2-lead">At street level, the city refuses to stay still. People interrupt the geometry. Reflections double a façade. A passing bus briefly turns a familiar corner into a block of colour.</p>
-          <p>Look at the scene as an editor would. The buildings establish structure; movement creates a second layer; the light decides what becomes visible first. None of these elements tells the story alone.</p>
-          <p>Good editorial design works through the same kind of selection. It gives the eye an entrance, creates a path through the material and leaves enough room for the reader to make connections.</p>
-        </div>
-        <aside className="ed2-side-quote"><span>THE CENTRAL IDEA</span><blockquote>“A page is not filled. It is <i>composed.</i>”</blockquote><b>— FIELD NOTE 01</b></aside>
-      </div>
+    <section className="ed3-feature">
+      <div className="ed3-section-head"><span>02 / THE FEATURE</span><span>LOOKING IS AN ACTIVE VERB</span><span>PLATE 02</span></div>
+      <div className="ed3-feature-title"><span className="ed3-kicker">ON THE POWER OF A SINGLE IMAGE</span><h2>What the eye<br/><i>cannot leave behind.</i></h2><p>Art creates a pause in the noise. Editorial design decides how that pause begins — and where it leads.</p></div>
+      <figure className="ed3-gallery-image"><img src={art.gallery} alt="A gallery space filled with artworks" /><figcaption><span>01 — THE ROOM</span><span>ART IN CONVERSATION WITH SPACE</span></figcaption></figure>
+      <div className="ed3-feature-notes"><div className="ed3-note-number">A<br/>01</div><p className="ed3-feature-lead">The frame gives an image a boundary. The page gives it a second life.</p><div className="ed3-note-copy"><p>Scale changes the way we read an image. A small reproduction asks us to lean in; a full-bleed image makes us stop. The contrast between the two is not decoration — it is pacing.</p><p>Place the image first, then let type respond to it. The strongest editorial pages feel discovered, not assembled from a template.</p></div></div>
     </section>
 
-    <section className="ed2-essay">
-      <div className="ed2-section-rail"><span>02</span><span>THE PHOTO ESSAY</span><span>THREE MOMENTS</span></div>
-      <div className="ed2-essay-title"><span className="ed2-eyebrow">LIGHT / TIME / PLACE</span><h2>Three ways<br />to <i>see the city.</i></h2></div>
-      <div className="ed2-photo-sequence">
-        <figure className="ed2-sequence-card ed2-sequence-one"><img src={images.architecture} alt="Minimal architectural forms seen from street level" /><figcaption><b>01 / STRUCTURE</b><span>Buildings draw the first grid.</span></figcaption></figure>
-        <div className="ed2-sequence-note"><span className="ed2-big-number">08<span>:</span>12</span><b>MORNING / THE FRAME</b><p>Hard edges, long shadows and open space make the structure legible.</p><i>↗</i></div>
-        <figure className="ed2-sequence-card ed2-sequence-two"><img src={images.street} alt="Urban street activity layered between buildings" /><figcaption><b>02 / MOVEMENT</b><span>People break the pattern.</span></figcaption></figure>
-        <div className="ed2-sequence-note ed2-sequence-note-dark"><span className="ed2-big-number">17<span>:</span>26</span><b>EVENING / THE PULSE</b><p>Repetition gives the street rhythm; one interruption gives it character.</p><i>↗</i></div>
-        <figure className="ed2-sequence-card ed2-sequence-three"><img src={images.night} alt="City buildings and lights against a darkening sky" /><figcaption><b>03 / ATMOSPHERE</b><span>Light rewrites the scene.</span></figcaption></figure>
+    <section className="ed3-spread">
+      <div className="ed3-spread-top"><span>03 / THE IMAGE STUDY</span><span>TYPE × PHOTOGRAPHY</span></div>
+      <div className="ed3-spread-heading"><h2>LET THE IMAGE<br/><i>BREAK THE FRAME.</i></h2><p>A poster study in three layers: the picture, the word, and the detail that refuses to sit still.</p></div>
+      <div className="ed3-poster">
+        <div className="ed3-poster-top"><span>THE ART REVIEW / SPECIAL EXHIBITION</span><span>OPEN DAILY — 10:00 / 18:00</span></div>
+        <div className="ed3-poster-art"><img src={art.portrait} alt="Fine-art portrait used as the poster's central image"/><span className="ed3-poster-overline">A FACE CAN HOLD<br/>A THOUSAND STORIES</span><span className="ed3-poster-giant">STILL<br/><i>HERE.</i></span><div className="ed3-mini-frame"><img src={art.frame} alt="A close view of a framed painting"/></div><span className="ed3-poster-ticket">EXHIBITION<br/><b>NO. 07</b><i>↗</i></span></div>
+        <div className="ed3-poster-bottom"><b>THE ART THAT STAYS</b><span>PAST / PRESENT / ALWAYS</span><span>RYŪMA CULTURE DESK</span></div>
+      </div>
+      <div className="ed3-spread-caption"><span>FIG. 03 — THE CAMPAIGN POSTER</span><p>Photography becomes the material of the headline. A second framed image breaks the grid; the red field anchors the composition.</p></div>
+    </section>
+
+    <section className="ed3-practice">
+      <div className="ed3-practice-head"><span className="ed3-kicker">04 / ANATOMY OF THE SPREAD</span><h2>Five choices.<br/><i>One clear voice.</i></h2><p>Each element has a job. The design works when every choice supports the same story.</p></div>
+      <div className="ed3-anatomy">
+        <article><span>01</span><b className="ed3-anatomy-symbol">▦</b><div><h3>Composition</h3><p>Let one image lead. Build the surrounding elements around its visual weight.</p></div></article>
+        <article><span>02</span><b className="ed3-anatomy-symbol">Aa</b><div><h3>Image-filled type</h3><p>Clip photography into one short word so the image and headline become a single object.</p></div></article>
+        <article><span>03</span><b className="ed3-anatomy-symbol">↗</b><div><h3>Overlap</h3><p>Allow one frame or label to cross the edge. One controlled interruption creates depth.</p></div></article>
+        <article><span>04</span><b className="ed3-anatomy-symbol">◩</b><div><h3>Contrast</h3><p>Pair a vivid image with paper, ink and one decisive accent colour.</p></div></article>
+        <article><span>05</span><b className="ed3-anatomy-symbol">№</b><div><h3>Captions</h3><p>Small labels and folios orient the reader without competing with the artwork.</p></div></article>
       </div>
     </section>
 
-    <section className="ed2-anatomy">
-      <div className="ed2-anatomy-top"><div><span className="ed2-eyebrow">03 / DESIGN ANATOMY</span><h2>Five decisions.<br /><i>One reading experience.</i></h2></div><p>Editorial design is the coordination of parts. Each part has its own job — but the page only works when they work together.</p></div>
-      <div className="ed2-principles">{principles.map((item, index) => <article className={`ed2-principle ed2-principle-${index + 1}`} key={item.n}><span className="ed2-principle-num">{item.n}</span><div className="ed2-principle-mark" aria-hidden="true">{['▦', '↗', 'Aa', '◩', '⌁'][index]}</div><h3>{item.title}</h3><p>{item.copy}</p><span className="ed2-principle-line" /></article>)}</div>
-    </section>
-
-    <section className="ed2-workshop">
-      <div className="ed2-workshop-header"><span className="ed2-eyebrow">04 / INSIDE THE LAYOUT</span><h2>One story.<br /><i>Different scales.</i></h2><p>Notice the defining technique of this issue: a photograph is not just placed next to a headline. It becomes the fill inside the letters themselves, then returns as a full image to establish context.</p></div>
-      <div className="ed2-layout-board">
-        <div className="ed2-board-top"><span>THE VISUAL REVIEW</span><b>TYPE / IMAGE STUDY 07</b><span>FIG. 04</span></div>
-        <div className="ed2-board-main">
-          <div className="ed2-board-headline"><span>STORY / 01</span><h3>THE <span className="ed2-board-photo-type" style={{'--ed2-type-image': `url("${images.skyline}")`}}>CITY</span><br /><i>NEVER SLEEPS.</i></h3><p>Photography becomes typography. The image carries the story before the reader reaches the first paragraph.</p></div>
-          <div className="ed2-board-image"><img src={images.skyline} alt="The same skyline photograph used as a typographic image fill" /><span>FIG. A / SOURCE IMAGE</span></div>
-          <div className="ed2-board-body"><b>THE TECHNIQUE</b><p>Use a high-resolution photograph as the background of large display letters. Clip the image to the text, keep the word legible, and let the full photograph elsewhere on the page reveal the complete scene.</p></div>
-          <div className="ed2-board-fact"><span>FIELD NOTE</span><strong>01</strong><i>Image becomes<br />the letterform.</i></div>
-          <div className="ed2-board-caption"><b>CAPTION / NAVIGATION</b><p>Use this technique for a short, meaningful word. Pair it with clear copy and a restrained grid so the effect stays editorial, not decorative noise.</p><span>RYŪMA EDITORIAL DESK — 07</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section className="ed2-closing">
-      <div className="ed2-closing-mark">THE VISUAL REVIEW <span>✳</span> ISSUE 07</div>
-      <h2>Let the image<br /><i>live inside the type.</i></h2>
-      <p>Editorial design gives information a voice, a pace and a place to land. When photography becomes part of the letterform, the typography itself becomes the visual story.</p>
-      <div className="ed2-closing-bottom"><span>GRID · HIERARCHY · IMAGE · TYPE · DETAIL</span><button onClick={() => onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowRight size={17} /></button></div>
+    <section className="ed3-closing">
+      <div className="ed3-closing-image"><img src={art.detail} alt="A detail of a painting with expressive colour and texture"/><span>PLATE 04 / THE LAST LOOK</span></div>
+      <div className="ed3-closing-copy"><span className="ed3-kicker">THE EDITOR'S LAST WORD</span><h2>Make them<br/><i>look twice.</i></h2><p>Great editorial design doesn't simply show the reader what matters. It creates a moment they want to stay with.</p><button onClick={() => onNavigate?.('library')}>RETURN TO DESIGN LIBRARY <ArrowRight size={16}/></button></div>
+      <footer className="ed3-footer"><span>RYŪMA — DESIGN ANATOMY</span><span>IMAGE / TYPE / STORY</span><span>END OF ISSUE 07 ↗</span></footer>
     </section>
   </main>;
 }
