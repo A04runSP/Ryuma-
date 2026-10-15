@@ -56,14 +56,14 @@ export default function Dashboard({ onNavigate }) {
     <header className="dashboard-nav">
       <button className="dashboard-brand" onClick={goHome}><span>R</span><b>RYUMA</b><em>リューマ</em></button>
       <div className="dashboard-nav-title">DESIGN ANATOMY</div>
-      <div className="dashboard-nav-actions"><button className="dashboard-back" onClick={goHome}><ArrowLeft size={15}/> BACK TO HOME</button><button className="dashboard-library" onClick={goLibrary}>LIBRARY <ArrowRight size={15}/></button></div>
+      <div className="dashboard-nav-actions"><button className="dashboard-back" onClick={goHome}><ArrowLeft size={15}/> BACK TO HOME</button></div>
     </header>
 
     <section className="dashboard-hero">
       <span className="dashboard-kicker">DESIGN ANATOMY / 01</span>
       <h1>Design is a<br/><span>system.</span></h1>
       <p>Look beyond the surface. Explore the decisions, influences and visual languages that make design feel the way it does.</p>
-      <button className="dashboard-cta" onClick={goLibrary}>EXPLORE THE LIBRARY <ArrowRight size={18}/></button>
+      <button className="dashboard-cta" onClick={goLibrary}>EXPLORE THE LIBRARY <ArrowRight size={18}/></button><button className="dashboard-cta" onClick={()=>onNavigate?.("practice-studio")}>OPEN PRACTICE STUDIO <ArrowRight size={18}/></button>
     </section>
 
     <section className="dashboard-story">

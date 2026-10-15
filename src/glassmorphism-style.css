@@ -2,3 +2,419 @@
 .glass-style-page{min-height:100dvh;position:relative;overflow-x:clip;overflow-y:visible;background:radial-gradient(circle at 10% 12%,#ffd6dc 0,rgba(255,214,220,.72) 18%,transparent 38%),radial-gradient(circle at 88% 22%,#e7d8ff 0,rgba(231,216,255,.72) 20%,transparent 40%),radial-gradient(circle at 18% 58%,#ffe9ee 0,rgba(255,233,238,.65) 18%,transparent 38%),radial-gradient(circle at 82% 72%,#eee5ff 0,rgba(238,229,255,.68) 20%,transparent 42%),linear-gradient(180deg,#fff 0%,#fffafd 48%,#fff 100%);color:#20202a;font-family:'Nunito',sans-serif;isolation:isolate}.glass-style-page::after{display:none!important}.glass-style-page::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 35% 35%,rgba(255,193,202,.18),transparent 24%),radial-gradient(circle at 65% 58%,rgba(215,197,255,.18),transparent 26%)}.glass-style-page>*{position:relative;z-index:1}.glass-blob{position:absolute!important;z-index:0!important;border-radius:50%;filter:blur(75px);opacity:.55;pointer-events:none}.blob-red{width:420px;height:420px;background:#ffc1ca;left:-140px;top:110px}.blob-purple{width:500px;height:500px;background:#d7c5ff;right:-180px;top:300px}.blob-pink{width:340px;height:340px;background:#ffd8e7;left:38%;bottom:-120px}.glass-dot-grid{position:absolute!important;z-index:0!important;right:7%;top:18%;width:150px;height:150px;opacity:.25;background-image:radial-gradient(#9b6bda 1.5px,transparent 1.5px);background-size:18px 18px}.glass-style-nav{width:min(1180px,calc(100% - 72px));height:92px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(35,30,45,.1);font-size:9px;letter-spacing:.16em;color:rgba(35,30,45,.48)}.glass-style-nav button{border:0;background:none;color:#27242e;font:800 9px 'Nunito';letter-spacing:.12em;display:flex;align-items:center;gap:7px;cursor:pointer}.glass-style-nav div{display:flex;gap:10px;align-items:baseline}.glass-style-nav b{font-size:17px;letter-spacing:.18em}.glass-style-nav div span{color:#9a91a2;font-size:11px}.glass-hero{width:min(1180px,calc(100% - 72px));margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:center;padding:105px 0 125px}.glass-intro>span,.glass-label,.glass-footer>span{color:#7650c7;font-size:11px;font-weight:900;letter-spacing:.19em}.glass-intro h1,.glass-section h2,.glass-footer h2{font-size:clamp(62px,8vw,110px);line-height:.9;letter-spacing:-.065em;margin:25px 0 0;font-weight:800}.glass-intro h1 em,.glass-section h2 em,.glass-footer h2 em{font-style:normal;color:#7650c7}.glass-intro p{max-width:530px;color:#6e6877;font-size:17px;line-height:1.7}.glass-intro .glass-lead{font-size:23px;line-height:1.45;color:#3d3846;margin:35px 0 18px}.glass-palette{display:flex;gap:8px;margin-top:32px}.glass-palette i{width:30px;height:30px;border-radius:50%;border:1px solid rgba(30,20,40,.1)}.glass-palette i:nth-child(1){background:#fff}.glass-palette i:nth-child(2){background:#e9dfff}.glass-palette i:nth-child(3){background:#ffc4ce}.glass-palette i:nth-child(4){background:#f3b5bd}.glass-palette i:nth-child(5){background:#7650c7}.glass-specimen{height:540px;position:relative}.glass-card{background:linear-gradient(135deg,rgba(255,255,255,.36) 0%,rgba(255,255,255,.20) 45%,rgba(247,239,255,.30) 100%);border:1px solid rgba(255,255,255,.78);box-shadow:0 28px 65px rgba(89,64,118,.18),inset 1px 1px 0 rgba(255,255,255,.92),inset -1px -1px 0 rgba(118,80,199,.12);backdrop-filter:blur(30px) saturate(160%) contrast(105%);-webkit-backdrop-filter:blur(30px) saturate(160%) contrast(105%);isolation:isolate}.glass-card::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.46),rgba(255,255,255,0) 32%,rgba(255,255,255,.08) 62%,rgba(198,171,255,.10));pointer-events:none;z-index:0}.glass-card::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 18% 12%,rgba(255,255,255,.28),transparent 24%),radial-gradient(circle at 82% 88%,rgba(190,160,255,.10),transparent 28%);pointer-events:none;z-index:0}.glass-card.main{position:absolute;inset:55px 45px 55px 15px;border-radius:34px;padding:40px;display:flex;flex-direction:column;justify-content:center}.glass-card.main>*{position:relative;z-index:1}.glass-card.main>span,.glass-card.mini small{font-size:9px;letter-spacing:.18em;color:#8b8194;font-weight:800}.glass-card.main h2{font-size:clamp(42px,5vw,72px);line-height:.9;letter-spacing:-.06em;margin:22px 0}.glass-card.main h2 em{font-style:normal;color:#7650c7}.glass-card.main p{color:#766f7c;font-size:14px}.glass-card.main button{align-self:flex-start;margin-top:20px;border:0;border-radius:999px;padding:12px 18px;background:linear-gradient(100deg,#7650c7,#ef7180);color:white;font:800 10px 'Nunito';letter-spacing:.12em;display:flex;gap:10px;align-items:center}.glass-card.mini{position:absolute;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:7px;overflow:hidden}.glass-card.mini>*{position:relative;z-index:1}.glass-card.mini strong{font-size:18px;letter-spacing:-.02em}.glass-card.mini span{font-size:9px;color:#8a8290;letter-spacing:.1em}.mini-one{right:0;top:10px;width:190px}.mini-two{left:0;bottom:5px;width:190px}.glass-reflection{position:absolute;inset:80px 100px 70px 70px;border-radius:40px;background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(255,255,255,.05));filter:blur(1px)}.glass-section{width:min(1180px,calc(100% - 72px));margin:auto;display:grid;grid-template-columns:210px 1fr;gap:65px;padding:120px 0;border-top:1px solid rgba(35,30,45,.1)}.glass-label{display:flex;gap:13px}.glass-section h2{font-size:clamp(50px,6vw,82px);margin:0}.glass-parts{display:grid;grid-template-columns:1fr 1fr;margin-top:60px;border-top:1px solid rgba(35,30,45,.1)}.glass-parts article{padding:28px 25px 30px 0;border-bottom:1px solid rgba(35,30,45,.1)}.glass-parts article:nth-child(even){padding-left:25px;border-left:1px solid rgba(35,30,45,.1)}.glass-parts article:last-child{grid-column:1/-1}.glass-parts b{font-size:9px;letter-spacing:.17em;color:#7650c7}.glass-parts h3{font-size:25px;margin:15px 0 7px}.glass-parts p,.glass-layer-list p{margin:0;color:#706a77;line-height:1.65;font-size:15px}.glass-demo{height:470px;margin-top:55px;position:relative;border-radius:34px;background:linear-gradient(135deg,#fff,#fff5fa 48%,#f4edff);overflow:hidden;border:1px solid rgba(35,30,45,.08)}.demo-ring{position:absolute;border:1px solid rgba(118,80,199,.22);border-radius:50%}.ring-red{width:330px;height:330px;left:-100px;top:-90px}.ring-purple{width:270px;height:270px;right:-70px;bottom:-90px}.glass-card.demo-card{position:absolute;width:55%;left:22%;top:18%;padding:35px;border-radius:30px;display:flex;flex-direction:column;gap:20px;overflow:hidden}.glass-card.demo-card>*{position:relative;z-index:1}.demo-card span,.demo-card small{font-size:9px;letter-spacing:.17em;color:#8b8194;font-weight:800}.demo-card strong{font-size:clamp(38px,5vw,64px);line-height:.9;letter-spacing:-.06em}.demo-card strong em{font-style:normal;color:#7650c7}.demo-orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.75}.demo-orb.red{width:70px;height:70px;background:#ffabb8;left:13%;bottom:15%}.demo-orb.purple{width:90px;height:90px;background:#c4adff;right:13%;top:18%}.glass-layer-list{margin-top:55px;border-top:1px solid rgba(35,30,45,.1)}.glass-layer-list article{display:grid;grid-template-columns:60px 180px 1fr;gap:20px;padding:27px 0;border-bottom:1px solid rgba(35,30,45,.1)}.glass-layer-list article>span{color:#ef7180;font-weight:900}.glass-layer-list h3{margin:0;font-size:23px}.glass-footer{width:min(1180px,calc(100% - 72px));margin:auto;padding:28px 0 70px;border-top:1px solid rgba(35,30,45,.1);position:relative}.glass-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:42px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.55),rgba(215,197,255,.24),rgba(255,255,255,0));filter:blur(12px);opacity:.8;pointer-events:none}.glass-footer h2{margin-top:25px}.glass-footer p{max-width:620px;color:#706a77;font-size:17px;line-height:1.7;margin:30px 0}.glass-footer button{border:0;background:none;padding:0;color:#7650c7;font:900 10px 'Nunito';letter-spacing:.14em;display:flex;gap:8px;align-items:center;cursor:pointer}
 html.glass-route-html,body.glass-route-body,body.glass-route-body #root{background:radial-gradient(circle at 10% 12%,#ffd6dc 0,rgba(255,214,220,.72) 18%,transparent 38%),radial-gradient(circle at 88% 22%,#e7d8ff 0,rgba(231,216,255,.72) 20%,transparent 40%),radial-gradient(circle at 18% 58%,#ffe9ee 0,rgba(255,233,238,.65) 18%,transparent 38%),radial-gradient(circle at 82% 72%,#eee5ff 0,rgba(238,229,255,.68) 20%,transparent 42%),linear-gradient(180deg,#fff 0%,#fffafd 48%,#fff 100%)!important}body.glass-route-body{color:#20202a}
 @media(max-width:800px){.glass-style-page{padding-bottom:0}.glass-style-nav,.glass-hero,.glass-section,.glass-footer{width:calc(100% - 40px)}.glass-style-nav{height:78px}.glass-style-nav>span{display:none}.glass-hero{grid-template-columns:1fr;gap:35px;padding:80px 0 90px}.glass-intro h1{font-size:clamp(62px,18vw,100px)}.glass-specimen{height:480px}.glass-card.main{inset:35px 10px 35px 10px;padding:28px 28px 125px;justify-content:center}.glass-card.mini{padding:17px}.mini-one{right:10px;top:50px;width:155px}.mini-one strong{font-size:10px;letter-spacing:-.04em;white-space:nowrap;max-width:none;overflow:visible;transform:translateX(-4px)}.mini-two{left:18px;bottom:45px;width:155px}.glass-section{grid-template-columns:1fr;gap:28px;padding:85px 0}.glass-section h2{font-size:clamp(48px,13vw,70px)}.glass-parts{grid-template-columns:1fr;margin-top:45px}.glass-parts article:nth-child(even){padding-left:0;border-left:0}.glass-parts article:last-child{grid-column:auto}.glass-demo{height:370px}.glass-card.demo-card{width:72%;left:14%;padding:25px}.glass-layer-list article{grid-template-columns:42px 1fr}.glass-layer-list p{grid-column:2}.glass-footer{padding:28px 0 55px}.glass-footer::before{top:0;height:34px}}
+
+
+/* Composition specimen refinement: make the frosted-glass material legible. */
+.glass-composition .glass-demo {
+  background:
+    linear-gradient(112deg, transparent 0 28%, rgba(255,255,255,.62) 28.2%, transparent 29% 63%, rgba(118,80,199,.12) 63.2%, transparent 64%),
+    repeating-linear-gradient(0deg, rgba(118,80,199,.055) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(118,80,199,.055) 0 1px, transparent 1px 24px),
+    radial-gradient(ellipse at 78% 24%, #c6b0ff 0 10%, transparent 30%),
+    radial-gradient(ellipse at 18% 78%, #ffb6c4 0 9%, transparent 27%),
+    linear-gradient(135deg, #f7f2ff 0%, #fffafd 48%, #f5eaff 100%);
+  border-color: rgba(255,255,255,.88);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 22px 55px rgba(106,72,150,.09);
+}
+.glass-composition .glass-demo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(255,255,255,.5), transparent 38%, rgba(255,255,255,.14) 72%, transparent);
+}
+.glass-composition .demo-ring {
+  border-color: rgba(118,80,199,.3);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.28);
+}
+.glass-composition .ring-red {
+  width: 390px;
+  height: 390px;
+  left: -115px;
+  top: -130px;
+  border-color: rgba(239,113,128,.3);
+}
+.glass-composition .ring-purple {
+  width: 330px;
+  height: 330px;
+  right: -75px;
+  bottom: -105px;
+}
+.glass-composition .glass-card.demo-card {
+  background: linear-gradient(135deg, rgba(255,255,255,.74), rgba(255,255,255,.38) 52%, rgba(230,218,255,.34));
+  border-color: rgba(255,255,255,.94);
+  box-shadow: 0 24px 55px rgba(89,64,118,.2), inset 0 1px 0 rgba(255,255,255,.98), inset 0 -1px 0 rgba(118,80,199,.12);
+  backdrop-filter: blur(24px) saturate(155%);
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
+}
+.glass-composition .glass-card.demo-card::before {
+  background: linear-gradient(118deg, rgba(255,255,255,.72), rgba(255,255,255,.06) 36%, rgba(198,171,255,.16) 100%);
+}
+.glass-composition .glass-card.demo-card::after {
+  background: linear-gradient(145deg, transparent 38%, rgba(255,255,255,.2) 39%, transparent 41%);
+}
+.glass-composition .demo-orb {
+  filter: blur(1px);
+  opacity: .86;
+  box-shadow: inset -7px -8px 16px rgba(90,50,140,.08), inset 5px 5px 14px rgba(255,255,255,.62), 0 12px 30px rgba(118,80,199,.12);
+}
+.glass-composition .demo-orb.red {
+  width: 86px;
+  height: 86px;
+  left: 10%;
+  bottom: 13%;
+}
+.glass-composition .demo-orb.purple {
+  width: 106px;
+  height: 106px;
+  right: 11%;
+  top: 15%;
+}
+@media(max-width:800px) {
+  .glass-composition .glass-demo {
+    background-size: auto, 24px 24px, 24px 24px, auto, auto, auto;
+  }
+  .glass-composition .glass-card.demo-card {
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+  }
+  .glass-composition .demo-orb.red { width: 64px; height: 64px; }
+  .glass-composition .demo-orb.purple { width: 78px; height: 78px; }
+}
+
+
+/* Final mobile composition polish: quieter background, clearer card hierarchy. */
+.glass-composition .glass-demo {
+  background:
+    linear-gradient(112deg, transparent 0 28%, rgba(255,255,255,.48) 28.2%, transparent 29% 63%, rgba(118,80,199,.08) 63.2%, transparent 64%),
+    repeating-linear-gradient(0deg, rgba(118,80,199,.032) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(118,80,199,.032) 0 1px, transparent 1px 28px),
+    radial-gradient(ellipse at 78% 24%, rgba(198,176,255,.8) 0 8%, transparent 28%),
+    radial-gradient(ellipse at 18% 78%, rgba(255,182,196,.72) 0 7%, transparent 25%),
+    linear-gradient(135deg, #f7f2ff 0%, #fffafd 48%, #f5eaff 100%);
+}
+.glass-composition .glass-card.demo-card {
+  width: 58%;
+  left: 21%;
+  top: 19%;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(255,255,255,.64), rgba(255,255,255,.32) 52%, rgba(230,218,255,.26));
+  box-shadow: 0 20px 44px rgba(89,64,118,.16), inset 0 1px 0 rgba(255,255,255,.96), inset 0 -1px 0 rgba(118,80,199,.1);
+}
+.glass-composition .demo-orb { opacity: .72; }
+.glass-composition .demo-orb.red { left: 9%; bottom: 12%; }
+.glass-composition .demo-orb.purple { right: 10%; top: 15%; }
+@media(max-width:800px) {
+  .glass-composition { padding-bottom: 66px; }
+  .glass-composition .glass-demo { height: 350px; }
+  .glass-composition .glass-card.demo-card {
+    width: 76%;
+    left: 12%;
+    top: 20%;
+    padding: 24px;
+  }
+  .glass-composition .demo-card strong { font-size: clamp(34px, 9vw, 48px); }
+  .glass-composition .demo-card small { font-size: 8px; line-height: 1.5; }
+  .glass-composition .ring-red { width: 300px; height: 300px; left: -105px; top: -85px; }
+  .glass-composition .ring-purple { width: 245px; height: 245px; right: -75px; bottom: -70px; }
+}
+
+
+/* Glassmorphism approved refinement: mobile hierarchy and glass-material clarity. */
+.glass-style-page {
+  background-color: #fffafd;
+}
+.glass-style-page::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,193,202,.15), transparent 26%),
+    radial-gradient(circle at 78% 31%, rgba(198,176,255,.15), transparent 28%),
+    radial-gradient(circle at 24% 66%, rgba(255,220,229,.12), transparent 25%);
+}
+.glass-specimen {
+  isolation: isolate;
+}
+.glass-specimen::before {
+  content: "";
+  position: absolute;
+  inset: 9% 6% 10% 7%;
+  border-radius: 38px;
+  border: 1px solid rgba(255,255,255,.72);
+  background: linear-gradient(135deg, rgba(255,255,255,.23), rgba(255,255,255,.04) 52%, rgba(216,197,255,.12));
+  box-shadow: 0 24px 60px rgba(100,70,135,.08), inset 0 1px 0 rgba(255,255,255,.8);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  z-index: 0;
+  pointer-events: none;
+}
+.glass-card.main {
+  background: linear-gradient(135deg, rgba(255,255,255,.58), rgba(255,255,255,.26) 54%, rgba(235,224,255,.3));
+  border-color: rgba(255,255,255,.92);
+  box-shadow: 0 25px 55px rgba(89,64,118,.16), inset 1px 1px 0 rgba(255,255,255,.96), inset -1px -1px 0 rgba(118,80,199,.1);
+}
+.glass-card.mini {
+  background: linear-gradient(135deg, rgba(255,255,255,.66), rgba(255,255,255,.34) 60%, rgba(238,224,255,.32));
+  box-shadow: 0 16px 38px rgba(89,64,118,.13), inset 1px 1px 0 rgba(255,255,255,.95), inset -1px -1px 0 rgba(118,80,199,.08);
+}
+.glass-card.main > span,
+.glass-card.mini small,
+.glass-card.mini span {
+  text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+.glass-card.main button {
+  box-shadow: 0 7px 18px rgba(118,80,199,.16);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.glass-card.main button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(118,80,199,.22);
+}
+.glass-parts article {
+  transition: background-color .2s ease;
+}
+.glass-layer-list article {
+  align-items: start;
+}
+@media(max-width:800px) {
+  .glass-hero {
+    gap: 28px;
+    padding-top: 70px;
+    padding-bottom: 78px;
+  }
+  .glass-intro h1 {
+    font-size: clamp(60px, 17.2vw, 92px);
+    line-height: .92;
+    letter-spacing: -.07em;
+    margin-top: 24px;
+  }
+  .glass-intro .glass-lead {
+    font-size: clamp(20px, 5.5vw, 24px);
+    line-height: 1.48;
+    margin-top: 28px;
+  }
+  .glass-intro p:not(.glass-lead) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .glass-palette {
+    gap: 9px;
+    margin-top: 28px;
+  }
+  .glass-palette i {
+    width: 32px;
+    height: 32px;
+  }
+  .glass-specimen {
+    height: 455px;
+    margin-top: 2px;
+  }
+  .glass-specimen::before {
+    inset: 7% 1% 7% 1%;
+    border-radius: 30px;
+  }
+  .glass-card.main {
+    inset: 38px 10px 38px 10px;
+    padding: 25px 25px 118px;
+  }
+  .glass-card.main h2 {
+    font-size: clamp(42px, 11vw, 58px);
+  }
+  .glass-card.main p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .glass-card.mini {
+    border-radius: 20px;
+    padding: 16px;
+  }
+  .mini-one {
+    right: 8px;
+    top: 18px;
+    width: 158px;
+  }
+  .mini-one strong {
+    font-size: 11px;
+    letter-spacing: -.025em;
+  }
+  .mini-two {
+    left: 8px;
+    bottom: 18px;
+    width: 154px;
+  }
+  .glass-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+  .glass-parts article {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  .glass-parts h3 {
+    font-size: 23px;
+  }
+  .glass-demo {
+    margin-top: 38px;
+  }
+  .glass-layer-list {
+    margin-top: 40px;
+  }
+  .glass-layer-list article {
+    padding: 24px 0;
+    gap: 14px;
+  }
+}
+@media(max-width:390px) {
+  .glass-style-nav,
+  .glass-hero,
+  .glass-section,
+  .glass-footer {
+    width: calc(100% - 36px);
+  }
+  .glass-intro h1 {
+    font-size: clamp(58px, 16.8vw, 68px);
+  }
+  .glass-specimen {
+    height: 425px;
+  }
+  .glass-card.main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mini-one {
+    width: 145px;
+    right: 5px;
+  }
+  .mini-one strong {
+    font-size: 10px;
+  }
+  .mini-two {
+    width: 143px;
+    left: 5px;
+  }
+}
+
+
+/* Glassmorphism visual correction pass — make layers deliberate, not doubled. */
+.glass-specimen::before { display: none; }
+.glass-specimen {
+  height: 560px;
+  border-radius: 38px;
+  background:
+    radial-gradient(ellipse at 78% 25%, rgba(190,160,255,.32), transparent 35%),
+    radial-gradient(ellipse at 18% 78%, rgba(255,165,187,.28), transparent 33%),
+    linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.02) 55%, rgba(223,205,255,.16));
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: 0 26px 65px rgba(113,75,139,.10), inset 0 1px 0 rgba(255,255,255,.7);
+}
+.glass-reflection {
+  inset: 32px 30px 32px 30px;
+  border: 1px solid rgba(255,255,255,.56);
+  background: linear-gradient(118deg, rgba(255,255,255,.44), rgba(255,255,255,.04) 48%, rgba(199,175,255,.13));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card.main {
+  inset: 56px 24px 56px 24px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(255,255,255,.38) 52%, rgba(221,204,255,.34));
+  border: 1px solid rgba(255,255,255,.96);
+  box-shadow: 0 22px 50px rgba(89,64,118,.20), inset 0 1px 0 #fff, inset 0 -1px 0 rgba(118,80,199,.14);
+  backdrop-filter: blur(34px) saturate(175%);
+  -webkit-backdrop-filter: blur(34px) saturate(175%);
+}
+.glass-card.main::before {
+  background: linear-gradient(112deg, rgba(255,255,255,.66), rgba(255,255,255,.02) 38%, rgba(190,160,255,.14));
+}
+.glass-card.main::after {
+  background: linear-gradient(145deg, transparent 42%, rgba(255,255,255,.30) 43%, transparent 45%);
+}
+.glass-card.mini {
+  border: 1px solid rgba(255,255,255,.98);
+  background: linear-gradient(135deg, rgba(255,255,255,.86), rgba(255,255,255,.50) 62%, rgba(220,201,255,.42));
+  box-shadow: 0 15px 34px rgba(92,65,124,.20), inset 0 1px 0 #fff, inset 0 -1px 0 rgba(118,80,199,.12);
+  backdrop-filter: blur(28px) saturate(175%);
+  -webkit-backdrop-filter: blur(28px) saturate(175%);
+}
+.glass-card.mini::before {
+  background: linear-gradient(115deg, rgba(255,255,255,.65), transparent 48%, rgba(193,169,255,.16));
+}
+.glass-card.mini::after {
+  background: radial-gradient(circle at 15% 0%, rgba(255,255,255,.48), transparent 45%);
+}
+.glass-dot-grid { opacity: .18; }
+.glass-demo {
+  background:
+    radial-gradient(ellipse at 78% 22%, rgba(177,143,255,.56), transparent 31%),
+    radial-gradient(ellipse at 18% 80%, rgba(255,139,168,.46), transparent 28%),
+    repeating-linear-gradient(0deg, rgba(118,80,199,.065) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(118,80,199,.065) 0 1px, transparent 1px 28px),
+    linear-gradient(135deg, #fff 0%, #fff8fc 48%, #f1e8ff 100%);
+  border: 1px solid rgba(255,255,255,.95);
+  box-shadow: 0 20px 48px rgba(100,70,135,.09), inset 0 1px 0 #fff;
+}
+.glass-card.demo-card {
+  width: 68%;
+  left: 16%;
+  top: 18%;
+  padding: 38px;
+  background: linear-gradient(135deg, rgba(255,255,255,.80), rgba(255,255,255,.42) 54%, rgba(217,197,255,.44));
+  border: 1px solid rgba(255,255,255,.98);
+  box-shadow: 0 25px 60px rgba(89,64,118,.22), inset 0 1px 0 #fff, inset 0 -1px 0 rgba(118,80,199,.15);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+}
+.glass-card.demo-card::before {
+  background: linear-gradient(115deg, rgba(255,255,255,.72), transparent 42%, rgba(190,160,255,.18));
+}
+.glass-card.demo-card::after {
+  background: linear-gradient(145deg, transparent 36%, rgba(255,255,255,.3) 37%, transparent 40%);
+}
+@media(max-width:800px) {
+  .glass-hero { padding-top: 76px; padding-bottom: 92px; }
+  .glass-specimen {
+    height: 475px;
+    border-radius: 30px;
+    margin: 0 2px;
+  }
+  .glass-reflection { inset: 22px 16px; border-radius: 27px; }
+  .glass-card.main {
+    inset: 35px 15px 35px 15px;
+    padding: 24px 22px 112px;
+    border-radius: 26px;
+  }
+  .glass-card.main h2 {
+    font-size: clamp(43px, 11.5vw, 56px);
+    margin: 18px 0;
+  }
+  .glass-card.main p { font-size: 12px; }
+  .glass-card.main button { margin-top: 15px; }
+  .glass-card.mini { padding: 15px 16px; border-radius: 20px; gap: 6px; }
+  .mini-one { width: 154px; right: 8px; top: 12px; }
+  .mini-one strong { font-size: 11px; }
+  .mini-two { width: 145px; left: 8px; bottom: 12px; }
+  .glass-demo {
+    height: 450px;
+    border-radius: 30px;
+    margin-top: 36px;
+  }
+  .glass-card.demo-card {
+    width: 78%;
+    left: 11%;
+    top: 18%;
+    padding: 27px 24px;
+    border-radius: 25px;
+    gap: 17px;
+  }
+  .demo-card strong { font-size: clamp(36px, 9.5vw, 48px); }
+  .demo-orb.red { width: 66px; height: 66px; }
+  .demo-orb.purple { width: 82px; height: 82px; }
+}
+@media(max-width:390px) {
+  .glass-specimen { height: 450px; }
+  .glass-card.main { inset: 34px 12px; padding: 22px 18px 108px; }
+  .mini-one { width: 140px; right: 5px; }
+  .mini-one strong { font-size: 10px; }
+  .mini-two { width: 132px; left: 5px; }
+  .glass-demo { height: 410px; }
+  .glass-card.demo-card { width: 82%; left: 9%; padding: 24px 20px; }
+}

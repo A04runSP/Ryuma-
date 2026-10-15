@@ -53,7 +53,7 @@ export default function MemphisDesignStyle({ onNavigate }) {
       <div className="memphis-section-label"><span>02</span><b>COLOUR SYSTEM</b></div>
       <div className="memphis-colour-main">
         <div><h2>Colour<br/><em>has volume.</em></h2><p>Memphis palettes use contrast as entertainment. Strong colour blocks sit beside unexpected neighbours to create energy and visual hierarchy.</p></div>
-        <div className="memphis-palette"><div><b>HOT<br/>PINK</b><span>#F45B9A</span></div><div><b>CYAN<br/>BLUE</b><span>#32C5E8</span></div><div><b>LEMON<br/>YELLOW</b><span>#FFD84D</span></div><div><b>MINT<br/>GREEN</b><span>#8DE0B0</span></div><div><b>INK<br/>BLACK</b><span>#171717</span></div></div>
+        <div className="memphis-palette"><div><b>HOT<br/>PINK</b><span>#F45B9A</span></div><div><b>CYAN<br/>BLUE</b><span>#32C5E8</span></div><div><b>LEMON<br/>YELLOW</b><span>#FFD84D</span></div><div><b>MINT<br/>GREEN</b><span>#8DE0B0</span></div><div><b>INK<br/>BLACK</b><span>#171717</span></div><div><b>PURE<br/>WHITE</b><span>#FFFFFF</span></div></div>
       </div>
     </section>
 

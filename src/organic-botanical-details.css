@@ -5,3 +5,92 @@
 .organic-page .organic-anatomy-grid{grid-template-columns:1.15fr .9fr 1fr .85fr 1.1fr;align-items:start}.organic-page .organic-anatomy-grid article{cursor:pointer;transition:transform .35s ease}.organic-page .organic-anatomy-grid article:nth-child(2),.organic-page .organic-anatomy-grid article:nth-child(4){margin-top:52px}.organic-page .organic-anatomy-grid article:nth-child(3){margin-top:18px}.organic-page .organic-anatomy-grid article:hover,.organic-page .organic-anatomy-grid article.is-active{transform:translateY(-7px)}.organic-page .organic-anatomy-grid article.is-active .organic-card-art{box-shadow:0 22px 46px var(--organic-shadow);outline:1px solid rgba(200,109,78,.5);outline-offset:5px}.organic-page .study-cursor{position:absolute;right:14px;top:14px;border:1px solid rgba(255,255,255,.7);padding:7px 9px;color:#fff;font-size:7px;letter-spacing:.15em;opacity:0;transition:.25s}.organic-page .organic-anatomy-grid article:hover .study-cursor,.organic-page .organic-anatomy-grid article.is-active .study-cursor{opacity:1}.organic-page .organic-study-panel{margin-top:52px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0;display:grid;grid-template-columns:.25fr 1fr auto;gap:30px;align-items:center}.organic-page .organic-study-panel h3{font:500 35px/1 Georgia,serif;margin:0 0 6px}.organic-page .organic-study-panel p{margin:0;max-width:650px;font-size:12px;line-height:1.7;color:#5f6962}.organic-page .organic-study-panel button{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:12px 15px;display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:.14em;cursor:pointer}
 .organic-page .organic-colour{background:#203a31}.organic-page .organic-palette button{border:0;border-right:1px solid rgba(23,61,47,.18);min-height:125px;background:var(--swatch);padding:15px 10px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;color:#183528;cursor:pointer;transition:transform .22s ease,filter .22s ease;position:relative}.organic-page .organic-palette button:nth-child(2),.organic-page .organic-palette button:nth-child(7){color:#f5f0e5}.organic-page .organic-palette button:hover,.organic-page .organic-palette button.is-selected{transform:translateY(-8px);filter:saturate(1.08)}.organic-page .organic-palette button span{font-size:7px;letter-spacing:.14em}.organic-page .organic-palette button b{font:14px Georgia,serif;font-weight:400}.organic-page .organic-palette button svg{position:absolute;right:10px;top:10px}.organic-page .organic-colour-lab{margin-top:55px;display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:stretch;position:relative;z-index:3}.organic-page .lab-preview{min-height:310px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;color:#183528;box-shadow:0 25px 55px rgba(0,0,0,.18);transition:background-color .3s ease;border-radius:0 42px 0 42px}.organic-page .lab-preview span,.organic-page .lab-preview small{font-size:8px;letter-spacing:.18em}.organic-page .lab-preview strong{font:500 clamp(45px,5vw,76px)/.86 Georgia,serif;letter-spacing:-.05em}.organic-page .lab-controls{padding:12px 0;color:#f1eadc}.organic-page .lab-controls h3{font:500 42px/1 Georgia,serif;margin:18px 0 12px}.organic-page .lab-controls p{font-size:13px;line-height:1.7;color:#c9d0c7;max-width:430px}.organic-page .lab-value{margin-top:25px;border:1px solid rgba(241,234,220,.28);padding:9px;display:flex;align-items:center;gap:12px}.organic-page .lab-value i{width:28px;height:28px;border-radius:50%;flex:none}.organic-page .lab-value b{font:14px Georgia,serif;flex:1}.organic-page .lab-value button{border:1px solid rgba(241,234,220,.35);background:transparent;color:inherit;padding:9px 11px;display:flex;gap:7px;align-items:center;font-size:7px;letter-spacing:.13em;cursor:pointer}.organic-page .lab-reset{border:0;background:none;color:#c9d0c7;padding:15px 0;display:flex;align-items:center;gap:7px;font-size:7px;letter-spacing:.15em;cursor:pointer}
 @media(max-width:760px){.organic-page .organic-anatomy-grid{grid-template-columns:1fr 1fr}.organic-page .organic-anatomy-grid article:nth-child(2),.organic-page .organic-anatomy-grid article:nth-child(4){margin-top:34px}.organic-page .organic-anatomy-grid article:nth-child(3){margin-top:0}.organic-page .organic-study-panel{display:block;margin-top:35px}.organic-page .organic-study-panel h3{margin:10px 0 6px}.organic-page .organic-study-panel button{margin-top:18px}.organic-page .organic-palette{grid-template-columns:repeat(2,1fr)}.organic-page .organic-palette button{min-height:105px}.organic-page .organic-colour-lab{grid-template-columns:1fr;gap:30px;margin-top:38px}.organic-page .lab-preview{min-height:260px;border-radius:0 30px 0 30px}.organic-page .lab-controls h3{font-size:35px}.organic-page .lab-value{flex-wrap:wrap}}
+
+
+/* Organic / Natural — mobile layout correction pass */
+.organic-page .organic-type-specimen,
+.organic-page .organic-palette,
+.organic-page .organic-colour-lab,
+.organic-page .organic-anatomy-grid{min-width:0}
+.organic-page .organic-type-specimen > *{min-width:0}
+.organic-page .organic-palette button{min-width:0;overflow:visible}
+.organic-page .organic-palette button span{display:block;max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+.organic-page .organic-palette button b{display:block;max-width:100%;overflow-wrap:anywhere}
+@media(max-width:760px){
+  .organic-page .organic-type-specimen{
+    grid-template-columns:76px minmax(0,1fr);
+    gap:12px;
+    align-items:start;
+  }
+  .organic-page .organic-type-specimen .specimen-main{
+    display:block;
+    width:76px;
+    max-width:76px;
+    font-size:78px;
+    line-height:.9;
+    letter-spacing:-.1em;
+    overflow:hidden;
+  }
+  .organic-page .organic-type-specimen > div:not(.specimen-sans){
+    min-width:0;
+    padding-right:0;
+  }
+  .organic-page .organic-type-specimen strong{
+    font-size:clamp(27px,7.5vw,36px);
+    line-height:.96;
+    letter-spacing:-.045em;
+    overflow-wrap:normal;
+    word-break:normal;
+    margin:8px 0 24px;
+  }
+  .organic-page .organic-type-specimen .type-flower{
+    width:58px;
+    right:0;
+    top:0;
+    opacity:.75;
+  }
+  .organic-page .organic-type-specimen .specimen-sans{
+    grid-column:1 / -1;
+    min-width:0;
+    margin-top:10px;
+  }
+  .organic-page .organic-type-specimen .specimen-sans small{
+    overflow-wrap:anywhere;
+    word-break:normal;
+    letter-spacing:.07em;
+  }
+  .organic-page .organic-palette{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    border:0;
+    overflow:visible;
+  }
+  .organic-page .organic-palette button{
+    min-height:116px;
+    padding:15px 14px;
+    border:0;
+    transform:none;
+    border-radius:32% 0 28% 0;
+  }
+  .organic-page .organic-palette button:nth-child(even){border-radius:0 28% 0 32%}
+  .organic-page .organic-palette button:hover,
+  .organic-page .organic-palette button.is-selected{transform:translateY(-3px)}
+  .organic-page .organic-palette button span{font-size:9px;letter-spacing:.1em}
+  .organic-page .organic-palette button b{font-size:15px;line-height:1.2}
+  .organic-page .organic-palette button svg{right:12px;top:12px}
+  .organic-page .organic-colour-lab{min-width:0}
+  .organic-page .lab-preview{min-width:0;padding:24px;overflow:hidden}
+  .organic-page .lab-preview strong{font-size:clamp(43px,11vw,62px);line-height:.9;overflow-wrap:normal}
+  .organic-page .lab-controls{min-width:0}
+  .organic-page .lab-value{min-width:0;display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px}
+  .organic-page .lab-value b{min-width:0;overflow-wrap:anywhere}
+  .organic-page .lab-value button{grid-column:1/-1;width:100%;justify-content:center}
+  .organic-page .organic-anatomy-grid article{min-width:0}
+  .organic-page .organic-card-art{min-width:0}
+}
+@media(max-width:390px){
+  .organic-page .organic-type-specimen{grid-template-columns:62px minmax(0,1fr);gap:10px}
+  .organic-page .organic-type-specimen .specimen-main{width:62px;max-width:62px;font-size:64px}
+  .organic-page .organic-type-specimen strong{font-size:27px}
+  .organic-page .organic-palette button{min-height:108px;padding:13px 11px}
+}
