@@ -90,7 +90,7 @@ export default function EditorialDesignStyle({ onNavigate }) {
           </figure>
           <div className="ed4-essay-side">
             <div className="ed4-time-card"><span>01</span><b>CONTEXT BEFORE DECORATION</b><p>Choose a photograph that tells the reader something the words alone cannot.</p></div>
-            <figure className="ed4-image-frame ed4-nature-frame"><img src={photos.nature} alt="Mountain landscape and open sky at changing light" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-nature-overlay"><span>LIGHT STUDY / 04</span><strong>THE ART<br />OF <i>STILLNESS.</i></strong><small>ATMOSPHERE IS ALSO INFORMATION.</small></div><div className="ed4-image-copy ed4-photo-overlay ed4-nature-overlay"><span>LIGHT STUDY / 04</span><strong>THE ART<br />OF <i>STILLNESS.</i></strong><small>ATMOSPHERE IS ALSO INFORMATION.</small></div>
+            <figure className="ed4-image-frame ed4-nature-frame"><img src={photos.nature} alt="Mountain landscape and open sky at changing light" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-nature-overlay"><span>LIGHT STUDY / 04</span><strong>THE ART<br />OF <i>STILLNESS.</i></strong><small>ATMOSPHERE IS ALSO INFORMATION.</small></div>
               <figcaption><b>FIG. 04 / ATMOSPHERE</b><span>Light sets the emotional tone.</span></figcaption>
             </figure>
           </div>
