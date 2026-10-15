@@ -1105,3 +1105,54 @@
     height: 76px;
   }
 }
+
+
+/* Mobile cover final spacing pass — lift the story above the issue tab and keep the tab clear. */
+@media (max-width: 700px) {
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    right: 26px !important;
+    bottom: 218px !important;
+    width: min(61%, 268px) !important;
+    gap: 10px !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay::before {
+    inset: -22px -18px -20px -38px !important;
+    background: linear-gradient(270deg, rgba(8,10,12,.9), rgba(8,10,12,.68) 72%, rgba(8,10,12,0)) !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(27px, 7.1vw, 37px) !important;
+    line-height: .95 !important;
+    text-wrap: balance;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    max-width: 24ch !important;
+    font-size: 7px !important;
+    line-height: 1.55 !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 12px !important;
+    bottom: 42px !important;
+    width: 70px !important;
+    height: 84px !important;
+  }
+}
+@media (max-width: 390px) {
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    right: 18px !important;
+    bottom: 204px !important;
+    width: 60% !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(25px, 7vw, 29px) !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    max-width: 22ch !important;
+    font-size: 6px !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 8px !important;
+    bottom: 38px !important;
+    width: 64px !important;
+    height: 76px !important;
+  }
+}
