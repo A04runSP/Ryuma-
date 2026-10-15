@@ -94,3 +94,15 @@
 .library-no-results{grid-column:1/-1;padding:28px;border:1px dashed #343247;border-radius:18px;color:#F5F1FA}
 @media(max-width:480px){.library-nav{gap:10px}.library-back{flex-shrink:0}.library-brand{flex-shrink:0}.library-brand em{display:none}.library-search-wrap{flex:1;width:auto;max-width:170px;padding:7px 8px}.library-search-input{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.library-card{transition:none}.library-card:hover,.library-card:active{transform:none}}
+
+/* Final mobile containment: allow the header to wrap instead of widening the page. */
+.library-shell,.library-shell *{min-width:0}
+.library-shell{overflow-x:clip;max-width:100vw}
+@media(max-width:480px){
+  .library-nav{display:flex;flex-wrap:wrap;justify-content:space-between;column-gap:12px;row-gap:14px;width:calc(100% - 32px)}
+  .library-back{max-width:46%;white-space:nowrap}
+  .library-brand{max-width:46%;white-space:nowrap}
+  .library-search-wrap{flex:1 0 100%;width:100%;max-width:100%;order:3}
+  .library-search-input{width:100%;min-width:0}
+  .library-hero,.library-collection,.library-end,.library-footer{width:calc(100% - 32px)}
+}
