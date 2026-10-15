@@ -220,3 +220,10 @@
     transition: none;
   }
 }
+
+
+/* Palette correction: Cyan Blue must remain its own named Memphis swatch. */
+.memphis-page .memphis-palette > div:nth-child(2) {
+  background: var(--blue);
+  color: var(--ink);
+}
