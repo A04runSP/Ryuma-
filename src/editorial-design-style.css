@@ -1156,3 +1156,66 @@
     height: 76px !important;
   }
 }
+
+
+/* Mobile cover precision pass — distinct upper-left callout and lower-right feature story. */
+@media (max-width: 700px) {
+  .ed4-page .ed4-cover-image {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    top: 8.5% !important;
+    bottom: auto !important;
+    left: 22px !important;
+    right: auto !important;
+    width: min(42%, 220px) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px !important;
+    text-align: left;
+    z-index: 3;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay::before {
+    inset: -18px -22px -20px -14px !important;
+    background: linear-gradient(90deg, rgba(8,10,12,.88), rgba(8,10,12,.62) 76%, rgba(8,10,12,0)) !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > span,
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(29px, 8vw, 43px) !important;
+    line-height: .92 !important;
+    text-align: left;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 12px !important;
+    bottom: 48px !important;
+    width: 68px !important;
+    height: 82px !important;
+    z-index: 5;
+  }
+  .ed4-page .ed4-cover-image > figcaption {
+    position: relative;
+    z-index: 6;
+  }
+}
+@media (max-width: 390px) {
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    left: 17px !important;
+    width: 44% !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(27px, 7.6vw, 32px) !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 8px !important;
+    bottom: 42px !important;
+    width: 62px !important;
+    height: 74px !important;
+  }
+}
