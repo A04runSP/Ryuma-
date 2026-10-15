@@ -74,3 +74,23 @@
   outline: 2px solid #20E3E6;
   outline-offset: 4px;
 }
+
+
+/* Reconciled Library theme: solid RYŪMA surfaces, violet hierarchy, aqua accents. */
+.library-shell{width:100%;max-width:100%;overflow-x:clip;box-sizing:border-box;background:#0D0D1F;color:#F5F1FA;font-family:'DM Sans',sans-serif}
+.library-shell *{box-sizing:border-box}
+.library-glow,.library-grain{display:none}
+.library-nav,.library-hero,.library-collection,.library-end,.library-footer{width:min(1180px,calc(100% - 48px));max-width:100%}
+.library-kicker,.library-number,.library-card-info>span{color:#20E3E6}
+.library-hero h1,.library-group-head h2,.library-end h2,.library-card-art span{background:none;color:#B388FF;-webkit-text-fill-color:#B388FF}
+.library-group-head h2,.library-end h2{background:none}
+.library-card{background:#17152A;border-color:#343247;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 18px 38px rgba(0,0,0,.2)}
+.library-card:hover{background:#201b35;border-color:#6A2C91}
+.library-card:focus-visible,.library-back:focus-visible,.library-brand:focus-visible,.library-footer button:focus-visible{outline:2px solid #20E3E6;outline-offset:4px}
+.library-search-wrap{display:flex;align-items:center;gap:8px;min-width:0;width:min(230px,34vw);padding:8px 10px;border:1px solid #343247;border-radius:999px;background:#17152A;color:#F5F1FA}
+.library-search-input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#F5F1FA;font:inherit;font-size:12px}
+.library-search-input::placeholder{color:#9CAFC3}
+.library-search-wrap:focus-within{border-color:#20E3E6;box-shadow:0 0 0 2px rgba(32,227,230,.15)}
+.library-no-results{grid-column:1/-1;padding:28px;border:1px dashed #343247;border-radius:18px;color:#F5F1FA}
+@media(max-width:480px){.library-nav{gap:10px}.library-back{flex-shrink:0}.library-brand{flex-shrink:0}.library-brand em{display:none}.library-search-wrap{flex:1;width:auto;max-width:170px;padding:7px 8px}.library-search-input{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.library-card{transition:none}.library-card:hover,.library-card:active{transform:none}}
