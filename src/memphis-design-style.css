@@ -234,3 +234,34 @@
   background: var(--mint);
   color: var(--ink);
 }
+
+
+/* Complete Memphis palette: white is a supporting neutral, not a replacement for the five core colours. */
+.memphis-page .memphis-palette > div:nth-child(1) { background: var(--pink); color: var(--ink); }
+.memphis-page .memphis-palette > div:nth-child(2) { background: var(--blue); color: var(--ink); }
+.memphis-page .memphis-palette > div:nth-child(3) { background: var(--yellow); color: var(--ink); }
+.memphis-page .memphis-palette > div:nth-child(4) { background: var(--mint); color: var(--ink); }
+.memphis-page .memphis-palette > div:nth-child(5) {
+  grid-column: auto;
+  min-height: 130px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  background: var(--ink);
+  color: #fff;
+}
+.memphis-page .memphis-palette > div:nth-child(5) b { font-size: 20px; }
+.memphis-page .memphis-palette > div:nth-child(5) span { margin-left: 0; }
+.memphis-page .memphis-palette > div:nth-child(6) {
+  background: #fff;
+  color: var(--ink);
+}
+.memphis-page .memphis-rule-cards > div:nth-child(4) {
+  background: var(--ink);
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .memphis-page .memphis-palette > div:nth-child(5) {
+    min-height: 130px;
+  }
+}
