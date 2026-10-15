@@ -368,3 +368,40 @@
   .ed4-page .ed4-image-copy>small{font-size:6px;letter-spacing:.08em}
   .ed4-page .ed4-cover-overlay>strong{font-size:35px}
 }
+
+
+/* Mobile overlay collision repair: keep every headline inside its own photo. */
+@media(max-width:700px){
+  .ed4-page .ed4-image-frame{overflow:hidden;position:relative}
+  .ed4-page .ed4-image-frame>img{width:100%;height:100%;object-fit:cover}
+  .ed4-page .ed4-image-copy{max-width:calc(100% - 32px);gap:7px}
+  .ed4-page .ed4-image-copy>strong{font-size:clamp(27px,8vw,44px);line-height:.92;letter-spacing:-.055em;overflow-wrap:anywhere}
+  .ed4-page .ed4-image-copy>small{max-width:26ch;font-size:7px;line-height:1.45;letter-spacing:.08em}
+  .ed4-page .ed4-cover-image{position:relative}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay{left:16px;right:16px;bottom:68px;max-width:none;width:auto}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>strong{font-size:clamp(29px,8.2vw,48px);line-height:.93;letter-spacing:-.055em}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>small{max-width:24ch}
+  .ed4-page .ed4-cover-image .ed4-cover-index{right:8px;bottom:90px;z-index:4}
+  .ed4-page .ed4-feature-photo{position:relative}
+  .ed4-page .ed4-feature-photo .ed4-grid-overlay{right:14px;left:14px;bottom:38px;max-width:none;width:auto;align-items:flex-end}
+  .ed4-page .ed4-feature-photo .ed4-grid-overlay>strong{font-size:clamp(28px,8vw,44px)}
+  .ed4-page .ed4-essay-main{position:relative}
+  .ed4-page .ed4-essay-main .ed4-house-overlay{left:15px;right:15px;bottom:34px;max-width:none;width:auto}
+  .ed4-page .ed4-essay-side figure{position:relative}
+  .ed4-page .ed4-essay-side .ed4-nature-overlay{left:14px;right:14px;top:18px;max-width:none;width:auto}
+  .ed4-page .ed4-essay-wide{position:relative;display:block;overflow:hidden}
+  .ed4-page .ed4-essay-wide>img{display:block;width:100%;height:clamp(260px,70vw,360px);object-fit:cover}
+  .ed4-page .ed4-essay-wide .ed4-street-overlay{left:16px;right:16px;bottom:62px;max-width:none;width:auto}
+  .ed4-page .ed4-essay-wide .ed4-street-overlay>strong{font-size:clamp(27px,8vw,43px)}
+  .ed4-page .ed4-essay-wide figcaption{position:relative;z-index:3;display:flex;flex-wrap:wrap;gap:5px 12px;padding-top:10px}
+  .ed4-page .ed4-spread-image{position:relative}
+  .ed4-page .ed4-spread-image .ed4-spread-overlay{left:14px;right:14px;bottom:38px;max-width:none;width:auto}
+  .ed4-page .ed4-ending-image{position:relative}
+  .ed4-page .ed4-ending-image .ed4-ending-overlay{left:16px;right:16px;bottom:50px;max-width:none;width:auto}
+}
+@media(max-width:390px){
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>strong{font-size:clamp(26px,7.5vw,34px)}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>small{font-size:6px;max-width:22ch}
+  .ed4-page .ed4-essay-wide .ed4-street-overlay>strong{font-size:clamp(25px,7.3vw,31px)}
+  .ed4-page .ed4-image-copy>span{font-size:7px}
+}
