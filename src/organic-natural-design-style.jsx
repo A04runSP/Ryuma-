@@ -41,6 +41,7 @@ function Flower({className=''}) { return <svg className={`ry-flower ${className}
 export default function OrganicNaturalDesignStyle({onNavigate}) {
   const [activeStudy,setActiveStudy] = useState(0);
   const [selected,setSelected] = useState(palette[0]);
+  const [paletteMode,setPaletteMode] = useState('Single');
   const [copied,setCopied] = useState(false);
   const [typeRole,setTypeRole] = useState('Display');
   const [typeSize,setTypeSize] = useState(64);
@@ -48,6 +49,7 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
   const [brandView,setBrandView] = useState('Packaging');
   const [mobileMenu,setMobileMenu] = useState(false);
   const typeText = useMemo(()=>({Display:'A natural voice.',Heading:'Good things grow slowly.',Body:'Design should feel as natural as the world around it.',Caption:'FORM · BOTANY · TEXTURE'})[typeRole],[typeRole]);
+  const choosePaletteMode = mode => { setPaletteMode(mode); const first = mode==='Harmony' ? palette[1] : mode==='Brand' ? palette[4] : mode==='Custom' ? palette[6] : palette[0]; setSelected(first); setCopied(false); };
   const copyHex = async () => { try { await navigator.clipboard.writeText(selected.hex); setCopied(true); window.setTimeout(()=>setCopied(false),1500); } catch { setCopied(false); } };
   const scrollTo = id => { document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'}); setMobileMenu(false); };
   return <main className="ry-organic" style={{'--ry-selected':selected.hex}}>
@@ -81,10 +83,10 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
     </section>
 
     <section className="ry-colour" id="ry-colour">
-      <div className="ry-colour-heading"><span className="ry-kicker">03 / 06 · COLOUR SYSTEM</span><h2>The Colour<br/><em>Garden</em></h2><p>Choose a living colour, explore combinations and see the palette change a composition in real time.</p><div className="ry-palette-modes"><span>SINGLE</span><span>HARMONY</span><span>BRAND</span><span>CUSTOM</span></div></div>
-      <div className="ry-palette-grid">{palette.map(c=><button key={c.name} className={selected.name===c.name?'ry-swatch is-selected':'ry-swatch'} onClick={()=>{setSelected(c);setCopied(false)}} aria-pressed={selected.name===c.name} aria-label={`Select ${c.name} ${c.hex}`}><span className="ry-swatch-colour" style={{background:c.hex}}>{selected.name===c.name&&<Check size={17}/>}</span><strong>{c.name}</strong><small>{c.hex}</small></button>)}</div>
+      <div className="ry-colour-heading"><span className="ry-kicker">03 / 06 · COLOUR SYSTEM</span><h2>The Colour<br/><em>Garden</em></h2><p>Choose a living colour, explore combinations and see the palette change a composition in real time.</p><div className="ry-palette-modes" role="group" aria-label="Palette mode">{['Single','Harmony','Brand','Custom'].map(mode=><button key={mode} type="button" className={paletteMode===mode?'is-active':''} aria-pressed={paletteMode===mode} onClick={()=>choosePaletteMode(mode)}>{mode}</button>)}</div></div>
+      <div className="ry-palette-grid">{palette.map(c=><button key={c.name} className={selected.name===c.name?'ry-swatch is-selected':'ry-swatch'} onClick={()=>{setSelected(c);setCopied(false);setPaletteMode('Single')}} aria-pressed={selected.name===c.name} aria-label={`Select ${c.name} ${c.hex}`}><span className="ry-swatch-colour" style={{background:c.hex}}>{selected.name===c.name&&<Check size={17}/>}</span><strong>{c.name}</strong><small>{c.hex}</small></button>)}</div>
       <div className="ry-live-preview" style={{background:selected.hex,color:['#203D2B','#65784B'].includes(selected.hex)?'#F3EBDD':'#203D2B'}}><span>LIVE COMPOSITION / COLOUR {palette.findIndex(c=>c.name===selected.name)+1}</span><h3>Good things<br/><em>grow slowly.</em></h3><p>Nature-inspired design<br/>for a calmer, more human experience.</p><div className="ry-preview-bottom"><span>{selected.name} · {selected.hex}</span><button onClick={copyHex}>{copied?<Check size={14}/>:<Copy size={14}/>} {copied?'COPIED':'COPY COLOUR'}</button></div><Sprig/></div>
-      <div className="ry-colour-note"><span className="ry-note-dot" style={{background:selected.hex}}/><div><strong>{selected.name} / {selected.role}</strong><p>Selected colour updates the preview instantly. Copy its exact HEX value for your next design.</p></div><button onClick={()=>{setSelected(palette[0]);setCopied(false)}}><RotateCcw size={14}/> Reset</button></div>
+      <div className="ry-colour-note"><span className="ry-note-dot" style={{background:selected.hex}}/><div><strong>{selected.name} / {selected.role}</strong><p>Selected colour updates the preview instantly. Copy its exact HEX value for your next design.</p></div><button onClick={()=>{setSelected(palette[0]);setPaletteMode('Single');setCopied(false)}}><RotateCcw size={14}/> Reset</button></div>
     </section>
 
     <section className="ry-type" id="ry-type">
