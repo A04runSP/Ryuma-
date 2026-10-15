@@ -77,3 +77,76 @@
   .editorial-real .ed-contrast-paper { padding: 16px; }
   .editorial-real .ed-contrast-paper h3 { font-size: 40px; }
 }
+
+
+/* Editorial image-filled type: the photograph is clipped into the letterforms. */
+.ed2-editorial .ed2-photo-headline {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  font:900 clamp(64px,9.3vw,136px)/.75 Georgia, 'Times New Roman', serif;
+  letter-spacing:-.075em;
+  margin:25px 0 22px;
+  max-width:100%;
+}
+.ed2-editorial .ed2-photo-headline > span,
+.ed2-editorial .ed2-photo-headline > em { display:block; }
+.ed2-editorial .ed2-photo-headline > em {
+  color:var(--ed-red);
+  font-style:italic;
+  font-weight:700;
+}
+.ed2-editorial .ed2-photo-type,
+.ed2-editorial .ed2-board-photo-type {
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+  background-image:var(--ed2-type-image);
+  background-size:cover;
+  background-position:center 48%;
+  background-repeat:no-repeat;
+  -webkit-background-clip:text;
+  background-clip:text;
+  display:inline-block;
+  filter:contrast(1.08) saturate(1.08);
+}
+.ed2-editorial .ed2-photo-type {
+  font-size:1.55em;
+  line-height:.7;
+  letter-spacing:-.085em;
+  margin:.055em 0 .09em -.035em;
+  white-space:nowrap;
+}
+.ed2-editorial .ed2-board-headline h3 {
+  font:800 clamp(36px,5vw,70px)/.83 Georgia,serif;
+  letter-spacing:-.065em;
+  margin:22px 0 18px;
+}
+.ed2-editorial .ed2-board-photo-type {
+  font-size:1.12em;
+  line-height:.8;
+  letter-spacing:-.09em;
+  white-space:nowrap;
+}
+.ed2-editorial .ed2-board-headline h3 i { color:var(--ed-red); }
+.ed2-editorial .ed2-board-image img { object-position:center; }
+@media(max-width:760px) {
+  .ed2-editorial .ed2-photo-headline {
+    font-size:clamp(55px,15vw,100px);
+    line-height:.78;
+    letter-spacing:-.075em;
+    margin:23px 0 20px;
+  }
+  .ed2-editorial .ed2-photo-type {
+    font-size:1.42em;
+    line-height:.72;
+    margin:.07em 0 .1em -.025em;
+    max-width:100%;
+  }
+  .ed2-editorial .ed2-board-headline h3 {
+    font-size:clamp(36px,10vw,58px);
+  }
+}
+@media(max-width:360px) {
+  .ed2-editorial .ed2-photo-headline { font-size:52px; }
+  .ed2-editorial .ed2-photo-type { font-size:1.32em; }
+}
