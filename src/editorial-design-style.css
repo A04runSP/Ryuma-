@@ -922,3 +922,43 @@
     height: 72px;
   }
 }
+
+
+/* Editorial cover — give the image enough vertical room for its typography. */
+@media (max-width: 700px) {
+  .ed4-page .ed4-cover-image > img {
+    height: clamp(500px, 145vw, 640px);
+    object-position: center 42%;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    inset: auto 94px 82px 18px;
+    gap: 12px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(32px, 9vw, 48px);
+    line-height: .94;
+    letter-spacing: -.05em;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    max-width: 25ch;
+    font-size: 8px;
+    line-height: 1.55;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    bottom: 88px;
+  }
+}
+@media (max-width: 390px) {
+  .ed4-page .ed4-cover-image > img {
+    height: clamp(500px, 150vw, 580px);
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    inset: auto 82px 76px 14px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(29px, 8.6vw, 35px);
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    bottom: 80px;
+  }
+}
