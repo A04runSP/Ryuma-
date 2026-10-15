@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { ArrowLeft, ArrowRight, Check, Copy, RotateCcw, Leaf, Menu } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Copy, RotateCcw, Menu } from 'lucide-react';
 import './organic-natural-design-style.css';
+import './organic-natural-design-v2.css';
 
 // Original vector artwork: illustrated botanical forms, never stock photography.
 const makeArtwork = (kind) => {
@@ -95,7 +96,7 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
 
     <section className="ry-hero" id="ry-hero">
       <div className="ry-hero-copy">
-        <span className="ry-kicker"><i/> 08 / 12 · EXPRESSIVE</span>
+        <span className="ry-kicker"><i/> 01 / 06 · WILD BOTANICAL</span>
         <h1>Organic /<br/><em>Natural</em><br/>Design</h1>
         <p className="ry-hero-lead">Design that grows instead of being constructed.</p>
         <p className="ry-hero-body">A living visual experience inspired by nature’s forms, textures and rhythms — to create human, warm and harmonious experiences.</p>
