@@ -405,3 +405,72 @@
   .ed4-page .ed4-essay-wide .ed4-street-overlay>strong{font-size:clamp(25px,7.3vw,31px)}
   .ed4-page .ed4-image-copy>span{font-size:7px}
 }
+
+
+/* FINAL MOBILE COVER OVERRIDE — taller photo canvas and a single readable text lane. */
+@media (max-width: 700px) {
+  .ed4-page .ed4-cover-image {
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .ed4-page .ed4-cover-image > img {
+    display: block;
+    width: 100%;
+    height: clamp(620px, 170vw, 760px) !important;
+    min-height: 620px;
+    object-fit: cover;
+    object-position: center 42%;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    left: 18px !important;
+    right: 102px !important;
+    bottom: 92px !important;
+    width: auto !important;
+    max-width: none !important;
+    gap: 12px;
+    z-index: 3;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(34px, 9vw, 50px) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    max-width: 24ch;
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 10px !important;
+    bottom: 92px !important;
+    z-index: 4;
+    width: 76px;
+    height: 92px;
+  }
+  .ed4-page .ed4-cover-image > figcaption {
+    position: relative;
+    z-index: 5;
+  }
+}
+@media (max-width: 390px) {
+  .ed4-page .ed4-cover-image > img {
+    height: 640px !important;
+    min-height: 640px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    left: 14px !important;
+    right: 90px !important;
+    bottom: 82px !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(31px, 8.7vw, 37px) !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 7px !important;
+    bottom: 82px !important;
+    width: 68px;
+    height: 82px;
+  }
+}
