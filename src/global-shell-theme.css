@@ -1051,3 +1051,52 @@
   opacity: 1;
   text-shadow: 0 0 14px rgba(179, 136, 255, .16);
 }
+
+
+/* Dashboard shell: match the approved solid Deep Violet & Aqua direction.
+   Scope only to the dashboard shell; independent style environments stay untouched. */
+.dashboard-shell{background:#0D0D1F;color:#F5F1FA}
+.dashboard-shell .dashboard-glow,.dashboard-shell .dashboard-grain{display:none}
+.dashboard-shell .dashboard-kicker{color:#20E3E6}
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-hero h1 span,
+.dashboard-shell .dashboard-story h2,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2,
+.dashboard-shell .dashboard-end h2 span{background:none;color:#B388FF;-webkit-text-fill-color:#B388FF;-webkit-background-clip:initial;background-clip:initial}
+.dashboard-shell .dashboard-hero p,
+.dashboard-shell .story-copy p,
+.dashboard-shell .systems-heading>p,
+.dashboard-shell .history-heading>p,
+.dashboard-shell .foundations-heading>p,
+.dashboard-shell .reading-heading>p,
+.dashboard-shell .principles-heading>p{color:#F5F1FA}
+.dashboard-shell .dashboard-nav-title,
+.dashboard-shell .dashboard-back,
+.dashboard-shell .dashboard-library{color:#9CAFC3}
+.dashboard-shell .dashboard-back:hover,
+.dashboard-shell .dashboard-library:hover{color:#20E3E6}
+.dashboard-shell .dashboard-cta{background:#B388FF;color:#0D0D1F;border:1px solid #B388FF;box-shadow:none}
+.dashboard-shell .dashboard-cta:hover{background:#6A2C91;border-color:#6A2C91;color:#F5F1FA}
+.dashboard-shell .system-row,
+.dashboard-shell .history-card,
+.dashboard-shell .foundation-card,
+.dashboard-shell .reading-card,
+.dashboard-shell .principle-card,
+.dashboard-shell .language-card,
+.dashboard-shell .dashboard-end-card{background:#17152A;border-color:#343247;box-shadow:none;backdrop-filter:none}
+.dashboard-shell button:focus-visible,
+.dashboard-shell a:focus-visible{outline:2px solid #20E3E6;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.dashboard-shell *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
