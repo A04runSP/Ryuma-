@@ -56,13 +56,13 @@ export default function EditorialDesignStyle({ onNavigate }) {
   </section>
 
   <section className="ed4-principles">
-   <div className="ed4-principles-head"><span className="ed4-kicker">04 / DESIGN ANATOMY</span><h2>Five decisions.<br/><em>One reading experience.</em></h2><p>Each element has its own job. The page only works when the jobs support one another.</p></div>
+   <div className="ed4-principles-head"><span className="ed4-kicker">04 / DESIGN ANATOMY</span><h2>Five decisions.<br/><em>One reading experience.</em></h2><p>Editorial design is the deliberate organisation of words, images and information into a readable story. It is used in magazines, newspapers, books and digital features. The goal is not decoration: it is to guide attention, build meaning and make complex content easy to follow.</p></div>
    <div className="ed4-principle-list">
-    <article><span>01</span><b>▦</b><div><h3>Grid</h3><p>A quiet structure lets different content share one page without flattening it.</p></div><i>↗</i></article>
-    <article><span>02</span><b>↗</b><div><h3>Hierarchy</h3><p>Scale, contrast and placement tell the reader where to begin and where to go next.</p></div><i>↗</i></article>
-    <article><span>03</span><b className="ed4-aa">Aa</b><div><h3>Typography</h3><p>Display type sets the voice; body type carries the argument; captions provide orientation.</p></div><i>↗</i></article>
-    <article><span>04</span><b>◩</b><div><h3>Image</h3><p>Cropping, scale and sequence turn photography into part of the narrative.</p></div><i>↗</i></article>
-    <article><span>05</span><b>№</b><div><h3>Navigation</h3><p>Section markers, captions and folios help readers move through long-form content.</p></div><i>↗</i></article>
+    <article><span>01</span><b>▦</b><div><h3>Grid</h3><p>A grid is the invisible framework behind the page. It aligns headlines, images, captions and columns so the layout feels intentional, even when the composition changes.</p></div><i>↗</i></article>
+    <article><span>02</span><b>↗</b><div><h3>Hierarchy</h3><p>Hierarchy creates a clear order of importance. The headline attracts attention, the deck explains the promise, body copy develops the story, and captions add context.</p></div><i>↗</i></article>
+    <article><span>03</span><b className="ed4-aa">Aa</b><div><h3>Typography</h3><p>Typography gives each kind of text a distinct role. Display type establishes character; readable body type carries the story; small labels and captions help readers navigate.</p></div><i>↗</i></article>
+    <article><span>04</span><b>◩</b><div><h3>Image</h3><p>Images are selected, cropped and sequenced to add evidence, emotion or context. They should contribute to the story rather than simply fill empty space.</p></div><i>↗</i></article>
+    <article><span>05</span><b>№</b><div><h3>Navigation</h3><p>Navigation includes section numbers, running labels, captions and page markers. These small signals tell readers where they are and what they are looking at.</p></div><i>↗</i></article>
    </div>
   </section>
 
