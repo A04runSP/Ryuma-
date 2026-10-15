@@ -962,3 +962,80 @@
     bottom: 80px;
   }
 }
+
+
+/* Editorial cover refinement — separate the lower-right title from the issue badge. */
+@media (max-width: 700px) {
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    left: auto !important;
+    right: 20px !important;
+    top: auto !important;
+    bottom: 158px !important;
+    width: min(62%, 250px) !important;
+    max-width: none !important;
+    align-items: flex-end;
+    text-align: right;
+    gap: 9px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay::before {
+    inset: -20px -14px -18px -32px;
+    background: linear-gradient(270deg, rgba(8,10,12,.9), rgba(8,10,12,.64) 72%, rgba(8,10,12,0));
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > span {
+    max-width: 100%;
+    text-align: right;
+    font-size: 8px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(27px, 7.2vw, 36px) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: balance;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    max-width: 23ch;
+    font-size: 7px;
+    line-height: 1.5;
+    letter-spacing: .075em;
+    text-align: right;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 10px !important;
+    bottom: 54px !important;
+    width: 70px;
+    height: 84px;
+    padding: 9px;
+    z-index: 4;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index b {
+    font-size: 29px;
+  }
+  .ed4-page .ed4-cover-image > figcaption {
+    position: relative;
+    z-index: 5;
+  }
+}
+@media (max-width: 390px) {
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    right: 14px !important;
+    bottom: 145px !important;
+    width: 64% !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(25px, 7vw, 29px) !important;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    max-width: 21ch;
+    font-size: 6px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 7px !important;
+    bottom: 46px !important;
+    width: 64px;
+    height: 76px;
+  }
+}
