@@ -796,3 +796,40 @@
  .quiet-editorial:not([data-theme="light"]) .qe-plate-img{background:linear-gradient(180deg,transparent 58%,rgba(0,0,0,.45)),repeating-linear-gradient(90deg,var(--qe-rule) 0 1px,transparent 1px 12.5%),repeating-linear-gradient(0deg,transparent 0 12.4%,rgba(236,235,230,.06) 12.5% 12.7%),#2A2D33}
 }
 @media(prefers-reduced-motion:reduce){.quiet-editorial *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* Editorial cover: restore one clear photo headline and a safe text zone on mobile. */
+@media(max-width:700px){
+  .ed4-page .ed4-cover-image{isolation:isolate;overflow:hidden;transform:none}
+  .ed4-page .ed4-cover-image>img{display:block;width:100%;height:clamp(350px,112vw,470px);object-fit:cover}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay{
+    left:16px;right:94px;bottom:56px;top:auto;width:auto;max-width:none;
+    display:flex;align-items:flex-start;gap:8px;text-align:left;
+  }
+  .ed4-page .ed4-cover-image .ed4-cover-overlay:before{
+    inset:-24px -18px -24px -16px;
+    background:linear-gradient(90deg,rgba(8,10,12,.88),rgba(8,10,12,.62) 76%,rgba(8,10,12,.12));
+  }
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>span{font-size:7px;letter-spacing:.13em;line-height:1.4}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>strong{
+    display:block;font-size:clamp(26px,7.4vw,36px);line-height:.94;
+    letter-spacing:-.055em;max-width:100%;overflow-wrap:normal;
+  }
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>small{font-size:6px;line-height:1.45;max-width:22ch}
+  .ed4-page .ed4-cover-image .ed4-cover-index{
+    right:10px;bottom:72px;width:64px;height:78px;padding:8px;
+    transform:rotate(3deg);z-index:5;
+  }
+  .ed4-page .ed4-cover-image .ed4-cover-index b{font-size:27px}
+  .ed4-page .ed4-cover-image .ed4-cover-index span{font-size:6px;letter-spacing:.09em}
+  /* Any stale secondary overlay must not duplicate the main cover story. */
+  .ed4-page .ed4-cover-image>.ed4-photo-overlay:not(.ed4-cover-overlay),
+  .ed4-page .ed4-cover-image>.ed4-image-copy:not(.ed4-cover-overlay){display:none!important}
+  .ed4-page .ed4-cover-image figcaption{position:relative;z-index:6}
+}
+@media(max-width:390px){
+  .ed4-page .ed4-cover-image>img{height:clamp(330px,105vw,400px)}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay{right:82px;bottom:48px}
+  .ed4-page .ed4-cover-image .ed4-cover-overlay>strong{font-size:clamp(24px,7vw,29px)}
+  .ed4-page .ed4-cover-image .ed4-cover-index{width:58px;height:72px;right:7px;bottom:66px}
+}
