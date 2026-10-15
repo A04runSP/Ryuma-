@@ -32,7 +32,7 @@ export default function EditorialDesignStyle({ onNavigate }) {
       <div className="ed2-cover-grid">
         <div className="ed2-cover-copy">
           <span className="ed2-eyebrow"><b>THE CITY ISSUE</b> / 01 — FEATURE</span>
-          <h1>THE CITY<br /><i>NEVER</i><br />STANDS<br /><em>STILL.</em></h1>
+          <h1 className="ed2-photo-headline"><span>THE</span><span className="ed2-photo-type" style={{'--ed2-type-image': `url("${images.skyline}")`}}>CITY</span><span>NEVER</span><em>SLEEPS.</em></h1>
           <p className="ed2-cover-deck">A visual field guide to the small details, changing light and restless rhythms that make a city feel alive.</p>
           <div className="ed2-cover-byline"><span>WORDS & ART DIRECTION</span><b>THE RYŪMA EDITORIAL DESK</b></div>
         </div>
@@ -95,23 +95,23 @@ export default function EditorialDesignStyle({ onNavigate }) {
     </section>
 
     <section className="ed2-workshop">
-      <div className="ed2-workshop-header"><span className="ed2-eyebrow">04 / INSIDE THE LAYOUT</span><h2>One story.<br /><i>Different scales.</i></h2><p>Notice how the same subject can be expressed through a headline, a photograph, a note and a quiet detail — without repeating the same layout.</p></div>
+      <div className="ed2-workshop-header"><span className="ed2-eyebrow">04 / INSIDE THE LAYOUT</span><h2>One story.<br /><i>Different scales.</i></h2><p>Notice the defining technique of this issue: a photograph is not just placed next to a headline. It becomes the fill inside the letters themselves, then returns as a full image to establish context.</p></div>
       <div className="ed2-layout-board">
-        <div className="ed2-board-top"><span>THE VISUAL REVIEW</span><b>LAYOUT STUDY / 07</b><span>FIG. 04</span></div>
+        <div className="ed2-board-top"><span>THE VISUAL REVIEW</span><b>TYPE / IMAGE STUDY 07</b><span>FIG. 04</span></div>
         <div className="ed2-board-main">
-          <div className="ed2-board-headline"><span>STORY / 01</span><h3>THE SHAPE<br /><i>OF EVERYDAY</i><br />LIFE.</h3><p>Small observations from a city that never holds still.</p></div>
-          <div className="ed2-board-image"><img src={images.detail} alt="Architectural detail used as a focal image in a magazine layout" /><span>FIG. A / DETAIL STUDY</span></div>
-          <div className="ed2-board-body"><b>THE ARTICLE</b><p>Begin with one clear idea. Let the image add evidence, the text add context and the caption anchor the detail. The reader should understand both the story and where to look next.</p></div>
-          <div className="ed2-board-fact"><span>FIELD NOTE</span><strong>01</strong><i>Notice what<br />others pass.</i></div>
-          <div className="ed2-board-caption"><b>CAPTION / NAVIGATION</b><p>Small labels make the page easier to enter, leave and return to.</p><span>RYŪMA EDITORIAL DESK — 07</span></div>
+          <div className="ed2-board-headline"><span>STORY / 01</span><h3>THE <span className="ed2-board-photo-type" style={{'--ed2-type-image': `url("${images.skyline}")`}}>CITY</span><br /><i>NEVER SLEEPS.</i></h3><p>Photography becomes typography. The image carries the story before the reader reaches the first paragraph.</p></div>
+          <div className="ed2-board-image"><img src={images.skyline} alt="The same skyline photograph used as a typographic image fill" /><span>FIG. A / SOURCE IMAGE</span></div>
+          <div className="ed2-board-body"><b>THE TECHNIQUE</b><p>Use a high-resolution photograph as the background of large display letters. Clip the image to the text, keep the word legible, and let the full photograph elsewhere on the page reveal the complete scene.</p></div>
+          <div className="ed2-board-fact"><span>FIELD NOTE</span><strong>01</strong><i>Image becomes<br />the letterform.</i></div>
+          <div className="ed2-board-caption"><b>CAPTION / NAVIGATION</b><p>Use this technique for a short, meaningful word. Pair it with clear copy and a restrained grid so the effect stays editorial, not decorative noise.</p><span>RYŪMA EDITORIAL DESK — 07</span></div>
         </div>
       </div>
     </section>
 
     <section className="ed2-closing">
       <div className="ed2-closing-mark">THE VISUAL REVIEW <span>✳</span> ISSUE 07</div>
-      <h2>Design the way<br /><i>the story is read.</i></h2>
-      <p>Editorial design gives information a voice, a pace and a place to land. The page becomes more than a container: it becomes part of the story.</p>
+      <h2>Let the image<br /><i>live inside the type.</i></h2>
+      <p>Editorial design gives information a voice, a pace and a place to land. When photography becomes part of the letterform, the typography itself becomes the visual story.</p>
       <div className="ed2-closing-bottom"><span>GRID · HIERARCHY · IMAGE · TYPE · DETAIL</span><button onClick={() => onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowRight size={17} /></button></div>
     </section>
   </main>;
