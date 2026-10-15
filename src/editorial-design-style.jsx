@@ -30,8 +30,8 @@ export default function EditorialDesignStyle({ onNavigate }) {
             <p className="ed4-deck">A field guide to the visual rhythms, overlooked details and changing light that make a city feel alive.</p>
             <div className="ed4-byline"><span>WORDS & ART DIRECTION</span><b>THE RYŪMA EDITORIAL DESK</b><span>6 MIN READ · PHOTO ESSAY</span></div>
           </div>
-          <figure className="ed4-cover-image">
-            <img src={photos.architecture} alt="Tall modern buildings rising into the city sky" />
+          <figure className="ed4-cover-image ed4-image-frame">
+            <img src={photos.architecture} alt="Tall modern buildings rising into the city sky" /><div className="ed4-image-copy ed4-cover-overlay"><span>01 / URBAN STUDIES</span><strong>THE SHAPE<br /><i>OF TOMORROW.</i></strong><small>Architecture changes how a city feels, moves and grows.</small></div>
             <figcaption><b>FIG. 01 / THE BUILT ENVIRONMENT</b><span>FORM · SCALE · LIGHT</span></figcaption>
             <div className="ed4-cover-index"><b>07</b><span>THE CITY<br />ISSUE</span></div>
           </figure>
@@ -60,8 +60,8 @@ export default function EditorialDesignStyle({ onNavigate }) {
           <h2>Structure<br />makes the<br /><i>story legible.</i></h2>
           <p>A grid is an invisible framework of columns, margins and gutters. It helps headlines, photographs and paragraphs feel connected—even when the composition changes.</p>
         </header>
-        <figure className="ed4-feature-photo">
-          <img src={photos.glass} alt="Angular glass architecture showing repeating structural lines" loading="lazy" />
+        <figure className="ed4-feature-photo ed4-image-frame">
+          <img src={photos.glass} alt="Angular glass architecture showing repeating structural lines" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-grid-overlay"><span>FORM STUDY / 02</span><strong>ORDER IN<br /><i>EVERY LINE.</i></strong><small>REPETITION · ALIGNMENT · RHYTHM</small></div>
           <figcaption><b>FIG. 02 / THE GRID IN ARCHITECTURE</b><span>Repeated lines create order and rhythm.</span></figcaption>
         </figure>
         <div className="ed4-story-grid">
@@ -84,19 +84,18 @@ export default function EditorialDesignStyle({ onNavigate }) {
           <p>Photography should add evidence, atmosphere or meaning—not merely fill an empty rectangle. These examples show how different images can carry different parts of a story.</p>
         </header>
         <div className="ed4-essay-grid">
-          <figure className="ed4-essay-main">
-            <img src={photos.house} alt="A thoughtfully composed house surrounded by greenery" loading="lazy" />
+          <figure className="ed4-essay-main ed4-image-frame">
+            <img src={photos.house} alt="A thoughtfully composed house surrounded by greenery" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-house-overlay"><span>FIELD NOTE / 03</span><strong>A PLACE<br /><i>TO BELONG.</i></strong><small>HOME · MEMORY · HUMAN SCALE</small></div>
             <figcaption><b>FIG. 03 / PLACE</b><span>A house gives the story a human scale.</span></figcaption>
           </figure>
           <div className="ed4-essay-side">
             <div className="ed4-time-card"><span>01</span><b>CONTEXT BEFORE DECORATION</b><p>Choose a photograph that tells the reader something the words alone cannot.</p></div>
-            <figure>
-              <img src={photos.nature} alt="Mountain landscape and open sky at changing light" loading="lazy" />
+            <figure className="ed4-image-frame ed4-nature-frame"><img src={photos.nature} alt="Mountain landscape and open sky at changing light" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-nature-overlay"><span>LIGHT STUDY / 04</span><strong>THE ART<br />OF <i>STILLNESS.</i></strong><small>ATMOSPHERE IS ALSO INFORMATION.</small></div><div className="ed4-image-copy ed4-photo-overlay ed4-nature-overlay"><span>LIGHT STUDY / 04</span><strong>THE ART<br />OF <i>STILLNESS.</i></strong><small>ATMOSPHERE IS ALSO INFORMATION.</small></div>
               <figcaption><b>FIG. 04 / ATMOSPHERE</b><span>Light sets the emotional tone.</span></figcaption>
             </figure>
           </div>
-          <figure className="ed4-essay-wide">
-            <img src={photos.street} alt="A city street at dusk with deep blue evening light" loading="lazy" />
+          <figure className="ed4-essay-wide ed4-image-frame">
+            <img src={photos.street} alt="A city street at dusk with deep blue evening light" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-street-overlay"><span>AFTER DARK / 05</span><strong>THE CITY<br /><i>IN MOTION.</i></strong><small>LIGHT TRAILS · ENERGY · PLACE</small></div>
             <figcaption><b>FIG. 05 / MOVEMENT</b><span>A wider scene can establish time, energy and a sense of place.</span></figcaption>
           </figure>
         </div>
@@ -120,7 +119,7 @@ export default function EditorialDesignStyle({ onNavigate }) {
               <div className="ed4-label"><b>B / BODY COPY</b><span>Comfortable line length and spacing support sustained reading.</span></div>
             </div>
             <figure>
-              <img src={photos.architecture} alt="Architectural photograph used as the main visual in a sample editorial spread" loading="lazy" />
+              <img src={photos.architecture} alt="Architectural photograph used as the main visual in a sample editorial spread" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-spread-overlay"><span>IMAGE / EVIDENCE</span><strong>LOOK<br /><i>UP.</i></strong><small>Scale gives the story its impact.</small></div><div className="ed4-image-copy ed4-photo-overlay ed4-spread-overlay"><span>IMAGE / EVIDENCE</span><strong>LOOK<br /><i>UP.</i></strong><small>Scale gives the story its impact.</small></div>
               <figcaption><b>C / PHOTOGRAPH</b><span>The image adds context and gives the eye a visual pause.</span></figcaption>
             </figure>
             <div className="ed4-spread-aside">
@@ -148,7 +147,7 @@ export default function EditorialDesignStyle({ onNavigate }) {
       </section>
 
       <section className="ed4-ending">
-        <figure><img src={photos.glass} alt="A final architectural study of geometry and light" loading="lazy" /><figcaption>FIG. 06 / THE LAST LOOK</figcaption></figure>
+        <figure className="ed4-image-frame ed4-ending-image"><img src={photos.glass} alt="A final architectural study of geometry and light" loading="lazy" /><div className="ed4-image-copy ed4-photo-overlay ed4-ending-overlay"><span>FINAL OBSERVATION / 06</span><strong>SEE THE<br /><i>STRUCTURE.</i></strong><small>Then decide what the reader should notice first.</small></div><figcaption>FIG. 06 / THE LAST LOOK</figcaption></figure>
         <div className="ed4-ending-copy">
           <span className="ed4-kicker">THE EDITOR'S LAST WORD</span>
           <h2>Give the story<br /><i>room to breathe.</i></h2>
