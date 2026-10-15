@@ -153,3 +153,152 @@
 @media(max-width:360px){
  .ed2-nav-index{display:none}.ed2-cover h1{font-size:63px}.ed2-cover-stamp{right:2px}.ed2-section-rail{gap:7px;font-size:5.5px}.ed2-board-top{font-size:5px}.ed2-board-main{grid-template-columns:1fr}.ed2-board-headline,.ed2-board-image,.ed2-board-body,.ed2-board-fact{grid-column:1}.ed2-board-fact{min-height:145px}.ed2-board-caption{grid-column:1}
 }
+
+
+/* Editorial Design — production repair and teaching clarity.
+   Scoped only to this page; does not alter other Ryūma design systems. */
+.ed4-page{
+  width:100%;
+  min-width:0;
+  background:#f3eee4 !important;
+  color:#191817 !important;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow:clip;
+  isolation:isolate;
+}
+.ed4-page *{box-sizing:border-box;min-width:0}
+.ed4-page img{max-width:100%;display:block}
+.ed4-page p{overflow-wrap:break-word}
+.ed4-page .ed4-cover,
+.ed4-page .ed4-feature,
+.ed4-page .ed4-layout-study,
+.ed4-page .ed4-principles{background:#f3eee4;color:#191817}
+.ed4-page .ed4-editor-note{background:#e3dbcf;color:#191817}
+.ed4-page .ed4-photoessay{background:#191817;color:#f3eee4}
+.ed4-page .ed4-ending{background:#f3eee4;color:#191817}
+.ed4-page .ed4-cover-title h1,
+.ed4-page .ed4-cover-title h1 *{font-family:Arial,Helvetica,sans-serif}
+.ed4-page .ed4-note-grid h2,
+.ed4-page .ed4-feature-head h2,
+.ed4-page .ed4-essay-head h2,
+.ed4-page .ed4-study-head h2,
+.ed4-page .ed4-principles-head h2,
+.ed4-page .ed4-ending-copy h2{font-family:Georgia,'Times New Roman',serif}
+.ed4-page .ed4-nav,
+.ed4-page .ed4-masthead,
+.ed4-page .ed4-cover-foot,
+.ed4-page .ed4-section-bar,
+.ed4-page .ed4-cover-image figcaption,
+.ed4-page .ed4-feature-photo figcaption,
+.ed4-page .ed4-essay-grid figcaption,
+.ed4-page .ed4-spread-top,
+.ed4-page .ed4-ending footer{line-height:1.5}
+.ed4-page .ed4-cover-image,
+.ed4-page .ed4-feature-photo,
+.ed4-page .ed4-essay-grid figure,
+.ed4-page .ed4-spread-body figure,
+.ed4-page .ed4-ending figure{min-width:0;max-width:100%}
+.ed4-page .ed4-cover-image img{width:100%;height:clamp(300px,54vw,720px);object-fit:cover}
+.ed4-page .ed4-essay-grid img,
+.ed4-page .ed4-feature-photo img,
+.ed4-page .ed4-spread-body figure img,
+.ed4-page .ed4-ending figure img{width:100%;max-width:100%;object-fit:cover}
+.ed4-page .ed4-principles-head>p{max-width:54ch;font:17px/1.65 Georgia,'Times New Roman',serif}
+.ed4-page .ed4-principle-list p{max-width:54ch;line-height:1.65}
+.ed4-page .ed4-principle-list article{min-width:0}
+@media(max-width:700px){
+  .ed4-page .ed4-nav{height:auto;min-height:58px;padding:14px 18px;gap:10px;display:grid;grid-template-columns:1fr auto;align-items:center}
+  .ed4-page .ed4-nav button{font-size:8px;letter-spacing:.08em}
+  .ed4-page .ed4-logo{grid-column:2;grid-row:1;font-size:17px;white-space:nowrap}
+  .ed4-page .ed4-logo i{display:none}
+  .ed4-page .ed4-nav-meta{grid-column:1/-1;text-align:right;font-size:7px;letter-spacing:.1em}
+  .ed4-page .ed4-cover{padding:18px 18px 24px}
+  .ed4-page .ed4-masthead{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:7px;line-height:1.5;border-bottom-width:4px}
+  .ed4-page .ed4-masthead span:nth-child(2){display:none}
+  .ed4-page .ed4-cover-main{display:flex;flex-direction:column;align-items:stretch;gap:28px;padding:34px 0 28px}
+  .ed4-page .ed4-cover-title{width:100%}
+  .ed4-page .ed4-cover-title h1{font-size:clamp(58px,15vw,104px);line-height:.82;letter-spacing:-.085em;margin:26px 0 22px;overflow-wrap:normal}
+  .ed4-page .ed4-deck{font-size:19px;line-height:1.45;max-width:31ch;margin-bottom:24px}
+  .ed4-page .ed4-byline{font-size:8px}
+  .ed4-page .ed4-cover-image{width:calc(100% - 8px);margin:0 8px 8px 0;transform:rotate(.4deg);padding:7px 7px 0;box-shadow:7px 7px 0 #b8483e}
+  .ed4-page .ed4-cover-image img{height:clamp(320px,112vw,540px)}
+  .ed4-page .ed4-cover-image figcaption{margin:0 -7px;padding:11px 8px;gap:8px;font-size:6px}
+  .ed4-page .ed4-cover-index{width:68px;height:82px;right:0;bottom:20%;padding:8px}
+  .ed4-page .ed4-cover-index b{font-size:28px}
+  .ed4-page .ed4-cover-index span{font-size:7px}
+  .ed4-page .ed4-cover-foot{gap:12px;align-items:flex-start;font-size:6px;line-height:1.8}
+  .ed4-page .ed4-cover-foot span:first-child{max-width:72%}
+  .ed4-page .ed4-editor-note{padding:42px 20px 48px}
+  .ed4-page .ed4-note-grid{grid-template-columns:1fr;gap:24px;padding-top:32px}
+  .ed4-page .ed4-note-grid h2,
+  .ed4-page .ed4-feature-head h2,
+  .ed4-page .ed4-essay-head h2,
+  .ed4-page .ed4-study-head h2,
+  .ed4-page .ed4-principles-head h2,
+  .ed4-page .ed4-ending-copy h2{font-size:clamp(43px,11.5vw,70px);line-height:.92;letter-spacing:-.065em}
+  .ed4-page .ed4-note-grid>div{padding-left:15px}
+  .ed4-page .ed4-note-grid p{font-size:16px;line-height:1.65}
+  .ed4-page .ed4-feature{padding:42px 20px 50px}
+  .ed4-page .ed4-section-bar{display:grid;grid-template-columns:34px 1fr;gap:6px 10px;align-items:center;font-size:7px}
+  .ed4-page .ed4-section-bar b{grid-row:span 2;font-size:24px}
+  .ed4-page .ed4-section-bar span:last-child{grid-column:2;text-align:left;max-width:none}
+  .ed4-page .ed4-feature-head{grid-template-columns:1fr;gap:18px;padding:38px 0 26px}
+  .ed4-page .ed4-feature-head>.ed4-kicker{grid-column:auto}
+  .ed4-page .ed4-feature-head>p{font-size:18px;line-height:1.5;padding-left:14px}
+  .ed4-page .ed4-feature-photo img{height:clamp(270px,90vw,480px)}
+  .ed4-page .ed4-feature-photo figcaption{align-items:flex-start;font-size:6px;gap:8px}
+  .ed4-page .ed4-story-grid{grid-template-columns:1fr;gap:22px;padding-top:26px}
+  .ed4-page .ed4-margin{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}
+  .ed4-page .ed4-margin b{font-size:24px}
+  .ed4-page .ed4-margin i{justify-self:end}
+  .ed4-page .ed4-story-copy p{font-size:16px;line-height:1.7}
+  .ed4-page .ed4-story-copy .ed4-lead{font-size:22px;line-height:1.4}
+  .ed4-page .ed4-pullquote{margin:0;padding:18px 0 18px 16px}
+  .ed4-page .ed4-photoessay{padding:42px 20px 50px}
+  .ed4-page .ed4-essay-head{grid-template-columns:1fr;gap:17px;padding:38px 0 28px}
+  .ed4-page .ed4-essay-head>.ed4-kicker{grid-column:auto}
+  .ed4-page .ed4-essay-head>p{font-size:17px;line-height:1.55}
+  .ed4-page .ed4-essay-grid{grid-template-columns:1fr;gap:24px}
+  .ed4-page .ed4-essay-main img{height:clamp(300px,100vw,520px)}
+  .ed4-page .ed4-essay-side{gap:24px}
+  .ed4-page .ed4-time-card{min-height:220px;padding:24px}
+  .ed4-page .ed4-time-card>span{font-size:60px}
+  .ed4-page .ed4-essay-side figure img{height:clamp(240px,75vw,390px)}
+  .ed4-page .ed4-essay-wide{grid-column:auto;display:block}
+  .ed4-page .ed4-essay-wide img{height:clamp(240px,70vw,360px)}
+  .ed4-page .ed4-essay-wide figcaption{display:flex;gap:9px}
+  .ed4-page .ed4-layout-study{padding:42px 20px 50px}
+  .ed4-page .ed4-study-head{grid-template-columns:1fr;gap:18px;padding:38px 0 28px}
+  .ed4-page .ed4-study-head>p{font-size:16px;line-height:1.65}
+  .ed4-page .ed4-spread{padding:15px 13px 17px;box-shadow:5px 5px 0 #c9c0b4}
+  .ed4-page .ed4-spread-top{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:6px;line-height:1.5}
+  .ed4-page .ed4-spread-body{grid-template-columns:1fr;gap:20px;padding-top:22px}
+  .ed4-page .ed4-spread-title h3{font-size:clamp(35px,9vw,52px);margin:20px 0}
+  .ed4-page .ed4-spread-title p{font-size:15px;line-height:1.6}
+  .ed4-page .ed4-spread-body figure img{height:clamp(250px,78vw,420px)}
+  .ed4-page .ed4-spread-aside{grid-column:auto;grid-template-columns:1fr;gap:10px;padding-top:15px}
+  .ed4-page .ed4-spread-aside p{font-size:14px;line-height:1.65;margin:0}
+  .ed4-page .ed4-study-foot{display:grid;grid-template-columns:1fr;gap:10px;line-height:1.65}
+  .ed4-page .ed4-principles{padding:42px 20px 50px}
+  .ed4-page .ed4-principles-head{display:grid;grid-template-columns:1fr;gap:18px}
+  .ed4-page .ed4-principles-head>p{font-size:16px;line-height:1.65}
+  .ed4-page .ed4-principle-list{margin-top:28px}
+  .ed4-page .ed4-principle-list article{display:grid;grid-template-columns:28px 38px minmax(0,1fr) 14px;gap:9px;padding:18px 0;align-items:start}
+  .ed4-page .ed4-principle-list article>span{font-size:16px}
+  .ed4-page .ed4-principle-list article>b{font-size:27px}
+  .ed4-page .ed4-principle-list article>div{min-width:0}
+  .ed4-page .ed4-principle-list h3{font-size:22px;margin:0 0 7px}
+  .ed4-page .ed4-principle-list p{font-size:13px;line-height:1.6;margin:0}
+  .ed4-page .ed4-principle-list article>i{font-size:13px}
+  .ed4-page .ed4-ending{grid-template-columns:1fr;gap:26px;padding:42px 20px 22px}
+  .ed4-page .ed4-ending figure img{height:clamp(270px,88vw,440px)}
+  .ed4-page .ed4-ending-copy>p{font-size:17px;line-height:1.6}
+  .ed4-page .ed4-ending footer{display:grid;grid-template-columns:1fr;gap:8px;font-size:7px}
+}
+@media(max-width:380px){
+  .ed4-page .ed4-cover-title h1{font-size:clamp(52px,14.5vw,60px)}
+  .ed4-page .ed4-cover-foot span:first-child{max-width:100%}
+  .ed4-page .ed4-cover-foot{display:grid;grid-template-columns:1fr;gap:7px}
+  .ed4-page .ed4-section-bar{grid-template-columns:28px minmax(0,1fr)}
+  .ed4-page .ed4-cover-index{right:0;width:62px;height:76px}
+}
