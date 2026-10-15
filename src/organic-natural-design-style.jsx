@@ -2,15 +2,48 @@ import React, { useMemo, useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Copy, RotateCcw, Leaf, Menu } from 'lucide-react';
 import './organic-natural-design-style.css';
 
+// Original vector artwork: illustrated botanical forms, never stock photography.
+const makeArtwork = (kind) => {
+  const palettes = {
+    hero: ['#0C3328','#164A38','#F4E8C9','#D9A74D','#E8C7A0'],
+    form: ['#143D30','#78916C','#E6CBA4','#C16A43','#F4E8C9'],
+    botany: ['#173F31','#3D7250','#F4E8C9','#D8A64B','#A8B69A'],
+    texture: ['#E8D8B9','#B9A58A','#514638','#D6BFA0','#F4E8C9'],
+    colour: ['#E9DDC4','#C06B45','#D9A74D','#8B9B79','#163D30'],
+    rhythm: ['#174233','#EBDCC0','#D8A64B','#A9B99B','#C56B48'],
+    brand: ['#12392D','#1B4B39','#EADCC0','#D6A24B','#C16A43'],
+    stone: ['#E8DDC7','#AFA48E','#637A60','#D7A34C','#F4E8C9']
+  };
+  const [bg,green,cream,gold,clay] = palettes[kind] || palettes.hero;
+  const leaves = kind === 'texture' || kind === 'stone' ? '' : `
+    <g stroke="${cream}" stroke-opacity=".55" stroke-width="1.5" fill="none">
+      <path d="M110 440 C180 350 215 260 260 120"/>
+      <path d="M194 302 C130 310 106 272 112 238 C162 240 195 263 194 302Z" fill="${green}"/>
+      <path d="M222 240 C274 225 297 188 286 158 C247 170 220 201 222 240Z" fill="${gold}"/>
+      <path d="M153 360 C98 351 75 318 87 288 C132 300 159 327 153 360Z" fill="${clay}"/>
+      <path d="M247 172 C213 137 223 101 249 82 C276 113 273 146 247 172Z" fill="${green}"/>
+      <path d="M181 319 C236 300 270 320 273 353 C232 368 199 352 181 319Z" fill="${green}"/>
+      <path d="M265 142 C298 100 337 105 352 130 C324 158 291 164 265 142Z" fill="${clay}"/>
+      <path d="M130 390 C92 408 64 391 58 366 C91 354 119 366 130 390Z" fill="${green}"/>
+    </g>`;
+  const flower = `<g transform="translate(320 118)" fill="${cream}" stroke="${gold}" stroke-width="1.2">
+    <ellipse cy="-24" rx="10" ry="25"/><ellipse cx="23" cy="-7" rx="10" ry="25" transform="rotate(55 23 -7)"/><ellipse cx="15" cy="21" rx="10" ry="25" transform="rotate(115 15 21)"/><ellipse cx="-15" cy="21" rx="10" ry="25" transform="rotate(-115 -15 21)"/><ellipse cx="-23" cy="-7" rx="10" ry="25" transform="rotate(-55 -23 -7)"/><circle r="10" fill="${gold}"/>
+  </g>`;
+  const texture = kind === 'texture' || kind === 'stone' ? `
+    <path d="M-20 320 L100 220 240 252 400 160 430 490 -20 490Z" fill="${green}" opacity=".95"/>
+    <path d="M-20 360 L118 288 226 320 365 250 430 490 -20 490Z" fill="${clay}" opacity=".9"/>
+    <path d="M40 110 Q100 70 150 115 T270 105 T420 100" fill="none" stroke="${gold}" stroke-width="2" opacity=".8"/>
+    <g fill="${cream}" opacity=".6">${Array.from({length:42},(_,i)=>`<circle cx="${(i*47)%420}" cy="${(i*71)%440}" r="${i%3+1}"/>`).join('')}</g>` : '';
+  const flowerBits = kind === 'botany' || kind === 'hero' || kind === 'rhythm' ? flower + `<g transform="translate(92 180) scale(.55)">${flower.replaceAll('translate(320 118)','translate(0 0)')}</g><g transform="translate(354 280) scale(.42)">${flower.replaceAll('translate(320 118)','translate(0 0)')}</g>` : '';
+  const circles = kind === 'colour' || kind === 'form' || kind === 'hero' || kind === 'brand' ? `<circle cx="340" cy="95" r="82" fill="${gold}" opacity=".8"/><circle cx="38" cy="300" r="68" fill="${clay}" opacity=".8"/><path d="M300 -10 C240 75 360 115 292 195 S345 325 420 360 L430 -10Z" fill="${cream}" opacity=".72"/>` : '';
+  const label = ({hero:'FIELD STUDY / 01',form:'FORM / CURVES',botany:'BOTANY / GROWTH',texture:'TEXTURE / GRAIN',colour:'COLOUR / EARTH',rhythm:'RHYTHM / REPEAT',brand:'ALVORA / NATURAL CARE',stone:'MATERIAL / STONE'})[kind] || 'RYŪMA / STUDY';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 480"><rect width="420" height="480" fill="${bg}"/><path d="M0 0H420V480H0Z" fill="${cream}" opacity=".08"/>${circles}${texture}${leaves}${flowerBits}<g fill="${cream}" opacity=".45">${Array.from({length:70},(_,i)=>`<circle cx="${(i*61)%420}" cy="${(i*37)%480}" r="${i%3===0?1.8:1}"/>`).join('')}</g><path d="M18 18H402V462H18Z" fill="none" stroke="${cream}" stroke-opacity=".35"/><text x="28" y="445" font-family="Georgia,serif" font-size="13" letter-spacing="2" fill="${cream}">${label}</text><text x="390" y="445" text-anchor="end" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="${cream}">RYŪMA</text></svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+};
 const photos = {
-  hero: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=90',
-  form: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=88',
-  botany: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=88',
-  texture: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=900&q=88',
-  colour: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=88',
-  rhythm: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=88',
-  brand: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1400&q=90',
-  stone: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=88'
+  hero: makeArtwork('hero'), form: makeArtwork('form'), botany: makeArtwork('botany'),
+  texture: makeArtwork('texture'), colour: makeArtwork('colour'), rhythm: makeArtwork('rhythm'),
+  brand: makeArtwork('brand'), stone: makeArtwork('stone')
 };
 const palette = [
   {name:'Forest',hex:'#203D2B',role:'Anchor · depth'},
