@@ -833,3 +833,92 @@
   .ed4-page .ed4-cover-image .ed4-cover-overlay>strong{font-size:clamp(24px,7vw,29px)}
   .ed4-page .ed4-cover-image .ed4-cover-index{width:58px;height:72px;right:7px;bottom:66px}
 }
+
+
+/* Editorial cover — authoritative mobile layout repair.
+   Keep the photo headline in a vertical stack and reserve a clear lane for the issue tab. */
+@media (max-width: 700px) {
+  .ed4-page .ed4-cover-image {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transform: none;
+  }
+  .ed4-page .ed4-cover-image > img {
+    display: block;
+    width: 100%;
+    height: clamp(350px, 112vw, 470px);
+    object-fit: cover;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    position: absolute;
+    z-index: 2;
+    inset: auto 88px 70px 16px;
+    width: auto;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    text-align: left;
+    color: #f2eee5;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -22px -14px -20px -16px;
+    background: linear-gradient(90deg, rgba(8,10,12,.9), rgba(8,10,12,.65) 72%, rgba(8,10,12,.08));
+    pointer-events: none;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > span {
+    display: block;
+    font-size: 8px;
+    line-height: 1.4;
+    letter-spacing: .13em;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    display: block;
+    max-width: 100%;
+    font-size: clamp(29px, 8.2vw, 46px);
+    line-height: .92;
+    letter-spacing: -.055em;
+    overflow-wrap: normal;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > small {
+    display: block;
+    max-width: 23ch;
+    font-size: 7px;
+    line-height: 1.5;
+    letter-spacing: .08em;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    z-index: 4;
+    right: 9px;
+    bottom: 76px;
+    width: 64px;
+    height: 78px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay ~ .ed4-image-copy,
+  .ed4-page .ed4-cover-image > .ed4-photo-overlay {
+    display: none !important;
+  }
+  .ed4-page .ed4-cover-image > figcaption {
+    position: relative;
+    z-index: 5;
+  }
+}
+@media (max-width: 390px) {
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay {
+    inset: auto 78px 62px 13px;
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-overlay > strong {
+    font-size: clamp(25px, 7.4vw, 31px);
+  }
+  .ed4-page .ed4-cover-image > .ed4-cover-index {
+    right: 6px;
+    bottom: 67px;
+    width: 58px;
+    height: 72px;
+  }
+}
