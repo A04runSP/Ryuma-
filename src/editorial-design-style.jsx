@@ -14,7 +14,9 @@ const anatomy=[
  {n:'05',t:'Information',d:'Dates, captions, folios and labels make the page feel complete.'}
 ];
 
-const filler='The city changes after dark. Windows become small signals, streets turn into moving lines, and familiar buildings take on another rhythm. An editorial page can work in the same way: it selects, orders and scales information so the reader moves naturally from one moment to the next.';
+const filler='After sunset, the city becomes a map of small decisions. Lit windows pull the eye upward, traffic draws bright lines across the street, and dark façades give each illuminated detail room to speak.';
+const storyDetail='From the waterfront, the skyline reads as a sequence rather than a single view: a low band of buildings, a cluster of glass towers, then the narrow spire that anchors the composition. Distance softens the edges while the water carries the last colour of the evening.';
+const storyClosing='The page follows the same logic. One image establishes place; a headline names the idea; short passages build context; captions and folios help the reader stay oriented. Each element has a different job, but all of them belong to the same visual argument.';
 
 export default function EditorialDesignStyle({onNavigate}){
  return <main className="editorial-shell editorial-real">
@@ -112,7 +114,14 @@ export default function EditorialDesignStyle({onNavigate}){
    <div className="ed-contrast-paper">
     <div className="ed-contrast-head"><b>EDITORIAL / 01</b><span>THE SYSTEM</span></div>
     <h3>Everything<br/><i>has a place.</i></h3>
-    <div className="ed-contrast-grid"><div className="fake-photo"/><div><b>HEADLINE</b><p>Scale attracts the eye.</p></div><div><b>ARTICLE</b><p>{filler}</p></div><div><b>DETAIL</b><p>Caption · date · folio</p></div></div>
+    <div className="ed-contrast-grid">
+      <div className="fake-photo" aria-label="Illustrated editorial page layout">
+       <span className="fake-photo-kicker">FIELD NOTES / 07</span><b>THE<br/><i>SHAPE</i><br/>OF NIGHT</b><span className="fake-photo-columns"><i/><i/><i/></span><span className="fake-photo-folio">FIG. 01 — CITY STUDY</span>
+      </div>
+      <div><b>HEADLINE</b><p>Scale attracts the eye and names the story.</p></div>
+      <div><b>ARTICLE</b><p>A short lead introduces the subject. Supporting paragraphs add context in a clear reading sequence.</p></div>
+      <div><b>DETAIL</b><p>Caption · date · folio</p></div>
+     </div>
    </div>
   </section>
 
