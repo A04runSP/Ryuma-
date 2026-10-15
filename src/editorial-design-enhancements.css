@@ -504,3 +504,7 @@
     width: 45% !important;
   }
 }
+
+/* Mobile cover: keep LOOK UP inset from the left edge and place the main title lower-right. */
+@media(max-width:700px){.ed4-page .ed4-cover-image>.ed4-cover-overlay{top:auto!important;bottom:118px!important;left:auto!important;right:18px!important;width:min(58%,270px)!important;align-items:flex-end;text-align:right}.ed4-page .ed4-cover-image>.ed4-cover-overlay>strong{font-size:clamp(30px,8vw,43px)!important;line-height:.94!important;max-width:100%;overflow-wrap:anywhere}.ed4-page .ed4-cover-image>.ed4-cover-overlay>small{text-align:right;max-width:24ch}.ed4-page .ed4-cover-image>.ed4-look-up{left:36px!important;right:auto!important}}
+@media(max-width:390px){.ed4-page .ed4-cover-image>.ed4-cover-overlay{right:14px!important;bottom:105px!important;width:56%!important}.ed4-page .ed4-cover-image>.ed4-cover-overlay>strong{font-size:clamp(28px,7.5vw,34px)!important}.ed4-page .ed4-cover-image>.ed4-look-up{left:28px!important}}
