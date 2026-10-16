@@ -492,3 +492,65 @@
  .special-cyberpunk .cyber-dystopia-specimen .cyber-signal-bars{left:14px;right:14px;bottom:36px;height:22px}
  .special-cyberpunk .cyber-dystopia-specimen .cyber-specimen-bottom{left:14px;right:14px;bottom:10px}
 }
+
+
+/* Cyberpunk Sound Deck — interactive soundtrack player */
+.special-cyberpunk .cyber-sound-deck{
+  position:relative;isolation:isolate;margin:0 0 clamp(48px,7vw,86px);
+  padding:18px 20px 14px;border:1px solid rgba(69,243,239,.34);
+  background:linear-gradient(115deg,rgba(14,20,31,.97),rgba(7,10,16,.96));
+  box-shadow:0 0 0 5px rgba(69,243,239,.025),inset 4px 0 0 var(--special-accent);
+  overflow:hidden;
+}
+.special-cyberpunk .cyber-sound-deck:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(110deg,transparent 15%,rgba(255,47,145,.07) 48%,transparent 80%);
+}
+.special-cyberpunk .cyber-deck-heading,.special-cyberpunk .cyber-deck-footer{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  color:#8fa1b1;font:8px 'DM Mono',monospace;letter-spacing:.12em;
+}
+.special-cyberpunk .cyber-deck-heading{padding-bottom:12px;border-bottom:1px solid var(--cyber-line)}
+.special-cyberpunk .cyber-deck-heading span,.special-cyberpunk .cyber-deck-footer>span{
+  display:flex;align-items:center;gap:7px;
+}
+.special-cyberpunk .cyber-deck-heading svg{color:var(--cyber-cyan)}
+.special-cyberpunk .cyber-deck-heading b{font-weight:500;color:var(--special-accent)}
+.special-cyberpunk .cyber-deck-main{display:flex;align-items:center;gap:14px;padding:17px 0 12px}
+.special-cyberpunk .cyber-play-button{
+  flex:0 0 46px;width:46px;height:46px;display:grid;place-items:center;
+  padding:0;border:1px solid var(--special-accent);border-radius:0;
+  color:var(--special-accent);background:rgba(5,7,11,.8);
+  box-shadow:0 0 18px color-mix(in srgb,var(--special-accent) 18%,transparent);
+}
+.special-cyberpunk .cyber-play-button:hover{background:var(--special-accent);color:#05070b}
+.special-cyberpunk .cyber-play-glyph{font-size:15px;margin-left:3px}
+.special-cyberpunk .cyber-pause-glyph{font-size:19px;font-weight:800}
+.special-cyberpunk .cyber-track-info{display:flex;flex-direction:column;gap:5px;min-width:0}
+.special-cyberpunk .cyber-track-info strong{color:#f4f5f1;font:700 13px 'DM Mono',monospace;letter-spacing:.02em}
+.special-cyberpunk .cyber-track-info span{color:#8294a5;font:7px 'DM Mono',monospace;letter-spacing:.08em}
+.special-cyberpunk .cyber-deck-visualizer{height:42px;flex:1;min-width:42px;display:flex;align-items:center;justify-content:flex-end;gap:2px;overflow:hidden}
+.special-cyberpunk .cyber-deck-visualizer i{height:var(--deck-bar);flex:1;max-width:5px;min-width:2px;background:var(--special-accent);opacity:.42;transform-origin:center;box-shadow:0 0 7px color-mix(in srgb,var(--special-accent) 30%,transparent)}
+.special-cyberpunk .cyber-sound-deck.is-playing .cyber-deck-visualizer i{animation:cyber-deck-beat 680ms ease-in-out infinite alternate;animation-delay:var(--deck-delay)}
+.special-cyberpunk .cyber-track-timeline{display:flex;align-items:center;gap:10px;color:#92a2b2;font:8px 'DM Mono',monospace}
+.special-cyberpunk .cyber-track-timeline input[type=range]{flex:1;min-width:0;accent-color:var(--special-accent);height:3px;cursor:pointer}
+.special-cyberpunk .cyber-deck-footer{padding-top:12px;margin-top:9px;border-top:1px solid rgba(69,243,239,.12)}
+.special-cyberpunk .cyber-deck-footer .cyber-live-dot{width:5px;height:5px}
+.special-cyberpunk .cyber-deck-footer label{display:flex;align-items:center;gap:8px}
+.special-cyberpunk .cyber-deck-footer input[type=range]{width:70px;accent-color:var(--special-accent);cursor:pointer}
+@keyframes cyber-deck-beat{
+  from{transform:scaleY(.22);opacity:.32}
+  to{transform:scaleY(1);opacity:1;filter:brightness(1.25)}
+}
+@media(max-width:420px){
+ .special-cyberpunk .cyber-sound-deck{padding:14px 12px 12px;margin-bottom:44px}
+ .special-cyberpunk .cyber-deck-main{gap:10px}
+ .special-cyberpunk .cyber-play-button{flex-basis:40px;width:40px;height:40px}
+ .special-cyberpunk .cyber-track-info strong{font-size:11px}
+ .special-cyberpunk .cyber-track-info span{font-size:6px;letter-spacing:.03em}
+ .special-cyberpunk .cyber-deck-visualizer{max-width:70px}
+ .special-cyberpunk .cyber-deck-heading,.special-cyberpunk .cyber-deck-footer{font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){
+ .special-cyberpunk .cyber-sound-deck.is-playing .cyber-deck-visualizer i{animation:none}
+}
