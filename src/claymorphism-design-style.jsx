@@ -30,7 +30,7 @@ export default function ClaymorphismDesignStyle({onNavigate}){
     <button className={`clay-object clay-main ${pressed==='main'?'is-pressed':''}`} onPointerDown={()=>press('main')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release}><span>CLAY UI</span><strong>SOFT<br/>BY DESIGN.</strong><small>{pressed==='main'?'PRESSED / SPRING BACK':'PRESS ME'}</small></button>
     <button className={`clay-object clay-circle ${pressed==='circle'?'is-pressed':''}`} aria-label="Press clay circle" onPointerDown={()=>press('circle')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release}><b>+</b></button>
     <button className={`clay-object clay-button ${pressed==='button'?'is-pressed':''}`} onPointerDown={()=>press('button')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release}>{pressed==='button'?'PRESSED':'TOUCH'}</button>
-    <div className={`clay-object clay-tile ${pressed==='tile'?'is-pressed':''}`} onPointerDown={()=>press('tile')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release}><span>04</span><b>PLAY</b></div>
+    <button type="button" className={`clay-object clay-tile ${pressed==='tile'?'is-pressed':''}`} aria-pressed={pressed==='tile'} onPointerDown={()=>press('tile')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release} onKeyDown={(event)=>{if(event.key==='Enter'||event.key===' ')press('tile')}} onKeyUp={release} onBlur={release}><span>04</span><b>{pressed==='tile'?'PLAYING':'PLAY'}</b></button>
    </div>
   </div></section>
 

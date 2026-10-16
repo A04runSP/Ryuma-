@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import './y2k-style.css';
 
@@ -11,6 +11,7 @@ const anatomy = [
 ];
 
 export default function Y2KStyle({ onNavigate }) {
+  const [enteredWeb, setEnteredWeb] = useState(false);
   return <main className="y2k-page">
     <header className="y2k-nav">
       <button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button>
@@ -63,7 +64,7 @@ export default function Y2KStyle({ onNavigate }) {
     <section className="y2k-interface">
       <div className="y2k-section-label"><span>06</span><b>INTERFACE CULTURE</b></div>
       <div className="y2k-interface-main">
-        <div className="y2k-window"><div className="window-top"><span>●</span><span>●</span><span>●</span><b>MY_FUTURE.EXE</b></div><div className="window-body"><span>LOADING...</span><strong>100%</strong><div className="loading"><i/></div><button>ENTER THE WEB →</button></div></div>
+        <div className="y2k-window"><div className="window-top"><span>●</span><span>●</span><span>●</span><b>MY_FUTURE.EXE</b></div><div className={`window-body${enteredWeb ? " is-online" : ""}`} aria-live="polite"><span>{enteredWeb ? "CONNECTION ESTABLISHED" : "LOADING..."}</span><strong>{enteredWeb ? "ONLINE" : "100%"}</strong><div className="loading" aria-label="Connection progress"><i/></div><button type="button" onClick={() => setEnteredWeb(value => !value)}>{enteredWeb ? "RESTART CONNECTION ↻" : "ENTER THE WEB →"}</button></div></div>
         <div><h2>Make it<br/><em>feel digital.</em></h2><p>Y2K is more than chrome and pink. It reflects an era of translucent interfaces, desktop windows, media players, animated cursors and the excitement of being online.</p></div>
       </div>
     </section>

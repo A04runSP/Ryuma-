@@ -1,0 +1,1514 @@
+/* Home-only solid-colour theme.
+   No gradients in the global Home shell.
+   Dashboard, Library, live preview artwork and independent Style Worlds are untouched. */
+
+.home-shell {
+  background: #0D0D1F;
+}
+.home-shell .aurora-one,
+.home-shell .aurora-two,
+.home-shell .aurora-three {
+  display: none;
+}
+.home-shell .brand-mark {
+  border-color: #6A2C91;
+  background: #17152A;
+}
+
+/* Primary Violet (#B388FF): solid headings, never gradient text. */
+.home-shell .hero h1,
+.home-shell .hero h1 span,
+.home-shell .definition-copy h2,
+.home-shell .definition-copy h2 span,
+.home-shell .anatomy-intro h2,
+.home-shell .anatomy-intro h2 span,
+.home-shell .preview-section h2 {
+  background: none;
+  color: #B388FF;
+  -webkit-text-fill-color: #B388FF;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+.home-shell .section-kicker,
+.home-shell .anatomy-intro .section-kicker,
+.home-shell .preview-section .section-kicker {
+  color: #9CAFC3;
+  -webkit-text-fill-color: #9CAFC3;
+}
+.home-shell .anatomy-note {
+  color: #9CAFC3;
+  -webkit-text-fill-color: #9CAFC3;
+}
+.home-shell .definition-process { color: #E6E2EB; }
+.home-shell .definition-process i { color: #6A2C91; }
+.home-shell .definition-close span { color: #B8B3C4; }
+
+/* Solid CTA fills. */
+.home-shell .jump-button,
+.home-shell .jump-button.secondary {
+  color: #0D0D1F;
+  background: #B388FF;
+  border: 1px solid #B388FF;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .20);
+}
+.home-shell .jump-button svg { color: #0D0D1F; }
+.home-shell .jump-button:hover {
+  background: #6A2C91;
+  border-color: #6A2C91;
+  color: #F5F1FA;
+}
+.home-shell .jump-button:hover svg { color: #F5F1FA; }
+
+/* Solid Anatomy card surfaces. */
+.home-shell .anatomy-colour,
+.home-shell .anatomy-type,
+.home-shell .anatomy-form,
+.home-shell .anatomy-space,
+.home-shell .anatomy-motion {
+  background: #17152A;
+  border-color: #343247;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .20);
+}
+
+/* Deep Night Surface for interactive states, with solid violet feedback. */
+.home-shell .anatomy-item:hover,
+.home-shell .anatomy-item:active {
+  background: #17152A;
+  border-color: #6A2C91;
+  box-shadow: inset 3px 0 0 #6A2C91;
+}
+.home-shell .anatomy-item:focus-visible {
+  background: #17152A;
+  border-color: #B388FF;
+  outline: 2px solid #B388FF;
+  outline-offset: 3px;
+}
+.home-shell .anatomy-item[aria-selected="true"],
+.home-shell .anatomy-item[aria-pressed="true"] {
+  border-color: #B388FF;
+  box-shadow: 0 0 0 1px #B388FF;
+}
+
+/* Decorative anatomy artwork uses solid fills; preview artwork is not targeted. */
+.home-shell .colour-visual .colour-wheel {
+  background: #6A2C91;
+  box-shadow: 0 0 18px rgba(106, 44, 145, .16);
+}
+.home-shell .colour-visual i:nth-child(1),
+.home-shell .colour-visual i:nth-child(2),
+.home-shell .colour-visual i:nth-child(3),
+.home-shell .colour-visual i:nth-child(4) { background: #B388FF; }
+.home-shell .colour-visual i { box-shadow: 0 0 12px rgba(179, 136, 255, .12); }
+.home-shell .form-triangle { border-bottom-color: #6A2C91; }
+.home-shell .form-circle { border-color: #8FA5BA; }
+.home-shell .form-square { border-color: #B388FF; }
+.home-shell .motion-dot { box-shadow: 0 0 10px rgba(179, 136, 255, .18); }
+.home-shell .motion-dot.one { background: #6A2C91; }
+.home-shell .motion-dot.two { background: #8FA5BA; }
+.home-shell .motion-dot.three { background: #B388FF; }
+
+/* Preserve original live-preview artwork and each design language's palette. */
+
+/* Soft Ivory (#F5F1FA): readable Home body copy and supporting text. */
+.home-shell .hero p,
+.home-shell .definition-copy p,
+.home-shell .anatomy-item p,
+.home-shell .anatomy-item .description,
+.home-shell .preview-section p,
+.home-shell .definition-process {
+  color: #F5F1FA;
+  -webkit-text-fill-color: #F5F1FA;
+}
+.home-shell .definition-close span {
+  color: #F5F1FA;
+  -webkit-text-fill-color: #F5F1FA;
+}
+
+/* Aqua Cyan (#20E3E6): restrained solid accent for interactive details. */
+.home-shell .section-kicker,
+.home-shell .anatomy-intro .section-kicker,
+.home-shell .preview-section .section-kicker {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
+.home-shell .jump-button:focus-visible,
+.home-shell .jump-button.secondary:focus-visible {
+  outline: 2px solid #20E3E6;
+  outline-offset: 4px;
+}
+.home-shell .anatomy-item:hover .anatomy-note,
+.home-shell .anatomy-item:focus-visible .anatomy-note {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
+
+/* Home wordmark: replace the legacy multicolour gradient with solid Primary Violet. */
+.home-shell .brand-name {
+  background: none;
+  color: #B388FF;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #B388FF;
+  text-shadow: none;
+}
+
+/* Emphasize the learning journey and brand closing line on Home.
+   Solid palette colours only; no gradients or changes to other pages. */
+.home-shell .definition-process {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  padding: 18px 20px;
+  border-left: 3px solid #20E3E6;
+  border-radius: 0 12px 12px 0;
+  background: #17152A;
+  color: #F5F1FA;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+.home-shell .definition-process span {
+  color: #F5F1FA;
+  font-weight: 800;
+}
+.home-shell .definition-process i {
+  color: #20E3E6;
+  font-style: normal;
+  font-weight: 800;
+}
+.home-shell .definition-close {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #343247;
+  border-radius: 12px;
+  background: #17152A;
+}
+.home-shell .definition-close strong {
+  color: #B388FF;
+  font-weight: 800;
+}
+.home-shell .definition-close span {
+  color: #F5F1FA;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .home-shell .definition-process {
+    gap: 8px 10px;
+    padding: 16px;
+    font-size: .94rem;
+    line-height: 1.65;
+  }
+  .home-shell .definition-close {
+    margin-top: 20px;
+    padding: 18px 16px;
+  }
+}
+
+/* Home Anatomy visuals: subtly animate geometry to make motion meaningful. */
+.home-shell .form-square {
+  animation: homeFormSquare 5s ease-in-out infinite;
+  transform-origin: center;
+}
+.home-shell .form-circle {
+  animation: homeFormCircle 5s ease-in-out infinite;
+  transform-origin: center;
+}
+.home-shell .form-triangle {
+  animation: homeFormTriangle 5s ease-in-out infinite;
+  transform-origin: center;
+}
+.home-shell .motion-dot.one { animation: homeMotionDotOne 3.2s ease-in-out infinite; }
+.home-shell .motion-dot.two { animation: homeMotionDotTwo 3.2s ease-in-out infinite; }
+.home-shell .motion-dot.three { animation: homeMotionDotThree 3.2s ease-in-out infinite; }
+@keyframes homeFormSquare {
+  0%, 100% { transform: rotate(-12deg) translate(0, 0); }
+  50% { transform: rotate(4deg) translate(4px, -3px); }
+}
+@keyframes homeFormCircle {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -2px); }
+}
+@keyframes homeFormTriangle {
+  0%, 100% { transform: rotate(0deg) translate(0, 0); }
+  50% { transform: rotate(9deg) translate(-3px, -4px); }
+}
+@keyframes homeMotionDotOne {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(12px); }
+}
+@keyframes homeMotionDotTwo {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-7px); }
+}
+@keyframes homeMotionDotThree {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, 4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .form-square,
+  .home-shell .form-circle,
+  .home-shell .form-triangle,
+  .home-shell .motion-dot.one,
+  .home-shell .motion-dot.two,
+  .home-shell .motion-dot.three {
+    animation: none !important;
+  }
+}
+
+/* The Colour card's wheel represents a full colour spectrum, not the UI palette.
+   Keep the wheel multicolour while all surrounding Home surfaces stay solid. */
+.home-shell .colour-visual .colour-wheel {
+  background: conic-gradient(
+    #F04468 0deg,
+    #FF9B45 48deg,
+    #F4D35E 92deg,
+    #67C96B 140deg,
+    #20C9C9 188deg,
+    #4388E8 232deg,
+    #7657D8 278deg,
+    #B45BD4 320deg,
+    #F04468 360deg
+  );
+}
+
+/* Space card: diagram layout, alignment and deliberate negative space. */
+.home-shell .space-visual {
+  width: 142px;
+  height: 112px;
+  right: 4px;
+  bottom: 1px;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-shell .space-layout-frame {
+  position: relative;
+  width: 112px;
+  height: 82px;
+  border: 1px solid #8FA5BA;
+  border-radius: 5px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  grid-template-rows: 8px 27px 1fr;
+  column-gap: 9px;
+  row-gap: 7px;
+  background: #0D0D1F;
+}
+.home-shell .space-layout-header {
+  grid-column: 1 / -1;
+  width: 45%;
+  height: 5px;
+  border-radius: 2px;
+  background: #B388FF;
+}
+.home-shell .space-layout-feature {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  border-radius: 3px;
+  background: #6A2C91;
+}
+.home-shell .space-layout-copy {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4px;
+}
+.home-shell .space-layout-copy i {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background: #F5F1FA;
+  opacity: .78;
+}
+.home-shell .space-layout-copy i:nth-child(2) { width: 72%; }
+.home-shell .space-layout-copy i:nth-child(3) { width: 86%; }
+.home-shell .space-layout-gap {
+  grid-column: 2;
+  grid-row: 3;
+  border: 1px dashed #20E3E6;
+  border-radius: 3px;
+  opacity: .85;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .space-layout-frame { animation: none; }
+}
+
+/* Fix Space diagram clipping inside the floating card on narrow screens. */
+.home-shell .anatomy-space {
+  min-height: 210px;
+}
+.home-shell .anatomy-space .space-visual {
+  width: 112px;
+  height: 82px;
+  right: 10px;
+  bottom: 10px;
+  top: auto;
+  overflow: visible;
+}
+.home-shell .anatomy-space .space-layout-frame {
+  box-sizing: border-box;
+  width: 100px;
+  height: 72px;
+  padding: 6px;
+  grid-template-columns: 29px 1fr;
+  grid-template-rows: 6px 22px 1fr;
+  column-gap: 7px;
+  row-gap: 5px;
+}
+.home-shell .anatomy-space .space-layout-header {
+  height: 4px;
+}
+.home-shell .anatomy-space .space-layout-copy {
+  gap: 3px;
+}
+.home-shell .anatomy-space .space-layout-copy i {
+  height: 2px;
+}
+.home-shell .anatomy-space .space-layout-gap {
+  min-height: 16px;
+}
+.home-shell .anatomy-space p {
+  max-width: 125px;
+}
+@media (max-width: 600px) {
+  .home-shell .anatomy-space {
+    min-height: 224px;
+  }
+  .home-shell .anatomy-space .space-visual {
+    width: 108px;
+    height: 78px;
+    right: 8px;
+    bottom: 9px;
+  }
+  .home-shell .anatomy-space .space-layout-frame {
+    width: 96px;
+    height: 68px;
+  }
+  .home-shell .anatomy-space p {
+    max-width: 132px;
+  }
+}
+
+/* Keep the Space card consistent with its siblings; place the diagram beside the copy. */
+.home-shell .anatomy-space {
+  min-height: 0;
+  height: auto;
+  padding-bottom: 17px;
+}
+.home-shell .anatomy-space p {
+  max-width: calc(100% - 116px);
+}
+.home-shell .anatomy-space .space-visual {
+  width: 106px;
+  height: 76px;
+  right: 10px;
+  bottom: 50%;
+  top: auto;
+  transform: translateY(50%);
+}
+.home-shell .anatomy-space .space-layout-frame {
+  width: 96px;
+  height: 68px;
+}
+@media (max-width: 600px) {
+  .home-shell .anatomy-space {
+    min-height: 0;
+    height: auto;
+    padding-bottom: 17px;
+  }
+  .home-shell .anatomy-space p {
+    max-width: calc(100% - 112px);
+  }
+  .home-shell .anatomy-space .space-visual {
+    width: 100px;
+    height: 72px;
+    right: 8px;
+    bottom: 50%;
+    top: auto;
+    transform: translateY(50%);
+  }
+  .home-shell .anatomy-space .space-layout-frame {
+    width: 92px;
+    height: 64px;
+  }
+}
+
+/* Motion card: independent X/Y/Z movement with staggered starts and separate timing. */
+.home-shell .motion-visual {
+  width: 148px;
+  height: 100px;
+  right: 2px;
+  bottom: 0;
+  top: auto;
+  overflow: visible;
+}
+.home-shell .motion-axis {
+  position: absolute;
+  z-index: 2;
+  color: #8FA5BA;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.home-shell .motion-axis-y { left: 13px; top: 3px; }
+.home-shell .motion-axis-x { right: 7px; top: 53px; }
+.home-shell .motion-axis-z { left: 75px; bottom: 2px; color: #20E3E6; }
+.home-shell .motion-axis-line {
+  position: absolute;
+  display: block;
+  opacity: .45;
+  border-color: #8FA5BA;
+}
+.home-shell .motion-axis-line-y {
+  left: 22px; top: 16px; height: 66px; border-left: 1px dashed #8FA5BA;
+}
+.home-shell .motion-axis-line-x {
+  left: 24px; top: 55px; width: 112px; border-top: 1px dashed #8FA5BA;
+}
+.home-shell .motion-axis-line-z {
+  left: 37px; top: 68px; width: 67px; border-top: 1px dashed #20E3E6;
+  transform: rotate(-28deg); transform-origin: left center;
+}
+.home-shell .motion-object {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.home-shell .motion-object-y {
+  width: 18px; height: 18px; left: 14px; top: 35px;
+  border-radius: 50%; background: #B388FF;
+  animation: homeAxisY 2.1s ease-in-out infinite;
+}
+.home-shell .motion-object-x {
+  width: 16px; height: 16px; left: 65px; top: 47px;
+  background: #6A2C91; border: 1px solid #B388FF;
+  animation: homeAxisX 2.8s ease-in-out .55s infinite;
+}
+.home-shell .motion-object-z {
+  width: 0; height: 0; left: 94px; top: 61px;
+  border-left: 10px solid transparent; border-right: 10px solid transparent;
+  border-bottom: 17px solid #20E3E6;
+  animation: homeAxisZ 3.4s ease-in-out 1.05s infinite;
+}
+@keyframes homeAxisY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22px); }
+}
+@keyframes homeAxisX {
+  0%, 100% { transform: translateX(-15px); }
+  50% { transform: translateX(25px); }
+}
+@keyframes homeAxisZ {
+  0%, 100% { transform: translateZ(0) scale(.72); opacity: .55; }
+  50% { transform: translateZ(0) scale(1.2); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .motion-object-y,
+  .home-shell .motion-object-x,
+  .home-shell .motion-object-z { animation: none !important; }
+}
+
+/* Home Anatomy cards: retain the floating composition while protecting text readability. */
+.home-shell .anatomy-item {
+  z-index: 1;
+  min-width: 0;
+}
+.home-shell .anatomy-item .anatomy-mark,
+.home-shell .anatomy-item h3,
+.home-shell .anatomy-item p {
+  position: relative;
+  z-index: 2;
+}
+.home-shell .anatomy-item p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.home-shell .anatomy-item .anatomy-visual {
+  z-index: 0;
+  opacity: .62;
+}
+@media (max-width: 680px) {
+  .home-shell .anatomy-stage {
+    min-height: 900px;
+    overflow: hidden;
+  }
+  .home-shell .anatomy-item {
+    width: 46%;
+    max-width: 46%;
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 13px 12px;
+  }
+  .home-shell .anatomy-item .anatomy-mark {
+    margin-bottom: 7px;
+    font-size: 7px;
+  }
+  .home-shell .anatomy-item h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .home-shell .anatomy-item p {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .home-shell .anatomy-item .anatomy-visual {
+    opacity: .42;
+  }
+  .home-shell .anatomy-colour { left: 4%; right: auto; top: 3%; }
+  .home-shell .anatomy-type { left: auto; right: 4%; top: 19%; }
+  .home-shell .anatomy-motion { left: 4%; right: auto; top: 35%; width: 46%; }
+  .home-shell .anatomy-form { left: auto; right: 4%; top: 51%; bottom: auto; }
+  .home-shell .anatomy-space { left: 4%; right: auto; top: 67%; bottom: auto; }
+  .home-shell .anatomy-space p { max-width: calc(100% - 78px); }
+  .home-shell .anatomy-space .space-visual {
+    width: 74px;
+    height: 60px;
+    right: 3px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  .home-shell .anatomy-space .space-layout-frame {
+    width: 70px;
+    height: 52px;
+    padding: 4px;
+    grid-template-columns: 21px 1fr;
+    grid-template-rows: 5px 17px 1fr;
+    column-gap: 4px;
+    row-gap: 3px;
+  }
+  .home-shell .anatomy-motion .motion-visual {
+    width: 82px;
+    height: 58px;
+    right: 0;
+    bottom: 0;
+  }
+  .home-shell .motion-axis-y { left: 7px; top: 0; }
+  .home-shell .motion-axis-x { right: 0; top: 31px; }
+  .home-shell .motion-axis-z { left: 42px; bottom: 0; }
+  .home-shell .motion-axis-line-y { left: 13px; top: 10px; height: 37px; }
+  .home-shell .motion-axis-line-x { left: 14px; top: 32px; width: 65px; }
+  .home-shell .motion-axis-line-z { left: 21px; top: 39px; width: 38px; }
+  .home-shell .motion-object-y { left: 6px; top: 21px; width: 12px; height: 12px; }
+  .home-shell .motion-object-x { left: 38px; top: 27px; width: 11px; height: 11px; }
+  .home-shell .motion-object-z { left: 54px; top: 35px; border-left-width: 7px; border-right-width: 7px; border-bottom-width: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .anatomy-item { animation: none !important; }
+}
+
+
+/* Mobile Anatomy content repair: preserve card positions, give copy a real text column.
+   The legacy global rules reserve too much width for decorative illustrations and can
+   force words to break into single-character stacks on narrow cards. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-item > .anatomy-mark,
+  .home-shell .anatomy-item > div:not(.anatomy-visual),
+  .home-shell .anatomy-item h3,
+  .home-shell .anatomy-item p {
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .home-shell .anatomy-item p {
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+  .home-shell .anatomy-item .anatomy-visual {
+    pointer-events: none;
+  }
+  .home-shell .anatomy-colour .colour-visual,
+  .home-shell .anatomy-type .type-visual,
+  .home-shell .anatomy-form .form-visual,
+  .home-shell .anatomy-space .space-visual,
+  .home-shell .anatomy-motion .motion-visual {
+    opacity: .30;
+  }
+  .home-shell .anatomy-motion .anatomy-visual {
+    opacity: .26;
+  }
+}
+
+
+/* Mobile Anatomy refinement: keep copy clear and separate the two middle cards. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-stage {
+    min-height: 980px;
+  }
+  .home-shell .anatomy-item {
+    height: 142px;
+    min-height: 142px;
+    max-height: 142px;
+    padding: 13px 12px;
+  }
+  .home-shell .anatomy-colour { top: 2.5%; }
+  .home-shell .anatomy-type { top: 19%; }
+  .home-shell .anatomy-motion { top: 36%; }
+  .home-shell .anatomy-form { top: 53%; }
+  .home-shell .anatomy-space { top: 70%; }
+
+  /* Keep text in the left portion; illustrations occupy the right/bottom corner. */
+  .home-shell .anatomy-item p {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  .home-shell .anatomy-colour .colour-visual {
+    width: 70px;
+    height: 70px;
+    right: 0;
+    top: auto;
+    bottom: 2px;
+    transform: none;
+    opacity: .22;
+  }
+  .home-shell .anatomy-colour .colour-wheel {
+    width: 52px;
+    height: 52px;
+    right: 4px;
+    top: 8px;
+  }
+  .home-shell .anatomy-colour .colour-wheel::after { inset: 9px; }
+  .home-shell .anatomy-colour .colour-wheel-core {
+    right: 26px;
+    top: 29px;
+    width: 7px;
+    height: 7px;
+  }
+  .home-shell .anatomy-type .type-visual {
+    width: 68px;
+    height: 58px;
+    right: 0;
+    top: auto;
+    bottom: 1px;
+    transform: none;
+    opacity: .18;
+  }
+  .home-shell .anatomy-type .type-visual span {
+    font-size: 42px;
+    right: 3px;
+    top: 4px;
+  }
+  .home-shell .anatomy-type .type-visual b {
+    font-size: 24px;
+    right: 1px;
+    top: 24px;
+  }
+  .home-shell .anatomy-form .form-visual {
+    width: 78px;
+    height: 66px;
+    right: 0;
+    top: auto;
+    bottom: 1px;
+    transform: none;
+    opacity: .22;
+  }
+  .home-shell .anatomy-form .form-circle { width: 38px; height: 38px; right: 7px; top: 5px; }
+  .home-shell .anatomy-form .form-square { width: 30px; height: 30px; right: 34px; top: 17px; }
+  .home-shell .anatomy-form .form-triangle {
+    right: 0;
+    top: 31px;
+    border-left-width: 13px;
+    border-right-width: 13px;
+    border-bottom-width: 23px;
+  }
+  .home-shell .anatomy-space p { max-width: 100%; }
+  .home-shell .anatomy-space .space-visual {
+    width: 72px;
+    height: 52px;
+    right: 2px;
+    bottom: 3px;
+    top: auto;
+    transform: none;
+    opacity: .20;
+  }
+  .home-shell .anatomy-space .space-layout-frame { width: 66px; height: 48px; }
+  .home-shell .anatomy-motion .motion-visual {
+    width: 72px;
+    height: 48px;
+    right: 0;
+    bottom: 0;
+    opacity: .20;
+  }
+  .home-shell .anatomy-motion .motion-object-y { left: 5px; top: 19px; }
+  .home-shell .anatomy-motion .motion-object-x { left: 33px; top: 25px; }
+  .home-shell .anatomy-motion .motion-object-z { left: 49px; top: 32px; }
+  .home-shell .anatomy-motion .motion-axis-x { top: 29px; }
+  .home-shell .anatomy-motion .motion-axis-z { left: 38px; }
+}
+
+
+/* Restore illustrative contrast on mobile without changing the restrained shell palette. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-colour .colour-visual,
+  .home-shell .anatomy-type .type-visual,
+  .home-shell .anatomy-form .form-visual,
+  .home-shell .anatomy-space .space-visual,
+  .home-shell .anatomy-motion .motion-visual {
+    opacity: 1;
+  }
+
+  .home-shell .anatomy-colour .colour-wheel {
+    box-shadow: 0 0 0 1px rgba(245, 241, 250, .20), 0 5px 18px rgba(32, 227, 230, .14);
+  }
+  .home-shell .anatomy-colour .colour-wheel::after {
+    background: #17152A;
+    border-color: rgba(245, 241, 250, .24);
+  }
+  .home-shell .anatomy-colour .colour-wheel-core {
+    background: #F5F1FA;
+    box-shadow: 0 0 0 2px rgba(13, 13, 31, .6);
+  }
+
+  .home-shell .anatomy-type .type-visual span {
+    color: rgba(179, 136, 255, .36);
+    -webkit-text-fill-color: rgba(179, 136, 255, .36);
+  }
+  .home-shell .anatomy-type .type-visual b {
+    color: #F5F1FA;
+    -webkit-text-fill-color: #F5F1FA;
+    text-shadow: 0 1px 8px rgba(13, 13, 31, .9);
+  }
+
+  .home-shell .anatomy-form .form-circle {
+    border-color: #8FA5BA;
+    border-width: 2px;
+  }
+  .home-shell .anatomy-form .form-square {
+    border-color: #B388FF;
+    border-width: 2px;
+    background: rgba(106, 44, 145, .18);
+  }
+  .home-shell .anatomy-form .form-triangle {
+    border-bottom-color: #6A2C91;
+    filter: drop-shadow(0 2px 5px rgba(106, 44, 145, .35));
+  }
+
+  .home-shell .anatomy-space .space-layout-frame {
+    border-color: #8FA5BA;
+    background: #0D0D1F;
+    box-shadow: 0 0 0 1px rgba(143, 165, 186, .12);
+  }
+  .home-shell .anatomy-space .space-layout-header { background: #B388FF; }
+  .home-shell .anatomy-space .space-layout-feature { background: #6A2C91; }
+  .home-shell .anatomy-space .space-layout-copy i { background: #F5F1FA; opacity: .9; }
+  .home-shell .anatomy-space .space-layout-gap { border-color: #20E3E6; opacity: 1; }
+
+  .home-shell .anatomy-motion .motion-axis {
+    color: #B8C5D6;
+    text-shadow: 0 1px 4px #0D0D1F;
+  }
+  .home-shell .anatomy-motion .motion-axis-z { color: #20E3E6; }
+  .home-shell .anatomy-motion .motion-axis-line-y,
+  .home-shell .anatomy-motion .motion-axis-line-x {
+    opacity: .8;
+    border-color: #8FA5BA;
+  }
+  .home-shell .anatomy-motion .motion-axis-line-z { opacity: .9; border-color: #20E3E6; }
+  .home-shell .anatomy-motion .motion-object-y { background: #B388FF; }
+  .home-shell .anatomy-motion .motion-object-x { background: #6A2C91; border-color: #D6A4FF; }
+  .home-shell .anatomy-motion .motion-object-z { border-bottom-color: #20E3E6; }
+}
+
+
+/* Dashboard shell theme: solid Deep Night surfaces and restrained violet/aqua accents.
+   Scoped exclusively to Dashboard; independent Style Worlds and Library artwork are untouched. */
+.dashboard-shell {
+  background: #0D0D1F;
+  color: #F5F1FA;
+}
+.dashboard-shell .dashboard-glow,
+.dashboard-shell .dashboard-grain {
+  display: none;
+}
+.dashboard-shell .dashboard-brand,
+.dashboard-shell .dashboard-library,
+.dashboard-shell .dashboard-back {
+  color: #F5F1FA;
+}
+.dashboard-shell .dashboard-brand:hover,
+.dashboard-shell .dashboard-library:hover,
+.dashboard-shell .dashboard-back:hover {
+  color: #20E3E6;
+}
+.dashboard-shell .dashboard-nav-title {
+  color: rgba(245, 241, 250, .52);
+}
+.dashboard-shell .dashboard-kicker,
+.dashboard-shell .system-no,
+.dashboard-shell .history-no,
+.dashboard-shell .foundation-no,
+.dashboard-shell .reading-step > span,
+.dashboard-shell .principle-card > span {
+  color: #20E3E6;
+}
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-hero h1 span,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2,
+.dashboard-shell .dashboard-end h2 span,
+.dashboard-shell .system-toggle h3,
+.dashboard-shell .history-toggle h3,
+.dashboard-shell .foundation-card h3,
+.dashboard-shell .reading-step h3,
+.dashboard-shell .principle-card h3,
+.dashboard-shell .preview-placeholder b,
+.dashboard-shell .influence-line b,
+.dashboard-shell .foundation-formula b,
+.dashboard-shell .language-chain b,
+.dashboard-shell .history-thread b {
+  background: none;
+  color: #B388FF;
+  -webkit-text-fill-color: #B388FF;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  text-shadow: none;
+}
+.dashboard-shell .dashboard-hero p,
+.dashboard-shell .story-copy p,
+.dashboard-shell .systems-heading > p,
+.dashboard-shell .history-heading > p,
+.dashboard-shell .foundations-heading > p,
+.dashboard-shell .reading-heading > p,
+.dashboard-shell .principles-heading > p,
+.dashboard-shell .system-panel-copy p,
+.dashboard-shell .history-copy p,
+.dashboard-shell .foundation-card p,
+.dashboard-shell .reading-step p,
+.dashboard-shell .principle-card p,
+.dashboard-shell .language-copy p,
+.dashboard-shell .dashboard-end > p {
+  color: rgba(245, 241, 250, .78);
+}
+.dashboard-shell .story-copy strong,
+.dashboard-shell .language-copy strong {
+  color: #F5F1FA;
+}
+.dashboard-shell .dashboard-cta {
+  background: #B388FF;
+  border: 1px solid #B388FF;
+  color: #0D0D1F;
+  box-shadow: none;
+}
+.dashboard-shell .dashboard-cta:hover {
+  background: #D6A4FF;
+  border-color: #D6A4FF;
+}
+.dashboard-shell .dashboard-cta:focus-visible,
+.dashboard-shell .dashboard-back:focus-visible,
+.dashboard-shell .dashboard-library:focus-visible,
+.dashboard-shell .dashboard-brand:focus-visible,
+.dashboard-shell .system-toggle:focus-visible,
+.dashboard-shell .history-toggle:focus-visible,
+.dashboard-shell .system-panel-copy button:focus-visible {
+  outline: 2px solid #20E3E6;
+  outline-offset: 4px;
+}
+.dashboard-shell .dashboard-story,
+.dashboard-shell .dashboard-history,
+.dashboard-shell .dashboard-foundations,
+.dashboard-shell .dashboard-reading,
+.dashboard-shell .dashboard-principles,
+.dashboard-shell .dashboard-language,
+.dashboard-shell .dashboard-footer {
+  border-color: rgba(245, 241, 250, .12);
+}
+.dashboard-shell .influence-line,
+.dashboard-shell .foundation-formula,
+.dashboard-shell .language-chain,
+.dashboard-shell .history-thread {
+  color: #20E3E6;
+}
+.dashboard-shell .influence-line i,
+.dashboard-shell .foundation-formula i,
+.dashboard-shell .language-chain i,
+.dashboard-shell .history-thread i {
+  color: #B388FF;
+}
+.dashboard-shell .system-row,
+.dashboard-shell .history-card,
+.dashboard-shell .foundation-card,
+.dashboard-shell .principle-card {
+  background: #17152A;
+  border-color: rgba(245, 241, 250, .14);
+  box-shadow: inset 0 1px 0 rgba(245, 241, 250, .035);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.dashboard-shell .system-row:hover,
+.dashboard-shell .history-card:hover,
+.dashboard-shell .history-card.is-open {
+  transform: translateY(-2px);
+  border-color: rgba(179, 136, 255, .65);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+}
+.dashboard-shell .system-chevron,
+.dashboard-shell .history-chevron {
+  color: #B388FF;
+}
+.dashboard-shell .system-preview {
+  background: #0D0D1F;
+  border-color: rgba(245, 241, 250, .16);
+  box-shadow: none;
+}
+.dashboard-shell .system-preview > span,
+.dashboard-shell .system-panel-copy > span,
+.dashboard-shell .history-era {
+  color: #D6A4FF;
+}
+.dashboard-shell .system-panel-copy button {
+  color: #20E3E6;
+}
+.dashboard-shell .preview-placeholder small {
+  color: rgba(245, 241, 250, .58);
+}
+.dashboard-shell .history-image-wrap {
+  background: #0D0D1F;
+  border-color: rgba(245, 241, 250, .16);
+}
+.dashboard-shell .history-image-wrap img {
+  filter: saturate(.96) contrast(1.04);
+}
+.dashboard-shell .history-image-wrap span {
+  background: rgba(13, 13, 31, .92);
+  color: #F5F1FA;
+  backdrop-filter: none;
+}
+.dashboard-shell .history-copy strong,
+.dashboard-shell .foundation-card strong {
+  color: #20E3E6;
+}
+.dashboard-shell .reading-list,
+.dashboard-shell .reading-step {
+  border-color: rgba(245, 241, 250, .12);
+}
+.dashboard-shell .foundation-formula em {
+  color: rgba(245, 241, 250, .54);
+}
+.dashboard-shell .dashboard-footer {
+  color: rgba(245, 241, 250, .52);
+}
+.dashboard-shell .system-row.is-open {
+  border-color: rgba(179, 136, 255, .65);
+}
+.dashboard-shell .system-row.is-open .system-panel {
+  border-top: 1px solid rgba(245, 241, 250, .08);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-shell *,
+  .dashboard-shell *::before,
+  .dashboard-shell *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* Home process sequence: cyan emphasis for the four learning verbs only. */
+.home-shell .definition-process span {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
+
+
+/* Dashboard foundation formula: all five terms in Aqua Cyan; final result in Deep Violet. */
+.dashboard-shell .foundation-formula span,
+.dashboard-shell .foundation-formula b {
+  color: #20E3E6;
+  -webkit-text-fill-color: #20E3E6;
+}
+.dashboard-shell .foundation-formula em {
+  color: #6A2C91;
+  -webkit-text-fill-color: #6A2C91;
+  font-style: normal;
+}
+
+
+/* Improve contrast for the Dashboard formula result while retaining Deep Violet. */
+.dashboard-shell .foundation-formula em {
+  color: #B388FF;
+  -webkit-text-fill-color: #B388FF;
+  font-weight: 800;
+  opacity: 1;
+  text-shadow: 0 0 14px rgba(179, 136, 255, .16);
+}
+
+
+/* Dashboard shell: match the approved solid Deep Violet & Aqua direction.
+   Scope only to the dashboard shell; independent style environments stay untouched. */
+.dashboard-shell{background:#0D0D1F;color:#F5F1FA}
+.dashboard-shell .dashboard-glow,.dashboard-shell .dashboard-grain{display:none}
+.dashboard-shell .dashboard-kicker{color:#20E3E6}
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-hero h1 span,
+.dashboard-shell .dashboard-story h2,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2,
+.dashboard-shell .dashboard-end h2 span{background:none;color:#B388FF;-webkit-text-fill-color:#B388FF;-webkit-background-clip:initial;background-clip:initial}
+.dashboard-shell .dashboard-hero p,
+.dashboard-shell .story-copy p,
+.dashboard-shell .systems-heading>p,
+.dashboard-shell .history-heading>p,
+.dashboard-shell .foundations-heading>p,
+.dashboard-shell .reading-heading>p,
+.dashboard-shell .principles-heading>p{color:#F5F1FA}
+.dashboard-shell .dashboard-nav-title,
+.dashboard-shell .dashboard-back,
+.dashboard-shell .dashboard-library{color:#9CAFC3}
+.dashboard-shell .dashboard-back:hover,
+.dashboard-shell .dashboard-library:hover{color:#20E3E6}
+.dashboard-shell .dashboard-cta{background:#B388FF;color:#0D0D1F;border:1px solid #B388FF;box-shadow:none}
+.dashboard-shell .dashboard-cta:hover{background:#6A2C91;border-color:#6A2C91;color:#F5F1FA}
+.dashboard-shell .system-row,
+.dashboard-shell .history-card,
+.dashboard-shell .foundation-card,
+.dashboard-shell .reading-card,
+.dashboard-shell .principle-card,
+.dashboard-shell .language-card,
+.dashboard-shell .dashboard-end-card{background:#17152A;border-color:#343247;box-shadow:none;backdrop-filter:none}
+.dashboard-shell button:focus-visible,
+.dashboard-shell a:focus-visible{outline:2px solid #20E3E6;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.dashboard-shell *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+
+/* Mobile viewport repair — global shells only.
+   Prevent CTA collisions, diagonal overflow, and oversized reading widths. */
+@media (max-width: 680px) {
+  .home-shell,
+  .dashboard-shell,
+  .library-shell {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .home-shell .topbar,
+  .home-shell .hero,
+  .home-shell .anatomy-definition,
+  .home-shell .anatomy-section,
+  .home-shell .preview-section,
+  .home-shell .home-footer,
+  .dashboard-shell .dashboard-nav,
+  .dashboard-shell .dashboard-hero,
+  .dashboard-shell .dashboard-story,
+  .dashboard-shell .dashboard-systems,
+  .dashboard-shell .dashboard-history,
+  .dashboard-shell .dashboard-foundations,
+  .dashboard-shell .dashboard-reading,
+  .dashboard-shell .dashboard-principles,
+  .dashboard-shell .dashboard-language,
+  .dashboard-shell .dashboard-end,
+  .dashboard-shell .dashboard-footer,
+  .library-shell .library-nav,
+  .library-shell .library-hero,
+  .library-shell .library-collection,
+  .library-shell .library-end,
+  .library-shell .library-footer {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-shell .hero {
+    padding: 64px 0 72px;
+  }
+  .home-shell .hero h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -.065em;
+    overflow-wrap: anywhere;
+  }
+  .home-shell .hero-copy {
+    max-width: 100%;
+    margin: 22px 0 26px;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .home-shell .jump-button {
+    display: inline-flex;
+    max-width: 100%;
+    min-height: 54px;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 20px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .home-shell .anatomy-definition {
+    padding: 70px 0;
+  }
+  .home-shell .anatomy-definition h2,
+  .home-shell .anatomy-intro h2 {
+    max-width: 100%;
+    font-size: clamp(30px, 8.5vw, 42px);
+    line-height: 1.08;
+    letter-spacing: -.055em;
+    overflow-wrap: break-word;
+  }
+  .home-shell .anatomy-definition p,
+  .home-shell .anatomy-intro > p {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .home-shell .anatomy-stage {
+    min-height: 620px;
+    margin-top: 32px;
+    border-radius: 22px;
+  }
+  .home-shell .anatomy-item {
+    width: min(74%, 250px);
+    padding: 14px;
+  }
+  .home-shell .anatomy-colour { left: 5%; top: 5%; }
+  .home-shell .anatomy-type { right: 5%; top: 24%; }
+  .home-shell .anatomy-form { left: 5%; bottom: 24%; }
+  .home-shell .anatomy-space { right: 5%; bottom: 5%; }
+  .home-shell .anatomy-motion { left: 13%; top: 44%; width: 74%; }
+  .home-shell .preview-section { padding-bottom: 72px; }
+  .home-shell .preview-stage { min-height: 350px; height: 350px; }
+  .home-shell .preview-caption { display: block; }
+  .home-shell .preview-caption p { text-align: left; margin-top: 10px; }
+
+  .dashboard-shell .dashboard-nav {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 22px 0;
+  }
+  .dashboard-shell .dashboard-nav-title {
+    display: none;
+  }
+  .dashboard-shell .dashboard-nav-actions {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .dashboard-shell .dashboard-hero {
+    padding: 58px 0 64px;
+  }
+  .dashboard-shell .dashboard-hero h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -.065em;
+    overflow-wrap: break-word;
+  }
+  .dashboard-shell .dashboard-hero > p {
+    max-width: 100%;
+    margin: 22px 0 26px;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .dashboard-shell .dashboard-cta {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 54px;
+    margin: 12px 0 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    white-space: normal;
+    line-height: 1.3;
+    text-align: left;
+  }
+  .dashboard-shell .dashboard-hero .dashboard-cta + .dashboard-cta {
+    margin-top: 12px;
+  }
+  .dashboard-shell h2,
+  .dashboard-shell .dashboard-story h2,
+  .dashboard-shell .dashboard-systems h2,
+  .dashboard-shell .dashboard-history h2,
+  .dashboard-shell .dashboard-foundations h2,
+  .dashboard-shell .dashboard-reading h2,
+  .dashboard-shell .dashboard-principles h2,
+  .dashboard-shell .dashboard-language h2,
+  .dashboard-shell .dashboard-end h2 {
+    max-width: 100%;
+    font-size: clamp(29px, 8vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -.055em;
+    overflow-wrap: break-word;
+  }
+  .dashboard-shell .dashboard-story p,
+  .dashboard-shell .dashboard-systems p,
+  .dashboard-shell .dashboard-history p,
+  .dashboard-shell .dashboard-foundations p,
+  .dashboard-shell .dashboard-reading p,
+  .dashboard-shell .dashboard-principles p,
+  .dashboard-shell .dashboard-language p,
+  .dashboard-shell .dashboard-end p {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .dashboard-shell .dashboard-story,
+  .dashboard-shell .dashboard-systems,
+  .dashboard-shell .dashboard-history,
+  .dashboard-shell .dashboard-foundations,
+  .dashboard-shell .dashboard-reading,
+  .dashboard-shell .dashboard-principles,
+  .dashboard-shell .dashboard-language,
+  .dashboard-shell .dashboard-end {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .dashboard-shell .influence-line,
+  .dashboard-shell .history-thread,
+  .dashboard-shell .foundation-formula,
+  .dashboard-shell .language-chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .library-shell .library-hero {
+    padding: 58px 0 72px;
+  }
+  .library-shell .library-hero h1 {
+    font-size: clamp(38px, 11vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -.06em;
+    overflow-wrap: break-word;
+  }
+  .library-shell .library-hero p {
+    max-width: 100%;
+    margin: 22px 0 26px;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .library-shell .library-meta {
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    line-height: 1.5;
+  }
+  .library-shell .library-group {
+    padding: 56px 0;
+  }
+  .library-shell .library-group-head {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .library-shell .library-group-head > div {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .library-shell .library-group-head h2,
+  .library-shell .library-end h2 {
+    font-size: clamp(29px, 8vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -.055em;
+  }
+  .library-shell .library-group-head p {
+    margin-top: 16px;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .library-shell .library-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .library-shell .library-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 260px;
+    border-radius: 24px;
+  }
+  .library-shell .library-card-art {
+    height: 130px;
+  }
+  .library-shell .library-end {
+    padding: 72px 0 84px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-shell .topbar,
+  .home-shell .hero,
+  .home-shell .anatomy-definition,
+  .home-shell .anatomy-section,
+  .home-shell .preview-section,
+  .home-shell .home-footer,
+  .dashboard-shell .dashboard-nav,
+  .dashboard-shell .dashboard-hero,
+  .dashboard-shell .dashboard-story,
+  .dashboard-shell .dashboard-systems,
+  .dashboard-shell .dashboard-history,
+  .dashboard-shell .dashboard-foundations,
+  .dashboard-shell .dashboard-reading,
+  .dashboard-shell .dashboard-principles,
+  .dashboard-shell .dashboard-language,
+  .dashboard-shell .dashboard-end,
+  .dashboard-shell .dashboard-footer,
+  .library-shell .library-nav,
+  .library-shell .library-hero,
+  .library-shell .library-collection,
+  .library-shell .library-end,
+  .library-shell .library-footer {
+    width: calc(100% - 32px);
+  }
+  .dashboard-shell .dashboard-cta,
+  .home-shell .jump-button {
+    width: 100%;
+  }
+}
+
+
+/* Screenshot-driven mobile correction: hard-bound text and restore vertical rhythm. */
+@media (max-width: 680px) {
+  html, body, #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  .home-shell .hero,
+  .home-shell .anatomy-definition,
+  .home-shell .anatomy-section,
+  .home-shell .preview-section,
+  .dashboard-shell .dashboard-hero,
+  .dashboard-shell .dashboard-story,
+  .dashboard-shell .dashboard-systems,
+  .dashboard-shell .dashboard-history,
+  .dashboard-shell .dashboard-foundations,
+  .dashboard-shell .dashboard-reading,
+  .dashboard-shell .dashboard-principles,
+  .dashboard-shell .dashboard-language,
+  .dashboard-shell .dashboard-end,
+  .library-shell .library-hero,
+  .library-shell .library-group,
+  .library-shell .library-end {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .home-shell .hero-copy {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 24px 0 28px !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .home-shell .hero {
+    padding-top: 64px !important;
+    padding-bottom: 54px !important;
+    margin-bottom: 0 !important;
+  }
+  .home-shell .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  .home-shell .hero .jump-button {
+    margin: 0 !important;
+  }
+  .home-shell .anatomy-definition {
+    width: calc(100% - 40px) !important;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+    margin-top: 0 !important;
+  }
+  .home-shell .anatomy-definition .definition-copy,
+  .home-shell .anatomy-definition .definition-process,
+  .home-shell .anatomy-definition .definition-close {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .home-shell .anatomy-definition h2,
+  .home-shell .anatomy-definition p {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .home-shell .anatomy-section,
+  .home-shell .preview-section {
+    padding-top: 48px !important;
+  }
+
+  .dashboard-shell .dashboard-hero > p,
+  .dashboard-shell .story-copy p,
+  .dashboard-shell .systems-heading > p,
+  .dashboard-shell .history-heading > p,
+  .dashboard-shell .foundations-heading > p,
+  .dashboard-shell .reading-heading > p,
+  .dashboard-shell .principles-heading > p,
+  .dashboard-shell .language-copy p,
+  .dashboard-shell .dashboard-end > p,
+  .library-shell .library-hero > p,
+  .library-shell .library-group-head > p,
+  .library-shell .library-end > p {
+    display: block;
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+  }
+  .dashboard-shell .dashboard-cta {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .library-shell .library-grid,
+  .library-shell .library-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+}

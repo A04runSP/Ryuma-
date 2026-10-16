@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, Minus, Plus, RotateCcw } from 'lucide-react';
 import './skeuomorphism-style.css';
 
@@ -16,6 +16,74 @@ export default function SkeuomorphismStyle({ onNavigate }) {
   const [value, setValue] = useState(50);
   const [volume, setVolume] = useState(62);
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioContext = useRef(null);
+  const speechTimer = useRef(null);
+
+  const getAudio = () => {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return null;
+    if (!audioContext.current) audioContext.current = new AudioCtx();
+    if (audioContext.current.state === 'suspended') audioContext.current.resume();
+    return audioContext.current;
+  };
+
+  const radioClick = (kind) => {
+    const ctx = getAudio();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = kind === 'off' ? 'sine' : 'triangle';
+    osc.frequency.setValueAtTime(kind === 'off' ? 520 : 180, now);
+    osc.frequency.exponentialRampToValueAtTime(kind === 'off' ? 120 : 720, now + (kind === 'tune' ? 0.18 : 0.09));
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.12, now + 0.012);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + (kind === 'tune' ? 0.2 : 0.13));
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(now); osc.stop(now + (kind === 'tune' ? 0.21 : 0.14));
+    if (kind === 'on' || kind === 'tune') {
+      const length = Math.floor(ctx.sampleRate * (kind === 'on' ? 0.16 : 0.1));
+      const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / length) * 0.22;
+      const noise = ctx.createBufferSource(); const ng = ctx.createGain();
+      noise.buffer = buffer; ng.gain.value = kind === 'on' ? 0.13 : 0.07; noise.connect(ng); ng.connect(ctx.destination); noise.start();
+    }
+  };
+
+  const stopRj = () => {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    if (speechTimer.current) window.clearTimeout(speechTimer.current);
+    speechTimer.current = null;
+  };
+
+  const startRj = () => {
+    stopRj();
+    if (!('speechSynthesis' in window)) return;
+    const lines = [
+      'Good evening, radio lovers! You are tuned in to Ryuma FM, where every frequency has a feeling.',
+      'This is your host, RJ Nova. Stay with me, keep the dial right here, and let the music find you.',
+      'You are listening to Ryuma Radio. Turn the dial, find your frequency, and make this moment yours.'
+    ];
+    let index = 0;
+    const speakNext = () => {
+      if (!isPlaying) return;
+      const utterance = new SpeechSynthesisUtterance(lines[index % lines.length]);
+      utterance.rate = 0.92; utterance.pitch = 0.88; utterance.volume = Math.max(0.2, volume / 100);
+      const voices = window.speechSynthesis.getVoices();
+      const voice = voices.find(v => /en-IN|en-GB/i.test(v.lang)) || voices.find(v => /en/i.test(v.lang));
+      if (voice) utterance.voice = voice;
+      utterance.onend = () => { if (isPlaying) speechTimer.current = window.setTimeout(() => { index++; speakNext(); }, 1400); };
+      window.speechSynthesis.speak(utterance);
+    };
+    speakNext();
+  };
+
+  useEffect(() => {
+    if (isPlaying) startRj();
+    else stopRj();
+    return () => stopRj();
+  }, [isPlaying]);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -50,7 +118,7 @@ export default function SkeuomorphismStyle({ onNavigate }) {
         <div className="desk-paper"><small>RYUMA / OBJECT 05</small><h2>FAMILIAR<br/><em>BY DESIGN.</em></h2><div className="paper-line"/><span>TOUCH / TURN / PRESS</span></div>
         <div className="desk-screw screw-a"/><div className="desk-screw screw-b"/>
         <div className="desk-knob"><span/><b>VOL</b></div>
-        <div className="desk-switch"><span>POWER</span><button className={active?'on':''} onClick={()=>setActive(v=>!v)}><i/></button></div>
+        <div className="desk-switch"><span>POWER</span><button className={active?'on':''} onClick={()=>{setActive(v=>!v);radioClick(active?'off':'on')}}><i/></button></div>
       </div>
     </section>
 
@@ -66,7 +134,7 @@ export default function SkeuomorphismStyle({ onNavigate }) {
             <div className="skeu-actions"><button onClick={()=>{if(active)setVolume(v=>Math.max(0,v-5))}}><Minus/></button><button onClick={()=>{if(active)setVolume(v=>Math.min(100,v+5))}}><Plus/></button><button onClick={()=>{if(active)setVolume(50)}} aria-label="Reset"><RotateCcw/></button></div>
           </div>
         </div>
-        <div className="skeu-console-bottom"><span>PHYSICAL CUES / DIGITAL RESPONSE</span><button onClick={()=>setActive(v=>!v)}>{active?'ON':'OFF'}</button></div>
+        <div className="skeu-console-bottom"><span>PHYSICAL CUES / DIGITAL RESPONSE</span><button onClick={()=>{setActive(v=>!v);radioClick(active?'off':'on')}}>{active?'ON':'OFF'}</button></div>
       </div>
     </section>
 
@@ -84,39 +152,30 @@ export default function SkeuomorphismStyle({ onNavigate }) {
       <div className="skeu-label">04 / COMPOSITION</div>
       <div className="skeu-workbench">
         <div className="leather-card">
-          <small>OBJECT / 05</small>
-          <h3>PRESS.<br/><em>TURN.</em><br/>DRAG.</h3>
+          <small>OBJECT / 05 — RADIO DECK</small>
+          <h3>TUNE IN.<br/><em>FEEL IT.</em></h3>
           <div className="leather-seam"/>
-          <span>REAL WORLD / DIGITAL SPACE</span>
+          <span>TURN THE DIAL / PRESS PLAY</span>
+          <div className="radio-frequency"><span>FM</span><b>{(88 + (value / 100) * 20).toFixed(1)}</b><small>MHz</small></div>
         </div>
 
         <div className="metal-plate">
-          <div className="metal-title">TACTILE INTERFACE</div>
-          <div className="metal-row">
-            <button
-              className={`metal-button ${isPlaying ? 'is-active' : ''}`}
-              onClick={() => setIsPlaying(true)}
-              disabled={isPlaying}
-              aria-pressed={isPlaying}
-            >
-              PLAY
-            </button>
-            <button
-              className={`metal-button ${!isPlaying ? 'is-active' : ''}`}
-              onClick={() => setIsPlaying(false)}
-              disabled={!isPlaying}
-              aria-pressed={!isPlaying}
-            >
-              PAUSE
-            </button>
+          <div className="metal-title">VINTAGE RADIO / CONTROLS</div>
+          <div className="radio-dial-wrap">
+            <div className="radio-dial" style={{'--dial-angle':`${-135 + value * 2.7}deg`}} aria-hidden="true"><span/></div>
+            <div><label htmlFor="radio-tuning">TUNING</label><input id="radio-tuning" className="radio-tuning" type="range" min="0" max="100" value={value} onChange={e=>{setValue(Number(e.target.value));radioClick('tune')}} aria-valuetext={`${(88 + (value / 100) * 20).toFixed(1)} megahertz`}/><div className="radio-scale"><span>88 MHz</span><span>108 MHz</span></div></div>
           </div>
-          <div className="metal-meter" aria-label={`Playback progress ${value}%`}>
+          <div className="metal-row">
+            <button className={`metal-button ${isPlaying ? 'is-active' : ''}`} onClick={() => {setIsPlaying(true);radioClick('on')}} disabled={isPlaying} aria-pressed={isPlaying}>▶ PLAY</button>
+            <button className={`metal-button ${!isPlaying ? 'is-active' : ''}`} onClick={() => {setIsPlaying(false);radioClick('off')}} disabled={!isPlaying} aria-pressed={!isPlaying}>Ⅱ PAUSE</button>
+          </div>
+          <div className="metal-meter" role="progressbar" aria-label="Tuning position" aria-valuemin="0" aria-valuemax="100" aria-valuenow={value}>
             <span style={{width:`${value}%`}}/>
           </div>
-          <div className="metal-status">{isPlaying ? 'PLAYING / LIVE' : 'PAUSED / READY'}</div>
+          <div className="metal-status" aria-live="polite">{isPlaying ? 'ON AIR / RJ NOVA LIVE' : 'STANDBY / READY'}</div><p className="radio-caption">{isPlaying ? 'RJ NOVA: GOOD EVENING, RADIO LOVERS…' : 'PRESS PLAY TO HEAR THE RJ'}</p>
         </div>
 
-        <div className="glass-note">REALISM<br/><b>≠</b><br/>CLUTTER</div>
+        <div className="glass-note">PHYSICAL DIAL<br/><b>→</b><br/>DIGITAL TUNING</div>
       </div>
     </section>
 
