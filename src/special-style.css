@@ -375,3 +375,60 @@
  .special-cyberpunk .cyber-city-atmosphere *{animation:none!important;transition:none!important}
  .special-cyberpunk .special-controls button{transition:none}
 }
+
+
+/* Live beat signal — animated visual simulation, no audio input required */
+.special-cyberpunk .cyber-signal-bars{
+  overflow:visible;
+}
+.special-cyberpunk .cyber-signal-bars i{
+  transform-origin:bottom center;
+  animation:cyber-live-beat 760ms ease-in-out infinite alternate;
+  animation-delay:var(--beat-delay,0s);
+  will-change:height,opacity,filter;
+}
+.special-cyberpunk .cyber-signal-bars i:nth-child(3n){animation-duration:520ms}
+.special-cyberpunk .cyber-signal-bars i:nth-child(4n){animation-duration:940ms}
+.special-cyberpunk .cyber-signal-bars i:nth-child(5n){animation-duration:640ms}
+.special-cyberpunk .cyber-signal-bars span{
+  display:flex;align-items:center;gap:6px;color:#b4c5d1;
+}
+.special-cyberpunk .cyber-live-dot{
+  display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:#ff2f91;box-shadow:0 0 10px #ff2f91;
+  animation:cyber-live-pulse 850ms ease-in-out infinite;
+}
+.special-cyberpunk .cyber-city-scene:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(0deg,transparent 0 44%,rgba(69,243,239,.12) 45%,transparent 46%);
+  background-size:100% 170%;
+  animation:cyber-beat-sweep 2.4s linear infinite;
+}
+.special-cyberpunk .cyber-moon{
+  animation:cyber-neon-throb 1.5s ease-in-out infinite alternate;
+}
+@keyframes cyber-live-beat{
+  0%{height:calc(var(--bar) * .24);opacity:.5;filter:saturate(.8)}
+  30%{height:calc(var(--bar) * .62);opacity:.8}
+  68%{height:calc(var(--bar) * .38);opacity:.65}
+  100%{height:var(--bar);opacity:1;filter:saturate(1.35) brightness(1.18)}
+}
+@keyframes cyber-live-pulse{
+  0%,100%{opacity:.45;transform:scale(.8);box-shadow:0 0 4px #ff2f91}
+  50%{opacity:1;transform:scale(1.25);box-shadow:0 0 13px #ff2f91}
+}
+@keyframes cyber-beat-sweep{
+  0%{transform:translateY(-55%);opacity:.1}
+  50%{opacity:.55}
+  100%{transform:translateY(55%);opacity:.1}
+}
+@keyframes cyber-neon-throb{
+  from{filter:brightness(.75);box-shadow:0 0 24px rgba(255,47,145,.12)}
+  to{filter:brightness(1.18);box-shadow:0 0 54px rgba(255,47,145,.35)}
+}
+@media(prefers-reduced-motion:reduce){
+ .special-cyberpunk .cyber-signal-bars i,
+ .special-cyberpunk .cyber-live-dot,
+ .special-cyberpunk .cyber-city-scene:after,
+ .special-cyberpunk .cyber-moon{animation:none!important;will-change:auto}
+}
