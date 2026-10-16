@@ -127,3 +127,9 @@
 @media(prefers-reduced-motion:reduce){
   .special-bauhaus .special-shapes i,.special-bauhaus .special-palette button,.special-bauhaus .special-controls button{transition:none}
 }
+
+
+/* Make the selected palette accent visibly drive the Bauhaus specimen */
+.special-bauhaus .special-shapes i:first-child{background:var(--special-accent)}
+.special-bauhaus .special-shapes i:nth-child(2){background:#f5c542}
+.special-bauhaus .special-shapes i:nth-child(3){background:#2355d6}
