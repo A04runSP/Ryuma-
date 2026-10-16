@@ -52,3 +52,17 @@
   .swiss-principles article{grid-template-columns:26px minmax(0,1fr) 16px;column-gap:10px;padding:24px 0}
   .swiss-principles article>div{padding-right:4px}
 }
+
+
+/* Keep Swiss page copy clear of the persistent floating utility control on mobile. */
+@media(max-width:760px){
+  .swiss-history-grid>div,
+  .swiss-principles article>div,
+  .swiss-challenge>div{padding-right:clamp(36px,8vw,54px)}
+  .swiss-history-grid strong{max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:420px){
+  .swiss-history-grid>div,
+  .swiss-principles article>div,
+  .swiss-challenge>div{padding-right:38px}
+}
