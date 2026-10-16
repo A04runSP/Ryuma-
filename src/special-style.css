@@ -157,3 +157,90 @@
 @media(prefers-reduced-motion:reduce){
   .special-bauhaus .special-shapes i{transition:none}
 }
+
+/* Cyberpunk neon terminal — isolated visual system */
+.special-cyberpunk{background:#070910;color:#f8f7f2;background-image:linear-gradient(rgba(32,227,230,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(32,227,230,.035) 1px,transparent 1px);background-size:34px 34px}
+.special-cyberpunk .special-nav{border-color:#26333d}
+.special-cyberpunk .special-nav button{color:#20e3e6}
+.special-cyberpunk .special-nav b{color:#f8f7f2}
+.special-cyberpunk .special-nav>span{color:#d5ff3f}
+.cyber-system-strip{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid #26333d;color:#8c9baa;font:9px 'DM Mono',monospace;letter-spacing:.1em}
+.cyber-system-strip span{display:flex;align-items:center;gap:7px}
+.cyber-system-strip svg{color:#20e3e6}
+.cyber-system-strip b{color:#d5ff3f}
+.cyber-system-strip .cyber-live{margin-left:auto;color:#ff4ca7}
+.cyber-live i{width:6px;height:6px;background:#ff4ca7;box-shadow:0 0 12px #ff4ca7;border-radius:50%}
+.special-cyberpunk .cyber-terminal-hero{align-items:stretch;padding:clamp(48px,7vw,96px) 0;gap:clamp(24px,4vw,58px)}
+.special-cyberpunk .special-intro h1{font-family:'DM Mono',monospace;font-size:clamp(52px,8vw,112px);line-height:.82;letter-spacing:-.1em;text-transform:uppercase;text-shadow:3px 0 rgba(255,76,167,.65),-3px 0 rgba(32,227,230,.5)}
+.special-cyberpunk .special-intro h1 em{font-style:normal;color:#20e3e6;text-shadow:3px 0 rgba(255,76,167,.7);display:inline-block}
+.special-cyberpunk .special-intro p{font-size:16px;line-height:1.65;color:#b8c3d0}
+.cyber-readout{display:grid;gap:8px;margin:24px 0;color:#8293a4;font:9px 'DM Mono',monospace;letter-spacing:.08em}
+.cyber-readout span{display:flex;align-items:center;gap:7px}
+.cyber-readout svg{color:#20e3e6}
+.cyber-readout b{color:#d5ff3f;font-weight:500}
+.special-cyberpunk .special-palette button{border-radius:2px;width:32px;height:32px;border:1px solid #45505d}
+.special-cyberpunk .special-palette button.selected{outline:2px solid var(--swatch);outline-offset:4px;box-shadow:0 0 20px color-mix(in srgb,var(--swatch) 50%,transparent)}
+.special-cyberpunk .special-hint{color:#20e3e6;font-size:9px}
+.special-cyberpunk .cyber-terminal-specimen{min-height:520px;padding:22px;background:#0c1018;color:#f8f7f2;border:1px solid #29404b;box-shadow:0 0 34px rgba(32,227,230,.08),inset 0 0 0 5px #090c12}
+.cyber-terminal-specimen:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(to bottom,transparent 0,transparent 4px,rgba(32,227,230,.045) 5px);mix-blend-mode:screen}
+.cyber-terminal-specimen:after{content:"";position:absolute;inset:12px;border:1px solid rgba(32,227,230,.14);pointer-events:none;z-index:1}
+.cyber-specimen-top,.cyber-specimen-bottom{position:relative;z-index:3;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#8398a9;font:8px 'DM Mono',monospace;letter-spacing:.08em}
+.cyber-specimen-top span{display:flex;align-items:center;gap:5px}
+.cyber-specimen-top svg{color:#20e3e6}
+.special-cyberpunk .special-specimen-label,.special-cyberpunk .special-specimen-foot{position:relative;z-index:3;color:#a4a5b8;font:9px 'DM Mono',monospace;letter-spacing:.1em}
+.special-cyberpunk .special-shapes i:first-child{width:48%;right:5%;top:17%;background:var(--special-accent);border-radius:0;clip-path:polygon(0 0,100% 0,100% 78%,77% 100%,0 100%);box-shadow:0 0 34px color-mix(in srgb,var(--special-accent) 55%,transparent);opacity:.88}
+.special-cyberpunk .special-shapes i:nth-child(2){width:55%;height:15%;left:-3%;top:48%;background:#ff4ca7;transform:skewY(-18deg);mix-blend-mode:screen;opacity:.86;box-shadow:0 0 24px rgba(255,76,167,.55)}
+.special-cyberpunk .special-shapes i:nth-child(3){width:22%;height:22%;right:11%;bottom:14%;border-radius:0;background:#20e3e6;clip-path:polygon(0 0,100% 0,100% 100%,24% 100%,24% 24%,0 24%);box-shadow:0 0 26px rgba(32,227,230,.45)}
+.special-cyberpunk .special-specimen h2{z-index:3;font-family:'DM Mono',monospace;font-size:clamp(42px,5.8vw,78px);line-height:.9;letter-spacing:-.085em;text-transform:uppercase;text-shadow:2px 0 rgba(255,76,167,.7),-2px 0 rgba(32,227,230,.55);overflow-wrap:anywhere}
+.cyber-coordinate{position:absolute;z-index:3;right:20px;top:30%;font:8px 'DM Mono',monospace;line-height:1.8;color:#20e3e6;opacity:.8}
+.cyber-signal-bars{position:absolute;z-index:3;bottom:54px;left:22px;right:22px;height:28px;display:flex;align-items:end;gap:4px;opacity:.85}
+.cyber-signal-bars i{flex:1;height:var(--bar);background:var(--special-accent);min-width:2px;box-shadow:0 0 8px color-mix(in srgb,var(--special-accent) 50%,transparent)}
+.cyber-section-strip{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:30px;color:#20e3e6;font:9px 'DM Mono',monospace;letter-spacing:.1em}
+.special-cyberpunk .special-principles,.special-cyberpunk .special-lab,.special-cyberpunk .special-footer{border-color:#26333d}
+.special-cyberpunk .special-section-title>span{color:#20e3e6}
+.special-cyberpunk .special-principles article{border-color:#26333d}
+.special-cyberpunk .special-principles article>span{color:#d5ff3f}
+.special-cyberpunk .special-principles h3{font-family:'DM Mono',monospace;text-transform:uppercase;font-size:clamp(17px,2vw,22px);letter-spacing:-.04em}
+.special-cyberpunk .special-principles p,.special-cyberpunk .special-lab p{color:#a4b2c1}
+.special-cyberpunk .special-lab h2{font-family:'DM Mono',monospace;text-transform:uppercase}
+.special-cyberpunk .special-controls{border:1px solid #26333d;padding:18px;background:rgba(12,16,24,.85)}
+.cyber-control-header{display:flex;align-items:center;gap:8px;color:#20e3e6;font:9px 'DM Mono',monospace;letter-spacing:.1em;padding-bottom:14px;border-bottom:1px solid #26333d}
+.special-cyberpunk .special-controls label{color:#9eacbc}
+.special-cyberpunk .special-controls textarea{background:#080b11;color:#f8f7f2;border:1px solid #354654;border-radius:0;font-family:'DM Mono',monospace}
+.special-cyberpunk .special-controls textarea:focus{border-color:#20e3e6}
+.cyber-active-accent{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#8293a4;font:9px 'DM Mono',monospace;letter-spacing:.08em}
+.cyber-active-accent i{width:10px;height:10px;box-shadow:0 0 10px currentColor}
+.cyber-active-accent b{margin-left:auto;color:#f8f7f2}
+.special-cyberpunk .special-controls button{justify-content:flex-start;background:transparent;color:#20e3e6;border:1px solid #20e3e6;border-left:5px solid var(--special-accent);padding:14px;font-weight:700}
+.special-cyberpunk .special-controls button:hover{background:#20e3e6;color:#090b12}
+.special-cyberpunk .special-footer button{color:#20e3e6}
+.special-cyberpunk button:focus-visible,.special-cyberpunk textarea:focus-visible{outline:2px solid #d5ff3f;outline-offset:4px}
+@media(max-width:760px){
+ .cyber-system-strip{gap:12px;font-size:8px}.cyber-system-strip .cyber-live{margin-left:0}
+ .special-cyberpunk .cyber-terminal-hero{padding:48px 0;gap:30px}
+ .special-cyberpunk .special-intro h1{font-size:clamp(46px,12vw,76px)}
+ .special-cyberpunk .cyber-terminal-specimen{min-height:430px;padding:18px}
+ .special-cyberpunk .special-specimen h2{font-size:clamp(38px,9vw,62px);margin:42px 0}
+ .cyber-coordinate{right:15px;top:32%;font-size:7px}
+ .cyber-signal-bars{left:18px;right:18px;bottom:46px;height:22px}
+ .cyber-section-strip{font-size:8px}
+ .special-cyberpunk .special-controls{padding:14px}
+}
+@media(max-width:420px){
+ .cyber-system-strip span:nth-child(2){display:none}
+ .special-cyberpunk .cyber-terminal-specimen{min-height:370px;padding:14px}
+ .special-cyberpunk .special-specimen h2{font-size:clamp(32px,8.7vw,42px);letter-spacing:-.07em;margin:38px 0;max-width:94%}
+ .special-cyberpunk .special-shapes i:first-child{width:44%;right:4%;top:20%}
+ .special-cyberpunk .special-shapes i:nth-child(2){width:50%;height:12%;top:48%}
+ .special-cyberpunk .special-shapes i:nth-child(3){width:18%;height:18%;right:9%;bottom:16%}
+ .cyber-specimen-top,.cyber-specimen-bottom{font-size:7px}
+ .cyber-coordinate{display:none}
+ .cyber-section-strip span:nth-child(2){display:none}
+}
+@media(prefers-reduced-motion:no-preference){
+ .special-cyberpunk .cyber-terminal-specimen:before{animation:cyber-scan 8s linear infinite}
+ .special-cyberpunk .special-specimen h2{animation:cyber-jitter 7s steps(1,end) infinite}
+}
+@keyframes cyber-scan{from{background-position:0 -80px}to{background-position:0 80px}}
+@keyframes cyber-jitter{0%,94%,100%{transform:translate(0)}95%{transform:translate(2px,-1px)}96%{transform:translate(-2px,1px)}97%{transform:translate(0)}}
+@media(prefers-reduced-motion:reduce){.special-cyberpunk .cyber-terminal-specimen:before,.special-cyberpunk .special-specimen h2{animation:none}}
