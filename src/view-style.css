@@ -1,3 +1,304 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
 .style-page{min-height:100vh;position:relative;overflow:hidden;background:#f3efe6;color:#242421;font-family:'Nunito',sans-serif}.style-page:before{content:'';position:absolute;inset:0;background:radial-gradient(45% 35% at 8% 8%,rgba(151,174,192,.18),transparent 70%),radial-gradient(38% 40% at 92% 22%,rgba(224,151,101,.13),transparent 70%);pointer-events:none}.style-nav,.style-hero,.style-section,.style-footer{position:relative;z-index:1;width:min(1180px,calc(100% - 72px));margin:auto}.style-nav{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(36,36,33,.12);font-size:9px;letter-spacing:.16em;color:rgba(36,36,33,.5)}.style-brand{display:flex;align-items:baseline;gap:10px}.style-brand b{font-size:16px;letter-spacing:.17em}.style-brand span{font-size:11px;color:rgba(36,36,33,.45)}.style-back{display:flex;align-items:center;gap:7px;border:0;background:none;color:#242421;font-size:9px;font-weight:800;letter-spacing:.12em;cursor:pointer}.style-kicker{display:block;color:#b66b45;font-size:11px;font-weight:900;letter-spacing:.19em;margin-bottom:22px}.minimal-hero{position:relative;z-index:1;width:min(1180px,calc(100% - 72px));margin:auto;display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center;padding:110px 0 130px}.minimal-copy h1,.style-section h2,.style-footer h2{margin:0;letter-spacing:-.065em;line-height:.96;font-weight:800}.minimal-copy h1{font-size:clamp(66px,9vw,126px)}.minimal-copy h1 em,.style-section h2 em,.style-footer h2 em{font-style:normal;color:#252522}.style-lead{font-size:24px;line-height:1.45;color:#45453f;margin:34px 0 22px}.minimal-copy>p:not(.style-lead),.style-section-content>p,.style-footer>p{font-size:17px;line-height:1.7;color:#68675f;max-width:610px}.minimal-palette{display:flex;gap:9px;margin-top:38px}.swatch{width:30px;height:30px;border-radius:50%;border:1px solid rgba(36,36,33,.14)}.swatch.black{background:#242421}.swatch.grey{background:#8b8b84}.swatch.cream{background:#f3efe6}.swatch.brown{background:#a9795a}.swatch.orange{background:#e7a477}.swatch.blue{background:#a8c8dc}.minimal-poster{position:relative;height:560px;border:1px solid rgba(36,36,33,.12);background:#eee9dd;overflow:hidden;padding:36px;display:flex;flex-direction:column;justify-content:flex-start;box-shadow:0 30px 70px rgba(54,48,37,.11)}.poster-small{font-size:10px;letter-spacing:.18em;color:#77766e}.minimal-poster strong{font-size:clamp(54px,7vw,92px);line-height:.84;letter-spacing:-.07em;margin-top:22px;max-width:560px;color:#252522}.poster-form{position:absolute}.form-one{width:170px;height:170px;border-radius:50%;background:#a9795a;right:13%;top:30%}.form-two{width:110px;height:110px;background:#a8c8dc;right:25%;bottom:19%}.poster-line{position:absolute;width:45%;height:2px;background:#242421;left:9%;bottom:24%}.minimal-poster small{position:absolute;left:36px;bottom:35px;font-size:9px;letter-spacing:.15em;color:#77766e}.style-section{display:grid;grid-template-columns:220px 1fr;gap:65px;padding:120px 0;border-top:1px solid rgba(36,36,33,.12)}.style-section-label{display:flex;gap:13px;align-items:flex-start;color:#b66b45;font-size:11px;letter-spacing:.17em;font-weight:900}.style-section-label span{opacity:.6}.style-section h2{font-size:clamp(48px,6vw,82px)}.style-section-content>p{margin-top:34px}.style-strong{color:#242421!important;font-weight:800;font-size:21px!important}.minimal-rule{display:flex;flex-wrap:wrap;gap:15px;align-items:center;margin-top:48px;color:#b66b45;font-size:12px;font-weight:900;letter-spacing:.16em}.minimal-rule i{font-style:normal;color:#8daec5}.minimal-anatomy-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:65px;border-top:1px solid rgba(36,36,33,.12)}.minimal-anatomy-grid article{padding:30px 24px 34px 0;border-bottom:1px solid rgba(36,36,33,.12)}.minimal-anatomy-grid article:nth-child(even){padding-left:28px;border-left:1px solid rgba(36,36,33,.12)}.minimal-anatomy-grid article:last-child{grid-column:1/-1}.minimal-anatomy-grid article>span{font-size:10px;color:#b66b45;font-weight:900;letter-spacing:.12em}.minimal-anatomy-grid h3{font-size:28px;margin:25px 0 10px;color:#252522}.minimal-anatomy-grid p{margin:0;color:#68675f;font-size:15px;line-height:1.65}.composition-canvas{position:relative;height:470px;margin-top:55px;background:#faf7ef;border:1px solid rgba(36,36,33,.12);overflow:hidden}.composition-copy{position:absolute;left:8%;top:12%;display:flex;flex-direction:column;gap:10px}.composition-copy span{font-size:10px;color:#b66b45}.composition-copy strong{font-size:clamp(35px,5vw,65px);line-height:.9;letter-spacing:-.06em}.composition-copy small{font-size:9px;letter-spacing:.14em;color:#77766e}.composition-square{position:absolute;width:170px;height:170px;right:17%;top:18%;background:#242421}.composition-dot{position:absolute;width:82px;height:82px;border-radius:50%;right:29%;bottom:17%;background:#a9795a}.composition-orange{position:absolute;width:38px;height:38px;right:12%;bottom:24%;border-radius:50%;background:#e7a477}.composition-blue{position:absolute;width:25px;height:100px;left:55%;bottom:0;background:#a8c8dc}.rule-list{margin-top:55px;border-top:1px solid rgba(36,36,33,.12)}.rule-list>div{display:grid;grid-template-columns:55px 160px 1fr;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid rgba(36,36,33,.12)}.rule-list b{font-size:10px;color:#b66b45}.rule-list strong{font-size:22px;color:#252522}.rule-list span{font-size:15px;color:#68675f;line-height:1.5}.style-footer{padding:135px 0 80px;border-top:1px solid rgba(36,36,33,.12)}.style-footer h2{font-size:clamp(54px,7vw,96px)}.style-footer>p{margin-top:32px}.style-footer-meta{display:flex;justify-content:space-between;margin-top:75px;padding-top:22px;border-top:1px solid rgba(36,36,33,.12);font-size:9px;letter-spacing:.15em;color:rgba(36,36,33,.42)}.style-empty{padding:180px 8%;position:relative;z-index:1}.style-empty h1{font-size:clamp(60px,10vw,130px);margin:0}.style-empty p{color:#68675f;font-size:20px}
 @media(max-width:800px){.style-nav,.minimal-hero,.style-section,.style-footer{width:calc(100% - 40px)}.style-nav{height:78px}.style-nav>span{display:none}.minimal-hero{grid-template-columns:1fr;gap:45px;padding:80px 0 95px}.minimal-copy h1{font-size:clamp(64px,18vw,100px)}.style-lead{font-size:20px}.minimal-poster{height:430px}.style-section{grid-template-columns:1fr;gap:28px;padding:85px 0}.style-section h2{font-size:clamp(48px,13vw,70px)}.minimal-anatomy-grid{grid-template-columns:1fr;margin-top:45px}.minimal-anatomy-grid article:nth-child(even){padding-left:0;border-left:0}.minimal-anatomy-grid article:last-child{grid-column:auto}.composition-canvas{height:360px}.composition-square{width:120px;height:120px}.rule-list>div{grid-template-columns:40px 1fr;gap:12px}.rule-list span{grid-column:2}.style-footer{padding:95px 0 55px}.style-footer-meta{gap:20px;flex-direction:column}}
+
+
+/* Style-page navigation accents: use the Ryūma solid palette. */
+.style-page .style-brand b {
+  color: #6A2C91;
+}
+.style-page .style-back {
+  color: #20E3E6;
+}
+.style-page .style-back:hover,
+.style-page .style-back:focus-visible {
+  color: #20E3E6;
+}
+.style-page .style-back:focus-visible {
+  outline: 2px solid #20E3E6;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+
+/* Minimalism composition: a purposeful product-poster example, not decorative shapes. */
+.minimal-composition .composition-canvas {
+  height: 500px;
+  background: #faf7ef;
+  border: 1px solid rgba(36, 36, 33, .14);
+}
+.minimal-composition .composition-copy {
+  left: 7%;
+  top: 10%;
+  width: 43%;
+  gap: 12px;
+  z-index: 2;
+}
+.minimal-composition .composition-copy > span {
+  font-size: 9px;
+  letter-spacing: .16em;
+  font-weight: 800;
+}
+.minimal-composition .composition-copy strong {
+  font-size: clamp(38px, 5.4vw, 70px);
+  line-height: .88;
+  letter-spacing: -.065em;
+}
+.minimal-composition .composition-copy small {
+  margin-top: 8px;
+  font-size: 8px;
+  letter-spacing: .13em;
+}
+.minimal-composition .composition-copy p {
+  margin: 14px 0 0;
+  max-width: 230px;
+  color: #68675f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.lamp-stage {
+  position: absolute;
+  right: 7%;
+  top: 12%;
+  width: 38%;
+  height: 74%;
+}
+.lamp-shade {
+  position: absolute;
+  top: 13%;
+  left: 15%;
+  width: 70%;
+  height: 24%;
+  background: #a9795a;
+  border-radius: 48% 48% 12% 12%;
+}
+.lamp-neck {
+  position: absolute;
+  top: 36%;
+  left: 47%;
+  width: 6%;
+  height: 9%;
+  background: #a9795a;
+}
+.lamp-stem {
+  position: absolute;
+  top: 43%;
+  left: 48%;
+  width: 4%;
+  height: 32%;
+  background: #a8c8dc;
+}
+.lamp-base {
+  position: absolute;
+  bottom: 15%;
+  left: 29%;
+  width: 42%;
+  height: 7%;
+  border-radius: 50%;
+  background: #242421;
+}
+.lamp-ground {
+  position: absolute;
+  bottom: 14%;
+  left: 4%;
+  width: 92%;
+  height: 1px;
+  background: rgba(36, 36, 33, .35);
+}
+.composition-caption {
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+  right: 7%;
+  padding-top: 12px;
+  border-top: 1px solid rgba(36, 36, 33, .16);
+  color: #77766e;
+  font-size: 8px;
+  letter-spacing: .14em;
+}
+.composition-caption i {
+  color: #b66b45;
+  font-style: normal;
+  padding: 0 5px;
+}
+@media(max-width:800px) {
+  .minimal-composition .composition-canvas { height: 360px; }
+  .minimal-composition .composition-copy {
+    left: 6%;
+    top: 10%;
+    width: 46%;
+    gap: 9px;
+  }
+  .minimal-composition .composition-copy > span { font-size: 7px; letter-spacing: .1em; }
+  .minimal-composition .composition-copy strong { font-size: clamp(29px, 8vw, 42px); }
+  .minimal-composition .composition-copy small { font-size: 6.5px; letter-spacing: .08em; }
+  .minimal-composition .composition-copy p { font-size: 10px; line-height: 1.45; margin-top: 8px; }
+  .lamp-stage { right: 3%; top: 17%; width: 43%; height: 67%; }
+  .lamp-shade { top: 13%; height: 23%; }
+  .lamp-stem { height: 31%; }
+  .lamp-base { bottom: 16%; }
+  .lamp-ground { bottom: 15%; }
+  .composition-caption { left: 6%; right: 6%; bottom: 5%; font-size: 6.5px; letter-spacing: .08em; }
+}
+
+
+/* Minimalism reference pass: improve mobile scale and spacing without changing other styles. */
+.minimal-page .minimal-hero {
+  gap: 64px;
+}
+.minimal-page .minimal-poster {
+  min-height: 560px;
+}
+.minimal-page .minimal-poster .form-one {
+  width: clamp(190px, 28vw, 270px);
+  height: clamp(190px, 28vw, 270px);
+  right: 13%;
+  top: 32%;
+}
+.minimal-page .minimal-poster .form-two {
+  width: clamp(130px, 20vw, 190px);
+  height: clamp(130px, 20vw, 190px);
+  right: 25%;
+  bottom: 19%;
+}
+.minimal-page .minimal-poster .poster-line {
+  bottom: 25%;
+}
+@media (max-width: 800px) {
+  .minimal-page .minimal-hero {
+    gap: 48px;
+    padding-top: 76px;
+    padding-bottom: 90px;
+  }
+  .minimal-page .minimal-copy h1 {
+    font-size: clamp(66px, 17.5vw, 104px);
+    line-height: .98;
+    letter-spacing: -.07em;
+  }
+  .minimal-page .style-lead {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: clamp(19px, 5.2vw, 23px);
+    line-height: 1.5;
+  }
+  .minimal-page .minimal-copy > p:not(.style-lead) {
+    font-size: clamp(16px, 4.4vw, 19px);
+    line-height: 1.75;
+  }
+  .minimal-page .minimal-palette {
+    gap: 10px;
+    margin-top: 34px;
+  }
+  .minimal-page .swatch {
+    width: clamp(30px, 7.8vw, 38px);
+    height: clamp(30px, 7.8vw, 38px);
+    flex: 0 0 auto;
+  }
+  .minimal-page .minimal-poster {
+    height: 500px;
+    min-height: 500px;
+    padding: 34px;
+    box-shadow: 0 18px 42px rgba(54, 48, 37, .08);
+  }
+  .minimal-page .minimal-poster strong {
+    font-size: clamp(49px, 12vw, 68px);
+    margin-top: 22px;
+    white-space: nowrap;
+  }
+  .minimal-page .minimal-poster .form-one {
+    width: clamp(190px, 44vw, 245px);
+    height: clamp(190px, 44vw, 245px);
+    top: 34%;
+    right: 13%;
+  }
+  .minimal-page .minimal-poster .form-two {
+    width: clamp(130px, 28vw, 165px);
+    height: clamp(130px, 28vw, 165px);
+    right: 25%;
+    bottom: 19%;
+  }
+  .minimal-page .minimal-poster .poster-line {
+    width: 48%;
+    bottom: 25%;
+    left: 9%;
+  }
+  .minimal-page .minimal-poster small {
+    left: 34px;
+    bottom: 30px;
+  }
+  .minimal-page .style-section {
+    gap: 26px;
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+  .minimal-page .style-section h2 {
+    line-height: .99;
+  }
+  .minimal-page .minimal-anatomy-grid {
+    margin-top: 42px;
+  }
+  .minimal-page .minimal-anatomy-grid article {
+    padding-top: 25px;
+    padding-bottom: 29px;
+  }
+  .minimal-page .minimal-anatomy-grid h3 {
+    margin-top: 21px;
+  }
+  .minimal-page .minimal-composition .composition-canvas {
+    height: 410px;
+    margin-top: 42px;
+  }
+  .minimal-page .minimal-composition .composition-copy {
+    top: 11%;
+    width: 45%;
+  }
+  .minimal-page .minimal-composition .composition-copy strong {
+    font-size: clamp(31px, 8.2vw, 44px);
+  }
+  .minimal-page .lamp-stage {
+    top: 18%;
+    right: 3%;
+    width: 44%;
+    height: 65%;
+  }
+  .minimal-page .lamp-shade {
+    height: 24%;
+  }
+  .minimal-page .lamp-stem {
+    height: 30%;
+  }
+  .minimal-page .composition-caption {
+    bottom: 5%;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .minimal-page .minimal-poster {
+    height: 455px;
+    min-height: 455px;
+    padding: 26px;
+  }
+  .minimal-page .minimal-poster strong {
+    font-size: clamp(43px, 11.5vw, 49px);
+  }
+  .minimal-page .minimal-poster .form-one {
+    width: 184px;
+    height: 184px;
+    right: 10%;
+  }
+  .minimal-page .minimal-poster .form-two {
+    width: 128px;
+    height: 128px;
+    right: 23%;
+  }
+  .minimal-page .minimal-poster small {
+    left: 26px;
+    bottom: 26px;
+  }
+  .minimal-page .minimal-composition .composition-canvas {
+    height: 380px;
+  }
+  .minimal-page .minimal-composition .composition-copy {
+    width: 47%;
+  }
+}

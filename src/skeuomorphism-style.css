@@ -7,3 +7,23 @@
 .skeu-workbench{min-height:540px;padding:35px;background:linear-gradient(135deg,#6c4939,#3d2922);border-radius:9px;box-shadow:12px 15px 25px rgba(50,35,28,.25),inset 1px 1px rgba(255,255,255,.12);position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(280px,.88fr);gap:28px;align-items:center;overflow:hidden}.leather-card{width:100%;min-height:330px;padding:28px;background:linear-gradient(145deg,#694437,#3d2822);border-radius:8px;box-shadow:9px 12px 17px rgba(15,8,5,.45),inset 2px 2px rgba(255,255,255,.14),inset -2px -2px rgba(0,0,0,.3);color:#eee1d2}.metal-plate{width:100%;padding:28px;background:linear-gradient(145deg,#d6d2ca,#88857e);border-radius:7px;box-shadow:8px 11px 16px rgba(20,10,5,.45),inset 1px 1px #fff,inset -2px -2px #555;position:relative;z-index:2}.metal-button:disabled{cursor:default;opacity:.62}.metal-button.is-active{box-shadow:inset 2px 2px 4px rgba(40,30,20,.28),inset -1px -1px 2px rgba(255,255,255,.65)}.metal-meter{overflow:hidden}.metal-meter span{transition:width .12s linear}.metal-status{margin-top:12px;font-size:8px;letter-spacing:.08em;color:#504b45}.glass-note{position:absolute;right:6%;bottom:7%;padding:18px 22px;text-align:center;background:rgba(237,244,244,.7);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(5px);box-shadow:3px 5px 9px rgba(20,10,5,.2);font-size:11px;color:#504b45}
 @media(max-width:800px){.skeu-workbench{min-height:0;padding:20px;display:flex;flex-direction:column;align-items:stretch;gap:18px}.leather-card{width:100%;min-height:300px;padding:22px}.metal-plate{position:relative;right:auto;top:auto;width:100%;padding:20px}.glass-note{position:relative;right:auto;bottom:auto;align-self:flex-end;font-size:9px}}
 @media(max-width:380px){.skeu-workbench{min-height:0}.leather-card h3{font-size:36px}}
+
+
+/* Composition refinements: a recognizable physical radio with a real, accessible tuning control. */
+.radio-frequency{display:flex;align-items:baseline;gap:9px;margin-top:24px;color:#eee1d2}
+.radio-frequency span,.radio-frequency small{font:10px 'DM Mono';letter-spacing:.12em}
+.radio-frequency b{font:800 35px/1 'Playfair Display';color:#d97b6e}
+.radio-dial-wrap{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;align-items:center;margin:10px 0 24px}
+.radio-dial{width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 32% 27%,#faf7ef 0 3%,#c7c3bb 10%,#827e77 45%,#4b4945 73%,#292825 100%);box-shadow:5px 6px 9px rgba(45,35,28,.4),inset 2px 2px 4px rgba(255,255,255,.7),inset -3px -4px 5px rgba(0,0,0,.55);position:relative;transform:rotate(var(--dial-angle));transition:transform .12s}
+.radio-dial span{position:absolute;left:50%;top:7px;width:4px;height:18px;border-radius:3px;background:#a94336;transform:translateX(-50%)}
+.radio-dial-wrap label{font:10px 'DM Mono';color:#504b45;display:block;margin-bottom:10px}
+.radio-tuning{width:100%;accent-color:#a94336;cursor:pointer}
+.radio-tuning:focus-visible{outline:3px solid #a94336;outline-offset:4px}
+.radio-scale{display:flex;justify-content:space-between;font:8px 'DM Mono';color:#504b45;margin-top:5px}
+.metal-plate .metal-row{margin-top:20px}
+.metal-button:focus-visible,.skeu-page button:focus-visible{outline:3px solid #a94336;outline-offset:4px}
+@media(max-width:380px){.radio-dial-wrap{grid-template-columns:60px minmax(0,1fr);gap:12px}.radio-dial{width:58px;height:58px}.radio-frequency b{font-size:30px}}
+
+
+.radio-caption{margin:10px 0 0;font:9px/1.5 'DM Mono',monospace;color:#504b45;letter-spacing:.04em}
+.radio-tuning{touch-action:pan-y}

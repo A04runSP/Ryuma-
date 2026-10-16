@@ -1,2 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap');
 .swiss-page{--swiss-ink:#171717;--swiss-muted:#777;--swiss-paper:#f6f5f1;background:var(--swiss-paper);color:var(--swiss-ink);font-family:Inter,Arial,sans-serif;min-height:100vh;padding:0 clamp(18px,5vw,76px);overflow:hidden}.swiss-page *{box-sizing:border-box}.swiss-nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d7d5d0;gap:16px}.swiss-nav button,.swiss-footer button{border:0;background:none;color:inherit;font:500 11px 'DM Mono',monospace;cursor:pointer;display:flex;align-items:center;gap:8px}.swiss-nav>strong{font-size:14px;letter-spacing:.12em}.swiss-nav>strong span{font-size:10px;letter-spacing:.06em;color:var(--swiss-muted);margin-left:8px}.swiss-nav small,.swiss-overline,.swiss-hero-foot,.swiss-section-head,.swiss-poster-top,.swiss-poster-footer,.swiss-poster-kicker,.swiss-annotation,.swiss-history-grid strong,.swiss-principles article>span,.swiss-application-grid article>span,.swiss-challenge>div>span,.swiss-footer{font:10px 'DM Mono',monospace;letter-spacing:.06em}.swiss-hero{padding:clamp(58px,10vw,140px) 0 28px;max-width:1200px}.swiss-overline,.swiss-hero-foot{display:flex;justify-content:space-between;gap:16px}.swiss-hero h1{font-size:clamp(58px,11vw,150px);letter-spacing:-.09em;line-height:.86;margin:42px 0 28px;font-weight:800}.swiss-hero h1 em,.swiss-history-grid h2 em,.swiss-challenge h2 em{font-style:normal;color:var(--swiss-muted);font-weight:500}.swiss-hero>p{font-size:clamp(17px,2.2vw,25px);line-height:1.55;max-width:670px;color:#555;margin:0 0 60px}.swiss-hero-foot{border-top:1px solid #d7d5d0;padding-top:16px}.swiss-specimen-section,.swiss-history,.swiss-anatomy,.swiss-applications{padding:70px 0;border-top:1px solid #d7d5d0}.swiss-section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:28px}.swiss-section-head p,.swiss-section-head>span:last-child{color:var(--swiss-muted);margin:0}.swiss-playground{display:grid;grid-template-columns:minmax(210px,270px) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:start}.swiss-controls{display:grid;gap:22px;background:#eeede8;padding:22px;position:sticky;top:16px}.swiss-controls label{display:grid;gap:9px;font:10px 'DM Mono',monospace;letter-spacing:.04em}.swiss-controls label b{font-size:13px}.swiss-controls textarea,.swiss-controls select{width:100%;border:1px solid #d4d2cc;background:var(--swiss-paper);padding:10px;font:12px Inter,sans-serif;color:var(--swiss-ink);resize:vertical}.swiss-controls input[type=range]{width:100%;accent-color:#171717}.swiss-swatches{display:flex;gap:10px}.swiss-swatches button{width:28px;height:28px;background:var(--swatch);border:2px solid transparent;border-radius:50%;cursor:pointer}.swiss-swatches button.selected{outline:2px solid var(--swatch);outline-offset:3px}.swiss-toggle-row{display:flex;justify-content:space-between;align-items:center;font-size:12px}.swiss-toggle-row button,.swiss-reset{display:flex;align-items:center;gap:6px;border:1px solid #ccc9c1;background:transparent;padding:8px 10px;font:10px 'DM Mono',monospace;cursor:pointer}.swiss-reset{justify-content:center;width:100%;padding:12px}.swiss-poster-wrap{min-width:0}.swiss-poster{position:relative;isolation:isolate;overflow:hidden;min-height:620px;aspect-ratio:4/5;background:#fdfcf8;border:1px solid #dedbd4;padding:clamp(22px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between}.swiss-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--swiss-columns),1fr);gap:clamp(5px,1vw,14px);padding:0 clamp(22px,4vw,48px);z-index:-1;pointer-events:none}.swiss-grid i{border-left:1px solid rgba(23,23,23,.12);border-right:1px solid rgba(23,23,23,.05)}.swiss-poster-top,.swiss-poster-footer{display:flex;justify-content:space-between;gap:12px;line-height:1.5}.swiss-poster-top span{text-align:right}.swiss-poster-main{position:relative;z-index:1;text-align:var(--poster-align,left);text-align:inherit}.swiss-poster.align-center .swiss-poster-main{text-align:center}.swiss-poster.align-right .swiss-poster-main{text-align:right}.swiss-poster-kicker{display:block;margin-bottom:24px}.swiss-poster-main h2{font-size:clamp(44px,7vw,100px);letter-spacing:-.085em;line-height:.88;margin:0;font-weight:900;overflow-wrap:anywhere}.swiss-accent-rule{width:64px;height:7px;background:var(--swiss-accent);margin:24px 0}.swiss-poster.align-center .swiss-accent-rule{margin-left:auto;margin-right:auto}.swiss-poster.align-right .swiss-accent-rule{margin-left:auto}.swiss-poster-main p{font-size:clamp(15px,2vw,22px);line-height:1.3;font-weight:600}.swiss-poster-circle{position:absolute;width:clamp(100px,19vw,220px);aspect-ratio:1;border-radius:50%;background:var(--swiss-accent);right:7%;top:34%;z-index:-1;opacity:.95}.swiss-poster-footer{border-top:1px solid #c8c5bd;padding-top:12px}.swiss-annotation{position:absolute;background:var(--swiss-paper);padding:4px 6px;font-size:9px}.ann-a{top:27%;right:6%}.ann-b{top:54%;left:5%;writing-mode:vertical-rl}.ann-c{bottom:17%;right:5%}.swiss-history-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw}.swiss-history-grid h2,.swiss-challenge h2{font-size:clamp(42px,7vw,84px);letter-spacing:-.07em;line-height:.95;margin:0}.swiss-history-grid>div{max-width:600px}.swiss-history-grid p,.swiss-challenge p{font-size:16px;line-height:1.8;color:#555;margin:0 0 20px}.swiss-history-grid strong{display:block;border-left:4px solid #e53935;padding:8px 0 8px 16px;line-height:1.7}.swiss-principles{border-top:1px solid #d7d5d0}.swiss-principles article{display:grid;grid-template-columns:70px 1fr 30px;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid #d7d5d0}.swiss-principles article>span{color:var(--swiss-muted);padding-top:5px}.swiss-principles h3,.swiss-application-grid h3{font-size:clamp(22px,3vw,32px);letter-spacing:-.04em;margin:0 0 8px}.swiss-principles p,.swiss-application-grid p{margin:0;line-height:1.7;color:#65635e;max-width:640px;font-size:14px}.swiss-principles article>b{font-size:20px;font-weight:400}.swiss-application-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.swiss-application-grid article{background:#eeede8;padding:24px;min-height:220px;display:flex;flex-direction:column;align-items:start}.swiss-application-grid article>span{color:var(--swiss-muted);margin-bottom:auto}.swiss-application-grid h3{margin-top:36px}.swiss-challenge{background:#171717;color:#f6f5f1;margin:20px calc(clamp(18px,5vw,76px)*-1) 0;padding:clamp(36px,8vw,100px) clamp(18px,5vw,76px);display:flex;justify-content:space-between;align-items:end;gap:40px}.swiss-challenge>div{max-width:720px}.swiss-challenge h2{margin:28px 0}.swiss-challenge h2 em{color:#aaa}.swiss-challenge p{color:#bbb;max-width:650px}.swiss-challenge>button{flex-shrink:0;background:var(--swiss-accent,#e53935);border:0;padding:15px 18px;color:#fff;font:10px 'DM Mono',monospace;cursor:pointer}.swiss-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0}.swiss-footer button{font-size:10px}@media(max-width:760px){.swiss-nav{height:66px}.swiss-nav small{display:none}.swiss-nav>strong span{display:none}.swiss-hero h1{margin-top:34px}.swiss-playground{grid-template-columns:1fr}.swiss-controls{position:static;grid-template-columns:1fr 1fr;gap:16px}.swiss-controls label:first-child,.swiss-reset{grid-column:1/-1}.swiss-poster{min-height:500px}.swiss-history-grid{grid-template-columns:1fr;gap:24px}.swiss-application-grid{grid-template-columns:1fr}.swiss-application-grid article{min-height:180px}.swiss-challenge{align-items:start;flex-direction:column}.swiss-footer{flex-wrap:wrap}.swiss-annotation{font-size:8px}}@media(max-width:420px){.swiss-controls{grid-template-columns:1fr}.swiss-controls label:first-child,.swiss-reset{grid-column:auto}.swiss-poster{min-height:450px}.swiss-poster-main h2{font-size:clamp(38px,12vw,58px)}.swiss-poster-circle{top:38%;right:4%}.swiss-poster-footer{font-size:8px}.swiss-overline,.swiss-hero-foot{font-size:8px}.swiss-section-head{align-items:start;flex-direction:column;gap:8px}}
+
+
+/* Swiss specimen refinement: responsive composition and collision prevention. */
+.swiss-poster-main{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.swiss-poster-main h2{max-width:100%;text-wrap:balance;overflow-wrap:anywhere;word-break:normal}
+.swiss-poster-main p{position:relative;z-index:2;max-width:min(100%,28ch);overflow-wrap:anywhere}
+.swiss-annotation{max-width:calc(100% - 24px);z-index:3;line-height:1.35}
+@media(max-width:760px){
+  .swiss-poster{min-height:0;aspect-ratio:auto;min-height:clamp(500px,145vw,680px);padding:clamp(20px,5.5vw,30px)}
+  .swiss-poster-top,.swiss-poster-footer{position:relative;z-index:2}
+  .swiss-poster-main{margin:clamp(34px,8vw,54px) 0;max-width:100%}
+  .swiss-poster-main h2{font-size:clamp(36px,9.6vw,68px);line-height:.94;letter-spacing:-.075em}
+  .swiss-poster-kicker{margin-bottom:clamp(16px,4vw,24px)}
+  .swiss-poster-main p{font-size:clamp(15px,4vw,20px);max-width:22ch}
+  .swiss-poster-circle{width:clamp(100px,27vw,170px);top:44%;right:4%}
+  .swiss-annotation{font-size:8px}
+  .ann-a{top:24%;right:4%}
+  .ann-b{top:52%;left:auto;right:4%;writing-mode:vertical-rl}
+  .ann-c{bottom:16%;right:4%}
+}
+@media(max-width:420px){
+  .swiss-poster{min-height:clamp(500px,150vw,620px);padding:18px}
+  .swiss-poster-top,.swiss-poster-footer{gap:8px;font-size:8px}
+  .swiss-poster-top span{text-align:right}
+  .swiss-poster-main{margin:42px 0}
+  .swiss-poster-main h2{font-size:clamp(32px,9.2vw,42px);line-height:.98;letter-spacing:-.065em}
+  .swiss-poster-main p{font-size:15px;max-width:18ch;margin-top:22px}
+  .swiss-poster-circle{width:clamp(94px,25vw,118px);top:47%;right:4%;opacity:.88}
+  .swiss-annotation{font-size:7px;padding:3px 4px}
+  .ann-a{top:23%;right:3%}
+  .ann-b{top:55%;right:3%;left:auto}
+  .ann-c{bottom:14%;right:3%}
+}
+@media(prefers-reduced-motion:reduce){
+  .swiss-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+
+
+/* Swiss principle list: restore balanced editorial margins on narrow screens. */
+.swiss-principles article{min-width:0}
+.swiss-principles article>div{min-width:0}
+@media(max-width:760px){
+  .swiss-principles article{grid-template-columns:34px minmax(0,1fr) 20px;column-gap:14px;padding:26px 0}
+  .swiss-principles article>div{padding-right:8px}
+  .swiss-principles h3{overflow-wrap:anywhere}
+  .swiss-principles p{max-width:34ch}
+  .swiss-principles article>b{justify-self:end}
+}
+@media(max-width:420px){
+  .swiss-principles article{grid-template-columns:26px minmax(0,1fr) 16px;column-gap:10px;padding:24px 0}
+  .swiss-principles article>div{padding-right:4px}
+}
+
+
+/* Keep Swiss page copy clear of the persistent floating utility control on mobile. */
+@media(max-width:760px){
+  .swiss-history-grid>div,
+  .swiss-principles article>div,
+  .swiss-challenge>div{padding-right:clamp(36px,8vw,54px)}
+  .swiss-history-grid strong{max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:420px){
+  .swiss-history-grid>div,
+  .swiss-principles article>div,
+  .swiss-challenge>div{padding-right:38px}
+}

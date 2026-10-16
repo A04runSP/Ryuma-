@@ -1,0 +1,35 @@
+/* Ryūma / Design Anatomy — global product-shell tokens.
+   These tokens belong to Home, Dashboard and Design Library only.
+   Independent Style Worlds must define and own their own environments.
+   Token introduction is intentionally non-invasive: existing UI does not change
+   until a component explicitly consumes these variables.
+*/
+:root {
+  /* Global shell surfaces */
+  --ryuma-shell-bg: #0D0D1F;
+  --ryuma-shell-surface: #17152A;
+  --ryuma-shell-surface-raised: #211D38;
+  --ryuma-shell-border: rgba(245, 241, 250, 0.12);
+
+  /* Deep Violet & Aqua identity */
+  --ryuma-accent-primary: #B388FF;
+  --ryuma-accent-violet-deep: #6A2C91;
+  --ryuma-accent-aqua: #20E3E6;
+  --ryuma-accent-lilac: #D6A4FF;
+
+  /* Global shell typography */
+  --ryuma-text-primary: #F5F1FA;
+  --ryuma-text-secondary: rgba(245, 241, 250, 0.72);
+  --ryuma-text-muted: rgba(245, 241, 250, 0.48);
+
+  /* Existing global font roles retained pending typography review */
+  --ryuma-font-body: 'DM Sans', sans-serif;
+  --ryuma-font-display: 'Manrope', sans-serif;
+
+  /* Motion and shape primitives for the global shell */
+  --ryuma-radius-card: 1.5rem;
+  --ryuma-radius-control: 999px;
+  --ryuma-motion-fast: 180ms;
+  --ryuma-motion-standard: 280ms;
+  --ryuma-focus-ring: 0 0 0 3px rgba(179, 136, 255, 0.45);
+}
