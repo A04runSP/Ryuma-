@@ -23,7 +23,8 @@ export default function SpecialStyle({ style, onNavigate }) {
   const system = systems[style] || systems.Bauhaus;
   const [accent, setAccent] = useState(system.palette[0][1]);
   const [headline, setHeadline] = useState(system.headline.replaceAll('\\n','\n'));
-  const reset = () => { setAccent(system.palette[0][1]); setHeadline(system.headline.replaceAll('\\n','\n')); };\n  const isCyberpunk = style === 'Cyberpunk';
+  const reset = () => { setAccent(system.palette[0][1]); setHeadline(system.headline.replaceAll('\\n','\n')); };
+  const isCyberpunk = style === 'Cyberpunk';
   return <main className={`special-style special-${style.toLowerCase()}`} style={{'--special-accent':accent}}>
     <header className={`special-nav ${style === "Cyberpunk" ? "cyber-terminal-nav" : ""}`}><button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button><b>RYŪMA / DESIGN ANATOMY</b><span>{system.number}</span></header>
     <section className="special-hero"><div className="special-intro"><span className="special-kicker">{system.era} / DESIGN LANGUAGE</span><h1>{isCyberpunk ? <>SIGNAL<br/><em>OVERRIDE</em></> : system.thesis}</h1><p>{system.intro}</p>{isCyberpunk && <div className="cyber-readout"><span><Terminal size={13}/> TERMINAL / 04.03</span><span>ENCRYPTION: <b>ACTIVE</b></span><span>NOISE FLOOR <b>-12 DB</b></span></div>}<div className="special-palette">{system.palette.map(([name,value])=><button key={value} aria-label={name} title={name} className={accent===value?'selected':''} style={{'--swatch':value}} onClick={()=>setAccent(value)}/>)}</div><span className="special-hint">SELECT A COLOUR TO CHANGE THE SPECIMEN</span></div>
