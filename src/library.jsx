@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import { ArrowLeft, ArrowRight, Search } from 'lucide-react';
 import './library.css';
 
@@ -10,21 +10,15 @@ const groups = [
 ];
 
 export default function Library({ onNavigate }) {
-  const [query, setQuery] = useState('');
-  const filteredGroups = useMemo(() => {
-    const normalized = query.trim().toLocaleLowerCase();
-    return groups.map(group => ({ ...group, styles: group.styles.filter(style => style.toLocaleLowerCase().includes(normalized)) })).filter(group => group.styles.length > 0);
-  }, [query]);
-  const totalStyles = groups.reduce((total, group) => total + group.styles.length, 0);
   return <main className="library-shell">
     <div className="library-glow library-glow-a"/><div className="library-glow library-glow-b"/><div className="library-grain"/>
     <header className="library-nav">
       <button className="library-back" onClick={()=>onNavigate?.('dashboard')}><ArrowLeft size={15}/> DASHBOARD</button>
       <button className="library-brand" onClick={()=>onNavigate?.('home')}><b>RYUMA</b><em>リューマ</em></button>
-      <label className="library-search-wrap"><Search size={17} aria-hidden="true"/><input className="library-search-input" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Search styles" aria-label="Search design library" /></label>
+      <button className="library-search" aria-label="Search design library"><Search size={17}/></button>
     </header>
-    <section className="library-hero"><span className="library-kicker">DESIGN ANATOMY / 03</span><h1>Design<br/><span>Library.</span></h1><p>A catalogue of visual languages. Explore the ideas, characteristics and systems that make each style distinct.</p><div className="library-meta"><span>04 CATEGORIES</span><i>·</i><span>{totalStyles} DESIGN LANGUAGES</span></div></section>
-    <section className="library-collection" aria-live="polite">{filteredGroups.length ? filteredGroups.map(group => <section className="library-group" key={group.id}><div className="library-group-head"><div><span className="library-number">{group.id}</span><h2>{group.title}</h2></div><p>{group.subtitle}</p></div><div className="library-grid">{group.styles.map((style,index)=><button className="library-card" key={style} onClick={()=>onNavigate?.('view-style',style)}><span className="library-card-number">{group.id}.{String(index+1).padStart(2,'0')}</span><div className="library-card-art"><span>{style.split(' ').map(word=>word[0]).join('').slice(0,3)}</span></div><div className="library-card-info"><h3>{style}</h3><span>VIEW STYLE <ArrowRight size={14}/></span></div></button>)}</div></section>) : <p className="library-no-results">No design languages match “{query}”. Try another search.</p>}</section>
+    <section className="library-hero"><span className="library-kicker">DESIGN ANATOMY / 03</span><h1>Design<br/><span>Library.</span></h1><p>A catalogue of visual languages. Explore the ideas, characteristics and systems that make each style distinct.</p><div className="library-meta"><span>04 CATEGORIES</span><i>·</i><span>20+ DESIGN LANGUAGES</span></div></section>
+    <section className="library-collection">{groups.map(group => <section className="library-group" key={group.id}><div className="library-group-head"><div><span className="library-number">{group.id}</span><h2>{group.title}</h2></div><p>{group.subtitle}</p></div><div className="library-grid">{group.styles.map((style,index)=><button className="library-card" key={style} onClick={()=>onNavigate?.('view-style',style)}><span className="library-card-number">{group.id}.{String(index+1).padStart(2,'0')}</span><div className="library-card-art"><span>{style.split(' ').map(word=>word[0]).join('').slice(0,3)}</span></div><div className="library-card-info"><h3>{style}</h3><span>VIEW STYLE <ArrowRight size={14}/></span></div></button>)}</div></section>)}</section>
     <section className="library-end"><span className="library-kicker">DESIGN N → N+1</span><h2>The library<br/><span>keeps growing.</span></h2><p>New design languages can be added without rebuilding the ones already here.</p></section>
     <footer className="library-footer"><span>RYUMA / DESIGN ANATOMY</span><button onClick={()=>onNavigate?.('dashboard')}>BACK TO DASHBOARD <ArrowLeft size={14}/></button></footer>
   </main>;
