@@ -133,3 +133,27 @@
 .special-bauhaus .special-shapes i:first-child{background:var(--special-accent)}
 .special-bauhaus .special-shapes i:nth-child(2){background:#f5c542}
 .special-bauhaus .special-shapes i:nth-child(3){background:#2355d6}
+
+
+/* Bauhaus specimen palette interaction: accent propagates across all geometry */
+.special-bauhaus .special-shapes i:first-child{
+  background:var(--special-accent);
+}
+.special-bauhaus .special-shapes i:nth-child(2){
+  background:color-mix(in srgb,var(--special-accent) 42%,#f5c542);
+}
+.special-bauhaus .special-shapes i:nth-child(3){
+  background:color-mix(in srgb,var(--special-accent) 28%,#2355d6);
+}
+.special-bauhaus .special-controls button{
+  border-left-color:var(--special-accent);
+}
+.special-bauhaus .special-palette button.selected{
+  outline-color:var(--special-accent);
+}
+.special-bauhaus .special-shapes i{
+  transition:background-color .2s ease;
+}
+@media(prefers-reduced-motion:reduce){
+  .special-bauhaus .special-shapes i{transition:none}
+}
