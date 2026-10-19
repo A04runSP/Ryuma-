@@ -7,7 +7,7 @@ const systems = [
   { no:'02', name:'Brutalism', note:'Structure · contrast · raw form', className:'dashboard-brutal' },
   { no:'03', name:'Minimalism', note:'Reduction · rhythm · clarity', className:'dashboard-minimal' },
   { no:'04', name:'Dark UI', note:'Contrast · atmosphere · focus', className:'dashboard-dark' },
-  { no:'05', name:'Material', note:'Elevation · systems · motion', className:'dashboard-material' },
+  { no:'05', name:'Material Design', note:'Elevation · systems · motion', className:'dashboard-material' },
 ];
 
 const history = [
@@ -76,7 +76,7 @@ export default function Dashboard({ onNavigate }) {
       <div className="systems-heading"><div><span className="dashboard-kicker">02 / VISUAL LANGUAGES</span><h2>Explore the<br/><span>systems.</span></h2></div><p>Each design language makes a different set of decisions. Open one to see where its visual world will live.</p></div>
       <div className="system-list">{systems.map((system,index) => <article className={`system-row ${system.className} ${open===index?'is-open':''}`} key={system.name}>
         <button className="system-toggle" onClick={()=>setOpen(open===index?null:index)} aria-expanded={open===index}><span className="system-no">{system.no}</span><div><h3>{system.name}</h3><p>{system.note}</p></div><ChevronDown className="system-chevron" size={22}/></button>
-        <div className="system-panel"><div className="system-preview"><span>LIVE PREVIEW</span><div className="preview-placeholder"><b>{system.name}</b><small>ENVIRONMENT COMING TO LIFE</small></div></div><div className="system-panel-copy"><span>DESIGN LANGUAGE</span><p>The full environment will be connected here when this design system is built.</p><button onClick={goLibrary}>EXPLORE STYLE <ArrowRight size={15}/></button></div></div>
+        <div className="system-panel"><div className="system-preview"><span>LIVE PREVIEW</span><div className="preview-placeholder"><b>{system.name}</b><small>ENVIRONMENT COMING TO LIFE</small></div></div><div className="system-panel-copy"><span>DESIGN LANGUAGE</span><p>The full environment will be connected here when this design system is built.</p><button onClick={()=>onNavigate?.('view-style',system.name)}>EXPLORE STYLE <ArrowRight size={15}/></button></div></div>
       </article>)}</div>
     </section>
 
