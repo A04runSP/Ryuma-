@@ -163,3 +163,61 @@
     padding:13px 14px;
   }
 }
+
+
+/* Final mobile Brutalism preview cleanup: short specimen, no art/caption fade. */
+.home-shell .preview-card.preview-brutal .preview-art{
+  height:clamp(205px,54vw,270px) !important;
+  min-height:205px !important;
+  background:#f3e8d2 !important;
+  background-image:none !important;
+}
+.home-shell .preview-card.preview-brutal .preview-demo-wrap{
+  padding:10px 5% 4% !important;
+  background:#f3e8d2 !important;
+  background-image:none !important;
+}
+.home-shell .preview-card.preview-brutal .preview-demo{
+  padding:9px 12px !important;
+  gap:6px !important;
+  border:2px solid #121212 !important;
+  border-radius:0 !important;
+  box-shadow:3px 3px 0 #121212 !important;
+  background:#f3e8d2 !important;
+  color:#121212 !important;
+}
+.home-shell .preview-card.preview-brutal .preview-demo-label{
+  font-size:8px !important;
+  line-height:1 !important;
+}
+.home-shell .preview-card.preview-brutal .preview-demo strong{
+  font-size:16px !important;
+  line-height:1.05 !important;
+}
+.home-shell .preview-card.preview-brutal .preview-demo button{
+  padding:7px 10px !important;
+  font-size:10px !important;
+  box-shadow:2px 2px 0 #121212 !important;
+}
+.home-shell .preview-card.preview-brutal .preview-caption{
+  background:#0d0c18 !important;
+  background-image:none !important;
+}
+.home-shell .preview-card.preview-brutal .preview-caption::before,
+.home-shell .preview-card.preview-brutal .preview-caption::after{
+  content:none !important;
+  display:none !important;
+}
+@media(max-width:680px){
+  .home-shell .preview-card.preview-brutal .preview-art{
+    height:clamp(205px,54vw,270px) !important;
+    min-height:205px !important;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo-wrap{
+    padding:9px 5% 4% !important;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo{
+    padding:8px 10px !important;
+    gap:5px !important;
+  }
+}
