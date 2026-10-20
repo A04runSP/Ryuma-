@@ -112,3 +112,54 @@
     padding:13px 14px;
   }
 }
+
+
+/* Structural preview fix: art and interaction sample occupy separate rows. */
+.home-shell .preview-card .preview-art{
+  position:relative;
+  overflow:hidden;
+  height:clamp(250px,44vw,390px);
+  min-height:250px;
+}
+.home-shell .preview-card .preview-demo-wrap{
+  position:relative;
+  padding:0 6% 6%;
+  background:inherit;
+}
+.home-shell .preview-card .preview-demo{
+  position:relative;
+  inset:auto;
+  width:100%;
+  min-height:0;
+  max-width:none;
+  transform:none;
+  box-sizing:border-box;
+  margin:0;
+}
+.home-shell .preview-card .preview-demo strong{
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+@media(max-width:680px){
+  .home-shell .preview-card .preview-art{
+    height:clamp(235px,68vw,310px);
+    min-height:235px;
+  }
+  .home-shell .preview-card .preview-demo-wrap{
+    padding:0 5% 5%;
+  }
+  .home-shell .preview-card .preview-demo{
+    left:auto;
+    right:auto;
+    bottom:auto;
+    width:100%;
+    padding:14px 15px;
+    transform:none;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo{
+    left:auto;
+    right:auto;
+    width:100%;
+    padding:13px 14px;
+  }
+}
