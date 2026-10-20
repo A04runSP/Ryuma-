@@ -163,3 +163,49 @@
     padding:13px 14px;
   }
 }
+
+
+/* Final spacing refinement: keep Brutalism artwork clear and interaction compact. */
+.home-shell .preview-card.preview-brutal .preview-art{
+  background-image:none !important;
+}
+.home-shell .preview-card.preview-brutal .preview-demo-wrap{
+  padding-top:16px;
+  padding-bottom:5%;
+  background:#f3e8d2;
+}
+.home-shell .preview-card.preview-brutal .preview-demo{
+  min-height:0;
+  padding:12px 16px;
+  gap:8px;
+  box-shadow:5px 5px 0 #121212;
+}
+.home-shell .preview-card.preview-brutal .preview-demo-label{
+  font-size:9px;
+  letter-spacing:.16em;
+}
+.home-shell .preview-card.preview-brutal .preview-demo strong{
+  font-size:clamp(16px,2vw,21px);
+  line-height:1.08;
+}
+.home-shell .preview-card.preview-brutal .preview-demo button{
+  padding:9px 13px;
+  font-size:11px;
+}
+@media(max-width:680px){
+  .home-shell .preview-card.preview-brutal .preview-demo-wrap{
+    padding:12px 5% 5%;
+    background:#f3e8d2;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo{
+    padding:10px 12px;
+    gap:7px;
+    box-shadow:4px 4px 0 #121212;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo strong{
+    font-size:17px;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo button{
+    padding:8px 11px;
+  }
+}
