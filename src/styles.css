@@ -80,3 +80,35 @@
  .preview-dark .preview-demo,.preview-material .preview-demo{left:10%;right:10%;padding:15px}
 }
 @media(prefers-reduced-motion:reduce){.preview-card .art-orbit,.preview-card .art-block,.preview-card .art-type,.preview-card .art-line,.preview-demo button{transition:none}}
+
+
+/* Fix mobile preview specimen geometry: remove the old centered fixed-width rule. */
+.home-shell .preview-card .preview-demo{
+  box-sizing:border-box;
+  width:auto;
+  max-width:none;
+  transform:none;
+}
+@media(max-width:680px){
+  .home-shell .preview-card .preview-demo{
+    left:6%;
+    right:6%;
+    width:auto;
+    max-width:none;
+    transform:none;
+    padding:14px 15px;
+    gap:10px;
+  }
+  .home-shell .preview-card .preview-demo strong{
+    max-width:100%;
+    overflow-wrap:anywhere;
+    line-height:1.12;
+  }
+  .home-shell .preview-card.preview-brutal .preview-demo{
+    left:6%;
+    right:6%;
+    width:auto;
+    transform:none;
+    padding:13px 14px;
+  }
+}
