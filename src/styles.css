@@ -458,3 +458,50 @@
     padding:9px 10px;
   }
 }
+
+
+/* Dark UI card: prevent the dashboard artwork from being swallowed by the demo panel. */
+.home-shell .preview-card.preview-dark .preview-art{
+  height:clamp(280px,52vw,400px);
+  min-height:280px;
+  padding-bottom:0;
+}
+.home-shell .preview-card.preview-dark .art-block.block-a{
+  top:12%;
+  height:48%;
+  transform:rotate(-7deg) translateY(-2%);
+}
+.home-shell .preview-card.preview-dark .art-block.block-b{
+  top:24%;
+  height:24%;
+  transform:translateY(-3%);
+}
+.home-shell .preview-card.preview-dark .art-type{
+  top:34%;
+  transform:translateY(-4%);
+}
+.home-shell .preview-card.preview-dark .art-line{
+  bottom:18%;
+}
+.home-shell .preview-card.preview-dark .preview-demo-wrap{
+  position:relative;
+  z-index:2;
+  padding-top:16px;
+}
+@media(max-width:680px){
+  .home-shell .preview-card.preview-dark .preview-art{
+    height:clamp(270px,76vw,340px);
+    min-height:270px;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-a{
+    top:12%;
+    height:46%;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-b{
+    top:24%;
+    height:23%;
+  }
+  .home-shell .preview-card.preview-dark .art-type{
+    top:34%;
+  }
+}
