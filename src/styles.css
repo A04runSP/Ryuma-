@@ -505,3 +505,56 @@
     top:34%;
   }
 }
+
+
+/* Dark UI: expose more of the dashboard art above the interaction panel. */
+.home-shell .preview-card.preview-dark .preview-art{
+  height:clamp(300px,58vw,420px);
+  min-height:300px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.home-shell .preview-card.preview-dark .art-block.block-a{
+  top:7%;
+  height:43%;
+  transform:rotate(-5deg) translateY(0);
+}
+.home-shell .preview-card.preview-dark .art-block.block-b{
+  top:18%;
+  height:22%;
+  transform:translateY(0);
+}
+.home-shell .preview-card.preview-dark .art-type{
+  top:27%;
+  transform:translateY(0);
+}
+.home-shell .preview-card.preview-dark .art-line{
+  bottom:12%;
+}
+.home-shell .preview-card.preview-dark .preview-demo-wrap{
+  margin-top:0;
+  padding-top:18px;
+  position:relative;
+  z-index:3;
+}
+@media(max-width:680px){
+  .home-shell .preview-card.preview-dark .preview-art{
+    height:clamp(290px,82vw,360px);
+    min-height:290px;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-a{
+    top:7%;
+    height:42%;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-b{
+    top:18%;
+    height:21%;
+  }
+  .home-shell .preview-card.preview-dark .art-type{
+    top:27%;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo-wrap{
+    padding-top:14px;
+  }
+}
