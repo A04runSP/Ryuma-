@@ -558,3 +558,45 @@
     padding-top:14px;
   }
 }
+
+/* Dark UI mobile: make artwork and interaction specimen clearly separate. */
+@media(max-width:680px){
+  .home-shell .preview-card.preview-dark .preview-art{
+    height:360px !important;
+    min-height:360px !important;
+    flex:none !important;
+    display:block !important;
+    position:relative !important;
+    overflow:hidden !important;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-a{
+    top:8% !important;
+    height:58% !important;
+    transform:rotate(-5deg) !important;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-b{
+    top:25% !important;
+    height:32% !important;
+    transform:none !important;
+  }
+  .home-shell .preview-card.preview-dark .art-type{
+    top:39% !important;
+    transform:none !important;
+  }
+  .home-shell .preview-card.preview-dark .art-line{
+    bottom:12% !important;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo-wrap{
+    margin:0 !important;
+    padding:16px 5% 5% !important;
+    position:relative !important;
+    z-index:3 !important;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+  }
+}
