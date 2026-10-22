@@ -558,3 +558,92 @@
     padding-top:14px;
   }
 }
+
+/* Dark UI mobile: make artwork and interaction specimen clearly separate. */
+@media(max-width:680px){
+  .home-shell .preview-card.preview-dark .preview-art{
+    height:360px !important;
+    min-height:360px !important;
+    flex:none !important;
+    display:block !important;
+    position:relative !important;
+    overflow:hidden !important;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-a{
+    top:8% !important;
+    height:58% !important;
+    transform:rotate(-5deg) !important;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-b{
+    top:25% !important;
+    height:32% !important;
+    transform:none !important;
+  }
+  .home-shell .preview-card.preview-dark .art-type{
+    top:39% !important;
+    transform:none !important;
+  }
+  .home-shell .preview-card.preview-dark .art-line{
+    bottom:12% !important;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo-wrap{
+    margin:0 !important;
+    padding:16px 5% 5% !important;
+    position:relative !important;
+    z-index:3 !important;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+  }
+}
+
+
+/* Dark UI mobile correction v2: scale all art layers into the visible art viewport. */
+@media(max-width:680px){
+  .home-shell .preview-card.preview-dark .preview-art{
+    height:250px !important;
+    min-height:250px !important;
+    overflow:hidden !important;
+    position:relative !important;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-a{
+    top:12% !important;
+    height:38% !important;
+    left:12% !important;
+    width:76% !important;
+    transform:rotate(-4deg) !important;
+  }
+  .home-shell .preview-card.preview-dark .art-block.block-b{
+    top:30% !important;
+    height:24% !important;
+    left:19% !important;
+    width:25% !important;
+    transform:none !important;
+  }
+  .home-shell .preview-card.preview-dark .art-type{
+    top:31% !important;
+    left:51% !important;
+    font-size:clamp(34px,8vw,58px) !important;
+    transform:none !important;
+  }
+  .home-shell .preview-card.preview-dark .art-line{
+    bottom:12% !important;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo-wrap{
+    position:relative !important;
+    margin:0 !important;
+    padding:12px 5% 5% !important;
+    z-index:1 !important;
+  }
+  .home-shell .preview-card.preview-dark .preview-demo{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    margin:0 !important;
+    transform:none !important;
+  }
+}
