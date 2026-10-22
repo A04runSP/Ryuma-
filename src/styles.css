@@ -850,3 +850,56 @@
     padding:18px 5% 20px !important;
   }
 }
+
+/* Mobile glass preview: let the active card own its height; prevent the interaction panel from being clipped. */
+@media(max-width:680px){
+  .home-shell .preview-stage:has(.preview-card.preview-glass.is-active){
+    height:auto !important;
+    min-height:0 !important;
+    overflow:visible !important;
+  }
+  .home-shell .preview-stage .preview-card.preview-glass.is-active{
+    position:relative !important;
+    inset:auto !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    grid-template-rows:clamp(220px,64vw,300px) auto auto !important;
+    height:auto !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-art{
+    grid-row:1 !important;
+    height:auto !important;
+    min-height:0 !important;
+  }
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-demo-wrap{
+    grid-row:2 !important;
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:14px 5% !important;
+    box-sizing:border-box !important;
+    z-index:1 !important;
+  }
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-demo{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    margin:0 !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+  }
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-caption{
+    grid-row:3 !important;
+    position:relative !important;
+    inset:auto !important;
+    min-width:0 !important;
+    padding:18px 5% 20px !important;
+  }
+}
