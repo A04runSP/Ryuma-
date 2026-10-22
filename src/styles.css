@@ -761,3 +761,25 @@
     transform:none !important;
   }
 }
+
+
+/* Carousel overlap correction: keep inactive slides out of layout and paint. */
+.home-shell .preview-stage .preview-card:not(.is-active){
+  display:none !important;
+}
+.home-shell .preview-stage .preview-card.is-active{
+  display:grid !important;
+  grid-template-rows:minmax(0,1fr) auto auto !important;
+  opacity:1 !important;
+  transform:none !important;
+  transition:none !important;
+}
+.home-shell .preview-stage .preview-card.is-active .preview-art{
+  grid-row:1;
+}
+.home-shell .preview-stage .preview-card.is-active .preview-demo-wrap{
+  grid-row:2;
+}
+.home-shell .preview-stage .preview-card.is-active .preview-caption{
+  grid-row:3;
+}
