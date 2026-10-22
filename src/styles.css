@@ -786,7 +786,7 @@
 
 
 /* Glassmorphism card: true vertical flow, no overlapping demo layer. */
-.home-shell .preview-stage .preview-card.is-active{
+.home-shell .preview-stage .preview-card.preview-glass.is-active{
   position:absolute !important;
   inset:0 !important;
   display:grid !important;
@@ -795,14 +795,14 @@
   align-content:stretch !important;
   overflow:hidden !important;
 }
-.home-shell .preview-stage .preview-card.is-active .preview-art{
+.home-shell .preview-stage .preview-card.preview-glass.is-active .preview-art{
   grid-row:1 !important;
   min-height:250px !important;
   height:auto !important;
   width:100% !important;
   overflow:hidden !important;
 }
-.home-shell .preview-stage .preview-card.is-active .preview-demo-wrap{
+.home-shell .preview-stage .preview-card.preview-glass.is-active .preview-demo-wrap{
   grid-row:2 !important;
   position:relative !important;
   inset:auto !important;
@@ -812,7 +812,7 @@
   width:100% !important;
   box-sizing:border-box !important;
 }
-.home-shell .preview-stage .preview-card.is-active .preview-demo{
+.home-shell .preview-stage .preview-card.preview-glass.is-active .preview-demo{
   position:relative !important;
   inset:auto !important;
   left:auto !important;
@@ -825,7 +825,7 @@
   transform:none !important;
   box-sizing:border-box !important;
 }
-.home-shell .preview-stage .preview-card.is-active .preview-caption{
+.home-shell .preview-stage .preview-card.preview-glass.is-active .preview-caption{
   grid-row:3 !important;
   position:relative !important;
   inset:auto !important;
@@ -833,24 +833,20 @@
   z-index:0 !important;
 }
 @media(max-width:680px){
-  .home-shell .preview-stage{
-    height:auto !important;
-    min-height:0 !important;
-  }
-  .home-shell .preview-stage .preview-card.is-active{
+  .home-shell .preview-stage .preview-card.preview-glass.is-active{
     position:relative !important;
     inset:auto !important;
     grid-template-rows:250px auto auto !important;
     min-height:0 !important;
   }
-  .home-shell .preview-stage .preview-card.is-active .preview-art{
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-art{
     height:250px !important;
     min-height:250px !important;
   }
-  .home-shell .preview-stage .preview-card.is-active .preview-demo-wrap{
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-demo-wrap{
     padding:12px 5% 14px !important;
   }
-  .home-shell .preview-stage .preview-card.is-active .preview-caption{
+  .home-shell .preview-stage .preview-card.preview-glass.is-active .preview-caption{
     padding:18px 5% 20px !important;
   }
 }
