@@ -743,3 +743,21 @@
     transition:none !important;
   }
 }
+
+
+/* Prevent carousel ghosting: only the selected preview is painted. */
+.home-shell .preview-stage .preview-card{
+  visibility:hidden;
+}
+.home-shell .preview-stage .preview-card.is-active{
+  visibility:visible;
+}
+@media(max-width:680px){
+  .home-shell .preview-stage .preview-card{
+    transition:opacity .22s ease !important;
+    transform:none !important;
+  }
+  .home-shell .preview-stage .preview-card.is-active{
+    transform:none !important;
+  }
+}
