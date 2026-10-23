@@ -5,3 +5,139 @@
 .preview-glass .block-a{left:23%;top:28%;width:25%;height:34%;transform:rotate(-9deg);background:linear-gradient(145deg,rgba(205,211,225,.34),rgba(116,129,159,.16))}.preview-glass .block-b{right:20%;top:22%;width:31%;height:42%;transform:rotate(-9deg);background:linear-gradient(145deg,rgba(214,184,255,.38),rgba(118,91,181,.16));box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 30px 80px rgba(122,72,255,.28)}
 .preview-glass .art-type{z-index:3;color:rgba(237,235,187,.88);text-shadow:0 10px 30px rgba(0,0,0,.22);mix-blend-mode:normal}.preview-glass .art-line{z-index:3;background:linear-gradient(90deg,transparent,rgba(255,255,255,.72),transparent)}
 @media(max-width:680px){.preview-glass .art-block{backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%)}}
+
+/* Glassmorphism preview artwork: a recognizable frosted dashboard, not abstract Aa blocks. */
+.home-shell .preview-card.preview-glass .preview-art{
+  display:block;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  height:clamp(330px,58vw,450px);
+  min-height:330px;
+  background:
+    radial-gradient(ellipse at 78% 18%,rgba(190,111,255,.65),transparent 35%),
+    radial-gradient(ellipse at 18% 78%,rgba(71,143,255,.62),transparent 42%),
+    linear-gradient(135deg,#17283b 0%,#1a1a31 52%,#251a3b 100%) !important;
+}
+.home-shell .preview-card.preview-glass .glass-artwork{position:absolute;inset:0;overflow:hidden;color:#f8f7ff}
+.home-shell .preview-card.preview-glass .glass-art-glow{position:absolute;border-radius:50%;filter:blur(30px);pointer-events:none}
+.home-shell .preview-card.preview-glass .glass-art-glow-blue{width:44%;height:45%;left:-8%;bottom:0;background:rgba(52,133,255,.55)}
+.home-shell .preview-card.preview-glass .glass-art-glow-violet{width:48%;height:60%;right:-5%;top:-12%;background:rgba(174,83,255,.55)}
+.home-shell .preview-card.preview-glass .glass-art-orbit{position:absolute;border:1px solid rgba(255,255,255,.22);border-radius:50%;pointer-events:none}
+.home-shell .preview-card.preview-glass .glass-art-orbit-one{width:75%;height:90%;left:13%;top:6%;transform:rotate(-23deg)}
+.home-shell .preview-card.preview-glass .glass-art-orbit-two{width:96%;height:55%;left:2%;top:28%;transform:rotate(18deg);border-color:rgba(211,199,255,.25)}
+.home-shell .preview-card.preview-glass .glass-ui-card{position:absolute;border:1px solid rgba(255,255,255,.28);border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.07));backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 24px 60px rgba(5,8,22,.22)}
+.home-shell .preview-card.preview-glass .glass-ui-card-back{width:55%;height:42%;right:9%;top:13%;padding:18px;transform:rotate(8deg);opacity:.66}
+.home-shell .preview-card.preview-glass .glass-ui-eyebrow{display:block;font-size:8px;letter-spacing:.16em;color:rgba(247,245,255,.68)}
+.home-shell .preview-card.preview-glass .glass-ui-back-row{display:flex;gap:8px;margin-top:14px}
+.home-shell .preview-card.preview-glass .glass-ui-back-row i{display:block;height:35px;flex:1;border-radius:9px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.13)}
+.home-shell .preview-card.preview-glass .glass-ui-back-lines{display:grid;gap:6px;margin-top:12px}
+.home-shell .preview-card.preview-glass .glass-ui-back-lines i{height:4px;width:82%;border-radius:9px;background:rgba(255,255,255,.22)}
+.home-shell .preview-card.preview-glass .glass-ui-back-lines i:nth-child(2){width:63%}
+.home-shell .preview-card.preview-glass .glass-ui-back-lines i:nth-child(3){width:74%}
+.home-shell .preview-card.preview-glass .glass-ui-card-main{width:72%;left:14%;top:22%;padding:20px 20px 16px;transform:rotate(-3deg);background:linear-gradient(145deg,rgba(245,242,255,.27),rgba(165,175,225,.12));}
+.home-shell .preview-card.preview-glass .glass-ui-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.home-shell .preview-card.preview-glass .glass-ui-heading strong{display:block;margin-top:9px;font-size:clamp(20px,4vw,31px);font-weight:550;line-height:1.03;letter-spacing:-.045em;color:#fff}
+.home-shell .preview-card.preview-glass .glass-ui-avatar{display:grid;place-items:center;width:36px;height:36px;flex:none;border-radius:13px;border:1px solid rgba(255,255,255,.4);background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(185,155,255,.22));font-size:14px;font-weight:600}
+.home-shell .preview-card.preview-glass .glass-ui-progress{margin-top:18px;padding:12px;border-radius:13px;background:rgba(14,17,34,.17);border:1px solid rgba(255,255,255,.16)}
+.home-shell .preview-card.preview-glass .glass-ui-progress-copy{display:flex;justify-content:space-between;gap:8px;font-size:8px;color:rgba(248,247,255,.7)}
+.home-shell .preview-card.preview-glass .glass-ui-progress-copy b{font-weight:500;color:#fff}
+.home-shell .preview-card.preview-glass .glass-ui-progress-track{height:5px;margin-top:9px;border-radius:8px;background:rgba(255,255,255,.16);overflow:hidden}
+.home-shell .preview-card.preview-glass .glass-ui-progress-track i{display:block;width:68%;height:100%;border-radius:8px;background:linear-gradient(90deg,#8abaff,#d6b3ff)}
+.home-shell .preview-card.preview-glass .glass-ui-bottom{display:flex;align-items:center;gap:10px;margin-top:14px}
+.home-shell .preview-card.preview-glass .glass-ui-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.2);font-size:13px}
+.home-shell .preview-card.preview-glass .glass-ui-bottom b,.home-shell .preview-card.preview-glass .glass-ui-bottom small{display:block}
+.home-shell .preview-card.preview-glass .glass-ui-bottom b{font-size:10px;font-weight:550}
+.home-shell .preview-card.preview-glass .glass-ui-bottom small{margin-top:3px;font-size:8px;color:rgba(248,247,255,.65)}
+.home-shell .preview-card.preview-glass .glass-ui-arrow{margin-left:auto;font-size:18px;color:rgba(255,255,255,.85)}
+.home-shell .preview-card.preview-glass .glass-float-chip{position:absolute;display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(245,242,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 8px 22px rgba(8,10,28,.16);font-size:8px;letter-spacing:.04em;color:rgba(255,255,255,.82)}
+.home-shell .preview-card.preview-glass .glass-float-chip-top{left:7%;top:9%}
+.home-shell .preview-card.preview-glass .glass-float-chip-bottom{right:7%;bottom:7%}
+.home-shell .preview-card.preview-glass .glass-chip-dot{width:6px;height:6px;border-radius:50%;background:#a9d8ff;box-shadow:0 0 8px #a9d8ff}
+.home-shell .preview-card.preview-glass .glass-float-chip b{font-weight:600;color:#fff}
+.home-shell .preview-card.preview-glass .glass-chip-spark{color:#d9b7ff}
+@media(max-width:680px){
+ .home-shell .preview-card.preview-glass .preview-art{height:clamp(300px,86vw,370px);min-height:300px}
+ .home-shell .preview-card.preview-glass .glass-ui-card-main{width:78%;left:11%;top:24%;padding:17px 15px 14px}
+ .home-shell .preview-card.preview-glass .glass-ui-card-back{width:58%;right:7%;top:14%;padding:14px}
+ .home-shell .preview-card.preview-glass .glass-ui-heading strong{font-size:clamp(20px,6vw,26px)}
+ .home-shell .preview-card.preview-glass .glass-ui-progress{margin-top:14px;padding:10px}
+ .home-shell .preview-card.preview-glass .glass-float-chip-top{left:5%;top:8%}
+ .home-shell .preview-card.preview-glass .glass-float-chip-bottom{right:4%;bottom:6%}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-shell .preview-card.preview-glass .glass-ui-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(91,91,130,.92)}
+}
+
+/* Refine the Glassmorphism card: separate the artwork from the interactive specimen,
+   then tint the specimen with the same cool blue / violet glass palette. */
+.home-shell .preview-card.preview-glass .preview-art{
+  height:clamp(270px,42vw,360px) !important;
+  min-height:270px !important;
+}
+.home-shell .preview-card.preview-glass .preview-demo-wrap{
+  padding:14px 5% 5% !important;
+  background:linear-gradient(180deg,rgba(24,31,55,.22),rgba(20,18,39,.48)) !important;
+  border-top:1px solid rgba(204,198,255,.18);
+}
+.home-shell .preview-card.preview-glass .preview-demo{
+  position:relative !important;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px 18px;
+  padding:18px 20px !important;
+  border:1px solid rgba(218,211,255,.42) !important;
+  border-radius:22px !important;
+  color:#f7f5ff !important;
+  background:
+    radial-gradient(ellipse at 0% 100%,rgba(79,145,255,.36),transparent 58%),
+    radial-gradient(ellipse at 100% 0%,rgba(184,105,255,.42),transparent 62%),
+    linear-gradient(135deg,rgba(230,232,255,.24),rgba(139,130,194,.13)) !important;
+  backdrop-filter:blur(24px) saturate(165%) !important;
+  -webkit-backdrop-filter:blur(24px) saturate(165%) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 14px 36px rgba(3,6,20,.2) !important;
+}
+.home-shell .preview-card.preview-glass .preview-demo-label{
+  grid-column:1 / -1;
+  color:rgba(235,232,255,.66) !important;
+}
+.home-shell .preview-card.preview-glass .preview-demo strong{
+  color:#fff !important;
+  text-shadow:0 1px 12px rgba(15,8,35,.22);
+}
+.home-shell .preview-card.preview-glass .preview-demo button{
+  border:1px solid rgba(255,255,255,.42) !important;
+  border-radius:15px !important;
+  color:#17142c !important;
+  background:linear-gradient(135deg,#c5a6ff 0%,#9b79ff 52%,#7b62f5 100%) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 20px rgba(92,57,190,.28) !important;
+}
+.home-shell .preview-card.preview-glass .preview-demo button:active{
+  transform:translateY(1px);
+  filter:brightness(.96);
+}
+@media(max-width:680px){
+  .home-shell .preview-card.preview-glass .preview-art{
+    height:clamp(255px,70vw,315px) !important;
+    min-height:255px !important;
+  }
+  .home-shell .preview-card.preview-glass .preview-demo-wrap{
+    padding:12px 5% 5% !important;
+  }
+  .home-shell .preview-card.preview-glass .preview-demo{
+    grid-template-columns:minmax(0,1fr);
+    gap:10px;
+    padding:15px 16px !important;
+    border-radius:19px !important;
+  }
+  .home-shell .preview-card.preview-glass .preview-demo-label{grid-column:auto}
+  .home-shell .preview-card.preview-glass .preview-demo button{
+    justify-self:start;
+    width:auto;
+    min-width:170px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .home-shell .preview-card.preview-glass .preview-demo button{transition:none !important}
+}
