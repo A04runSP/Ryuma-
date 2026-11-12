@@ -43,7 +43,7 @@ export default function FlatDesignStyle({ onNavigate }) {
           <p>A clean, simple and functional design approach that focuses on clarity, content and usability.</p>
           <div className="flat-hero-actions">
             <a href="#flat-anatomy">Explore Anatomy <ArrowRight size={16} /></a>
-            <a className="flat-secondary-action" href="#flat-demo"><Play size={13} /> Live Demo</a>
+            <a className="flat-secondary-action" href="#flat-weather-demo"><Play size={13} /> Live Demo</a>
           </div>
         </div>
         <div className="flat-hero-art" role="img" aria-label="Flat geometric landscape with a house, sun, mountains and tree">
@@ -84,7 +84,7 @@ export default function FlatDesignStyle({ onNavigate }) {
         </div>
       </section>
 
-      <section className="flat-lab-row" id="flat-demo">
+      <section className="flat-lab-row" id="flat-interaction-demo">
         <div className="flat-interaction">
           <div className="flat-section-heading"><i /> <h2>Interaction States</h2></div>
           <p>Try the controls to see how a flat interface responds.</p>
@@ -109,7 +109,7 @@ export default function FlatDesignStyle({ onNavigate }) {
         </div>
       </section>
 
-      <section className="flat-weather">
+      <section className="flat-weather" id="flat-weather-demo">
         <div className="flat-section-heading"><i /> <h2>Flat Design in Practice</h2></div>
         <p>A compact weather interface built with colour blocks, simple icons and clear information.</p>
         <div className="flat-weather-card">
