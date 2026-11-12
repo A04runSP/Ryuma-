@@ -67,3 +67,152 @@
 @media(prefers-reduced-motion:reduce){
  .material-card,.material-primary,.motion-orb{transition:none!important}
 }
+
+
+/* --------------------------------------------------------------------------
+   Material Design specimen — approved Plum & Electric Pink direction (B).
+   Scoped to this specimen; global Ryuma shell tokens remain untouched.
+   -------------------------------------------------------------------------- */
+.material-style-page{
+  --mat-bg:#20152F;
+  --mat-surface:#2B1B3D;
+  --mat-surface-raised:#38224D;
+  --mat-surface-soft:#F5EAFB;
+  --mat-text:#F8F1FC;
+  --mat-text-muted:#D2C2DE;
+  --mat-violet:#8B4DE8;
+  --mat-pink:#D85BCB;
+  --mat-coral:#FF80A8;
+  --mat-border:rgba(245,234,251,.22);
+  --mat-focus:#FF80A8;
+  background:var(--mat-bg);
+  color:var(--mat-text);
+  font-family:'DM Sans',sans-serif;
+}
+.material-style-page .material-nav{border-color:var(--mat-border);color:var(--mat-text)}
+.material-style-page .material-nav button{color:var(--mat-text-muted)}
+.material-style-page .material-nav>span{color:var(--mat-text-muted)}
+.material-style-page .material-kicker,
+.material-style-page .material-label,
+.material-style-page .material-footer>span{color:var(--mat-coral)}
+.material-style-page .material-label span{color:var(--mat-pink)}
+.material-style-page .material-hero-copy h1,
+.material-style-page .material-section h2,
+.material-style-page .material-footer h2{color:var(--mat-text)}
+.material-style-page .material-hero-copy h1 em,
+.material-style-page .material-section h2 em,
+.material-style-page .material-footer h2 em{color:var(--mat-pink)}
+.material-style-page .material-hero-copy p,
+.material-style-page .material-section>div>p,
+.material-style-page .material-footer p{color:var(--mat-text-muted)}
+.material-style-page .material-hero-copy .material-lead{color:var(--mat-text)}
+.material-style-page .material-primary{
+  background:var(--mat-pink);color:#20152F;
+  box-shadow:0 5px 16px rgba(216,91,203,.22);
+}
+.material-style-page .material-primary:hover{background:var(--mat-coral);box-shadow:0 8px 22px rgba(216,91,203,.3)}
+.material-style-page .material-stage{background:#2B1B3D}
+.material-style-page .material-backdrop{
+  background:
+    radial-gradient(circle at 78% 18%,rgba(216,91,203,.28),transparent 35%),
+    linear-gradient(135deg,#38224D 0%,#241631 58%,#20152F 100%);
+}
+.material-style-page .material-card{
+  color:#24152F;background:var(--mat-surface-soft);
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:0 12px 28px rgba(7,3,13,.32);
+}
+.material-style-page .card-back{background:#DCC4F8}
+.material-style-page .card-mid{background:#B77AF0}
+.material-style-page .card-front{background:#F5EAFB}
+.material-style-page .material-card span{color:#6B4B7D}
+.material-style-page .material-card .card-action{
+  background:var(--mat-pink);color:#20152F;
+}
+.material-style-page .material-card.is-open{
+  box-shadow:0 24px 55px rgba(7,3,13,.48);
+}
+.material-style-page .material-card.is-open p{color:#584363}
+.material-style-page .material-fab{
+  background:var(--mat-pink);color:#20152F;border:2px solid rgba(255,255,255,.35);
+  box-shadow:0 9px 24px rgba(216,91,203,.34);
+  cursor:pointer;
+}
+.material-style-page .material-fab:hover{background:var(--mat-coral);transform:translateY(-2px)}
+.material-style-page .material-section{border-color:var(--mat-border)}
+.material-style-page .material-flow i{color:var(--mat-pink)}
+.material-style-page .material-anatomy{border-color:var(--mat-border)}
+.material-style-page .material-anatomy article{border-color:var(--mat-border)}
+.material-style-page .material-anatomy article>span{color:var(--mat-coral)}
+.material-style-page .material-anatomy article p{color:var(--mat-text-muted)}
+.material-style-page .material-anatomy article>svg{color:var(--mat-pink)}
+.material-style-page .elevation-demo{background:#2B1B3D}
+.material-style-page .elevation-ground{background:#38224D}
+.material-style-page .elevation-ground>span{color:#E7D7F0}
+.material-style-page .elevation-surface{
+  background:#F5EAFB;color:#38224D;
+  border:1px solid rgba(139,77,232,.18);
+}
+.material-style-page .level-one{box-shadow:0 3px 8px rgba(7,3,13,.2)}
+.material-style-page .level-two{box-shadow:0 8px 18px rgba(7,3,13,.28)}
+.material-style-page .level-three{box-shadow:0 15px 30px rgba(7,3,13,.36)}
+.material-style-page .component-demo{
+  background:#2B1B3D;border:1px solid var(--mat-border);
+  box-shadow:0 10px 28px rgba(7,3,13,.24);
+}
+.material-style-page .demo-toolbar{border-color:var(--mat-border)}
+.material-style-page .demo-toolbar span,
+.material-style-page .demo-content strong{color:var(--mat-text)}
+.material-style-page .demo-toolbar i{background:#A98AB9}
+.material-style-page .demo-content span{color:var(--mat-text-muted)}
+.material-style-page .demo-avatar{background:var(--mat-violet);color:#fff}
+.material-style-page .demo-content button{
+  background:var(--mat-pink);color:#20152F;
+}
+.material-style-page .component-status{
+  flex-basis:100%;font-size:12px;color:var(--mat-text-muted);
+}
+.material-style-page .motion-demo{
+  background:#38224D;border:1px solid var(--mat-border);
+}
+.material-style-page .motion-demo:before{background:rgba(245,234,251,.32)}
+.material-style-page .motion-orb{
+  background:var(--mat-violet);
+  box-shadow:0 8px 22px rgba(139,77,232,.38);
+}
+.material-style-page .motion-demo.elevation .motion-orb{
+  background:var(--mat-pink);box-shadow:0 18px 32px rgba(216,91,203,.38);
+}
+.material-style-page .motion-demo.type .motion-orb{background:var(--mat-coral)}
+.material-style-page .motion-demo span{color:#F5EAFB}
+.material-style-page .material-controls button{
+  background:#2B1B3D;border-color:#8E6AA5;color:var(--mat-text);
+}
+.material-style-page .material-controls button.is-selected{
+  background:var(--mat-pink);border-color:var(--mat-pink);color:#20152F;
+}
+.material-style-page .stepper{
+  background:#2B1B3D;border:1px solid var(--mat-border);
+  box-shadow:0 8px 22px rgba(7,3,13,.25);
+}
+.material-style-page .stepper button{background:transparent;color:var(--mat-coral)}
+.material-style-page .stepper strong{color:var(--mat-text)}
+.material-style-page .stepper span{color:var(--mat-text-muted)}
+.material-style-page .material-footer button{color:var(--mat-coral)}
+.material-style-page .material-card:focus-visible,
+.material-style-page .material-primary:focus-visible,
+.material-style-page .material-controls button:focus-visible,
+.material-style-page .stepper button:focus-visible,
+.material-style-page .demo-content button:focus-visible,
+.material-style-page .material-nav button:focus-visible,
+.material-style-page .material-footer button:focus-visible,
+.material-style-page .material-fab:focus-visible{
+  outline:3px solid var(--mat-focus);outline-offset:4px;
+}
+@media(max-width:800px){
+  .material-style-page .material-stage{background:#2B1B3D}
+  .material-style-page .component-status{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .material-style-page .material-fab{transition:none}
+}
