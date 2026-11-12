@@ -1,100 +1,180 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import {
+  ArrowRight, BookOpen, Box, ChevronRight, Grid2X2, Layers3, Lightbulb,
+  Monitor, MonitorSmartphone, Moon, MoveUpRight, Play, RotateCcw,
+  Smartphone, Sun, Tablet, X
+} from 'lucide-react';
 import './fluent-design-style.css';
 
-const anatomy = [
-  ['01','LIGHT','Light creates atmosphere and guides attention.'],
-  ['02','MATERIAL','Responsive surfaces give the interface a sense of place.'],
-  ['03','DEPTH','Layering separates information without heavy visual weight.'],
-  ['04','MOTION','Continuous movement connects states and preserves context.'],
-  ['05','ADAPTATION','The system responds naturally across contexts and screens.'],
+const foundations = [
+  { id:'light', number:'01', title:'Light', description:'Illumination, reveal and visual hierarchy.', icon:Sun, detail:'Light directs attention, reveals important information and creates a clear visual focus. It should respond to context and interaction rather than decorate the interface.' },
+  { id:'material', number:'02', title:'Material', description:'A sense of place through responsive surfaces.', icon:Layers3, detail:'Material gives digital surfaces context. Mica and Acrylic can connect an interface to its environment while maintaining readable contrast and clear content hierarchy.' },
+  { id:'depth', number:'03', title:'Depth', description:'Layering, elevation and spatial context.', icon:Box, detail:'Depth communicates what is in front, what belongs together and where attention should go. Elevation should be intentional and consistent.' },
+  { id:'motion', number:'04', title:'Motion', description:'Purposeful, natural movement and transitions.', icon:Play, detail:'Motion connects interface states. It helps people understand change, preserve context and build a sense of continuity.' },
+  { id:'adaptation', number:'05', title:'Adaptation', description:'Responsive across devices and input methods.', icon:MonitorSmartphone, detail:'Adaptation keeps the experience coherent across screen sizes, orientations, pointer, touch and keyboard input.' }
 ];
 
+function FluentMark() {
+  return <div className="fluent-mark" aria-label="Fluent four-pane mark"><i/><i/><i/><i/></div>;
+}
+
 export default function FluentDesignStyle({ onNavigate }) {
-  const [active, setActive] = useState('light');
-  const [cardOpen, setCardOpen] = useState(null);
-  const [dragOffsets, setDragOffsets] = useState({});
-  const [dragging, setDragging] = useState(null);
-  const cards = {
-    light: { no:'01', title:'LIGHT', copy:'Light creates atmosphere and guides attention without taking over the interface.' },
-    material: { no:'02', title:'MATERIAL', copy:'Responsive surfaces create a sense of place while staying light, transparent and digital.' },
-    depth: { no:'03', title:'DEPTH', copy:'Layers establish relationships and focus without relying on heavy shadows.' },
-    motion: { no:'04', title:'MOTION', copy:'Movement connects one state to another so change feels continuous rather than abrupt.' },
+  const [activeFoundation, setActiveFoundation] = useState('light');
+  const [lightOn, setLightOn] = useState(true);
+  const [material, setMaterial] = useState('Mica');
+  const [elevation, setElevation] = useState(2);
+  const [motion, setMotion] = useState('Fade');
+  const [device, setDevice] = useState('desktop');
+  const [showGuidelines, setShowGuidelines] = useState(false);
+  const [demoKey, setDemoKey] = useState(0);
+
+  const selected = foundations.find(item => item.id === activeFoundation) || foundations[0];
+  const SelectedIcon = selected.icon;
+
+  const goTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start' });
   };
 
-  const startCardDrag = (event, key) => {
-    if (cardOpen) return;
-    const card = event.currentTarget;
-    const wrap = card.parentElement;
-    const startX = event.clientX;
-    const startY = event.clientY;
-    const startOffset = dragOffsets[key] || { x:0, y:0 };
-    let moved = false;
+  return (
+    <main className="fluent-page">
+      <header className="fluent-topbar">
+        <button className="fluent-brand" onClick={() => onNavigate?.('library')} aria-label="Back to Ryūma design library">
+          <span className="fluent-brand-symbol"><i/><i/><i/><i/></span>
+          <span><strong>Ryūma</strong><small>Design Anatomy</small></span>
+        </button>
+        <nav className="fluent-topnav" aria-label="Primary navigation">
+          <button className="is-current" onClick={() => goTo('fluent-overview')}>Design Library</button>
+          <button onClick={() => goTo('fluent-foundations')}>Components</button>
+          <button onClick={() => goTo('fluent-action')}>Patterns</button>
+          <button onClick={() => goTo('fluent-guidelines')}>Anatomy</button>
+        </nav>
+        <button className="fluent-top-back" onClick={() => onNavigate?.('library')}>All styles <ArrowRight size={15}/></button>
+      </header>
 
-    card.setPointerCapture?.(event.pointerId);
-    setDragging(key);
+      <div className="fluent-layout">
+        <aside className="fluent-sidebar" aria-label="Fluent Design sections">
+          <div className="fluent-sidebar-heading"><Grid2X2 size={19}/><strong>Design Library</strong></div>
+          <button className="fluent-side-link is-active" onClick={() => goTo('fluent-overview')}><Grid2X2 size={18}/>Overview</button>
+          <span className="fluent-side-caption">IN THIS STYLE</span>
+          {foundations.map(item => {
+            const Icon = item.icon;
+            return <button key={item.id} className={'fluent-side-link' + (activeFoundation===item.id?' is-selected':'')} onClick={() => {setActiveFoundation(item.id);goTo('fluent-foundations')}}><Icon size={18}/>{item.title}</button>;
+          })}
+          <span className="fluent-side-caption fluent-side-divider">OTHER STYLES</span>
+          {['Material Design','Swiss Design','Bauhaus','Cyberpunk'].map((name,index)=><button key={name} className="fluent-other-style" onClick={() => onNavigate?.('view-style', name==='Swiss Design'?'Swiss / International Style':name)}><span className={'fluent-style-dot dot-'+index}>{['M','S','B','C'][index]}</span>{name}</button>)}
+          <button className="fluent-sidebar-return" onClick={() => onNavigate?.('library')}><ArrowRight size={15}/> Browse all styles</button>
+        </aside>
 
-    const move = (moveEvent) => {
-      const dx = moveEvent.clientX - startX;
-      const dy = moveEvent.clientY - startY;
-      if (Math.abs(dx) + Math.abs(dy) > 6) moved = true;
+        <div className="fluent-content">
+          <section className="fluent-hero" id="fluent-overview">
+            <div className="fluent-breadcrumb"><span>Design Library</span><ChevronRight size={13}/><strong>Fluent Design</strong></div>
+            <div className="fluent-hero-copy">
+              <span className="fluent-eyebrow">DESIGN LANGUAGE / 02.03</span>
+              <h1>Fluent Design</h1>
+              <p>A design language shaped by light, material, depth, motion and adaptation — bringing clarity and continuity to modern digital experiences.</p>
+              <div className="fluent-hero-actions">
+                <button className="fluent-primary-button" onClick={() => goTo('fluent-foundations')}>Explore Anatomy <ArrowRight size={17}/></button>
+                <button className="fluent-secondary-button" onClick={() => setShowGuidelines(true)}><BookOpen size={18}/> Design Guidelines</button>
+              </div>
+            </div>
+            <div className="fluent-hero-visual" aria-hidden="true">
+              <div className="fluent-ribbon ribbon-one"/><div className="fluent-ribbon ribbon-two"/><div className="fluent-ribbon ribbon-three"/>
+              <FluentMark/>
+            </div>
+          </section>
 
-      const minX = -card.offsetLeft;
-      const maxX = wrap.clientWidth - card.offsetLeft - card.offsetWidth;
-      const minY = -card.offsetTop;
-      const maxY = wrap.clientHeight - card.offsetTop - card.offsetHeight;
-      const x = Math.max(minX, Math.min(maxX, startOffset.x + dx));
-      const y = Math.max(minY, Math.min(maxY, startOffset.y + dy));
+          <section className="fluent-foundations-section" id="fluent-foundations">
+            <div className="fluent-section-heading">
+              <div className="fluent-heading-icon"><Layers3 size={25}/></div>
+              <div><h2>The Five Foundations</h2><p>Core principles that shape Fluent Design.</p></div>
+            </div>
+            <div className="fluent-foundation-grid">
+              {foundations.map(item => {
+                const Icon = item.icon;
+                return <button key={item.id} className={'fluent-foundation-card' + (activeFoundation===item.id?' is-active':'')} onClick={() => setActiveFoundation(item.id)} aria-pressed={activeFoundation===item.id}>
+                  <Icon size={29} strokeWidth={1.8}/>
+                  <span className="fluent-card-number">{item.number}</span>
+                  <strong>{item.title}</strong>
+                  <p>{item.description}</p>
+                  <span className="fluent-card-more">Explore principle <ArrowRight size={14}/></span>
+                </button>;
+              })}
+            </div>
+            <div className="fluent-foundation-detail" aria-live="polite">
+              <div className="fluent-detail-icon"><SelectedIcon size={23}/></div>
+              <div><span>{selected.number} / SELECTED FOUNDATION</span><h3>{selected.title}</h3><p>{selected.detail}</p></div>
+              <button onClick={() => goTo('fluent-action')}>See it in action <ArrowRight size={16}/></button>
+            </div>
+          </section>
 
-      setDragOffsets((current) => ({ ...current, [key]: { x, y } }));
-    };
+          <section className="fluent-action-section" id="fluent-action">
+            <div className="fluent-action-main">
+              <div className="fluent-section-heading">
+                <div className="fluent-heading-icon"><Lightbulb size={25}/></div>
+                <div><h2>Fluent in Action</h2><p>Adjust the system and see the interface respond.</p></div>
+              </div>
+              <div className="fluent-demo-layout">
+                <div className={'fluent-live-preview ' + (lightOn?'light-enabled':'light-disabled') + ' elevation-'+elevation + ' motion-'+motion.toLowerCase()} key={demoKey}>
+                  <div className="fluent-preview-wallpaper"><span/><i/><b/></div>
+                  <div className="fluent-preview-window">
+                    <div className="fluent-preview-windowbar"><span/><span/><span/></div>
+                    <div className="fluent-preview-windowbody"><div className="fluent-preview-appicon"><FluentMark/></div><strong>Your workspace</strong><p>A calm space for focused work.</p><div className="fluent-preview-skeleton"><i/><i/><i/></div><button onClick={() => setDemoKey(v=>v+1)}>Try interaction <ArrowRight size={13}/></button></div>
+                  </div>
+                  {lightOn&&<div className="fluent-preview-reveal"/>}
+                </div>
+                <div className="fluent-controls">
+                  <div className="fluent-control-row">
+                    <div className="fluent-control-label"><Sun size={18}/><span>Light Reveal</span></div>
+                    <button className={'fluent-switch'+(lightOn?' is-on':'')} role="switch" aria-checked={lightOn} aria-label="Toggle light reveal" onClick={()=>setLightOn(v=>!v)}><i/></button>
+                  </div>
+                  <div className="fluent-control-row">
+                    <div className="fluent-control-label"><Layers3 size={18}/><span>Surface Material</span></div>
+                    <div className="fluent-segmented" role="group" aria-label="Surface material">{['None','Mica','Acrylic'].map(value=><button key={value} className={material===value?'is-active':''} aria-pressed={material===value} onClick={()=>setMaterial(value)}>{value}</button>)}</div>
+                  </div>
+                  <div className="fluent-control-row">
+                    <div className="fluent-control-label"><Layers3 size={18}/><span>Elevation (Depth)</span></div>
+                    <div className="fluent-segmented compact" role="group" aria-label="Elevation">{[0,1,2,3].map(value=><button key={value} className={elevation===value?'is-active':''} aria-pressed={elevation===value} onClick={()=>setElevation(value)}>{value}</button>)}</div>
+                  </div>
+                  <div className="fluent-control-row">
+                    <div className="fluent-control-label"><Play size={18}/><span>Motion</span></div>
+                    <div className="fluent-segmented" role="group" aria-label="Motion style">{['Fade','Slide','Scale'].map(value=><button key={value} className={motion===value?'is-active':''} aria-pressed={motion===value} onClick={()=>setMotion(value)}>{value}</button>)}</div>
+                  </div>
+                  <p className="fluent-control-note">Selected: {material} surface · Elevation {elevation} · {motion} transition</p>
+                </div>
+              </div>
+            </div>
+            <aside className="fluent-material-card">
+              <div className={'fluent-material-stack material-'+material.toLowerCase()}><i/><i/><i/></div>
+              <h3>{material} Surface</h3>
+              <p>{material==='None'?'A flat, uninterrupted surface with no added translucency.':material==='Mica'?'A subtle, adaptive material that samples the desktop backdrop.':'A translucent material that lets background context show through.'}</p>
+              <div className="fluent-material-swatches"><button className="swatch-blue" onClick={()=>setMaterial('Mica')} aria-label="Select Mica"/><button className="swatch-cyan" onClick={()=>setMaterial('Acrylic')} aria-label="Select Acrylic"/><button className="swatch-violet" onClick={()=>setMaterial('None')} aria-label="Select no material"/><button className="swatch-neutral" onClick={()=>setLightOn(v=>!v)} aria-label="Toggle light reveal"/></div>
+            </aside>
+          </section>
 
-    const end = () => {
-      card.releasePointerCapture?.(event.pointerId);
-      setDragging(null);
-      if (!moved) setCardOpen(key);
-      card.removeEventListener('pointermove', move);
-      card.removeEventListener('pointerup', end);
-      card.removeEventListener('pointercancel', end);
-    };
+          <section className="fluent-adaptation-section" id="fluent-guidelines">
+            <div className="fluent-adaptation-copy">
+              <div className="fluent-section-heading"><div className="fluent-heading-icon"><MonitorSmartphone size={25}/></div><div><h2>Adaptive Layout</h2><p>One system, different form factors.</p></div></div>
+              <p className="fluent-adaptation-description">The interface changes its composition to suit the available space while keeping navigation, hierarchy and essential actions familiar.</p>
+              <div className="fluent-device-picker" role="group" aria-label="Choose device preview">
+                <button className={device==='desktop'?'is-active':''} onClick={()=>setDevice('desktop')} aria-pressed={device==='desktop'}><Monitor size={23}/><span>Desktop</span></button>
+                <button className={device==='tablet'?'is-active':''} onClick={()=>setDevice('tablet')} aria-pressed={device==='tablet'}><Tablet size={23}/><span>Tablet</span></button>
+                <button className={device==='mobile'?'is-active':''} onClick={()=>setDevice('mobile')} aria-pressed={device==='mobile'}><Smartphone size={23}/><span>Mobile</span></button>
+              </div>
+            </div>
+            <div className={'fluent-device-stage device-'+device}>
+              <div className="fluent-device-frame"><div className="fluent-device-top"><i/><i/><i/></div><div className="fluent-device-body"><div className="fluent-device-sidebar"/><div className="fluent-device-main"><b/><i/><i/><span/><span/><span/></div></div></div>
+              <span className="fluent-device-caption">{device.toUpperCase()} / RESPONSIVE PREVIEW</span>
+            </div>
+          </section>
 
-    card.addEventListener('pointermove', move);
-    card.addEventListener('pointerup', end);
-    card.addEventListener('pointercancel', end);
-  };
-
-  return <main className="fluent-style-page">
-    <header className="fluent-nav">
-      <button onClick={() => onNavigate?.('library')}><ArrowLeft size={16}/> DESIGN LIBRARY</button>
-      <div><b>RYUMA</b><span>リューマ</span></div>
-      <span>DESIGN LANGUAGE / 02.03</span>
-    </header>
-
-    <section className="fluent-hero">
-      <div className="fluent-copy">
-        <span className="fluent-kicker">02 / FLUENT DESIGN</span>
-        <h1>Designed to<br/><em>feel.</em></h1>
-        <p className="fluent-lead">A digital language shaped by light, material, depth, motion and adaptation.</p>
-        <p>Fluent Design makes interfaces feel connected and responsive while keeping the system calm, clear and human.</p>
-        <div className="fluent-palette"><i/><i/><i/><i/><i/></div>
+          <footer className="fluent-footer">
+            <div><span className="fluent-eyebrow">RYŪMA / DESIGN ANATOMY</span><h2>Designed to<br/><em>feel connected.</em></h2><p>Explore the details behind a design language built around clarity, continuity and context.</p></div>
+            <button onClick={()=>onNavigate?.('library')}>Back to Design Library <ArrowRight size={16}/></button>
+          </footer>
+        </div>
       </div>
-      <div className="fluent-hero-art"><div className="fluent-light-orb"/><div className="fluent-grid"/><div className="fluent-glass-card"><span>FLUENT</span><strong>FLOW<br/>WITH IT.</strong><small>LIGHT / MATERIAL / MOTION</small></div></div>
-    </section>
 
-    <section className="fluent-section"><div className="fluent-label"><span>03</span><b>THE IDEA</b></div><div><h2>Interfaces that<br/><em>move with you.</em></h2><p>Fluent Design combines light, material, depth, motion and adaptability into a system that feels natural across digital experiences.</p><div className="fluent-flow"><span>LIGHT</span><i>→</i><span>MATERIAL</span><i>→</i><span>DEPTH</span><i>→</i><b>FLOW</b></div></div></section>
-
-    <section className="fluent-section"><div className="fluent-label"><span>04</span><b>DESIGN ANATOMY</b></div><div><h2>Five parts.<br/><em>One fluent language.</em></h2><div className="fluent-anatomy">{anatomy.map(([no,title,copy]) => <article key={no}><span>{no}</span><div><b>{title}</b><p>{copy}</p></div><ArrowRight size={17}/></article>)}</div></div></section>
-
-    <section className="fluent-section fluent-light"><div className="fluent-label"><span>05</span><b>LIGHT</b></div><div><h2>Let light guide<br/><em>the interface.</em></h2><p>Light creates atmosphere and focus. In Fluent, it supports the content instead of becoming the content.</p><div className="light-demo"><div className="light-grid"/><div className="light-source"/><div className="light-panel"><span>FOCUS</span><strong>FOLLOW<br/>THE LIGHT.</strong></div></div></div></section>
-
-    <section className="fluent-section fluent-material"><div className="fluent-label"><span>06</span><b>MATERIAL</b></div><div><h2>Surfaces can<br/><em>respond.</em></h2><p>Translucent surfaces create layers of information while keeping the interface open and lightweight.</p><div className="fluent-example-wrap"><div className="fluent-example-grid"/><div className="fluent-example-orb orb-blue"/><div className="fluent-example-orb orb-cyan"/>{Object.entries(cards).map(([key,card], index) => { const offset = dragOffsets[key] || {x:0,y:0}; return <button key={key} aria-label={`Drag ${card.title} card or tap to open`} className={`fluent-card fluent-card-${index+1} ${cardOpen===key?'is-open':''} ${dragging===key?'is-dragging':''}`} style={{transform:cardOpen===key?'rotate(0)':`translate3d(${offset.x}px, ${offset.y}px, 0) rotate(${[ -3, 3, -2, 2 ][index]}deg)${dragging===key?' scale(1.035)':''}`}} onPointerDown={(e)=>startCardDrag(e,key)}>{cardOpen===key&&<><span>{card.no}</span><strong>{card.title}</strong><p>{card.copy}</p></>}{cardOpen!==key&&<><span>{card.no}</span><strong>{card.title}</strong><small>DRAG / TAP</small></>}</button>})}{cardOpen&&<button className="fluent-return" onClick={()=>setCardOpen(null)}>TAP OUTSIDE TO RETURN</button>}</div></div></section>
-
-    <section className="fluent-section"><div className="fluent-label"><span>07</span><b>DEPTH</b></div><div><h2>Depth without<br/><em>weight.</em></h2><p>Fluent uses transparency, spacing and layered surfaces to create hierarchy without making the interface feel heavy.</p><div className="depth-demo"><div/><div/><div/><span>FOCUS</span></div></div></section>
-
-    <section className="fluent-section fluent-motion"><div className="fluent-label"><span>08</span><b>MOTION</b></div><div><h2>Nothing should<br/><em>feel abrupt.</em></h2><p>Motion connects one state to the next. Tap the states to see a contained Fluent transition.</p><div className={`motion-track ${active}`}><button onClick={()=>setActive('light')}>REST</button><i/><button onClick={()=>setActive('motion')}>MOVE</button><i/><button onClick={()=>setActive('depth')}>SETTLE</button><b/></div></div></section>
-
-    <section className="fluent-section"><div className="fluent-label"><span>09</span><b>ADAPTATION</b></div><div><h2>One system.<br/><em>Many contexts.</em></h2><p>The same visual language can adapt to different screens without losing its identity.</p><div className="adapt-demo"><div><span>DESKTOP</span><b>WIDE</b></div><div><span>TABLET</span><b>ADAPT</b></div><div><span>MOBILE</span><b>FOCUS</b></div></div></div></section>
-
-    <footer className="fluent-footer"><span>FLUENT DESIGN / 02.03</span><h2>Fluid system.<br/><em>Human response.</em></h2><p>A design specimen for studying light, material, depth, motion and adaptation.</p><button onClick={()=>onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowLeft size={15}/></button></footer>
-  </main>;
+      {showGuidelines&&<div className="fluent-modal-backdrop" role="presentation" onMouseDown={e=>{if(e.target===e.currentTarget)setShowGuidelines(false)}}><section className="fluent-guidelines-modal" role="dialog" aria-modal="true" aria-labelledby="fluent-guidelines-title"><button className="fluent-modal-close" onClick={()=>setShowGuidelines(false)} aria-label="Close guidelines"><X size={19}/></button><span className="fluent-eyebrow">DESIGN REFERENCE</span><h2 id="fluent-guidelines-title">Fluent Design Guidelines</h2><p>Use these principles as a practical checklist when designing a Fluent interface.</p><ul><li><strong>Clarity first.</strong> Keep content readable and controls predictable.</li><li><strong>Material with purpose.</strong> Use Mica and Acrylic to establish context, not as decoration.</li><li><strong>Meaningful depth.</strong> Use elevation to show hierarchy and focus.</li><li><strong>Motion with intent.</strong> Animate state changes and respect reduced motion.</li><li><strong>Adapt to input.</strong> Support touch, pointer, keyboard and different screen sizes.</li></ul><button className="fluent-primary-button" onClick={()=>setShowGuidelines(false)}>Got it <ArrowRight size={16}/></button></section></div>}
+    </main>
+  );
 }
