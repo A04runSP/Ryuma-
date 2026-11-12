@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+.minimalism-page{--m-ink:#252522;--m-muted:#68675f;--m-paper:#f3efe6;--m-panel:#faf7ef;--m-line:rgba(37,37,34,.15);--m-clay:#a9795a;min-height:100vh;overflow:hidden;background:var(--m-paper);color:var(--m-ink);font-family:'DM Sans',sans-serif}
+.minimalism-page *{box-sizing:border-box}
+.minimalism-nav,.minimalism-hero,.minimalism-section,.minimalism-footer{width:min(1180px,calc(100% - 72px));margin-inline:auto}
+.minimalism-nav{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--m-line);color:var(--m-muted);font-size:9px;letter-spacing:.15em}
+.minimalism-back{display:inline-flex;align-items:center;gap:8px;padding:10px 0;border:0;background:none;color:var(--m-ink);font:700 10px 'DM Sans',sans-serif;letter-spacing:.12em;cursor:pointer}
+.minimalism-back:focus-visible,.minimalism-brand:focus-visible{outline:2px solid var(--m-clay);outline-offset:5px}
+.minimalism-brand{color:var(--m-ink);text-decoration:none;font:800 16px 'Manrope',sans-serif;letter-spacing:.16em}
+.minimalism-brand span{margin-left:8px;color:var(--m-muted);font:500 10px 'DM Sans',sans-serif;letter-spacing:0}
+.minimalism-nav-index{font-size:9px}
+.minimalism-hero{display:grid;grid-template-columns:.88fr 1.12fr;gap:clamp(36px,6vw,84px);align-items:center;padding:clamp(76px,10vw,132px) 0}
+.minimalism-eyebrow{display:block;margin-bottom:24px;color:var(--m-clay);font-size:10px;font-weight:700;letter-spacing:.18em}
+.minimalism-hero h1,.minimalism-section h2,.minimalism-footer h2{margin:0;font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.075em;line-height:.94}
+.minimalism-hero h1{font-size:clamp(64px,8.8vw,120px)}
+.minimalism-hero h1 span,.minimalism-section h2 em,.minimalism-footer h2 em{font-style:normal;color:var(--m-muted)}
+.minimalism-lead{margin:32px 0 12px;font-size:clamp(20px,2.2vw,27px);line-height:1.4}
+.minimalism-intro{max-width:440px;margin:0;color:var(--m-muted);font-size:16px;line-height:1.8}
+.minimalism-swatches{display:flex;gap:10px;margin-top:34px}
+.minimalism-swatches span{width:28px;height:28px;border:1px solid rgba(37,37,34,.16);border-radius:50%}
+.swatch-charcoal{background:#252522}.swatch-grey{background:#92918a}.swatch-ivory{background:#f3efe6}.swatch-clay{background:#a9795a}.swatch-blue{background:#a8c8dc}
+.minimalism-poster{position:relative;min-height:540px;overflow:hidden;padding:30px;background:#eae5d9;border:1px solid var(--m-line);display:flex;flex-direction:column}
+.poster-meta,.poster-foot{display:flex;justify-content:space-between;color:var(--m-muted);font-size:8px;font-weight:700;letter-spacing:.15em}
+.poster-title{position:relative;z-index:1;margin-top:40px;font:800 clamp(48px,6vw,82px)/.86 'Manrope',sans-serif;letter-spacing:-.08em}
+.poster-title i{font-style:normal}
+.poster-circle{position:absolute;width:clamp(150px,22vw,250px);aspect-ratio:1;right:13%;top:36%;border-radius:50%;background:#a9795a}
+.poster-square{position:absolute;width:clamp(90px,13vw,145px);aspect-ratio:1;right:29%;bottom:14%;background:#a8c8dc}
+.poster-baseline{position:absolute;left:8%;bottom:25%;width:37%;height:2px;background:var(--m-ink)}
+.poster-foot{position:absolute;left:30px;right:30px;bottom:28px;padding-top:14px;border-top:1px solid var(--m-line)}
+.minimalism-section{display:grid;grid-template-columns:190px minmax(0,1fr);gap:clamp(30px,6vw,76px);padding:clamp(78px,9vw,120px) 0;border-top:1px solid var(--m-line)}
+.minimalism-section-label{display:flex;gap:13px;align-items:flex-start;color:var(--m-clay);font-size:10px;font-weight:700;letter-spacing:.16em}
+.minimalism-section-label span{opacity:.65}
+.minimalism-section h2{font-size:clamp(44px,6vw,76px)}
+.minimalism-section-lead{max-width:650px;margin:32px 0 0;color:var(--m-muted);font-size:18px;line-height:1.75}
+.minimalism-equation{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:42px;color:var(--m-clay);font-size:10px;font-weight:700;letter-spacing:.14em}
+.minimalism-equation b{color:var(--m-muted);font-size:18px}
+.minimalism-anatomy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:54px;border-top:1px solid var(--m-line)}
+.minimalism-anatomy article{min-width:0;padding:27px 26px 30px 0;border-bottom:1px solid var(--m-line)}
+.minimalism-anatomy article:nth-child(even){padding-left:26px;border-left:1px solid var(--m-line)}
+.minimalism-anatomy article:last-child{grid-column:1/-1}
+.minimalism-anatomy article>span{color:var(--m-clay);font-size:9px;font-weight:700;letter-spacing:.12em}
+.minimalism-anatomy h3{margin:20px 0 8px;font:700 23px 'Manrope',sans-serif}
+.minimalism-anatomy p{max-width:440px;margin:0;color:var(--m-muted);font-size:14px;line-height:1.7}
+.minimalism-type-specimen{margin-top:48px;padding:24px;background:var(--m-panel);border:1px solid var(--m-line)}
+.type-specimen-head{display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--m-line);color:var(--m-clay);font-size:8px;font-weight:700;letter-spacing:.14em}
+.type-row{display:grid;grid-template-columns:100px minmax(0,1fr) 130px;gap:15px;align-items:center;padding:18px 0;border-bottom:1px solid var(--m-line)}
+.type-row>span,.type-row>small{color:var(--m-muted);font-size:10px}
+.type-row strong{min-width:0;overflow-wrap:anywhere}
+.type-display strong{font:800 54px 'Manrope',sans-serif;letter-spacing:-.08em}
+.type-heading strong{font:700 24px 'Manrope',sans-serif;letter-spacing:-.04em}
+.type-body strong{font:500 16px 'DM Sans',sans-serif}
+.type-label strong{font:700 10px 'DM Sans',sans-serif;letter-spacing:.14em}
+.minimalism-grid-demo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:8px;margin-top:25px}
+.minimalism-grid-demo i{height:48px;background:#e6ded0;border:1px solid rgba(37,37,34,.08)}
+.minimalism-grid-demo i:nth-child(3n){background:#d9cbb9}
+.grid-caption{margin:12px 0 0;color:var(--m-muted);font-size:11px;line-height:1.6}
+.minimalism-product-poster{position:relative;min-height:450px;margin-top:46px;overflow:hidden;background:var(--m-panel);border:1px solid var(--m-line)}
+.product-copy{position:absolute;z-index:1;left:7%;top:11%;width:43%;display:flex;flex-direction:column;align-items:flex-start}
+.product-copy>span{color:var(--m-clay);font-size:9px;font-weight:700;letter-spacing:.14em}
+.product-copy strong{margin-top:20px;font:800 clamp(38px,5vw,66px)/.88 'Manrope',sans-serif;letter-spacing:-.07em}
+.product-copy small{margin-top:16px;color:var(--m-muted);font-size:8px;letter-spacing:.12em}
+.product-copy p{margin:18px 0 0;color:var(--m-muted);font-size:12px;line-height:1.6}
+.minimalism-lamp{position:absolute;right:7%;top:12%;width:39%;height:75%}
+.minimalism-lamp i{position:absolute;display:block}
+.lamp-shade{top:13%;left:15%;width:70%;height:24%;border-radius:48% 48% 12% 12%;background:#a9795a}
+.lamp-neck{top:36%;left:47%;width:6%;height:9%;background:#a9795a}
+.lamp-stem{top:43%;left:48%;width:4%;height:32%;background:#a8c8dc}
+.lamp-base{bottom:15%;left:29%;width:42%;height:7%;border-radius:50%;background:#252522}
+.lamp-ground{bottom:14%;left:4%;width:92%;height:1px;background:rgba(37,37,34,.35)}
+.product-caption{position:absolute;left:7%;right:7%;bottom:5%;padding-top:12px;border-top:1px solid var(--m-line);color:var(--m-muted);font-size:8px;letter-spacing:.13em}
+.product-caption b{padding:0 5px;color:var(--m-clay)}
+.minimalism-rules{border-top:1px solid var(--m-line)}
+.minimalism-rules>div{display:grid;grid-template-columns:45px 140px minmax(0,1fr);gap:18px;align-items:start;padding:22px 0;border-bottom:1px solid var(--m-line)}
+.minimalism-rules>div>span{padding-top:5px;color:var(--m-clay);font-size:9px;font-weight:700}
+.minimalism-rules strong{font:700 20px 'Manrope',sans-serif}
+.minimalism-rules p{margin:0;color:var(--m-muted);font-size:13px;line-height:1.7}
+.minimalism-footer{padding:110px 0 45px;border-top:1px solid var(--m-line)}
+.minimalism-footer h2{font-size:clamp(50px,7vw,88px)}
+.minimalism-footer>p{margin:25px 0 65px;color:var(--m-muted);font-size:16px;line-height:1.7}
+.minimalism-footer>div{display:flex;justify-content:space-between;gap:18px;padding-top:20px;border-top:1px solid var(--m-line);color:var(--m-muted);font-size:8px;letter-spacing:.14em}
+@media(max-width:800px){
+ .minimalism-nav,.minimalism-hero,.minimalism-section,.minimalism-footer{width:calc(100% - 40px)}
+ .minimalism-nav{height:76px}.minimalism-nav-index{display:none}
+ .minimalism-hero{grid-template-columns:1fr;gap:42px;padding:76px 0 86px}
+ .minimalism-hero h1{font-size:clamp(64px,16vw,100px)}
+ .minimalism-poster{min-height:440px}
+ .minimalism-section{grid-template-columns:1fr;gap:25px;padding:78px 0}
+ .minimalism-section h2{font-size:clamp(44px,11vw,68px)}
+ .minimalism-anatomy{grid-template-columns:1fr;margin-top:38px}
+ .minimalism-anatomy article:nth-child(even){padding-left:0;border-left:0}
+ .minimalism-anatomy article:last-child{grid-column:auto}
+ .type-row{grid-template-columns:76px minmax(0,1fr);gap:10px}
+ .type-row>small{grid-column:2}
+ .type-display strong{font-size:44px}
+ .type-heading strong{font-size:20px}
+ .minimalism-product-poster{min-height:380px}
+ .product-copy{left:6%;width:47%}
+ .product-copy strong{font-size:clamp(32px,8vw,46px)}
+ .minimalism-lamp{right:2%;width:44%}
+ .minimalism-rules>div{grid-template-columns:35px minmax(0,1fr);gap:12px}
+ .minimalism-rules p{grid-column:2}
+ .minimalism-footer{padding-top:85px}
+ .minimalism-footer>div{flex-direction:column}
+}
+@media(max-width:390px){
+ .minimalism-nav,.minimalism-hero,.minimalism-section,.minimalism-footer{width:calc(100% - 32px)}
+ .minimalism-brand{font-size:14px}
+ .minimalism-poster{min-height:400px;padding:22px}
+ .poster-title{font-size:clamp(43px,12vw,55px)}
+ .poster-foot{left:22px;right:22px;bottom:22px}
+ .minimalism-type-specimen{padding:15px}
+ .type-row{grid-template-columns:62px minmax(0,1fr)}
+ .type-display strong{font-size:38px}
+ .minimalism-grid-demo{gap:4px}
+ .minimalism-grid-demo i{height:32px}
+ .minimalism-product-poster{min-height:350px}
+ .product-copy{top:10%;width:48%}
+ .product-copy strong{font-size:clamp(29px,8.4vw,37px)}
+ .product-copy p{font-size:10px}
+ .minimalism-lamp{top:20%;height:64%;width:43%}
+ .product-caption{font-size:6px;letter-spacing:.08em}
+}
+@media(prefers-reduced-motion:reduce){.minimalism-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
