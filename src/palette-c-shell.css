@@ -1,0 +1,435 @@
+/* Palette C — shared product shell only.
+   Home, Dashboard and Design Library consume this layer.
+   Individual design-language environments and Practice Studio remain independent. */
+
+.home-shell,
+.dashboard-shell,
+.library-shell {
+  color-scheme: dark;
+  background: var(--ryuma-c-base) !important;
+  color: var(--ryuma-c-text-primary);
+}
+
+/* Remove atmospheric shell effects; retain each specimen's own artwork. */
+.home-shell .aurora,
+.home-shell .grain,
+.dashboard-shell .dashboard-glow,
+.dashboard-shell .dashboard-grain,
+.library-shell .library-glow,
+.library-shell .library-grain {
+  display: none !important;
+}
+
+/* HOME */
+.home-shell {
+  background: var(--ryuma-c-base) !important;
+  color: var(--ryuma-c-text-primary);
+}
+.home-shell .brand-mark {
+  background: var(--ryuma-c-surface-raised);
+  border-color: var(--ryuma-c-border);
+  color: var(--ryuma-c-accent);
+}
+.home-shell .brand-name,
+.home-shell .hero h1,
+.home-shell .hero h1 span,
+.home-shell .definition-copy h2,
+.home-shell .definition-copy h2 span,
+.home-shell .anatomy-intro h2,
+.home-shell .preview-section h2 {
+  background: none !important;
+  color: var(--ryuma-c-text-primary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-primary) !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow: none;
+}
+.home-shell .hero h1 span,
+.home-shell .definition-copy h2 span {
+  color: var(--ryuma-c-accent) !important;
+  -webkit-text-fill-color: var(--ryuma-c-accent) !important;
+}
+.home-shell .section-kicker,
+.home-shell .anatomy-intro .section-kicker,
+.home-shell .preview-section .section-kicker,
+.home-shell .anatomy-note {
+  color: var(--ryuma-c-text-secondary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-secondary) !important;
+}
+.home-shell .hero p,
+.home-shell .definition-copy p,
+.home-shell .anatomy-item p,
+.home-shell .preview-section p,
+.home-shell .definition-process,
+.home-shell .definition-close span {
+  color: var(--ryuma-c-text-secondary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-secondary) !important;
+}
+.home-shell .definition-process,
+.home-shell .definition-close,
+.home-shell .anatomy-colour,
+.home-shell .anatomy-type,
+.home-shell .anatomy-form,
+.home-shell .anatomy-space,
+.home-shell .anatomy-motion {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+}
+.home-shell .definition-process {
+  border-left: 3px solid var(--ryuma-c-accent) !important;
+}
+.home-shell .definition-process i,
+.home-shell .definition-close strong,
+.home-shell .anatomy-item h3 {
+  color: var(--ryuma-c-accent);
+}
+.home-shell .jump-button,
+.home-shell .jump-button.secondary {
+  background: var(--ryuma-c-accent) !important;
+  border: 1px solid var(--ryuma-c-accent) !important;
+  color: var(--ryuma-c-text-on-accent) !important;
+  box-shadow: none !important;
+}
+.home-shell .jump-button svg { color: var(--ryuma-c-text-on-accent) !important; }
+.home-shell .jump-button:hover {
+  background: var(--ryuma-c-accent-hover) !important;
+  border-color: var(--ryuma-c-accent-hover) !important;
+}
+.home-shell .jump-button:focus-visible,
+.home-shell .jump-button.secondary:focus-visible,
+.home-shell .anatomy-item:focus-visible {
+  outline: 3px solid var(--ryuma-c-focus) !important;
+  outline-offset: 3px;
+}
+.home-shell .anatomy-item:hover,
+.home-shell .anatomy-item:active,
+.home-shell .anatomy-item[aria-selected="true"],
+.home-shell .anatomy-item[aria-pressed="true"] {
+  border-color: var(--ryuma-c-accent) !important;
+  box-shadow: inset 3px 0 0 var(--ryuma-c-accent) !important;
+}
+.home-shell .home-footer {
+  border-color: var(--ryuma-c-divider);
+  color: var(--ryuma-c-text-muted);
+}
+/* Keep the live preview artwork true to the design language being demonstrated. */
+
+/* DASHBOARD */
+.dashboard-shell {
+  background: var(--ryuma-c-base) !important;
+  color: var(--ryuma-c-text-primary);
+  font-family: var(--ryuma-font-body, 'DM Sans', sans-serif);
+}
+.dashboard-shell .dashboard-brand,
+.dashboard-shell .dashboard-library,
+.dashboard-shell .dashboard-back { color: var(--ryuma-c-text-primary); }
+.dashboard-shell .dashboard-brand em,
+.dashboard-shell .dashboard-nav-title { color: var(--ryuma-c-text-muted); }
+.dashboard-shell .dashboard-kicker { color: var(--ryuma-c-accent); }
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-story h2,
+.dashboard-shell .dashboard-systems h2,
+.dashboard-shell .dashboard-history h2,
+.dashboard-shell .dashboard-foundations h2,
+.dashboard-shell .dashboard-reading h2,
+.dashboard-shell .dashboard-principles h2,
+.dashboard-shell .dashboard-language h2,
+.dashboard-shell .dashboard-end h2,
+.dashboard-shell .dashboard-hero span,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2 span {
+  background: none !important;
+  color: var(--ryuma-c-text-primary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-primary) !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+.dashboard-shell .dashboard-hero h1 span,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2 span {
+  color: var(--ryuma-c-accent) !important;
+  -webkit-text-fill-color: var(--ryuma-c-accent) !important;
+}
+.dashboard-shell .dashboard-hero p,
+.dashboard-shell .story-copy p,
+.dashboard-shell .systems-heading > p,
+.dashboard-shell .history-heading > p,
+.dashboard-shell .foundations-heading > p,
+.dashboard-shell .reading-heading > p,
+.dashboard-shell .principles-heading > p,
+.dashboard-shell .language-copy p,
+.dashboard-shell .dashboard-end p {
+  color: var(--ryuma-c-text-secondary);
+}
+.dashboard-shell .story-copy strong { color: var(--ryuma-c-text-primary); }
+.dashboard-shell .dashboard-story,
+.dashboard-shell .dashboard-systems,
+.dashboard-shell .dashboard-history,
+.dashboard-shell .dashboard-foundations,
+.dashboard-shell .dashboard-reading,
+.dashboard-shell .dashboard-principles,
+.dashboard-shell .dashboard-language,
+.dashboard-shell .dashboard-end {
+  border-color: var(--ryuma-c-divider);
+}
+.dashboard-shell .dashboard-cta,
+.dashboard-shell .system-panel-copy button,
+.dashboard-shell .dashboard-end button {
+  background: var(--ryuma-c-accent);
+  border: 1px solid var(--ryuma-c-accent);
+  color: var(--ryuma-c-text-on-accent);
+  box-shadow: none;
+}
+.dashboard-shell .dashboard-cta:hover,
+.dashboard-shell .system-panel-copy button:hover,
+.dashboard-shell .dashboard-end button:hover {
+  background: var(--ryuma-c-accent-hover);
+  border-color: var(--ryuma-c-accent-hover);
+}
+.dashboard-shell .system-row,
+.dashboard-shell .history-card,
+.dashboard-shell .foundation-card,
+.dashboard-shell .reading-step,
+.dashboard-shell .principle-card,
+.dashboard-shell .language-card {
+  background: var(--ryuma-c-surface-raised);
+  border-color: var(--ryuma-c-border);
+  box-shadow: none;
+}
+.dashboard-shell .system-row:hover,
+.dashboard-shell .history-card:hover,
+.dashboard-shell .history-card.is-open {
+  border-color: var(--ryuma-c-accent);
+}
+.dashboard-shell .system-toggle h3,
+.dashboard-shell .history-toggle h3,
+.dashboard-shell .foundation-card h3,
+.dashboard-shell .reading-step h3,
+.dashboard-shell .principle-card h3 { color: var(--ryuma-c-text-primary); }
+.dashboard-shell .system-toggle p,
+.dashboard-shell .system-panel-copy p,
+.dashboard-shell .history-copy p,
+.dashboard-shell .foundation-card p,
+.dashboard-shell .reading-step p,
+.dashboard-shell .principle-card p { color: var(--ryuma-c-text-secondary); }
+.dashboard-shell .system-no,
+.dashboard-shell .history-no,
+.dashboard-shell .foundation-no,
+.dashboard-shell .reading-step > span { color: var(--ryuma-c-accent); }
+.dashboard-shell .system-panel,
+.dashboard-shell .history-panel,
+.dashboard-shell .system-preview,
+.dashboard-shell .preview-placeholder {
+  background: var(--ryuma-c-structure);
+  border-color: var(--ryuma-c-border);
+}
+.dashboard-shell .system-panel-copy > span,
+.dashboard-shell .system-preview > span,
+.dashboard-shell .history-era,
+.dashboard-shell .foundation-card strong { color: var(--ryuma-c-text-muted); }
+.dashboard-shell .influence-line,
+.dashboard-shell .foundation-formula,
+.dashboard-shell .language-chain,
+.dashboard-shell .history-thread { color: var(--ryuma-c-accent); }
+.dashboard-shell .influence-line i,
+.dashboard-shell .foundation-formula i,
+.dashboard-shell .language-chain i,
+.dashboard-shell .history-thread i { color: var(--ryuma-c-text-secondary); }
+.dashboard-shell button:focus-visible {
+  outline: 3px solid var(--ryuma-c-focus);
+  outline-offset: 3px;
+}
+
+/* DESIGN LIBRARY */
+.library-shell {
+  background: var(--ryuma-c-base) !important;
+  color: var(--ryuma-c-text-primary);
+  font-family: var(--ryuma-font-body, 'DM Sans', sans-serif);
+}
+.library-shell .library-back,
+.library-shell .library-brand,
+.library-shell .library-footer button { color: var(--ryuma-c-text-primary); }
+.library-shell .library-brand em,
+.library-shell .library-search-input::placeholder { color: var(--ryuma-c-text-muted); }
+.library-shell .library-kicker,
+.library-shell .library-number,
+.library-shell .library-card-number,
+.library-shell .library-card-info > span { color: var(--ryuma-c-accent); }
+.library-shell .library-hero h1,
+.library-shell .library-group-head h2,
+.library-shell .library-end h2,
+.library-shell .library-end h2 span {
+  background: none !important;
+  color: var(--ryuma-c-text-primary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-primary) !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+.library-shell .library-hero h1 span,
+.library-shell .library-end h2 span {
+  color: var(--ryuma-c-accent) !important;
+  -webkit-text-fill-color: var(--ryuma-c-accent) !important;
+}
+.library-shell .library-hero p,
+.library-shell .library-group-head p,
+.library-shell .library-end p { color: var(--ryuma-c-text-secondary); }
+.library-shell .library-meta { color: var(--ryuma-c-text-secondary); }
+.library-shell .library-meta i { color: var(--ryuma-c-accent); }
+.library-shell .library-group,
+.library-shell .library-end,
+.library-shell .library-footer { border-color: var(--ryuma-c-divider); }
+.library-shell .library-card {
+  background: var(--ryuma-c-surface-raised);
+  border: 1px solid var(--ryuma-c-border);
+  box-shadow: none;
+}
+.library-shell .library-card:hover {
+  background: var(--ryuma-c-surface-hover);
+  border-color: var(--ryuma-c-accent);
+  transform: translateY(-3px);
+}
+.library-shell .library-card-art {
+  background: var(--ryuma-c-structure);
+  border-color: var(--ryuma-c-border);
+}
+.library-shell .library-card-art span { color: var(--ryuma-c-text-primary); }
+.library-shell .library-card-info h3 { color: var(--ryuma-c-text-primary); }
+.library-shell .library-card-info > span { color: var(--ryuma-c-accent); }
+.library-shell .library-search-wrap {
+  background: var(--ryuma-c-surface-raised);
+  border-color: var(--ryuma-c-border);
+}
+.library-shell .library-search-input { color: var(--ryuma-c-text-primary); }
+.library-shell .library-search-wrap:focus-within,
+.library-shell .library-search-input:focus-visible {
+  border-color: var(--ryuma-c-focus);
+  outline: 2px solid var(--ryuma-c-focus-ring);
+  outline-offset: 2px;
+}
+.library-shell .library-no-results { color: var(--ryuma-c-text-secondary); }
+.library-shell .library-back:hover,
+.library-shell .library-footer button:hover { color: var(--ryuma-c-accent); }
+.library-shell button:focus-visible {
+  outline: 3px solid var(--ryuma-c-focus);
+  outline-offset: 3px;
+}
+
+/* Responsive shell checks: keep the palette independent of layout breakpoints. */
+@media (prefers-reduced-motion: reduce) {
+  .home-shell *,
+  .dashboard-shell *,
+  .library-shell * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* SOLID PRODUCT CHROME — remove residual frosted-glass treatments.
+   This targets shared Home UI only. The Glassmorphism specimen remains an
+   intentional teaching example and keeps its own visual language. */
+.home-shell .anatomy-stage,
+.home-shell .preview-stage {
+  background: var(--ryuma-c-structure) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .anatomy-item {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .preview-caption {
+  background: var(--ryuma-c-base) !important;
+  border-top: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .preview-card:not(.preview-glass) .preview-demo {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  color: var(--ryuma-c-text-primary) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .preview-card:not(.preview-glass) .preview-demo button {
+  background: var(--ryuma-c-accent) !important;
+  border: 1px solid var(--ryuma-c-accent) !important;
+  color: var(--ryuma-c-text-on-accent) !important;
+  box-shadow: none !important;
+}
+
+.home-shell .preview-card:not(.preview-glass) .preview-demo button:hover {
+  background: var(--ryuma-c-accent-hover) !important;
+  border-color: var(--ryuma-c-accent-hover) !important;
+}
+
+/* Shared app chrome stays opaque even when placed over specimen artwork. */
+.home-shell .preview-caption,
+.dashboard-shell .system-panel,
+.dashboard-shell .history-panel,
+.dashboard-shell .system-preview,
+.dashboard-shell .preview-placeholder,
+.library-shell .library-card,
+.library-shell .library-search-wrap {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+
+/* Home anatomy cards: use Palette C rather than a glass-inspired treatment.
+   The Design Library's dedicated Glassmorphism specimen is intentionally untouched. */
+.home-shell .anatomy-stage {
+  background: var(--ryuma-c-structure) !important;
+  border-color: var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+}
+.home-shell .anatomy-item {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home-shell .anatomy-item h3 {
+  color: var(--ryuma-c-text-primary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-primary) !important;
+}
+.home-shell .anatomy-item .anatomy-mark {
+  color: var(--ryuma-c-accent) !important;
+}
+.home-shell .anatomy-item p {
+  color: var(--ryuma-c-text-secondary) !important;
+}
+.home-shell .anatomy-item:hover,
+.home-shell .anatomy-item:focus-visible,
+.home-shell .anatomy-item:active {
+  border-color: var(--ryuma-c-accent) !important;
+  box-shadow: inset 3px 0 0 var(--ryuma-c-accent) !important;
+}
