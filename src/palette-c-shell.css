@@ -338,3 +338,65 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* SOLID PRODUCT CHROME — remove residual frosted-glass treatments.
+   This targets shared Home UI only. The Glassmorphism specimen remains an
+   intentional teaching example and keeps its own visual language. */
+.home-shell .anatomy-stage,
+.home-shell .preview-stage {
+  background: var(--ryuma-c-structure) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .anatomy-item {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .preview-caption {
+  background: var(--ryuma-c-base) !important;
+  border-top: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .preview-card:not(.preview-glass) .preview-demo {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  color: var(--ryuma-c-text-primary) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-shell .preview-card:not(.preview-glass) .preview-demo button {
+  background: var(--ryuma-c-accent) !important;
+  border: 1px solid var(--ryuma-c-accent) !important;
+  color: var(--ryuma-c-text-on-accent) !important;
+  box-shadow: none !important;
+}
+
+.home-shell .preview-card:not(.preview-glass) .preview-demo button:hover {
+  background: var(--ryuma-c-accent-hover) !important;
+  border-color: var(--ryuma-c-accent-hover) !important;
+}
+
+/* Shared app chrome stays opaque even when placed over specimen artwork. */
+.home-shell .preview-caption,
+.dashboard-shell .system-panel,
+.dashboard-shell .history-panel,
+.dashboard-shell .system-preview,
+.dashboard-shell .preview-placeholder,
+.library-shell .library-card,
+.library-shell .library-search-wrap {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
