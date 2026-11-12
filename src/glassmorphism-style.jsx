@@ -1,30 +1,117 @@
 import React, { useEffect } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, Layers, Palette, Play, Sun, Type, Grid2X2, Sparkles } from 'lucide-react';
 import './glassmorphism-style.css';
 
-const layers=[
- {no:'01',title:'Transparency',copy:'A translucent white surface lets the colour and light beneath remain part of the composition.'},
- {no:'02',title:'Depth',copy:'Layered surfaces, soft shadows and overlapping edges create a clear sense of front and back.'},
- {no:'03',title:'Light',copy:'Soft highlights and blurred colour fields make the material feel luminous rather than heavy.'},
- {no:'04',title:'Hierarchy',copy:'Opacity, scale and position separate primary content from supporting details.'},
+const anatomy = [
+  { title: 'Colour', detail: 'Pastel pink, lavender and violet create a soft atmosphere.', icon: Palette },
+  { title: 'Type', detail: 'Clear typography gives the translucent surfaces structure.', icon: Type },
+  { title: 'Form', detail: 'Rounded panels and fluid shapes make the interface feel tactile.', icon: Grid2X2 },
+  { title: 'Space', detail: 'Careful spacing keeps each glass layer distinct and readable.', icon: Sparkles },
+  { title: 'Motion', detail: 'Subtle transitions add life without distracting from content.', icon: Play },
 ];
 
-export default function GlassmorphismStyle({onNavigate}){
- useEffect(()=>{
-  document.documentElement.classList.add('glass-route-html');
-  document.body.classList.add('glass-route-body');
-  return()=>{
-   document.documentElement.classList.remove('glass-route-html');
-   document.body.classList.remove('glass-route-body');
-  };
- },[]);
- return <main className="glass-style-page">
- <div className="glass-blob blob-red"/><div className="glass-blob blob-purple"/><div className="glass-blob blob-pink"/><div className="glass-dot-grid"/>
- <header className="glass-style-nav"><button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button><div><b>RYUMA</b><span>リューマ</span></div><span>DESIGN LANGUAGE / 02</span></header>
- <section className="glass-hero"><div className="glass-intro"><span>02 / GLASSMORPHISM</span><h1>Light<br/><em>through glass.</em></h1><p className="glass-lead">A visual language built from transparency, soft light and layered depth.</p><p>The surface stays light and restrained while colour, blur and edges create the sense of a material floating above the background.</p><div className="glass-palette"><i/><i/><i/><i/><i/></div></div>
-  <div className="glass-specimen"><div className="glass-reflection"/><div className="glass-card main"><span>RYŪMA / STUDY 02</span><h2>Clarity<br/><em>in layers.</em></h2><p>White glass · soft light · subtle depth</p><button>EXPLORE <ArrowRight size={15}/></button></div><div className="glass-card mini mini-one"><small>01</small><strong>TRANSPARENCY</strong><span>LET LIGHT THROUGH</span></div><div className="glass-card mini mini-two"><small>02</small><strong>DEPTH</strong><span>BUILD WITH LAYERS</span></div></div></section>
- <section className="glass-section"><div className="glass-label"><span>03</span><b>DESIGN ANATOMY</b></div><div><h2>Five parts.<br/><em>One glass language.</em></h2><div className="glass-parts"><article><b>COLOUR</b><h3>Soft atmosphere</h3><p>White remains dominant while pale red and purple provide the energy behind the surface.</p></article><article><b>TYPE</b><h3>Dark contrast</h3><p>Black and deep purple carry information; light red and pink provide emphasis.</p></article><article><b>FORM</b><h3>Rounded surfaces</h3><p>Quiet curves and thin borders make the glass feel physical without becoming heavy.</p></article><article><b>SPACE</b><h3>Breathing room</h3><p>Generous margins let the translucent layers remain visually distinct.</p></article><article><b>MOTION</b><h3>Gentle response</h3><p>Small shifts, reveals and hover movement should feel soft and weightless.</p></article></div></div></section>
- <section className="glass-section glass-composition"><div className="glass-label"><span>04</span><b>COMPOSITION</b></div><div><h2>Make the surface<br/><em>stand out.</em></h2><div className="glass-demo"><div className="demo-ring ring-red"/><div className="demo-ring ring-purple"/><div className="glass-card demo-card"><span>GLASS / 01</span><strong>Foreground<br/><em>over atmosphere.</em></strong><small>THE BACKGROUND IS PART OF THE MATERIAL.</small></div><div className="demo-orb red"/><div className="demo-orb purple"/></div></div></section>
- <section className="glass-section"><div className="glass-label"><span>05</span><b>THE LAYERS</b></div><div><h2>What makes it<br/><em>feel like glass?</em></h2><div className="glass-layer-list">{layers.map(item=><article key={item.no}><span>{item.no}</span><div><h3>{item.title}</h3><p>{item.copy}</p></div></article>)}</div></div></section>
- <footer className="glass-footer"><span>GLASSMORPHISM / 02</span><h2>Light surface.<br/><em>Clear hierarchy.</em></h2><p>A focused design specimen for studying transparency, depth and light — not a replacement for the Ryūma site environment.</p><button onClick={()=>onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowLeft size={15}/></button></footer>
- </main>}
+const layers = [
+  { title: 'Transparency', copy: 'See-through surfaces reveal context while keeping content in focus.', icon: Layers },
+  { title: 'Depth', copy: 'Layering, blur and shadow create a clear sense of foreground and background.', icon: Layers },
+  { title: 'Light', copy: 'Soft highlights and controlled glow give the material its luminous quality.', icon: Sun },
+  { title: 'Hierarchy', copy: 'Contrast, scale and spacing make the most important information easy to find.', icon: Grid2X2 },
+];
+
+function scrollToSection(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+}
+
+export default function GlassmorphismStyle({ onNavigate }) {
+  useEffect(() => {
+    document.documentElement.classList.add('glass-route-html');
+    document.body.classList.add('glass-route-body');
+    return () => {
+      document.documentElement.classList.remove('glass-route-html');
+      document.body.classList.remove('glass-route-body');
+    };
+  }, []);
+
+  return (
+    <main className="glass-style-page">
+      <div className="glass-atmosphere glass-atmosphere-pink" aria-hidden="true" />
+      <div className="glass-atmosphere glass-atmosphere-violet" aria-hidden="true" />
+      <header className="glass-style-nav">
+        <button className="glass-back-link" onClick={() => onNavigate?.('library')} aria-label="Back to Design Library">
+          <ArrowLeft size={16} /> <span>RYŪMA — DESIGN LIBRARY</span>
+        </button>
+        <div className="glass-nav-meta"><span>DESIGN LANGUAGE</span><b>02 / 20</b></div>
+      </header>
+
+      <div className="glass-content">
+        <section className="glass-hero" aria-labelledby="glass-title">
+          <div className="glass-hero-copy">
+            <span className="glass-eyebrow">DESIGN LANGUAGE / 02</span>
+            <h1 id="glass-title">Glassmorphism</h1>
+            <h2>Light through glass.</h2>
+            <p>A design style that uses transparency, blur and light to create depth, softness and modern clarity.</p>
+            <div className="glass-hero-actions">
+              <button className="glass-primary-button" onClick={() => scrollToSection('glass-anatomy')}>Explore <ArrowDown size={16} /></button>
+              <button className="glass-secondary-button" onClick={() => scrollToSection('glass-layers')}><Layers size={16} /> View Components</button>
+            </div>
+          </div>
+          <div className="glass-hero-art" aria-label="Abstract translucent glass panels">
+            <div className="glass-orb glass-orb-one" />
+            <div className="glass-orb glass-orb-two" />
+            <div className="glass-pane glass-pane-back" />
+            <div className="glass-pane glass-pane-middle" />
+            <div className="glass-pane glass-pane-front" />
+            <div className="glass-art-caption"><span>GLASS / 01</span><b>Clarity in layers</b></div>
+          </div>
+        </section>
+
+        <section className="glass-panel glass-anatomy" id="glass-anatomy" aria-labelledby="glass-anatomy-title">
+          <div className="glass-section-heading">
+            <span className="glass-eyebrow">THE FOUNDATIONS</span>
+            <h2 id="glass-anatomy-title">Design Anatomy</h2>
+            <p>The five elements that shape the glassmorphism language.</p>
+          </div>
+          <div className="glass-anatomy-grid">
+            {anatomy.map(({ title, detail, icon: Icon }, index) => (
+              <article className="glass-anatomy-card" key={title}>
+                <div className="glass-anatomy-icon"><Icon size={25} strokeWidth={1.8} /></div>
+                <span className="glass-card-index">0{index + 1}</span>
+                <h3>{title}</h3>
+                <p>{detail}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="glass-panel glass-layers-section" id="glass-layers" aria-labelledby="glass-layers-title">
+          <div className="glass-layer-art" aria-hidden="true">
+            <div className="glass-layer-glow" />
+            <div className="glass-layer-shape shape-back" />
+            <div className="glass-layer-shape shape-middle" />
+            <div className="glass-layer-shape shape-front" />
+            <span className="glass-layer-art-label">MATERIAL STUDY / 04</span>
+          </div>
+          <div className="glass-layer-copy">
+            <span className="glass-eyebrow">MATERIAL & DEPTH</span>
+            <h2 id="glass-layers-title">The Layers</h2>
+            <p className="glass-layer-intro">How glassmorphism builds visual depth.</p>
+            <div className="glass-layer-list">
+              {layers.map(({ title, copy, icon: Icon }, index) => (
+                <article className="glass-layer-item" key={title}>
+                  <span className="glass-layer-icon"><Icon size={19} /></span>
+                  <div><h3>{title}</h3><p>{copy}</p></div>
+                  <span className="glass-layer-number">0{index + 1}</span>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer className="glass-footer">
+        <span>RYŪMA / DESIGN ANATOMY</span>
+        <p>Transparency · Depth · Light · Hierarchy</p>
+        <button onClick={() => onNavigate?.('library')}>Back to Design Library <ArrowRight size={15} /></button>
+      </footer>
+    </main>
+  );
+}
