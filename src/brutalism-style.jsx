@@ -1,23 +1,157 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, Plus, Minus } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Plus, Minus, ArrowUpRight } from 'lucide-react';
 import './brutalism-style.css';
 
-const parts=[
- {n:'01',t:'Colour',d:'Bright orange and yellow collide with black and white. Red acts as a visual signal.'},
- {n:'02',t:'Type',d:'Oversized, heavy typography creates hierarchy without apologising for itself.'},
- {n:'03',t:'Form',d:'Hard rectangles, thick borders and offset blocks replace soft decoration.'},
- {n:'04',t:'Space',d:'Uneven spacing and deliberate tension keep the composition raw and energetic.'},
- {n:'05',t:'Asymmetry',d:'Intentional imbalance and irregular positioning create tension without losing control.'},
- {n:'06',t:'Visible Structure',d:'Borders, grids and containers stay exposed so the construction becomes part of the design.'}
+const parts = [
+  { n: '01', mark: '□', t: 'Colour', d: 'High contrast, intentional and expressive.' },
+  { n: '02', mark: 'T', t: 'Type', d: 'Large, bold and unapologetic typography.' },
+  { n: '03', mark: '▣', t: 'Form', d: 'Simple, blocky and structural shapes.' },
+  { n: '04', mark: '▰', t: 'Space', d: 'Generous, deliberate and sometimes unbalanced.' },
+  { n: '05', mark: '↗', t: 'Asymmetry', d: 'Layouts that break conventional balance.' },
+  { n: '06', mark: '▦', t: 'Visible Structure', d: 'Show the grid, borders and system clearly.' }
 ];
 
-export default function BrutalismStyle({onNavigate}){
- const [active,setActive]=useState(false); const [count,setCount]=useState(7);
- return <main className="brutal-page"><header className="brutal-nav"><button onClick={()=>onNavigate?.('library')}><ArrowLeft size={16}/> DESIGN LIBRARY</button><div><b>RYUMA</b><span>リューマ</span></div><strong>04 / BRUTALISM</strong></header>
- <section className="brutal-hero"><div className="brutal-copy"><span>DESIGN LANGUAGE / 04</span><h1>MAKE IT<br/><i>LOUD.</i></h1><p>Raw structure. Hard edges. No unnecessary polish.</p><div className="brutal-stamp">BRUTAL<br/>BY DESIGN</div></div><div className="brutal-poster"><div className="poster-black">NO<br/>SOFT<br/><em>EDGES.</em></div><div className="poster-yellow">USE<br/><b>CONTRAST.</b></div><div className="poster-red">RAW<br/>UI</div><div className="poster-orange">04</div></div></section>
- <div className="brutal-impact-strip" aria-label="Brutalism manifesto"><span>BREAK THE GRID</span><b>×</b><span>KEEP THE EDGE</span><b>×</b><span>MAKE IT LOUD</span></div>\n <section className="brutal-demo"><div className="brutal-label">01 / LIVE SPECIMEN</div><div className="brutal-console"><div className="console-head"><b>CONTROL // RAW</b><span>STATUS: {active?'ON':'OFF'}</span></div><div className="console-body"><div><small>COUNTER</small><strong>{String(count).padStart(2,'0')}</strong><div className="brutal-actions"><button onClick={()=>setCount(c=>Math.max(0,c-1))} disabled={!active} aria-label="Decrease counter"><Minus/></button><button onClick={()=>setCount(c=>c+1)} disabled={!active} aria-label="Increase counter"><Plus/></button></div></div><div className="brutal-switch"><button className={active?'is-active':''} onClick={()=>setActive(v=>!v)} aria-pressed={active}>{active?'ON':'OFF'}</button><small>{active?'CONTROLS ACTIVE / CLICK TO SWITCH OFF':'CONTROLS LOCKED / CLICK TO SWITCH ON'}</small></div></div></div></section>
- <section className="brutal-section"><div className="brutal-label">02 / THE IDEA</div><div><h2>DESIGN<br/><span>WITHOUT</span><br/><em className="permission-word">PERMISSION.</em></h2><p>Brutalism exposes structure instead of hiding it. Strong contrast, visible boundaries and intentionally direct interactions become the visual language.</p><div className="brutal-rules"><div><b>01</b><span>HARD BORDER</span></div><div><b>02</b><span>FLAT COLOUR</span></div><div><b>03</b><span>OFFSET SHADOW</span></div><div><b>04</b><span>RAW TYPE</span></div></div></div></section>
- <section className="brutal-section anatomy"><div className="brutal-label">03 / DESIGN ANATOMY</div><div><h2>EVERY PART.<br/><span>NO FLUFF.</span></h2><div className="brutal-parts">{parts.map(x=><article key={x.n}><b>{x.n}</b><h3>{x.t}</h3><p>{x.d}</p></article>)}</div></div></section>
- <section className="brutal-section composition"><div className="brutal-label">04 / COMPOSITION</div><div className="brutal-collage" aria-label="Unconventional raw website example"><div className="raw-browser-note">PERSONAL HOMEPAGE / LAST UPDATED: 14 OCT 2026</div><h3 className="raw-site-title">HELLO, INTERNET!</h3><p className="raw-site-intro">Welcome to my corner of the web. This page is a collection of things I am working on, things I like, and links I keep forgetting.</p><div className="raw-sticker">UNDER CONSTRUCTION !!!</div><hr/><div className="raw-site-columns"><aside className="raw-site-nav"><b>JUMP TO:</b><ul><li><a href="#raw-about">About me</a></li><li><a href="#raw-links">Bookmarks</a></li><li><a href="#raw-form">Guestbook</a></li></ul><p>Visitors: <b>001284</b></p><p><small>Best viewed with curiosity.</small></p></aside><section className="raw-site-main"><h4 id="raw-about">ABOUT ME</h4><p>I make little projects and learn by breaking things. Some are finished. Most are not. That is the page.</p><ul><li>Currently making: <b>small web experiments</b></li><li>Currently learning: <b>design and code</b></li><li>Status: <mark>still figuring it out</mark></li></ul><h4 id="raw-links">BOOKMARKS I LIKE</h4><ul><li><a href="https://brutalist-web.design/" target="_blank" rel="noreferrer">Brutalist Web Design</a> — notes on the web</li><li><a href="https://www.art.yale.edu/" target="_blank" rel="noreferrer">Yale School of Art</a> — an unpredictable website</li><li><a href="https://news.ycombinator.com/" target="_blank" rel="noreferrer">Hacker News</a> — links and discussion</li></ul><h4 id="raw-form">GUESTBOOK</h4><p>Leave a note below. This sample form is local-only; it does not publish or send anything.</p><form className="raw-form" onSubmit={e=>{e.preventDefault();e.currentTarget.querySelector('.raw-form-result').textContent='Thanks — your demo note is visible only on this page.'}}><label htmlFor="raw-name">Name:</label><input id="raw-name" name="name" placeholder="your name"/><label htmlFor="raw-message">Your message:</label><textarea id="raw-message" name="message" rows="3" placeholder="say hello..."/><label className="raw-check"><input type="checkbox" name="public"/> I agree to be nice.</label><button type="submit">Sign guestbook</button><p className="raw-form-result" aria-live="polite"></p></form><p className="raw-footnote">Thanks for visiting. Go explore somewhere else. <a href="#raw-about">Back to top ↑</a></p></section></div></div></section>
- <footer className="brutal-footer"><span>BRUTALISM / 04</span><h2>RAW.<br/><i>DIRECT.</i><br/>ALIVE.</h2><p>When the structure becomes the aesthetic.</p><button onClick={()=>onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowRight size={16}/></button></footer></main>;
+export default function BrutalismStyle({ onNavigate }) {
+  const [active, setActive] = useState(false);
+  const [count, setCount] = useState(12);
+  const [guestName, setGuestName] = useState('');
+  const [guestMessage, setGuestMessage] = useState('');
+  const [guestNotes, setGuestNotes] = useState([
+    { name: 'ARD', message: 'Great style!', date: '11 Nov' },
+    { name: 'Krios', message: 'Bold & clean.', date: '10 Nov' },
+    { name: 'Athena', message: 'Love the grid.', date: '09 Nov' }
+  ]);
+  const [guestFeedback, setGuestFeedback] = useState('');
+
+  function addGuestNote(event) {
+    event.preventDefault();
+    if (!guestName.trim() || !guestMessage.trim()) {
+      setGuestFeedback('Add your name and a message first.');
+      return;
+    }
+    setGuestNotes(notes => [{ name: guestName.trim(), message: guestMessage.trim(), date: 'Today' }, ...notes]);
+    setGuestName('');
+    setGuestMessage('');
+    setGuestFeedback('Note added locally to this demo.');
+  }
+
+  return (
+    <main className="brutal-page">
+      <header className="brutal-nav">
+        <button onClick={() => onNavigate?.('library')}><ArrowLeft size={16}/> DESIGN LIBRARY</button>
+        <div className="brutal-brand"><b>▲ RYŪMA</b><span>— Design Library</span></div>
+        <nav aria-label="Design library navigation">
+          <button onClick={() => onNavigate?.('library')}>Design Library</button>
+          <a href="#brutal-anatomy">Styles</a>
+          <a href="#brutal-specimen">Components</a>
+        </nav>
+        <strong>BRUTALISM　///</strong>
+      </header>
+
+      <div className="brutal-board">
+        <section className="brutal-hero">
+          <div className="brutal-hero-copy">
+            <span className="brutal-kicker">04 / BRUTALISM</span>
+            <h1>MAKE IT<br/><i>LOUD.</i></h1>
+            <p className="brutal-tagline">A design language that refuses to be subtle.</p>
+            <p className="brutal-hero-note">RAW<br/>BOLD<br/>FUNCTIONAL<br/>UNPOLISHED <ArrowUpRight size={25}/></p>
+          </div>
+          <div className="brutal-architecture" aria-label="Abstract architectural brutalist poster artwork">
+            <div className="architecture-sun"/>
+            <div className="architecture-building" aria-hidden="true">
+              <div className="building-face building-front">
+                <div className="building-window-grid front-windows"/>
+              </div>
+              <div className="building-face building-side">
+                <div className="building-window-grid side-windows"/>
+              </div>
+              <div className="building-slab slab-top"/>
+              <div className="building-slab slab-middle"/>
+              <div className="building-slab slab-bottom"/>
+            </div>
+            <span>FIELD STUDY / 04</span>
+          </div>
+        </section>
+
+        <aside className="brutal-side">
+          <section className="brutal-idea brutal-panel">
+            <h2 className="brutal-tab">THE IDEA</h2>
+            <p>Brutalism in digital design is bold, structural and unapologetic. It prioritises clarity, contrast and function over decoration.</p>
+            <span className="brutal-plus">＋</span>
+          </section>
+          <section className="brutal-rules-panel brutal-panel">
+            <h2 className="brutal-tab">CORE RULES</h2>
+            <ol>
+              <li><b>01</b><span>Use bold, high-contrast typography.</span></li>
+              <li><b>02</b><span>Embrace raw, structural layouts.</span></li>
+              <li><b>03</b><span>Keep elements functional and direct.</span></li>
+              <li><b>04</b><span>Avoid unnecessary decoration.</span></li>
+            </ol>
+          </section>
+        </aside>
+
+        <section className="brutal-specimen" id="brutal-specimen">
+          <div className="brutal-section-heading"><h2>LIVE SPECIMEN</h2><span>////</span></div>
+          <div className="brutal-console">
+            <div className="brutal-counter">
+              <small>COUNTER</small>
+              <strong>{String(count).padStart(3, '0')}</strong>
+            </div>
+            <div className="brutal-counter-actions">
+              <button onClick={() => setCount(value => value + 1)} disabled={!active} aria-label="Increase counter"><Plus/></button>
+              <button onClick={() => setCount(value => Math.max(0, value - 1))} disabled={!active} aria-label="Decrease counter"><Minus/></button>
+            </div>
+            <div className="brutal-toggle-area">
+              <small>INTERACTION</small>
+              <button className={active ? 'brutal-toggle is-active' : 'brutal-toggle'} onClick={() => setActive(value => !value)} aria-pressed={active}>
+                <span>{active ? 'ON' : 'OFF'}</span><i/>
+              </button>
+              <p>{active ? 'Controls active. Use + and −.' : 'Activate to enable controls.'}</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="brutal-anatomy" id="brutal-anatomy">
+          <div className="brutal-section-heading"><h2>DESIGN ANATOMY</h2><span>////</span></div>
+          <div className="brutal-parts">
+            {parts.map(part => <article key={part.n}>
+              <b className="brutal-part-mark">{part.mark}</b>
+              <div><h3>{part.t}</h3><p>{part.d}</p></div>
+            </article>)}
+          </div>
+        </section>
+
+        <section className="brutal-composition">
+          <div className="brutal-section-heading composition-heading"><h2>COMPOSITION</h2><p>A practical example — a personal homepage in a brutalist style.</p><span>− □ ×</span></div>
+          <div className="brutal-homepage">
+            <div className="brutal-home-top"><b>A.R.D</b><nav><a href="#home-work">HOME</a><a href="#home-work">WORK</a><a href="#home-work">NOTES</a><a href="#guestbook">GUESTBOOK</a></nav></div>
+            <div className="brutal-home-grid">
+              <div className="brutal-home-intro">
+                <h3>ARUN<br/>S.P.</h3>
+                <span className="brutal-home-sticker">PERSONAL<br/>HOMEPAGE</span>
+                <p>Engineer / Creator / Designer <ArrowRight size={16}/></p>
+              </div>
+              <div className="brutal-home-art" id="home-work"><span>BUILD / BREAK / REPEAT</span><div/></div>
+              <div className="brutal-guestbook" id="guestbook">
+                <h3>GUESTBOOK</h3>
+                <form onSubmit={addGuestNote}>
+                  <label className="brutal-sr-only" htmlFor="brutal-guest-name">Your name</label>
+                  <input id="brutal-guest-name" value={guestName} onChange={event => setGuestName(event.target.value)} placeholder="Your name" maxLength={30}/>
+                  <label className="brutal-sr-only" htmlFor="brutal-guest-message">Leave a message</label>
+                  <textarea id="brutal-guest-message" value={guestMessage} onChange={event => setGuestMessage(event.target.value)} placeholder="Leave a message..." rows="2" maxLength={120}/>
+                  <button type="submit">ADD NOTE</button>
+                  <p className="brutal-guest-feedback" aria-live="polite">{guestFeedback || 'Demo only — notes stay on this page.'}</p>
+                </form>
+                <ul>{guestNotes.slice(0, 3).map((note, index) => <li key={note.name + note.date + index}><b>{note.name}</b><span>— {note.message}</span><time>{note.date}</time></li>)}</ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer className="brutal-footer">
+          <h2>RAW. DIRECT. ALIVE.</h2><span>///</span>
+        </footer>
+      </div>
+    </main>
+  );
 }
