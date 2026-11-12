@@ -58,9 +58,17 @@ export default function BrutalismStyle({ onNavigate }) {
           </div>
           <div className="brutal-architecture" aria-label="Abstract architectural brutalist poster artwork">
             <div className="architecture-sun"/>
-            <div className="architecture-block block-one"/>
-            <div className="architecture-block block-two"/>
-            <div className="architecture-block block-three"/>
+            <div className="architecture-building" aria-hidden="true">
+              <div className="building-face building-front">
+                <div className="building-window-grid front-windows"/>
+              </div>
+              <div className="building-face building-side">
+                <div className="building-window-grid side-windows"/>
+              </div>
+              <div className="building-slab slab-top"/>
+              <div className="building-slab slab-middle"/>
+              <div className="building-slab slab-bottom"/>
+            </div>
             <span>FIELD STUDY / 04</span>
           </div>
         </section>
