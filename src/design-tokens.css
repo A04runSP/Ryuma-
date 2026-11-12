@@ -33,3 +33,48 @@
   --ryuma-motion-standard: 280ms;
   --ryuma-focus-ring: 0 0 0 3px rgba(179, 136, 255, 0.45);
 }
+
+/* --------------------------------------------------------------------------
+   Palette C — Deep Blue / Steel / Coral
+   Experimental product-shell palette, introduced as a separate token layer.
+   60 / 30 / 10 describes visual area distribution, not token count:
+   60% base canvas, 30% structural surfaces, 10% deliberate accent.
+   Existing Deep Violet & Aqua tokens above remain unchanged.
+   No live component consumes these tokens until a separately approved rollout.
+   Independent Style Worlds must retain ownership of their own environments.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Core 60 / 30 / 10 roles */
+  --ryuma-c-base: #0C1A33;
+  --ryuma-c-structure: #2E3F63;
+  --ryuma-c-accent: #FF6B6B;
+
+  /* Extended surfaces */
+  --ryuma-c-surface-raised: #253653;
+  --ryuma-c-surface-hover: #3A4D72;
+  --ryuma-c-accent-subtle: #472D43;
+
+  /* Typography */
+  --ryuma-c-text-primary: #F5F1E8;
+  --ryuma-c-text-secondary: #AEB9CC;
+  --ryuma-c-text-muted: #8492AA;
+  --ryuma-c-text-on-accent: #0C1A33;
+
+  /* Borders, dividers and keyboard focus */
+  --ryuma-c-border: #435371;
+  --ryuma-c-divider: #263650;
+  --ryuma-c-focus: #FF6B6B;
+  --ryuma-c-focus-ring: 0 0 0 3px rgba(255, 107, 107, 0.38);
+
+  /* Interaction states */
+  --ryuma-c-accent-hover: #F2555B;
+  --ryuma-c-accent-active: #E84E58;
+  --ryuma-c-disabled-surface: #253653;
+  --ryuma-c-disabled-text: #8492AA;
+
+  /* Semantic feedback remains distinct from the brand accent */
+  --ryuma-c-status-success: #55C79A;
+  --ryuma-c-status-warning: #F2BE62;
+  --ryuma-c-status-danger: #F07878;
+  --ryuma-c-status-info: #83B8E8;
+}
