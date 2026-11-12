@@ -42,8 +42,8 @@ export default function FlatDesignStyle({ onNavigate }) {
           <h1>Flat<br /><span>Design.</span></h1>
           <p>A clean, simple and functional design approach that focuses on clarity, content and usability.</p>
           <div className="flat-hero-actions">
-            <a href="#flat-anatomy">Explore Anatomy <ArrowRight size={16} /></a>
-            <a className="flat-secondary-action" href="#flat-weather-demo"><Play size={13} /> Live Demo</a>
+            <button type="button" onClick={() => document.getElementById("flat-anatomy")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Explore Anatomy <ArrowRight size={16} /></button>
+            <button type="button" className="flat-secondary-action" onClick={() => document.getElementById("flat-weather-demo")?.scrollIntoView({ behavior: "smooth", block: "start" })}><Play size={13} /> Live Demo</button>
           </div>
         </div>
         <div className="flat-hero-art" role="img" aria-label="Flat geometric landscape with a house, sun, mountains and tree">
