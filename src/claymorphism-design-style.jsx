@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import {
-  ArrowLeft, BookOpen, Check, CheckCircle2, Circle, Download, Heart,
-  Image as ImageIcon, Layers3, Music2, Pause, Play, Plus, Search,
-  SlidersHorizontal, Sparkles, Square, ToggleLeft, Volume2, X
+  ArrowLeft, Check, CheckCircle2, Circle, Download, Heart,
+  Layers3, Music2, Pause, Play, Plus, Search, Sparkles, X
 } from 'lucide-react';
 import './claymorphism-design-style.css';
 
@@ -39,7 +38,10 @@ export default function ClaymorphismDesignStyle({ onNavigate }) {
     onPointerCancel: () => setPressed(null),
     onBlur: () => setPressed(null),
     onKeyDown: (event) => {
-      if (event.key === 'Enter' || event.key === ' ') setPressed(name);
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setPressed(name);
+      }
     },
     onKeyUp: () => setPressed(null),
     'aria-pressed': pressed === name,
@@ -188,7 +190,7 @@ export default function ClaymorphismDesignStyle({ onNavigate }) {
             <div className="clay-player-cover"><span/><i/></div>
             <div className="clay-player-meta"><b>Morning Vibes</b><span>Ambient playlist · 12 tracks</span></div>
             <button type="button" className={'clay-player-like ' + (liked ? 'is-selected' : '')} aria-label="Like playlist" aria-pressed={liked} onClick={() => setLiked(!liked)}><Heart size={19} fill={liked ? 'currentColor' : 'none'}/></button>
-            <div className="clay-player-progress"><span/><i/></div>
+            <div className="clay-player-progress"><span/></div>
             <div className="clay-player-time"><span>01:24</span><span>03:56</span></div>
             <div className="clay-player-controls">
               <button type="button" aria-label="Previous track"><ArrowLeft size={17}/></button>
