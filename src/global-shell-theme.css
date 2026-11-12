@@ -1512,3 +1512,123 @@
     max-width: 100%;
   }
 }
+
+
+/* Ryuma mobile anatomy repair: stack all five concepts without overlap.
+   Desktop positioning and the independent style-world specimens are untouched. */
+@media (max-width: 680px) {
+  .home-shell .anatomy-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    min-height: 0;
+    height: auto;
+    padding: 16px;
+    overflow: visible;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-orbit {
+    display: none;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item {
+    position: relative;
+    inset: auto;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    min-height: 156px;
+    max-height: none;
+    margin: 0;
+    padding: 18px 112px 18px 16px;
+    overflow: hidden;
+    border-radius: 18px;
+    animation: none;
+    transform: none;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item:hover {
+    transform: none;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item > .anatomy-mark,
+  .home-shell .anatomy-stage > .anatomy-item > div:not(.anatomy-visual) {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item h3 {
+    margin: 0 0 7px;
+    font-size: 22px;
+    line-height: 1.15;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item p {
+    max-width: 100%;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item .anatomy-visual {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    right: 10px;
+    bottom: auto;
+    width: 92px;
+    height: 82px;
+    opacity: .82;
+    transform: translateY(-50%) scale(.82);
+    transform-origin: center right;
+    pointer-events: none;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-motion {
+    width: 100%;
+  }
+
+  .home-shell .anatomy-note {
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-shell .anatomy-stage {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item {
+    min-height: 150px;
+    padding: 16px 96px 16px 14px;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item h3 {
+    font-size: 20px;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item p {
+    font-size: 12px;
+  }
+
+  .home-shell .anatomy-stage > .anatomy-item .anatomy-visual {
+    right: 5px;
+    transform: translateY(-50%) scale(.72);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-shell .anatomy-stage > .anatomy-item {
+    animation: none !important;
+    transition: none !important;
+  }
+}
