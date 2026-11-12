@@ -37,6 +37,7 @@ export default function MinimalismStyle({ onNavigate }) {
             <span title="Soft ivory #F5F1E8" className="swatch-ivory" />
             <span title="Powder blue #8FB8E8" className="swatch-blue" />
             <span title="Warm brown #A66B3D" className="swatch-clay" />
+            <span title="Sunflower yellow #FFC928" className="swatch-yellow" />
           </div>
         </div>
         <div className="minimalism-poster" role="img" aria-label="Editorial Minimalism poster: bold black THE ESSENTIAL typography over a powder-blue square, a small brown circle containing the Minimalism description, and a curved brown underline">
