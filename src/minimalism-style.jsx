@@ -32,21 +32,28 @@ export default function MinimalismStyle({ onNavigate }) {
           <h1>Less.<br /><span>But better.</span></h1>
           <p className="minimalism-lead">Make room for what matters.</p>
           <p className="minimalism-intro">Minimalism is not the absence of design. It is the deliberate removal of everything that competes with its purpose.</p>
-          <div className="minimalism-swatches" aria-label="Example restrained colour palette">
-            <span title="Charcoal" className="swatch-charcoal" />
-            <span title="Warm grey" className="swatch-grey" />
-            <span title="Soft ivory" className="swatch-ivory" />
-            <span title="Muted clay" className="swatch-clay" />
-            <span title="Muted blue" className="swatch-blue" />
+          <div className="minimalism-swatches" aria-label="Minimalism poster colour palette">
+            <span title="Near black #0F0F0F" className="swatch-charcoal" />
+            <span title="Soft ivory #F5F1E8" className="swatch-ivory" />
+            <span title="Powder blue #8FB8E8" className="swatch-blue" />
+            <span title="Warm brown #A66B3D" className="swatch-clay" />
           </div>
         </div>
-        <div className="minimalism-poster" role="img" aria-label="Minimalist poster using typography, a circle, a square and open space">
+        <div className="minimalism-poster" role="img" aria-label="Editorial Minimalism poster: bold black THE ESSENTIAL typography over a powder-blue square, a small brown circle containing the Minimalism description, and a curved brown underline">
           <div className="poster-meta"><span>FORM STUDY — 001</span><span>2026</span></div>
+          <div className="poster-number">01</div>
+          <div className="poster-square" aria-hidden="true" />
           <div className="poster-title">THE<br /><i>ESSENTIAL.</i></div>
-          <div className="poster-circle" />
-          <div className="poster-square" />
-          <div className="poster-baseline" />
-          <div className="poster-foot"><span>SPACE / FORM / TYPE</span><span>01—05</span></div>
+          <svg className="poster-underline" viewBox="0 0 720 52" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M5 39 Q360 -15 715 39" />
+          </svg>
+          <div className="poster-circle">
+            <span className="poster-circle-mark" aria-hidden="true" />
+            <strong>Minimalism</strong>
+            <p>The art of<br />international<br />reduction.</p>
+          </div>
+          <div className="poster-descriptor">SPACE /<br />FORM /<br />TYPE /<br />BALANCE</div>
+          <div className="poster-foot"><span>RYŪMA — DESIGN ANATOMY</span><span>01—05</span></div>
         </div>
       </section>
 
