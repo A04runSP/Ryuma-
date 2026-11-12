@@ -1,45 +1,222 @@
 import React, { useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import {
+  ArrowLeft, BookOpen, Check, CheckCircle2, Circle, Download, Heart,
+  Image as ImageIcon, Layers3, Music2, Pause, Play, Plus, Search,
+  SlidersHorizontal, Sparkles, Square, ToggleLeft, Volume2, X
+} from 'lucide-react';
 import './claymorphism-design-style.css';
 
-const anatomy=[
- ['01','SOFTNESS','Rounded geometry creates a friendly physical character.'],
- ['02','VOLUME','Raised surfaces make components feel molded rather than flat.'],
- ['03','TOUCH','Pressed states communicate interaction through physical response.'],
- ['04','PLAY','Small movements and exaggerated forms give the system personality.'],
- ['05','DEPTH','Light and shadow create the illusion of soft material.'],
+const palette = [
+  { name: 'Lavender', hex: '#EDE6FF', tone: 'lavender' },
+  { name: 'Mint', hex: '#CFF7EB', tone: 'mint' },
+  { name: 'Aqua', hex: '#C4F2FF', tone: 'aqua' },
+  { name: 'Coral', hex: '#FFC9D3', tone: 'coral' },
+  { name: 'Peach', hex: '#FFE6C7', tone: 'peach' },
+  { name: 'Butter', hex: '#FFF4BB', tone: 'butter' },
 ];
 
-export default function ClaymorphismDesignStyle({onNavigate}){
- const [pressed,setPressed]=useState(null);
- const press=(key)=>setPressed(key);
- const release=()=>setPressed(null);
- return <main className="clay-style-page">
-  <header className="clay-nav"><button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button><div><b>RYUMA</b><span>リューマ</span></div><span>DESIGN LANGUAGE / 02.04</span></header>
+function SectionHeading({ eyebrow, title, note }) {
+  return <div className="clay-section-heading">
+    <span>{eyebrow}</span>
+    <h2>{title}</h2>
+    {note && <p>{note}</p>}
+  </div>;
+}
 
-  <section className="clay-hero"><div className="clay-copy"><span className="clay-kicker">02 / CLAYMORPHISM</span><h1>Soft by<br/><em>design.</em></h1><p className="clay-lead">A tactile visual language built from soft surfaces, rounded forms and playful physicality.</p><p>Claymorphism makes digital interfaces feel almost touchable. Every surface appears molded, raised and ready to respond.</p><div className="clay-palette"><i/><i/><i/><i/><i/></div></div><div className="clay-hero-art"><div className="clay-hero-blob"/><div className="clay-hero-card"><span>CLAY UI</span><strong>SOFT<br/>SURFACES.</strong><small>FORM / VOLUME / TOUCH</small></div><div className="clay-hero-pill">MOLDED</div></div></section>
+export default function ClaymorphismDesignStyle({ onNavigate }) {
+  const [toggle, setToggle] = useState(true);
+  const [checked, setChecked] = useState(true);
+  const [range, setRange] = useState(64);
+  const [query, setQuery] = useState('');
+  const [liked, setLiked] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const [pressed, setPressed] = useState(null);
 
-  <section className="clay-section"><div className="clay-label"><span>03</span><b>THE IDEA</b></div><div><h2>Interfaces you can<br/><em>almost touch.</em></h2><p>Claymorphism turns familiar interface elements into soft, dimensional objects. Rounded geometry, controlled shadows and tactile states create a friendly sense of physicality.</p><div className="clay-flow"><span>FORM</span><i>→</i><span>VOLUME</span><i>→</i><span>TOUCH</span><i>→</i><b>FEEL</b></div></div></section>
+  const pressProps = (name) => ({
+    onPointerDown: () => setPressed(name),
+    onPointerUp: () => setPressed(null),
+    onPointerLeave: () => setPressed(null),
+    onPointerCancel: () => setPressed(null),
+    onBlur: () => setPressed(null),
+    onKeyDown: (event) => {
+      if (event.key === 'Enter' || event.key === ' ') setPressed(name);
+    },
+    onKeyUp: () => setPressed(null),
+    'aria-pressed': pressed === name,
+  });
 
-  <section className="clay-section"><div className="clay-label"><span>04</span><b>DESIGN ANATOMY</b></div><div><h2>Five parts.<br/><em>One soft language.</em></h2><div className="clay-anatomy">{anatomy.map(([no,title,copy])=><article key={no}><span>{no}</span><div><b>{title}</b><p>{copy}</p></div></article>)}</div></div></section>
+  return <main className="clay-style-page">
+    <div className="clay-specimen-wrap">
+      <header className="clay-specimen-header">
+        <button className="clay-back-link" type="button" onClick={() => onNavigate?.('library')}>
+          <ArrowLeft size={16} /> Back to Design Library
+        </button>
+        <span className="clay-edition"><Sparkles size={14} /> DESIGN SPECIMEN / 02.04</span>
+      </header>
 
-  <section className="clay-section"><div className="clay-label"><span>05</span><b>MATERIAL</b></div><div><h2>Made to<br/><em>feel.</em></h2><p>Soft surfaces gain character through inflated forms, gentle highlights and shadows that suggest depth without becoming glossy.</p>
-   <div className="clay-playground">
-    <div className="clay-playground-label">CLAY PLAYGROUND / TOUCH THE OBJECTS</div>
-    <div className="clay-playground-orb orb-pink"/><div className="clay-playground-orb orb-blue"/>
-    <button type="button" className={`clay-object clay-main ${pressed==='main'?'is-pressed':''}`} aria-label="Press the main clay surface" aria-pressed={pressed==='main'} onPointerDown={()=>press('main')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release} onKeyDown={(event)=>{if(event.key==='Enter'||event.key===' ')press('main')}} onKeyUp={release} onBlur={release}><span>CLAY UI</span><strong>SOFT<br/>BY DESIGN.</strong><small>{pressed==='main'?'PRESSED / SPRING BACK':'PRESS ME'}</small></button>
-    <button type="button" className={`clay-object clay-circle ${pressed==='circle'?'is-pressed':''}`} aria-label="Press clay circle" aria-pressed={pressed==='circle'} onPointerDown={()=>press('circle')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release} onKeyDown={(event)=>{if(event.key==='Enter'||event.key===' ')press('circle')}} onKeyUp={release} onBlur={release}><b>+</b></button>
-    <button type="button" className={`clay-object clay-button ${pressed==='button'?'is-pressed':''}`} aria-pressed={pressed==='button'} onPointerDown={()=>press('button')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release} onKeyDown={(event)=>{if(event.key==='Enter'||event.key===' ')press('button')}} onKeyUp={release} onBlur={release}>{pressed==='button'?'PRESSED':'TOUCH'}</button>
-    <button type="button" className={`clay-object clay-tile ${pressed==='tile'?'is-pressed':''}`} aria-pressed={pressed==='tile'} onPointerDown={()=>press('tile')} onPointerUp={release} onPointerCancel={release} onPointerLeave={release} onKeyDown={(event)=>{if(event.key==='Enter'||event.key===' ')press('tile')}} onKeyUp={release} onBlur={release}><span>04</span><b>{pressed==='tile'?'PLAYING':'PLAY'}</b></button>
-   </div>
-  </div></section>
+      <section className="clay-intro">
+        <div className="clay-intro-copy">
+          <span className="clay-kicker">A STUDY IN SOFT MATERIALS</span>
+          <h1>Claymorphism<span>.</span></h1>
+          <p className="clay-intro-lead">A soft, tactile interface language shaped by rounded forms, inflated surfaces and gentle depth.</p>
+          <div className="clay-traits">
+            <span><Layers3 size={15}/> Playful</span>
+            <span><Circle size={14}/> Tactile</span>
+            <span><Heart size={14}/> Friendly</span>
+          </div>
+        </div>
+        <div className="clay-hero-object" aria-label="Abstract layered clay sculpture">
+          <div className="clay-hero-orb clay-hero-orb-mint"/>
+          <div className="clay-hero-orb clay-hero-orb-coral"/>
+          <div className="clay-hero-orb clay-hero-orb-aqua"/>
+          <div className="clay-hero-sculpture">
+            <div className="clay-sculpture-play"><Play size={54} fill="currentColor"/></div>
+            <span className="clay-sculpture-spark">✦</span>
+          </div>
+          <div className="clay-hero-shadow"/>
+        </div>
+        <aside className="clay-characteristics">
+          <h2>Key characteristics</h2>
+          {['Soft, rounded geometry','Inflated tactile surfaces','Gentle diffused shadows','Playful pastel colour','Responsive physical feedback'].map((item, index) =>
+            <div key={item}><span>{['◈','▱','☼','✿','⌁'][index]}</span>{item}</div>
+          )}
+        </aside>
+      </section>
 
-  <section className="clay-section"><div className="clay-label"><span>06</span><b>FORM</b></div><div><h2>Round the edges.<br/><em>Keep the character.</em></h2><p>Soft geometry makes controls feel approachable. Circles, inflated rectangles and generous radii establish the molded visual vocabulary.</p><div className="clay-form-demo"><div/><div/><div/><span>SOFT GEOMETRY</span></div></div></section>
+      <section className="clay-specimen-grid clay-grid-top">
+        <article className="clay-panel clay-anatomy-panel">
+          <SectionHeading eyebrow="01 / MATERIAL STUDY" title="Anatomy of a clay surface" note="A soft object is built from light, body and shadow."/>
+          <div className="clay-layer-study">
+            <div className="clay-layer-stack" aria-hidden="true">
+              <div className="clay-layer clay-layer-highlight"/>
+              <div className="clay-layer clay-layer-body"/>
+              <div className="clay-layer clay-layer-depth"/>
+              <div className="clay-layer-ground"/>
+            </div>
+            <div className="clay-layer-labels">
+              <div><i/><b>Highlight</b><span>Soft, diffused light</span></div>
+              <div><i/><b>Surface</b><span>Smooth, matte finish</span></div>
+              <div><i/><b>Body colour</b><span>Pastel material base</span></div>
+              <div><i/><b>Ambient shadow</b><span>Broad, soft falloff</span></div>
+            </div>
+          </div>
+        </article>
 
-  <section className="clay-section"><div className="clay-label"><span>07</span><b>TOUCH</b></div><div><h2>Press it.<br/><em>Feel it respond.</em></h2><p>The interface communicates touch through compression and spring-back. Interaction becomes part of the material itself.</p><div className="clay-states"><div><span>REST</span><b>RAISED</b></div><i>→</i><div><span>TOUCH</span><b>PRESSED</b></div><i>→</i><div><span>RELEASE</span><b>SPRING</b></div></div></div></section>
+        <article className="clay-panel clay-palette-panel">
+          <SectionHeading eyebrow="02 / COLOUR STUDY" title="A playful palette" note="Pastels carry the material without overpowering it."/>
+          <div className="clay-swatch-grid">
+            {palette.map((colour) => <div className="clay-swatch" key={colour.name}>
+              <span className={'clay-swatch-chip ' + colour.tone}/>
+              <b>{colour.name}</b><code>{colour.hex}</code>
+            </div>)}
+          </div>
+          <div className="clay-palette-note"><span/>Use one dominant pastel, then balance with a quieter neutral.</div>
+        </article>
 
-  <section className="clay-section"><div className="clay-label"><span>08</span><b>ADAPTATION</b></div><div><h2>One soft language.<br/><em>Many interfaces.</em></h2><p>Claymorphism can scale from playful controls to complete interface systems while preserving its tactile personality.</p><div className="clay-adapt"><div><span>MOBILE</span><b>FOCUS</b></div><div><span>TABLET</span><b>PLAY</b></div><div><span>DESKTOP</span><b>FLOW</b></div></div></div></section>
+        <article className="clay-panel clay-buttons-panel">
+          <SectionHeading eyebrow="03 / ACTIONS" title="Button variations" note="Raised, pillowy surfaces with clear hierarchy."/>
+          <div className="clay-button-row">
+            <button className="clay-ui-button clay-primary" type="button">Primary action <ArrowLeft className="clay-button-arrow" size={15}/></button>
+            <button className="clay-ui-button clay-secondary" type="button">Secondary</button>
+          </div>
+          <div className="clay-icon-button-row">
+            <button className="clay-icon-button tone-lavender" type="button" aria-label="Play"><Play size={22} fill="currentColor"/></button>
+            <button className="clay-icon-button tone-aqua" type="button" aria-label="Add"><Plus size={25}/></button>
+            <button className={'clay-icon-button tone-coral ' + (liked ? 'is-selected' : '')} type="button" aria-label={liked ? 'Unlike' : 'Like'} aria-pressed={liked} onClick={() => setLiked(!liked)}><Heart size={22} fill={liked ? 'currentColor' : 'none'}/></button>
+            <button className="clay-icon-button tone-butter" type="button" aria-label="Download"><Download size={21}/></button>
+          </div>
+        </article>
+      </section>
 
-  <footer className="clay-footer"><span>CLAYMORPHISM / 02.04</span><h2>Soft surface.<br/><em>Strong character.</em></h2><p>A tactile visual language built from softness, volume, touch, play and depth.</p><button onClick={()=>onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowLeft size={15}/></button></footer>
- </main>;
+      <section className="clay-specimen-grid clay-grid-controls">
+        <article className="clay-panel clay-controls-panel">
+          <SectionHeading eyebrow="04 / INPUTS" title="Tactile controls" note="Small controls should feel soft, not slippery."/>
+          <div className="clay-control-row">
+            <button type="button" role="switch" aria-checked={toggle} aria-label="Enable soft mode" className={'clay-switch ' + (toggle ? 'is-on' : '')} onClick={() => setToggle(!toggle)}><span/></button>
+            <button type="button" role="checkbox" aria-checked={checked} aria-label="Select option" className={'clay-checkbox ' + (checked ? 'is-checked' : '')} onClick={() => setChecked(!checked)}>{checked && <Check size={18}/>}</button>
+            <button type="button" className="clay-radio" aria-label="Selected radio option" aria-pressed="true"><span/></button>
+            <label className="clay-range-wrap"><span className="sr-only">Surface depth</span><input type="range" min="0" max="100" value={range} onChange={(event) => setRange(Number(event.target.value))} style={{'--range-value': range + '%'}}/></label>
+            <output className="clay-range-value">{range}</output>
+          </div>
+          <p className="clay-control-feedback">{toggle ? 'Soft mode enabled' : 'Soft mode disabled'} · {checked ? 'Option selected' : 'Option cleared'}</p>
+        </article>
+
+        <article className="clay-panel clay-input-panel">
+          <SectionHeading eyebrow="05 / TEXT ENTRY" title="Input field" note="A recessed surface gives the field a gentle inset feel."/>
+          <label className="clay-search-field">
+            <Search size={20}/>
+            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search the specimen…" aria-label="Search the specimen"/>
+            {query && <button type="button" onClick={() => setQuery('')} aria-label="Clear search"><X size={16}/></button>}
+          </label>
+          <span className="clay-input-hint">{query ? 'Searching for: ' + query : 'Try entering a component name.'}</span>
+        </article>
+
+        <article className="clay-panel clay-states-panel">
+          <SectionHeading eyebrow="06 / FEEDBACK" title="Button states" note="The material changes with the interaction."/>
+          <div className="clay-state-grid">
+            <div><button type="button" className="clay-state-button state-default">Aa</button><b>Default</b></div>
+            <div><button type="button" className="clay-state-button state-hover">Aa</button><b>Hover</b></div>
+            <div><button type="button" className="clay-state-button state-pressed" {...pressProps('state')}>Aa</button><b>Pressed</b></div>
+            <div><button type="button" className="clay-state-button state-disabled" disabled>Aa</button><b>Disabled</b></div>
+          </div>
+          <span className="clay-state-caption">{pressed === 'state' ? 'Pressed state preview' : 'Compare the four visual states'}</span>
+        </article>
+      </section>
+
+      <section className="clay-specimen-grid clay-grid-patterns">
+        <article className="clay-panel clay-card-examples">
+          <SectionHeading eyebrow="07 / SURFACE PATTERNS" title="Card examples" note="Different content, one consistent material language."/>
+          <div className="clay-example-cards">
+            <div className="clay-example-card">
+              <div className="clay-example-art art-landscape"><span/><i/></div>
+              <b>Media card</b><p>Image and video content</p>
+            </div>
+            <div className="clay-example-card">
+              <div className="clay-example-art art-folder"><span/><i/></div>
+              <b>Collection card</b><p>Group related content</p>
+            </div>
+            <div className="clay-example-card">
+              <div className="clay-example-art art-stats"><i/><i/><i/></div>
+              <b>Data card</b><p>Simple progress and metrics</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="clay-panel clay-player-panel">
+          <SectionHeading eyebrow="08 / INTERFACE PATTERN" title="Media player" note="A compact interface assembled from clay components."/>
+          <div className="clay-player">
+            <div className="clay-player-cover"><span/><i/></div>
+            <div className="clay-player-meta"><b>Morning Vibes</b><span>Ambient playlist · 12 tracks</span></div>
+            <button type="button" className={'clay-player-like ' + (liked ? 'is-selected' : '')} aria-label="Like playlist" aria-pressed={liked} onClick={() => setLiked(!liked)}><Heart size={19} fill={liked ? 'currentColor' : 'none'}/></button>
+            <div className="clay-player-progress"><span/><i/></div>
+            <div className="clay-player-time"><span>01:24</span><span>03:56</span></div>
+            <div className="clay-player-controls">
+              <button type="button" aria-label="Previous track"><ArrowLeft size={17}/></button>
+              <button type="button" className="clay-player-play" aria-label={playing ? 'Pause' : 'Play'} onClick={() => setPlaying(!playing)}>{playing ? <Pause size={20} fill="currentColor"/> : <Play size={20} fill="currentColor"/>}</button>
+              <button type="button" aria-label="Next track"><ArrowLeft className="clay-next-icon" size={17}/></button>
+            </div>
+            <span className="clay-player-status"><Music2 size={13}/>{playing ? 'Now playing' : 'Ready to play'}</span>
+          </div>
+        </article>
+
+        <article className="clay-panel clay-guidelines-panel">
+          <SectionHeading eyebrow="09 / DESIGN PRACTICE" title="Usage guide" note="Keep the softness intentional."/>
+          <ul className="clay-guideline-list">
+            <li><CheckCircle2/>Use soft, balanced shadows.</li>
+            <li><CheckCircle2/>Keep shapes rounded and simple.</li>
+            <li><CheckCircle2/>Use pastel colour with clear contrast.</li>
+            <li className="avoid"><X/>Avoid sharp edges and hard shadows.</li>
+            <li className="avoid"><X/>Do not overuse depth or gloss.</li>
+            <li className="avoid"><X/>Keep text and focus states accessible.</li>
+          </ul>
+        </article>
+      </section>
+
+      <footer className="clay-specimen-footer">
+        <span>CLAYMORPHISM / DESIGN ANATOMY</span>
+        <p>Soft surfaces. Clear purpose. Tactile feedback.</p>
+        <button type="button" onClick={() => onNavigate?.('library')}><ArrowLeft size={15}/> Return to Design Library</button>
+      </footer>
+    </div>
+  </main>;
 }
