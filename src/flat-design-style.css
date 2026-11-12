@@ -12,8 +12,8 @@
 .flat-hero h1{font:700 clamp(58px,7vw,94px)/.88 'Space Grotesk';letter-spacing:-.075em;margin:23px 0 16px}.flat-hero h1 span{color:var(--flat-accent)}
 .flat-hero-copy>p{max-width:460px;color:var(--flat-muted);font-size:16px;line-height:1.55;margin:0}
 .flat-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.flat-hero-actions a{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;background:var(--flat-accent);color:#fff;text-decoration:none;font-size:12px;font-weight:800;border-radius:7px;transition:background .16s,transform .16s}
-.flat-hero-actions a:hover{background:#1d4ed8;transform:translateY(-2px)}
+.flat-hero-actions a,.flat-hero-actions button{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;background:var(--flat-accent);color:#fff;text-decoration:none;font-size:12px;font-weight:800;border-radius:7px;cursor:pointer;font-family:inherit;transition:background .16s,transform .16s}
+.flat-hero-actions a:hover,.flat-hero-actions button:hover{background:#1d4ed8;transform:translateY(-2px)}
 .flat-hero-actions .flat-secondary-action{background:transparent;border:1px solid #66758b;color:var(--flat-text)}.flat-hero-actions .flat-secondary-action:hover{background:var(--flat-panel)}
 .flat-hero-art{height:292px;position:relative;overflow:hidden;border-radius:16px;background:#16a9e8;isolation:isolate}
 .flat-sky-sun{position:absolute;width:104px;height:104px;border-radius:50%;background:#facc15;left:37%;top:7%;z-index:0}
