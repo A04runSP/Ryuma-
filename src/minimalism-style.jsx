@@ -41,7 +41,7 @@ export default function MinimalismStyle({ onNavigate }) {
         </div>
         <div className="minimalism-poster" role="img" aria-label="Editorial Minimalism poster: bold black THE ESSENTIAL typography over a powder-blue square, a small brown circle containing the Minimalism description, and a curved brown underline">
           <div className="poster-meta"><span>FORM STUDY — 001</span><span>2026</span></div>
-          <div className="poster-number">01</div>
+          <div className="poster-index"><span>01</span><i aria-hidden="true" /></div>
           <div className="poster-square" aria-hidden="true" />
           <div className="poster-title">THE<br /><i>ESSENTIAL.</i></div>
           <svg className="poster-underline" viewBox="0 0 720 52" preserveAspectRatio="none" aria-hidden="true">
