@@ -3,8 +3,8 @@ import { ArrowLeft, ArrowRight, Power, Sun, Volume2 } from 'lucide-react';
 import './neomorphism-style.css';
 
 const parts=[
- {n:'01',t:'Colour',d:'A warm peach surface carries the system. Cream, coral and muted violet provide restrained accents.'},
- {n:'02',t:'Type',d:'Deep charcoal typography keeps the tactile interface readable and grounded.'},
+ {n:'01',t:'Colour',d:'Midnight graphite surfaces carry the system. Ember orange provides a restrained, high-contrast accent.'},
+ {n:'02',t:'Type',d:'Warm ivory typography keeps the tactile interface readable and grounded.'},
  {n:'03',t:'Form',d:'Rounded controls become raised or recessed through paired soft shadows.'},
  {n:'04',t:'Space',d:'Open spacing separates tactile objects so the surface never feels crowded.'},
  {n:'05',t:'Motion',d:'Controls press inward and release outward, reinforcing the physical metaphor.'}
@@ -23,16 +23,16 @@ export default function NeomorphismStyle({onNavigate}){
   '--neo-depth':depth,
   '--neo-offset':`${4+depth*18}px`,
   '--neo-blur':`${10+depth*34}px`,
-  '--neo-light':`rgba(255,225,213,${Math.min(light,.5)})`,
-  '--neo-dark':`rgba(155,83,70,${Math.min(dark,.62)})`,
+  '--neo-light':`rgba(255,255,255,${Math.min(light,.28)})`,
+  '--neo-dark':`rgba(0,0,0,${Math.min(dark,.72)})`,
   '--neo-state':`${pressedCount}`
  };
  const buttonStyle=(isPressed)=>({
   '--neo-btn-offset':`${5+depth*9}px`,
   '--neo-btn-blur':`${10+depth*18}px`,
   '--neo-btn-inset':`${4+depth*7}px`,
-  '--neo-btn-light':`rgba(255,225,213,${Math.min(isPressed?light*.9:light,.5)})`,
-  '--neo-btn-dark':`rgba(155,83,70,${Math.min(isPressed?dark*1.1:dark,.68)})`
+  '--neo-btn-light':`rgba(255,255,255,${Math.min(isPressed?light*.9:light,.28)})`,
+  '--neo-btn-dark':`rgba(0,0,0,${Math.min(isPressed?dark*1.1:dark,.76)})`
  });
  const stateText=pressedCount===0?'ALL RAISED':pressedCount===3?'ALL PRESSED':`${pressedCount} PRESSED · ${raisedCount} RAISED`;
  return <main className="neo-page"><header className="neo-nav"><button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button><div><b>RYUMA</b><span>リューマ</span></div><small>DESIGN LANGUAGE / 03</small></header>
