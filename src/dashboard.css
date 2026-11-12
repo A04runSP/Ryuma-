@@ -9,3 +9,164 @@
 
 /* Dashboard branding: solid Deep Violet, matching the approved Ryūma palette. */
 .dashboard-brand b { color: #6A2C91; }
+
+
+/* Palette C final dashboard pass.
+   Kept at the end of dashboard.css so component-level legacy rules cannot
+   reintroduce the former violet/pink gradient treatment. */
+.dashboard-shell {
+  background: var(--ryuma-c-base) !important;
+  color: var(--ryuma-c-text-primary) !important;
+}
+.dashboard-shell .dashboard-brand b,
+.dashboard-shell .dashboard-kicker,
+.dashboard-shell .system-no,
+.dashboard-shell .history-no,
+.dashboard-shell .foundation-no,
+.dashboard-shell .reading-step > span,
+.dashboard-shell .principle-card > span,
+.dashboard-shell .history-copy strong,
+.dashboard-shell .system-panel-copy button,
+.dashboard-shell .influence-line,
+.dashboard-shell .foundation-formula,
+.dashboard-shell .language-chain,
+.dashboard-shell .history-thread {
+  color: var(--ryuma-c-accent) !important;
+  -webkit-text-fill-color: var(--ryuma-c-accent) !important;
+  background: none !important;
+}
+.dashboard-shell .dashboard-hero h1,
+.dashboard-shell .dashboard-story h2,
+.dashboard-shell .dashboard-systems h2,
+.dashboard-shell .dashboard-history h2,
+.dashboard-shell .dashboard-foundations h2,
+.dashboard-shell .dashboard-reading h2,
+.dashboard-shell .dashboard-principles h2,
+.dashboard-shell .dashboard-language h2,
+.dashboard-shell .dashboard-end h2,
+.dashboard-shell .system-toggle h3,
+.dashboard-shell .history-toggle h3,
+.dashboard-shell .foundation-card h3,
+.dashboard-shell .reading-step h3,
+.dashboard-shell .principle-card h3,
+.dashboard-shell .preview-placeholder b {
+  background: none !important;
+  color: var(--ryuma-c-text-primary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-primary) !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow: none !important;
+}
+.dashboard-shell .dashboard-hero h1 span,
+.dashboard-shell .dashboard-story h2 span,
+.dashboard-shell .dashboard-systems h2 span,
+.dashboard-shell .dashboard-history h2 span,
+.dashboard-shell .dashboard-foundations h2 span,
+.dashboard-shell .dashboard-reading h2 span,
+.dashboard-shell .dashboard-principles h2 span,
+.dashboard-shell .dashboard-language h2 span,
+.dashboard-shell .dashboard-end h2 span {
+  color: var(--ryuma-c-accent) !important;
+  -webkit-text-fill-color: var(--ryuma-c-accent) !important;
+  background: none !important;
+}
+.dashboard-shell .dashboard-brand,
+.dashboard-shell .dashboard-back,
+.dashboard-shell .dashboard-library,
+.dashboard-shell .system-toggle,
+.dashboard-shell .history-toggle {
+  color: var(--ryuma-c-text-primary) !important;
+}
+.dashboard-shell .dashboard-brand em,
+.dashboard-shell .dashboard-nav-title,
+.dashboard-shell .dashboard-hero p,
+.dashboard-shell .story-copy p,
+.dashboard-shell .systems-heading > p,
+.dashboard-shell .history-heading > p,
+.dashboard-shell .foundations-heading > p,
+.dashboard-shell .reading-heading > p,
+.dashboard-shell .principles-heading > p,
+.dashboard-shell .language-copy p,
+.dashboard-shell .dashboard-end > p,
+.dashboard-shell .system-toggle p,
+.dashboard-shell .system-panel-copy p,
+.dashboard-shell .history-copy p,
+.dashboard-shell .foundation-card p,
+.dashboard-shell .reading-step p,
+.dashboard-shell .principle-card p,
+.dashboard-shell .preview-placeholder small {
+  color: var(--ryuma-c-text-secondary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-secondary) !important;
+}
+.dashboard-shell .story-copy strong,
+.dashboard-shell .language-copy strong { color: var(--ryuma-c-text-primary) !important; }
+.dashboard-shell .system-row,
+.dashboard-shell .history-card,
+.dashboard-shell .foundation-card,
+.dashboard-shell .reading-step,
+.dashboard-shell .principle-card {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.dashboard-shell .system-row:hover,
+.dashboard-shell .history-card:hover,
+.dashboard-shell .history-card.is-open {
+  border-color: var(--ryuma-c-accent) !important;
+  box-shadow: inset 3px 0 0 var(--ryuma-c-accent) !important;
+}
+.dashboard-shell .system-panel,
+.dashboard-shell .system-preview,
+.dashboard-shell .preview-placeholder,
+.dashboard-shell .history-panel {
+  background: var(--ryuma-c-structure) !important;
+  border-color: var(--ryuma-c-border) !important;
+}
+.dashboard-shell .history-image-wrap {
+  background: var(--ryuma-c-surface-raised) !important;
+  border-color: var(--ryuma-c-border) !important;
+}
+.dashboard-shell .history-image-wrap span {
+  background: var(--ryuma-c-base) !important;
+  color: var(--ryuma-c-text-primary) !important;
+}
+.dashboard-shell .system-chevron,
+.dashboard-shell .history-chevron,
+.dashboard-shell .influence-line i,
+.dashboard-shell .foundation-formula i,
+.dashboard-shell .language-chain i,
+.dashboard-shell .history-thread i {
+  color: var(--ryuma-c-text-muted) !important;
+}
+.dashboard-shell .foundation-card strong,
+.dashboard-shell .system-preview > span,
+.dashboard-shell .system-panel-copy > span,
+.dashboard-shell .history-era,
+.dashboard-shell .foundation-formula em {
+  color: var(--ryuma-c-text-muted) !important;
+}
+.dashboard-shell .dashboard-cta,
+.dashboard-shell .system-panel-copy button,
+.dashboard-shell .dashboard-end button {
+  background: var(--ryuma-c-accent) !important;
+  border: 1px solid var(--ryuma-c-accent) !important;
+  color: var(--ryuma-c-text-on-accent) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-on-accent) !important;
+  box-shadow: none !important;
+}
+.dashboard-shell .dashboard-cta:hover,
+.dashboard-shell .system-panel-copy button:hover,
+.dashboard-shell .dashboard-end button:hover {
+  background: var(--ryuma-c-accent-hover) !important;
+  border-color: var(--ryuma-c-accent-hover) !important;
+}
+.dashboard-shell button:focus-visible {
+  outline: 3px solid var(--ryuma-c-focus) !important;
+  outline-offset: 3px !important;
+}
+.dashboard-shell .dashboard-footer {
+  border-color: var(--ryuma-c-divider) !important;
+  color: var(--ryuma-c-text-muted) !important;
+}
