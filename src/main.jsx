@@ -22,6 +22,7 @@ import './editorial-design-style.css';
 import './editorial-design-enhancements.css';
 import './organic-natural-design-style.css';
 import './global-shell-theme.css';
+import './palette-c-shell.css';
 import './special-style.css';
 import Dashboard from './dashboard.jsx';
 import PracticeStudio from './practice-studio.jsx';
