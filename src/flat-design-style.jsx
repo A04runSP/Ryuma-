@@ -3,11 +3,11 @@ import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 import './flat-design-style.css';
 
 const anatomy = [
-  { title: 'Colour', copy: 'Solid, purposeful colour creates hierarchy.', mark: '●', tone: 'violet' },
+  { title: 'Colour', copy: 'Solid, purposeful colour creates hierarchy.', mark: '●', tone: 'blue' },
   { title: 'Typography', copy: 'Clear type makes information easy to scan.', mark: 'Aa', tone: 'blue' },
   { title: 'Layout', copy: 'Grid and alignment create order.', mark: '▦', tone: 'cyan' },
   { title: 'Components', copy: 'Simple elements communicate their purpose.', mark: '▱', tone: 'green' },
-  { title: 'Interaction', copy: 'Immediate feedback makes actions clear.', mark: '↗', tone: 'violet' },
+  { title: 'Interaction', copy: 'Immediate feedback makes actions clear.', mark: '↗', tone: 'blue' },
   { title: 'Responsive', copy: 'The system adapts across screen sizes.', mark: '▣', tone: 'blue' },
 ];
 
