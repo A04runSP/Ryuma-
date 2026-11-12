@@ -400,3 +400,36 @@
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }
+
+
+/* Home anatomy cards: use Palette C rather than a glass-inspired treatment.
+   The Design Library's dedicated Glassmorphism specimen is intentionally untouched. */
+.home-shell .anatomy-stage {
+  background: var(--ryuma-c-structure) !important;
+  border-color: var(--ryuma-c-border) !important;
+  box-shadow: none !important;
+}
+.home-shell .anatomy-item {
+  background: var(--ryuma-c-surface-raised) !important;
+  border: 1px solid var(--ryuma-c-border) !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home-shell .anatomy-item h3 {
+  color: var(--ryuma-c-text-primary) !important;
+  -webkit-text-fill-color: var(--ryuma-c-text-primary) !important;
+}
+.home-shell .anatomy-item .anatomy-mark {
+  color: var(--ryuma-c-accent) !important;
+}
+.home-shell .anatomy-item p {
+  color: var(--ryuma-c-text-secondary) !important;
+}
+.home-shell .anatomy-item:hover,
+.home-shell .anatomy-item:focus-visible,
+.home-shell .anatomy-item:active {
+  border-color: var(--ryuma-c-accent) !important;
+  box-shadow: inset 3px 0 0 var(--ryuma-c-accent) !important;
+}
