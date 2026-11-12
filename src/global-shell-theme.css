@@ -1656,3 +1656,61 @@
     padding-top: 52px;
   }
 }
+
+
+/* Design Library mobile refinement — retain the editorial feel with tighter cards. */
+@media (max-width: 680px) {
+  .library-shell .library-hero {
+    padding-top: 52px;
+    padding-bottom: 64px;
+  }
+
+  .library-shell .library-group {
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+
+  .library-shell .library-group-head {
+    margin-bottom: 24px;
+  }
+
+  .library-shell .library-card {
+    min-height: 252px;
+    border-radius: 22px;
+  }
+
+  .library-shell .library-card-art {
+    height: 112px;
+  }
+
+  .library-shell .library-card-number {
+    padding-top: 16px;
+  }
+
+  .library-shell .library-card-info {
+    padding: 0 18px 20px;
+  }
+
+  .library-shell .library-card-info h3 {
+    font-size: 19px;
+  }
+
+  .library-shell .library-end {
+    padding-top: 68px;
+    padding-bottom: 78px;
+  }
+}
+
+@media (max-width: 380px) {
+  .library-shell .library-card {
+    min-height: 238px;
+  }
+
+  .library-shell .library-card-art {
+    height: 100px;
+  }
+
+  .library-shell .library-card-info h3 {
+    font-size: 18px;
+  }
+}
