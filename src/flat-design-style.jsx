@@ -1,26 +1,132 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 import './flat-design-style.css';
 
-const anatomy=[
- {no:'01',title:'Colour',copy:'Bright colour blocks communicate categories, actions and emphasis without needing visual effects.'},
- {no:'02',title:'Type',copy:'Sharp, confident letterforms create hierarchy and give the interface its digital voice.'},
- {no:'03',title:'Form',copy:'Simple geometric shapes build the visual vocabulary: circles, rectangles, lines and blocks.'},
- {no:'04',title:'Space',copy:'Clear spacing separates information and lets bold shapes remain easy to scan.'},
- {no:'05',title:'Motion',copy:'Small shifts, reveals and colour changes make interaction feel immediate and purposeful.'}
+const anatomy = [
+  { title: 'Colour', copy: 'Solid, purposeful colour creates hierarchy.', mark: '●', tone: 'blue' },
+  { title: 'Typography', copy: 'Clear type makes information easy to scan.', mark: 'Aa', tone: 'blue' },
+  { title: 'Layout', copy: 'Grid and alignment create order.', mark: '▦', tone: 'cyan' },
+  { title: 'Components', copy: 'Simple elements communicate their purpose.', mark: '▱', tone: 'green' },
+  { title: 'Interaction', copy: 'Immediate feedback makes actions clear.', mark: '↗', tone: 'blue' },
+  { title: 'Responsive', copy: 'The system adapts across screen sizes.', mark: '▣', tone: 'blue' },
 ];
 
-export default function FlatDesignStyle({onNavigate}){
- const [interactionMode,setInteractionMode]=useState('');
- const showInteraction=(mode)=>setInteractionMode(current=>current===mode?'':mode);
- return <main className="flat-style-page">
-  <header className="flat-nav"><button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button><div><b>RYUMA</b><span>リューマ</span></div><span>DESIGN LANGUAGE / 02</span></header>
-  <section className="flat-hero"><div className="flat-copy"><span className="flat-kicker">02 / FLAT DESIGN</span><h1>Simple<br/><em>hits hard.</em></h1><p className="flat-lead">A modern digital language built from colour, geometry and clarity.</p><p>No fake depth. No unnecessary surface. Just strong visual decisions arranged into a system.</p><div className="flat-palette"><i/><i/><i/><i/><i/></div></div><div className="flat-poster"><div className="flat-block blue"/><div className="flat-block violet"/><div className="flat-block cyan"/><div className="flat-block lime"/><span className="poster-number">03</span><strong>FLAT<br/><em>FORM.</em></strong><small>COLOUR / TYPE / SPACE</small></div></section>
-  <section className="flat-section"><div className="flat-label"><span>03</span><b>THE IDEA</b></div><div><h2>Less surface.<br/><em>More signal.</em></h2><p>Flat design treats the interface as a visual system, not a physical object.</p><p className="flat-strong">Colour communicates. Shape organizes. Typography guides. Space separates.</p><div className="flat-rule"><span>SEE</span><i>→</i><span>UNDERSTAND</span><i>→</i><span>ACT</span></div></div></section>
-  <section className="flat-section"><div className="flat-label"><span>04</span><b>DESIGN ANATOMY</b></div><div><h2>Five parts.<br/><em>One flat language.</em></h2><div className="flat-anatomy">{anatomy.map(item=><article key={item.no}><span>{item.no}</span><b>{item.title.toUpperCase()}</b><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></div></section>
-  <section className="flat-section flat-composition"><div className="flat-label"><span>05</span><b>COMPOSITION</b></div><div><h2>Build with<br/><em>simple shapes.</em></h2><div className="flat-canvas" aria-label="Flat design weather app example"><div className="flat-weather-top"><span>MONDAY, 14 OCT</span><button onClick={()=>showInteraction('weather')}>CHANGE CITY ↗</button></div><div className="flat-weather-main"><div><small>CHENNAI, INDIA</small><strong>29°</strong><b>PARTLY CLOUDY</b><span>Feels like 32° · H 31° / L 26°</span></div><div className="flat-sun-cloud" aria-hidden="true"><i/><b/></div></div><div className="flat-weather-strip"><div><small>NOW</small><b>☀</b><strong>29°</strong></div><div><small>3 PM</small><b>☁</b><strong>30°</strong></div><div><small>4 PM</small><b>☁</b><strong>29°</strong></div><div><small>5 PM</small><b>☂</b><strong>27°</strong></div></div><div className="flat-weather-bottom"><span>{interactionMode==='weather'?'CITY SELECTOR DEMO — CHENNAI':'SIMPLE SHAPES. CLEAR INFORMATION.'}</span><button onClick={()=>showInteraction('weather')}>VIEW FORECAST <ArrowRight size={15}/></button></div></div></div></section>
-  <section className="flat-section"><div className="flat-label"><span>06</span><b>VISUAL HIERARCHY</b></div><div><h2>Make the important<br/><em>impossible to miss.</em></h2><div className="flat-hierarchy"><div><b>01</b><strong>SIZE</strong><span>Larger elements attract attention first.</span></div><div><b>02</b><strong>COLOUR</strong><span>Bright accents identify action and emphasis.</span></div><div><b>03</b><strong>POSITION</strong><span>Placement establishes relationships.</span></div><div><b>04</b><strong>CONTRAST</strong><span>Strong contrast creates priority.</span></div></div></div></section>
-  <section className="flat-section flat-interaction"><div className="flat-label"><span>07</span><b>INTERACTION</b></div><div><h2>Design the response,<br/><em>not the illusion.</em></h2><p>A button can change colour. A panel can slide. An icon can rotate. The interaction should communicate that something happened — not pretend to be a physical object.</p><div className={`flat-interaction-demo ${interactionMode}`}><span>SYSTEM RESPONSE</span><strong>{interactionMode?interactionMode.toUpperCase():'SELECT AN ACTION'}</strong><i>{interactionMode==='hover'?'The element reacts to focus.':interactionMode==='press'?'The action is acknowledged.':interactionMode==='change'?'The visual state changes.':'Tap a control to test the behaviour.'}</i></div><div className="flat-actions"><button className={interactionMode==='hover'?'is-selected':''} onClick={()=>showInteraction('hover')}>HOVER</button><button className={interactionMode==='press'?'is-selected':''} onClick={()=>showInteraction('press')}>PRESS</button><button className={interactionMode==='change'?'is-selected':''} onClick={()=>showInteraction('change')}>CHANGE</button></div></div></section>
-  <footer className="flat-footer"><span>FLAT DESIGN / 02</span><h2>Simple form.<br/><em>Strong signal.</em></h2><p>A focused design specimen for studying clarity, colour, geometry and digital interaction.</p><button onClick={()=>onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowLeft size={15}/></button></footer>
- </main>;
+const palette = [
+  { name: 'Blue', hex: '#2563EB' },
+  { name: 'Red', hex: '#EF4444' },
+  { name: 'Yellow', hex: '#FACC15' },
+  { name: 'Green', hex: '#10B981' },
+  { name: 'Ink', hex: '#0F172A' },
+];
+
+export default function FlatDesignStyle({ onNavigate }) {
+  const [city, setCity] = useState('Chennai');
+  const [forecastOpen, setForecastOpen] = useState(false);
+  const [interaction, setInteraction] = useState('normal');
+
+  const weather = city === 'Chennai'
+    ? { temp: '32°', condition: 'PARTLY CLOUDY', high: '34°', low: '27°' }
+    : { temp: '28°', condition: 'CLOUDY', high: '30°', low: '23°' };
+
+  return (
+    <main className="flat-style-page">
+      <header className="flat-nav">
+        <button className="flat-back" onClick={() => onNavigate?.('library')}><ArrowLeft size={16} /> DESIGN LIBRARY</button>
+        <div className="flat-brand"><b>RYŪMA</b><span>DESIGN ANATOMY</span></div>
+        <span className="flat-nav-label">DESIGN LANGUAGE / 04</span>
+      </header>
+
+      <section className="flat-hero">
+        <div className="flat-hero-copy">
+          <span className="flat-kicker">04 / FLAT DESIGN</span>
+          <h1>Flat<br /><span>Design.</span></h1>
+          <p>A clean, simple and functional design approach that focuses on clarity, content and usability.</p>
+          <div className="flat-hero-actions">
+            <button type="button" onClick={() => document.getElementById("flat-anatomy")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Explore Anatomy <ArrowRight size={16} /></button>
+            <button type="button" className="flat-secondary-action" onClick={() => document.getElementById("flat-weather-demo")?.scrollIntoView({ behavior: "smooth", block: "start" })}><Play size={13} /> Live Demo</button>
+          </div>
+        </div>
+        <div className="flat-hero-art" role="img" aria-label="Flat geometric landscape with a house, sun, mountains and tree">
+          <div className="flat-sky-sun" />
+          <div className="flat-cloud" />
+          <div className="flat-mountain flat-mountain-back" />
+          <div className="flat-mountain flat-mountain-front" />
+          <div className="flat-tree"><i /></div>
+          <div className="flat-house"><i /><b /></div>
+          <div className="flat-ground" />
+        </div>
+      </section>
+
+      <section className="flat-principles" aria-label="Flat design principles">
+        <div><b className="principle-icon">◎</b><span><strong>Simple</strong><small>Clear and focused</small></span></div>
+        <div><b className="principle-icon">▱</b><span><strong>Functional</strong><small>Purpose-driven UI</small></span></div>
+        <div><b className="principle-icon">ϟ</b><span><strong>Scalable</strong><small>Works across devices</small></span></div>
+        <div><b className="principle-icon">▦</b><span><strong>Modern</strong><small>Timeless and versatile</small></span></div>
+      </section>
+
+      <section className="flat-content-row" id="flat-anatomy">
+        <div className="flat-overview">
+          <div className="flat-section-heading"><i /> <h2>Design Overview</h2></div>
+          <p>Flat Design removes unnecessary visual effects and focuses on content, hierarchy and action.</p>
+          <div className="flat-shape-stack" aria-hidden="true"><i /><b /><span /></div>
+        </div>
+        <div className="flat-anatomy">
+          <div className="flat-section-heading"><i /> <h2>Core Anatomy</h2></div>
+          <div className="flat-anatomy-grid">
+            {anatomy.map((item) => (
+              <article className="flat-anatomy-card" key={item.title}>
+                <b className={`flat-anatomy-mark ${item.tone}`}>{item.mark}</b>
+                <strong>{item.title}</strong>
+                <p>{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="flat-lab-row" id="flat-interaction-demo">
+        <div className="flat-interaction">
+          <div className="flat-section-heading"><i /> <h2>Interaction States</h2></div>
+          <p>Try the controls to see how a flat interface responds.</p>
+          <div className="flat-state-buttons">
+            <button className="state-normal" onClick={() => setInteraction('normal')}>Normal</button>
+            <button className="state-hover" onClick={() => setInteraction('hover')}>Hover</button>
+            <button className="state-pressed" onClick={() => setInteraction('pressed')}>Pressed</button>
+            <button className="state-disabled" disabled>Disabled</button>
+          </div>
+          <div className={`flat-state-output state-${interaction}`} aria-live="polite">
+            <strong>{interaction === 'normal' ? 'Default state' : interaction === 'hover' ? 'Hover / focus state' : 'Pressed state'}</strong>
+            <span>{interaction === 'normal' ? 'Ready for input' : interaction === 'hover' ? 'The control highlights on hover or keyboard focus.' : 'The action has been acknowledged.'}</span>
+          </div>
+        </div>
+
+        <div className="flat-palette-section">
+          <div className="flat-section-heading"><i /> <h2>Colour Palette</h2></div>
+          <p>Bright, functional colours with strong contrast.</p>
+          <div className="flat-swatches">
+            {palette.map((color) => <div className="flat-swatch" key={color.hex}><span style={{ background: color.hex }} /><strong>{color.hex}</strong><small>{color.name}</small></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="flat-weather" id="flat-weather-demo">
+        <div className="flat-section-heading"><i /> <h2>Flat Design in Practice</h2></div>
+        <p>A compact weather interface built with colour blocks, simple icons and clear information.</p>
+        <div className="flat-weather-card">
+          <div className="flat-weather-location">
+            <span>{city.toUpperCase()}, INDIA</span>
+            <button onClick={() => { setCity(city === 'Chennai' ? 'Bengaluru' : 'Chennai'); setForecastOpen(false); }}>CHANGE CITY ↗</button>
+          </div>
+          <div className="flat-weather-main">
+            <div><strong>{weather.temp}</strong><b>{weather.condition}</b><small>H: {weather.high} &nbsp; L: {weather.low}</small></div>
+            <div className="flat-weather-sun" aria-hidden="true">☀</div>
+          </div>
+          {forecastOpen && <div className="flat-forecast" aria-live="polite"><span>MON <b>☀ 32°</b></span><span>TUE <b>☁ 30°</b></span><span>WED <b>☀ 33°</b></span><span>THU <b>☁ 29°</b></span></div>}
+          <button className="flat-forecast-toggle" aria-expanded={forecastOpen} onClick={() => setForecastOpen(open => !open)}>{forecastOpen ? 'HIDE FORECAST' : 'VIEW FORECAST'} <ArrowRight size={15} /></button>
+        </div>
+      </section>
+
+      <footer className="flat-footer"><span>RYŪMA / DESIGN ANATOMY</span><span>FLAT DESIGN — CLARITY THROUGH SIMPLICITY</span><button onClick={() => onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowLeft size={14} /></button></footer>
+    </main>
+  );
 }
