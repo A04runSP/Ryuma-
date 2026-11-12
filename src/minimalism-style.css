@@ -27,7 +27,7 @@
 .minimalism-page .minimalism-poster .poster-title{position:absolute;z-index:2;left:6%;top:23%;margin:0;color:#0f0f0f;font:800 clamp(48px,10.7vw,132px)/.86 'Manrope',sans-serif;letter-spacing:-.09em;white-space:nowrap}
 .minimalism-page .minimalism-poster .poster-title i{font-style:normal}
 .minimalism-page .minimalism-poster .poster-underline{position:absolute;z-index:3;left:6%;top:43.5%;width:84%;height:4%;overflow:visible}
-.minimalism-page .minimalism-poster .poster-underline path{fill:none;stroke:#a66b3d;stroke-width:6;stroke-linecap:round}
+.minimalism-page .minimalism-poster .poster-underline path{fill:none;stroke:#a66b3d;stroke-width:12;stroke-linecap:round}
 .minimalism-page .minimalism-poster .poster-circle{position:absolute;z-index:4;top:10.5%;right:7%;width:25%;aspect-ratio:1;border-radius:50%;background:#a66b3d;color:#fffaf2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:3% 2.5% 2.5% 4%}
 .minimalism-page .minimalism-poster .poster-circle-mark{position:absolute;left:12%;top:25%;width:5%;aspect-ratio:1;background:#fffaf2}
 .minimalism-page .minimalism-poster .poster-circle strong{font:700 clamp(10px,1.1vw,16px) 'Manrope',sans-serif;white-space:nowrap}
@@ -97,7 +97,7 @@
  .minimalism-page .minimalism-poster .poster-square{top:17.5%;left:5%;width:53%;height:29%}
  .minimalism-page .minimalism-poster .poster-title{top:23%;left:6%;font-size:clamp(46px,10.7vw,78px);letter-spacing:-.095em}
  .minimalism-page .minimalism-poster .poster-underline{top:43.5%;left:6%;width:84%;height:3.5%}
- .minimalism-page .minimalism-poster .poster-underline path{stroke-width:5}
+ .minimalism-page .minimalism-poster .poster-underline path{stroke-width:14}
  .minimalism-page .minimalism-poster .poster-circle{top:10.5%;right:7%;width:25%;padding:3% 2.5% 2.5% 4%}
  .minimalism-page .minimalism-poster .poster-circle strong{font-size:clamp(8px,1.8vw,12px)}
  .minimalism-page .minimalism-poster .poster-circle p{font-size:clamp(6.5px,1.45vw,9px);line-height:1.5}
