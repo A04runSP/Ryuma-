@@ -1632,3 +1632,27 @@
     transition: none !important;
   }
 }
+
+
+/* Dashboard mobile rhythm refinements — preserve desktop composition. */
+@media (max-width: 680px) {
+  .dashboard-shell .dashboard-hero {
+    padding-top: 60px;
+  }
+
+  /* The reading process and principles are adjacent chapters;
+     reduce the combined gap without changing their internal layouts. */
+  .dashboard-shell .dashboard-reading {
+    padding-bottom: 48px;
+  }
+
+  .dashboard-shell .dashboard-principles {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 380px) {
+  .dashboard-shell .dashboard-hero {
+    padding-top: 52px;
+  }
+}
