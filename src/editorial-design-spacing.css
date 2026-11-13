@@ -173,3 +173,16 @@
     padding-top: 46px;
   }
 }
+
+
+/* Hero-only correction: reduce the oversized gap below the mobile metadata row. */
+@media (max-width: 680px) {
+  .eds-hero-meta {
+    padding-top: 14px;
+    padding-bottom: 8px;
+  }
+
+  .eds-hero-main {
+    padding-top: 20px;
+  }
+}
