@@ -1,0 +1,44 @@
+/* Ryuma Organic / Natural — Botanical Atlas */
+.ry-botanical-atlas{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(190px,.58fr) minmax(0,1.42fr);
+  gap:28px 4vw;
+  padding:76px clamp(20px,5vw,76px) 68px;
+  background:#e9dfca;
+  color:#203d2b;
+  border-top:1px solid rgba(32,61,43,.14);
+  border-bottom:1px solid rgba(32,61,43,.14);
+}
+.ry-atlas-heading{position:sticky;top:30px;align-self:start}
+.ry-atlas-heading h2{font:400 clamp(48px,5vw,76px)/.88 'Playfair Display',Georgia,serif;letter-spacing:-.065em;margin:20px 0}
+.ry-atlas-heading h2 em{color:#b96646;font-weight:400}
+.ry-atlas-heading p{max-width:260px;font-size:13px;line-height:1.7;color:#5e6753}
+.ry-atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ry-atlas-specimen{position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;padding:16px 16px 20px;background:#f5efe2;border:1px solid rgba(32,61,43,.16);border-radius:3px 28px 3px 3px;overflow:hidden}
+.ry-atlas-specimen:after{content:"";position:absolute;inset:8px;border:1px solid rgba(32,61,43,.08);pointer-events:none}
+.ry-specimen-meta{position:relative;z-index:1;width:100%;display:flex;justify-content:space-between;gap:8px;color:#75806b;font-size:8px;letter-spacing:.14em}
+.ry-atlas-specimen svg{position:relative;z-index:1;width:min(100%,260px);height:250px;margin:8px auto 2px;overflow:visible}
+.ry-atlas-specimen h3{position:relative;z-index:1;align-self:flex-start;font:400 27px/1 'Playfair Display',Georgia,serif;margin:5px 0 7px}
+.ry-atlas-specimen p{position:relative;z-index:1;align-self:flex-start;margin:0;color:#68705e;font-size:10px;line-height:1.5}
+.ry-atlas-leaf svg{filter:drop-shadow(0 8px 8px rgba(32,61,43,.08))}
+.ry-atlas-stem svg,.ry-atlas-flower svg,.ry-atlas-tree svg{background:radial-gradient(ellipse at center,#e8e0cc 0,rgba(232,224,204,0) 68%)}
+@media(max-width:900px){
+ .ry-botanical-atlas{grid-template-columns:1fr;padding:54px 24px;gap:24px}
+ .ry-atlas-heading{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:end}
+ .ry-atlas-heading .ry-kicker,.ry-atlas-heading h2,.ry-atlas-heading p{grid-column:1}
+ .ry-atlas-heading p{grid-column:2;grid-row:2;align-self:center}
+}
+@media(max-width:600px){
+ .ry-botanical-atlas{padding:44px 16px;gap:22px}
+ .ry-atlas-heading{display:block}
+ .ry-atlas-heading h2{font-size:clamp(46px,12vw,62px);margin:16px 0}
+ .ry-atlas-heading p{font-size:12px;max-width:330px}
+ .ry-atlas-grid{grid-template-columns:1fr;gap:10px}
+ .ry-atlas-specimen{display:grid;grid-template-columns:minmax(0,1fr) minmax(112px,.8fr);grid-template-rows:auto 1fr auto;column-gap:8px;padding:14px 12px;min-height:210px;border-radius:3px 20px 3px 3px}
+ .ry-specimen-meta{grid-column:1/-1}
+ .ry-atlas-specimen svg{grid-column:2;grid-row:2/4;width:100%;height:170px;margin:0}
+ .ry-atlas-specimen h3{grid-column:1;grid-row:2;align-self:end;font-size:26px;margin:0 0 8px}
+ .ry-atlas-specimen p{grid-column:1;grid-row:3;align-self:start;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.ry-botanical-atlas *{animation:none!important;transition:none!important}}
