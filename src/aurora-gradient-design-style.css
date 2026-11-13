@@ -37,7 +37,7 @@
 
 
 /* Final refinement pass — true auroral curtains, distinct from the mountain horizon. */
-.aurora-field{--aurora-intensity:1;--aurora-blur:54px;--aurora-depth:1;background:radial-gradient(ellipse at 50% 82%,#102536 0%,#081522 40%,#040914 82%)}
+.aurora-field{--aurora-intensity:1;--aurora-blur:54px;--aurora-depth:1;background:radial-gradient(ellipse at 50% 82%,#102536 0%,#081522 40%,#040914 82%)}.aurora-field .aurora-ribbon,.aurora-field .aurora-glow{filter:hue-rotate(var(--aurora-hue,0deg)) blur(var(--aurora-blur))}.aurora-field .aurora-glow{filter:hue-rotate(var(--aurora-hue,0deg)) blur(calc(var(--aurora-blur)*1.25))}
 .aurora-ribbon{position:absolute;top:-8%;height:91%;width:58%;border-radius:0;left:auto;mix-blend-mode:screen;filter:blur(calc(var(--aurora-blur)*.72));opacity:calc(var(--aurora-intensity)*.82);transform-origin:50% 0;scale:1 var(--aurora-depth,1);mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 78%,transparent 100%)}
 .aurora-ribbon:before,.aurora-ribbon:after{content:"";position:absolute;inset:0;pointer-events:none}
 .ribbon-warm{left:-5%;background:linear-gradient(90deg,transparent 0%,rgba(42,245,167,.04) 13%,rgba(55,255,187,.3) 24%,rgba(72,255,200,.08) 33%,transparent 44%,rgba(45,228,171,.28) 57%,rgba(72,255,210,.06) 68%,transparent 82%),radial-gradient(ellipse at 32% 45%,rgba(54,250,178,.26),transparent 58%);clip-path:polygon(0 0,100% 0,100% 78%,88% 70%,79% 81%,68% 72%,57% 86%,44% 73%,32% 83%,19% 72%,8% 82%,0 75%);animation:curtainDriftA 27s ease-in-out infinite alternate}
