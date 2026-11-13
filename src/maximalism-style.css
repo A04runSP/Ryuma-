@@ -398,3 +398,20 @@
  .max-footer{padding:78px 7vw 28px}
 }
 @media(prefers-reduced-motion:reduce){.max-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Hero collage artwork and interaction polish */
+.max-statue{position:absolute;z-index:3;right:10%;top:2%;height:96%;width:auto;max-width:48%;overflow:visible;filter:drop-shadow(13px 14px 0 rgba(0,0,0,.8));pointer-events:none}
+.max-hero-art:before{content:"✿";position:absolute;z-index:4;left:46%;bottom:9%;font-size:clamp(100px,14vw,190px);line-height:1;color:var(--pink);-webkit-text-stroke:2px var(--ink);text-shadow:5px 5px 0 var(--acid);transform:rotate(-14deg);pointer-events:none}
+.max-hero-art:after{content:"✳";position:absolute;z-index:5;left:5%;top:23%;font-size:clamp(55px,8vw,105px);color:var(--acid);-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--pink);transform:rotate(12deg);pointer-events:none}
+.max-sunburst{z-index:1}
+.max-circle,.max-orbit{z-index:4}
+.max-hero-art b{z-index:6}
+.max-hero-art i{z-index:6}
+.max-hero-copy{z-index:7}
+.max-hero-sticker{z-index:8}
+@media(max-width:640px){
+ .max-statue{height:62%;max-width:76%;right:2%;top:36%;opacity:.96}
+ .max-hero-art:before{left:5%;bottom:11%;font-size:90px}
+ .max-hero-art:after{left:75%;top:33%;font-size:48px}
+ .max-hero-copy{position:relative}
+}
