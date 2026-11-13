@@ -7,9 +7,9 @@
   --eds-muted: #77736b;
   --eds-line: #c9c3b8;
   --eds-accent: #d84a32;
-  --eds-display: 'Playfair Display', Georgia, serif;
+  --eds-display: Georgia, 'Times New Roman', serif;
   --eds-sans: 'DM Sans', Arial, sans-serif;
-  --eds-mono: 'DM Mono', monospace;
+  --eds-mono: 'SFMono-Regular', Consolas, monospace;
   background: var(--eds-paper);
   color: var(--eds-ink);
   font-family: var(--eds-sans);
