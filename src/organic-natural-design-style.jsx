@@ -58,11 +58,12 @@ const palette = [
   {name:'Stone',hex:'#B8B0A0',role:'Grounding neutral'}
 ];
 const studies = [
-  {name:'Form',no:'01',image:photos.form,copy:'Soft curves, irregular silhouettes and gentle transitions make interfaces feel grown rather than engineered.',detail:'Let a shape feel discovered. Use asymmetry, rounded edges and natural variation, then balance it with a clear grid.'},
-  {name:'Botany',no:'02',image:photos.botany,copy:'Leaves, stems and organic structures become part of the visual language.',detail:'Use botanical imagery as structure, not filler. Let the crop, direction and scale guide the eye through the page.'},
-  {name:'Texture',no:'03',image:photos.texture,copy:'Paper, bark, stone and grain introduce a tactile physical layer.',detail:'A little material texture can soften a digital surface. Keep detail subtle enough that text and controls remain crisp.'},
-  {name:'Colour',no:'04',image:photos.colour,copy:'Earth, plant, clay and sky tones create warmth without relying on green alone.',detail:'Build from a stable dark, a warm paper and a small set of living accents. Reserve the strongest colour for meaningful moments.'},
-  {name:'Rhythm',no:'05',image:photos.rhythm,copy:'Variation in scale, crop and spacing creates a natural reading rhythm.',detail:'Alternate density and breathing room. Repetition creates coherence; variation makes the system feel alive.'}
+{name:"Organic abstraction",kind:"abstraction",no:"01",copy:"Freeform silhouettes, layered masses and expressive negative space.",detail:"Build a composition from distinct irregular forms. Control overlap, scale and empty space so the result feels expressive rather than random."},
+{name:"Organic geometry",kind:"geometry",no:"02",copy:"Soft geometry, imperfect circles and playful proportion.",detail:"Vary the proportions, edges and alignment of geometric primitives. The tension between order and irregularity gives the system character."},
+{name:"Fluid design",kind:"fluid",no:"03",copy:"Continuous contours, flowing paths and visual movement.",detail:"Use connected curves and directional movement to lead the eye. Motion should clarify relationships, not become decoration."},
+{name:"Organic editorial",kind:"editorial",no:"04",copy:"Expressive type, asymmetric grids and deliberate rhythm.",detail:"Let typography carry the voice. Offset columns, varied scale and whitespace create editorial composition without sacrificing readability."},
+{name:"Biomorphic patterns",kind:"biomorphic",no:"05",copy:"Repeated cellular forms, clusters and irregular patterns.",detail:"Create rhythm through repetition with controlled variation. Change scale, rotation and spacing while keeping a recognisable pattern."},
+{name:"Material-led design",kind:"material",no:"06",copy:"Layered planes, cut-paper edges and tactile surface effects.",detail:"Suggest material through layers, borders, grain and shadow. Keep effects restrained so the interface remains crisp and usable."}
 ];
 const rules = [
   ['01','Work with natural forms','Use curves, irregular silhouettes and gentle transitions—not a grid of identical boxes.'],
@@ -109,6 +110,12 @@ function OrganicComposition() { return <section className="ry-organic-compositio
     <article><span>03</span><div><h3>Natural rhythm</h3><p>Asymmetry balanced by repetition, alignment and space.</p></div><i className="principle-shape shape-three"/></article>
   </div>
 </section> }
+function ApplicationComposition({view}) {
+ if(view==="Packaging") return <div className="ry-app-art ry-app-pack"><div className="pack-box"><span>FORM / 01</span><b>field<br/><i>notes</i></b><small>BOTANICAL SOAP · 120G</small></div><div className="pack-tube"><b>O</b><small>daily<br/>care</small></div></div>;
+ if(view==="Digital") return <div className="ry-app-art ry-app-digital"><div className="app-window"><span>STUDIO / HOME</span><b>Make room<br/><i>to breathe.</i></b><div/><small>Explore the collection ↗</small></div></div>;
+ if(view==="Editorial") return <div className="ry-app-art ry-app-editorial"><div className="editorial-sheet"><small>ISSUE 04 / CULTURE</small><b>Objects<br/><i>with a soul.</i></b><span>FORM, MATERIAL & THE EVERYDAY</span></div></div>;
+ return <div className="ry-app-art ry-app-space"><div className="space-arch"/><div className="space-orb"/><div className="space-seat"/></div>;
+}
 function Flower({className=''}) { return <svg className={`ry-flower ${className}`} viewBox="0 0 100 100" aria-hidden="true"><g fill="currentColor"><ellipse cx="50" cy="22" rx="10" ry="22"/><ellipse cx="78" cy="38" rx="10" ry="22" transform="rotate(55 78 38)"/><ellipse cx="72" cy="70" rx="10" ry="22" transform="rotate(110 72 70)"/><ellipse cx="28" cy="70" rx="10" ry="22" transform="rotate(-110 28 70)"/><ellipse cx="22" cy="38" rx="10" ry="22" transform="rotate(-55 22 38)"/></g><circle cx="50" cy="50" r="11" fill="#D9B85F"/></svg> }
 export default function OrganicNaturalDesignStyle({onNavigate}) {
   const [activeStudy,setActiveStudy] = useState(0);
@@ -176,7 +183,7 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
 
     <section className="ry-practice" id="ry-practice">
       <div className="ry-practice-heading"><span className="ry-kicker">06 / 06 · APPLIED DESIGN</span><h2>Nature in<br/><em>Practice.</em></h2><p>One visual language applied across packaging, digital interfaces and editorial materials.</p><div className="ry-practice-tabs">{['Packaging','Digital','Editorial','Environmental'].map(v=><button key={v} className={brandView===v?'is-active':''} onClick={()=>setBrandView(v)}>{v}<ArrowRight size={13}/></button>)}</div></div>
-      <div className="ry-brand-composition"><div className="ry-brand-photo" style={{backgroundImage:`linear-gradient(0deg,rgba(15,39,28,.4),transparent 45%),url(${brandView==='Packaging'?photos.brand:brandView==='Digital'?photos.hero:brandView==='Editorial'?photos.texture:photos.stone})`}}><span>{brandView.toUpperCase()} / FIELD STUDY 01</span><div><small>ALVORA · NATURAL CARE</small><h3>{brandView==='Digital'?'Rooted in balance.':brandView==='Editorial'?'A slower kind of living.':brandView==='Environmental'?'Made of the earth.':'Good Things Grow Here.'}</h3></div></div><div className="ry-brand-side"><span>APPLICATION / {brandView.toUpperCase()}</span><h3>Rooted<br/><em>in balance.</em></h3><p>Natural materials, considered typography and a grounded palette make one recognisable system.</p><div className="ry-brand-swatches">{palette.slice(0,5).map(c=><i key={c.name} style={{background:c.hex}} title={c.name}/>)}</div><button onClick={()=>setBrandView(v=>{const a=['Packaging','Digital','Editorial','Environmental'];return a[(a.indexOf(v)+1)%a.length]})}>Next application <ArrowRight size={14}/></button></div></div>
+      <div className="ry-brand-composition"><div className="ry-brand-photo"><span>{brandView.toUpperCase()} / CODED STUDY 01</span><ApplicationComposition view={brandView}/><div><small>STUDIO / ORGANIC SYSTEMS</small><h3>{brandView==='Digital'?'A softer interface.':brandView==='Editorial'?'A slower kind of story.':brandView==='Environmental'?'Space to belong.':'Made to feel human.'}</h3></div></div><div className="ry-brand-side"><span>APPLICATION / {brandView.toUpperCase()}</span><h3>Rooted<br/><em>in balance.</em></h3><p>Natural materials, considered typography and a grounded palette make one recognisable system.</p><div className="ry-brand-swatches">{palette.slice(0,5).map(c=><i key={c.name} style={{background:c.hex}} title={c.name}/>)}</div><button onClick={()=>setBrandView(v=>{const a=['Packaging','Digital','Editorial','Environmental'];return a[(a.indexOf(v)+1)%a.length]})}>Next application <ArrowRight size={14}/></button></div></div>
     </section>
 
     <section className="ry-rules" id="ry-rules">
