@@ -1,89 +1,106 @@
 import React, { useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Globe2, Monitor, Mouse, Disc3, Gamepad2, Smartphone, Sparkles, Heart, Search, Download, X, Minus, Square } from 'lucide-react';
 import './y2k-style.css';
+import './y2k-redesign.css';
 
-const anatomy = [
-  { no:'01', title:'Chrome', copy:'Liquid metal, bevels and reflective surfaces turn ordinary interface pieces into futuristic objects.' },
-  { no:'02', title:'Colour', copy:'Electric cyan, bubblegum pink, violet, silver and acid green create a playful digital spectrum.' },
-  { no:'03', title:'Type', copy:'Wide display lettering, tiny technical labels and stretched proportions create instant Y2K attitude.' },
-  { no:'04', title:'Texture', copy:'Gloss, noise, glass, pixels and soft gradients recreate the optimistic material culture of the early web.' },
-  { no:'05', title:'Motion', copy:'Floating objects, scrolling marquees and playful transitions make the interface feel alive.' }
+const characteristics = [
+  ['01', 'Digital optimism', 'Technology presented as playful, accessible and full of possibility.'],
+  ['02', 'Futurist materials', 'Chrome, translucent plastic, holographic film and reflective surfaces.'],
+  ['03', 'Pop colour', 'Electric cyan, violet and bubblegum pink against deep digital navy.'],
+  ['04', 'Expressive type', 'Oversized geometric display lettering balanced with compact UI labels.'],
+  ['05', 'Interface nostalgia', 'Desktop windows, media players, pixel icons and early-web details.']
 ];
+const palette = [
+  ['Chrome Silver', '#C0C0C0', 'Reflective neutral'],
+  ['Electric Cyan', '#00E5FF', 'Digital signal'],
+  ['Holo Violet', '#B27BFF', 'Futurist accent'],
+  ['Bubble Pink', '#FF6EC7', 'Pop energy'],
+  ['Digital Navy', '#0B1028', 'Deep foundation']
+];
+const materials = [
+  ['Chrome metallic', 'Polished, directional highlights', 'material-chrome'],
+  ['Iridescent film', 'Colour shifts across the surface', 'material-holo'],
+  ['Translucent plastic', 'Soft refraction and layered depth', 'material-plastic'],
+  ['Pixel / scanline', 'Visible digital texture, used sparingly', 'material-pixel']
+];
+function WindowControls(){return <div className="y2k-window-controls" aria-hidden="true"><i/><i/><i/></div>}
 
 export default function Y2KStyle({ onNavigate }) {
-  const [enteredWeb, setEnteredWeb] = useState(false);
-  return <main className="y2k-page">
+  const [online, setOnline] = useState(false);
+  const [activeTab, setActiveTab] = useState('Overview');
+  const [motionOn, setMotionOn] = useState(true);
+  const [downloaded, setDownloaded] = useState(false);
+  return <main className={`y2k-page y2k-redesign ${motionOn ? 'y2k-motion-on' : 'y2k-motion-off'}`}>
     <header className="y2k-nav">
-      <button onClick={()=>onNavigate?.('library')}><ArrowLeft size={15}/> DESIGN LIBRARY</button>
-      <div className="y2k-brand"><b>RYUMA</b><span>リューマ</span></div>
-      <span>EXPRESSIVE / 03</span>
+      <button className="y2k-back" type="button" onClick={() => onNavigate?.('library')}><ArrowLeft size={16}/> <span>DESIGN LIBRARY</span></button>
+      <a className="y2k-brand" href="#y2k-top" aria-label="Ryūma Y2K specimen home"><span className="y2k-brand-mark">✳</span><span><b>RYŪMA</b><small>DESIGN ANATOMY</small></span></a>
+      <nav className="y2k-nav-links" aria-label="Specimen sections"><a href="#y2k-anatomy">Anatomy</a><a href="#y2k-system">Systems</a><a href="#y2k-components">Components</a></nav>
+      <span className="y2k-nav-index">03.03 / EXPRESSIVE</span>
     </header>
 
-    <section className="y2k-hero">
-      <div className="y2k-grid"/>
-      <div className="y2k-orb orb-pink"/><div className="y2k-orb orb-cyan"/><div className="y2k-orb orb-silver"/>
+    <section className="y2k-hero" id="y2k-top">
+      <div className="y2k-hero-grid" aria-hidden="true"/>
       <div className="y2k-hero-copy">
-        <span className="y2k-kicker">03 / Y2K</span>
-        <h1>HELLO<br/><em>2000.</em></h1>
-        <p>The future looked shiny, optimistic and slightly weird. Y2K brings that digital dream back.</p>
+        <span className="y2k-eyebrow"><i/> 03.03 / EXPRESSIVE — DIGITAL</span>
+        <h1><span>Y2K</span><em>DIGITAL<br/>FUTURISM</em></h1>
+        <p>The bold, optimistic design language of the early 2000s — where the internet, technology and pop culture imagined a brighter digital future.</p>
+        <div className="y2k-tags"><span>Y2K</span><span>DIGITAL</span><span>FUTURISM</span><span>CHROME</span></div>
       </div>
-      <div className="y2k-badge"><span>THE</span><b>FUTURE</b><i>IS NOW</i></div>
-      <div className="y2k-marquee">CYBER · CHROME · POP · PIXEL · GLASS · FUTURE · CYBER · CHROME · POP · PIXEL</div>
-    </section>
-
-    <section className="y2k-intro">
-      <div><span className="y2k-kicker">THE IDEA</span><h2>When tomorrow<br/><em>looked like this.</em></h2></div>
-      <p>Y2K design captures the visual optimism of the late 1990s and early 2000s — a moment when the internet felt new, technology felt magical and the future was imagined in chrome.</p>
-      <strong>Playful. Glossy. Unapologetically digital.</strong>
-    </section>
-
-    <section className="y2k-anatomy">
-      <div className="y2k-section-label"><span>03</span><b>DESIGN ANATOMY</b></div>
-      <div className="y2k-section-main">
-        <h2>Five signals.<br/><em>Maximum millennium.</em></h2>
-        <div className="y2k-anatomy-grid">{anatomy.map(item=><article key={item.no}><span>{item.no}</span><div className="y2k-mini-shape"/><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div>
+      <div className="y2k-hero-art" role="img" aria-label="Retro-futurist desktop computer with a holographic disc and mobile phone">
+        <div className="y2k-orbit y2k-orbit-one"/><div className="y2k-orbit y2k-orbit-two"/>
+        <div className="y2k-globe"><span/></div><div className="y2k-cd"><i/></div>
+        <div className="y2k-computer"><div className="y2k-computer-shell"><div className="y2k-screen"><div className="y2k-screen-sun"/><div className="y2k-screen-palm palm-a"/><div className="y2k-screen-palm palm-b"/><span>RYŪMA / ONLINE</span></div><div className="y2k-speaker speaker-a"/><div className="y2k-speaker speaker-b"/><div className="y2k-drive"/></div><div className="y2k-computer-neck"/><div className="y2k-computer-base"/></div>
+        <div className="y2k-keyboard">{Array.from({length:24},(_,i)=><i key={i}/>)}</div><div className="y2k-mouse"/><div className="y2k-phone"><div className="y2k-phone-screen">✳<small>01:38</small></div></div>
+        <div className="y2k-star star-a">✳</div><div className="y2k-star star-b">✧</div><div className="y2k-floor-grid"/>
       </div>
+      <div className="y2k-hero-stamp"><small>RYŪMA SPECIMEN</small><b>03.03</b><span>EST. 2000 / REIMAGINED</span></div>
+      <div className="y2k-hero-bottom"><span>THE FUTURE WAS A FEELING.</span><span>SCROLL TO EXPLORE ↓</span></div>
     </section>
 
-    <section className="y2k-colour">
-      <div className="y2k-section-label"><span>04</span><b>COLOUR SYSTEM</b></div>
-      <div className="y2k-colour-main">
-        <div><h2>Colour from<br/><em>the future.</em></h2><p>Y2K colour is bright, artificial and optimistic. Metallic neutrals meet candy brights and digital glow.</p></div>
-        <div className="y2k-palette"><div className="y2k-chrome"><span>CHROME</span></div><div className="y2k-cyan"><span>CYAN</span></div><div className="y2k-pink"><span>BUBBLEGUM</span></div><div className="y2k-violet"><span>VIOLET</span></div><div className="y2k-lime"><span>ACID LIME</span></div></div>
-      </div>
+    <section className="y2k-characteristics" id="y2k-anatomy">
+      <div className="y2k-characteristics-title"><span>✳</span><b>CORE<br/>CHARACTERISTICS</b></div>
+      {characteristics.map(([no,title])=><div className="y2k-characteristic" key={no}><span>{no}</span><b>{title}</b></div>)}
     </section>
 
-    <section className="y2k-type">
-      <div className="y2k-section-label"><span>05</span><b>TYPOGRAPHY</b></div>
-      <div className="y2k-type-main">
-        <div className="y2k-type-screen"><small>WELCOME TO THE</small><strong>NEW<br/>WEB</strong><span>EST. 2000 // ONLINE</span></div>
-        <div><h2>Type gets<br/><em>wide.</em></h2><p>Y2K typography loves stretched proportions, geometric forms, oversized display type and tiny technical labels that make the whole system feel like a digital artifact.</p></div>
-      </div>
+    <section className="y2k-intro-section">
+      <div className="y2k-section-meta"><span>01 / THE IDEA</span><span>OPTIMISM, REBOOTED</span></div>
+      <div className="y2k-intro-layout"><h2>A future<br/>that felt <em>possible.</em></h2><div><p>Y2K emerged around the turn of the millennium, shaped by personal computing, the early web, electronic music and a new pop-cultural fascination with the digital world.</p><p>Its visual language imagined technology as something tactile and exciting: polished metal, translucent shells, luminous colour and interfaces that invited exploration.</p><strong>Not nostalgia for old technology. Nostalgia for how new it felt.</strong></div></div>
     </section>
 
-    <section className="y2k-interface">
-      <div className="y2k-section-label"><span>06</span><b>INTERFACE CULTURE</b></div>
-      <div className="y2k-interface-main">
-        <div className="y2k-window"><div className="window-top"><span>●</span><span>●</span><span>●</span><b>MY_FUTURE.EXE</b></div><div className={`window-body${enteredWeb ? " is-online" : ""}`} aria-live="polite"><span>{enteredWeb ? "CONNECTION ESTABLISHED" : "LOADING..."}</span><strong>{enteredWeb ? "ONLINE" : "100%"}</strong><div className="loading" aria-label="Connection progress"><i/></div><button type="button" onClick={() => setEnteredWeb(value => !value)}>{enteredWeb ? "RESTART CONNECTION ↻" : "ENTER THE WEB →"}</button></div></div>
-        <div><h2>Make it<br/><em>feel digital.</em></h2><p>Y2K is more than chrome and pink. It reflects an era of translucent interfaces, desktop windows, media players, animated cursors and the excitement of being online.</p></div>
-      </div>
+    <section className="y2k-system-section" id="y2k-system">
+      <div className="y2k-section-heading"><span>02 / COLOUR SYSTEM</span><h2>Colour from<br/><em>tomorrow.</em></h2><p>A compact palette of metallic neutrals and high-energy digital accents.</p></div>
+      <div className="y2k-palette-grid">{palette.map(([name,hex,role])=><article className="y2k-swatch" key={name}><div className={`y2k-swatch-surface ${name==='Chrome Silver'?'swatch-chrome':''}`} style={{'--swatch':hex}}><span>{name==='Chrome Silver'?'✧':''}</span></div><div className="y2k-swatch-info"><b>{name}</b><code>{hex}</code><small>{role}</small></div></article>)}</div>
     </section>
 
-    <section className="y2k-rules">
-      <div className="y2k-section-label"><span>07</span><b>THE RULES</b></div>
-      <div className="y2k-rules-main"><h2>Don't be<br/><em>too serious.</em></h2><div className="y2k-rule-list">
-        <div><b>01</b><strong>Shine</strong><span>Use gloss, chrome and reflective surfaces to create digital excitement.</span></div>
-        <div><b>02</b><strong>Play</strong><span>Mix shapes, scale and colour with the confidence of early internet culture.</span></div>
-        <div><b>03</b><strong>Float</strong><span>Let objects overlap, orbit and hover instead of sitting rigidly on a grid.</span></div>
-        <div><b>04</b><strong>Pixelate</strong><span>Keep small technical details that make the world feel unmistakably digital.</span></div>
-      </div></div>
+    <section className="y2k-type-section">
+      <div className="y2k-section-meta"><span>03 / TYPOGRAPHY</span><span>DISPLAY × INTERFACE</span></div>
+      <div className="y2k-type-layout"><div className="y2k-type-poster"><span>WELCOME TO THE</span><strong>NEW<br/>WEB<span>✳</span></strong><i>EST. 2000 — ONLINE</i><div className="y2k-type-orbit"/></div><div className="y2k-type-copy"><h2>Big type.<br/><em>Small signals.</em></h2><p>Use wide, geometric display lettering to create impact. Pair it with clear interface typography, compact metadata and mono labels for technical contrast.</p><div className="y2k-type-spec"><div><b>DISPLAY</b><span>Eurostile / Orbitron-inspired</span></div><div><b>HEADING</b><span>Geometric sans — bold weight</span></div><div><b>BODY</b><span>Neutral sans — open counters</span></div><div><b>MICRO</b><span>Monospace — tracked labels</span></div></div></div></div>
     </section>
 
-    <footer className="y2k-footer">
-      <span className="y2k-kicker">Y2K · EXPRESSIVE</span>
-      <h2>THE FUTURE<br/><em>IS STILL FUN.</em></h2>
-      <p>A visual language built from chrome dreams, digital optimism and the strange beauty of imagining tomorrow.</p>
-      <div><span>CHROME · POP · PIXEL · GLASS · FUTURE</span><span>RYUMA / DESIGN ANATOMY</span></div>
-    </footer>
+    <section className="y2k-layer-section">
+      <div className="y2k-section-meta"><span>04 / LAYERING & COMPOSITION</span><span>DEPTH IS A MATERIAL</span></div>
+      <div className="y2k-layer-layout"><div className="y2k-layer-window"><div className="y2k-layer-title"><WindowControls/><span>DESKTOP / 2001</span><span>— ◱ ×</span></div><div className="y2k-layer-content"><div className="y2k-layer-wallpaper"><div className="y2k-wallpaper-sun"/><span>HELLO<br/>WORLD.</span></div><div className="y2k-floating-panel"><b>NOW PLAYING</b><span>Digital Dreams.mp3</span><div className="y2k-track"><i/></div><small>03:08　◖◖◖　04:22</small></div><div className="y2k-pixel-heart">♥</div></div></div><div className="y2k-layer-copy"><h2>Layer it.<br/><em>Let it float.</em></h2><ul><li>Overlapping windows and panels</li><li>Glossy, translucent surfaces</li><li>Bold, oversized typography</li><li>Orbital and geometric graphics</li><li>Pixel details as visual punctuation</li></ul></div></div>
+    </section>
+
+    <section className="y2k-material-section">
+      <div className="y2k-section-heading"><span>05 / TEXTURE & MATERIAL</span><h2>Touch the<br/><em>digital.</em></h2><p>Surfaces give Y2K its unmistakable physicality.</p></div>
+      <div className="y2k-material-grid">{materials.map(([name,copy,cls])=><article className="y2k-material" key={name}><div className={`y2k-material-sample ${cls}`}/><b>{name}</b><p>{copy}</p></article>)}</div>
+    </section>
+
+    <section className="y2k-component-section" id="y2k-components">
+      <div className="y2k-section-meta"><span>06 / COMPONENT SHOWCASE</span><span>INTERFACE PLAYGROUND</span></div>
+      <div className="y2k-component-layout"><div className="y2k-component-copy"><h2>Built for<br/><em>interaction.</em></h2><p>Y2K interfaces combine expressive surfaces with familiar controls. The details should feel tactile, not ornamental.</p><div className="y2k-component-tabs" role="tablist" aria-label="Component examples">{['Overview','Tokens','States'].map(tab=><button type="button" role="tab" aria-selected={activeTab===tab} className={activeTab===tab?'is-active':''} onClick={()=>setActiveTab(tab)} key={tab}>{tab}</button>)}</div><div className="y2k-tab-copy" role="tabpanel">{activeTab==='Overview'?'A compact collection of buttons, icons, progress and window controls.':activeTab==='Tokens'?'Use chrome for material, cyan for primary signals and pink or violet for selective emphasis.':'Every control needs hover, pressed, focus and disabled states — not just a shiny default.'}</div></div>
+        <div className="y2k-demo-window"><div className="y2k-demo-bar"><WindowControls/><b>MY_FUTURE.EXE</b><span>— ◱ ×</span></div><div className="y2k-demo-body"><div className="y2k-demo-actions"><button className="y2k-button-primary" type="button" onClick={()=>setDownloaded(true)}>{downloaded?'DOWNLOADED ✓':'DOWNLOAD'} <ArrowUpRight size={15}/></button><button className="y2k-button-secondary" type="button" onClick={()=>setDownloaded(false)}>RESET</button><button className="y2k-button-icon" type="button" aria-label="Close demo" onClick={()=>setDownloaded(false)}><X size={17}/></button></div><div className="y2k-progress-label"><span>{downloaded?'FILE READY':'DOWNLOADING...'}</span><b>{downloaded?'100%':'72%'}</b></div><div className="y2k-progress"><i style={{width:downloaded?'100%':'72%'}}/></div><div className="y2k-demo-footer"><span><Heart size={15} fill="currentColor"/> PIXEL LOVE</span><span>ONLINE / 2001</span></div></div></div></div>
+      <div className="y2k-motion-control"><div><Sparkles size={17}/><span><b>Motion preview</b><small>Toggle the specimen's subtle floating details.</small></span></div><button type="button" role="switch" aria-checked={motionOn} onClick={()=>setMotionOn(v=>!v)} className={`y2k-switch ${motionOn?'is-on':''}`}><i/></button></div>
+    </section>
+
+    <section className="y2k-live-section">
+      <div className="y2k-section-meta"><span>07 / INTERACTION STUDY</span><span>CONNECT TO THE WEB</span></div>
+      <div className="y2k-live-layout"><div className="y2k-live-copy"><h2>Enter the<br/><em>new world.</em></h2><p>A tiny interaction inspired by the anticipation of connecting to the early internet.</p></div><div className="y2k-live-window"><div className="y2k-live-title"><WindowControls/><b>CONNECTION_MANAGER.EXE</b><span>v2.0</span></div><div className="y2k-live-body" aria-live="polite"><Globe2 size={32}/><span>{online?'CONNECTION ESTABLISHED':'READY TO CONNECT'}</span><strong>{online?'YOU ARE ONLINE':'WELCOME, USER'}</strong><div className="y2k-live-meter"><i style={{width:online?'100%':'12%'}}/></div><button type="button" onClick={()=>setOnline(v=>!v)}>{online?'DISCONNECT ↻':'CONNECT TO THE WEB ↗'}</button></div></div></div>
+    </section>
+
+    <section className="y2k-use-section"><div className="y2k-section-meta"><span>08 / WHERE IT LIVES</span><span>Y2K, REIMAGINED</span></div><h2>Still shaping<br/><em>the future.</em></h2><div className="y2k-use-grid"><article><Disc3/><b>Music & creative media</b><span>Album artwork, visualizers and culture-led campaigns.</span><ArrowUpRight/></article><article><Gamepad2/><b>Gaming & entertainment</b><span>Playful interfaces, virtual worlds and collectible digital objects.</span><ArrowUpRight/></article><article><Smartphone/><b>Tech & digital brands</b><span>Product launches and expressive technology experiences.</span><ArrowUpRight/></article></div></section>
+
+    <footer className="y2k-footer"><span>RYŪMA / DESIGN ANATOMY — 03.03</span><h2>THE FUTURE<br/><em>IS STILL FUN.</em></h2><p>Digital optimism, reimagined for a new generation.</p><button type="button" onClick={()=>onNavigate?.('library')}>BACK TO DESIGN LIBRARY <ArrowLeft size={15}/></button></footer>
   </main>;
 }
