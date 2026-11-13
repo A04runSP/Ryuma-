@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check, Copy, RotateCcw, Menu } from 'lucide-reac
 import './organic-natural-design-style.css';
 import './organic-natural-design-v2.css';
 import './organic-composition.css';
+import './organic-visual-families.css';
 
 // Original vector artwork: illustrated botanical forms, never stock photography.
 const makeArtwork = (kind) => {
