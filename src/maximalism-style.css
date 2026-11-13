@@ -415,3 +415,6 @@
  .max-hero-art:after{left:75%;top:33%;font-size:48px}
  .max-hero-copy{position:relative}
 }
+
+/* Hero refinement: remove orbital outlines around the portrait */
+.max-hero-art .max-orbit{display:none!important}
