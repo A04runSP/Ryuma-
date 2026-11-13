@@ -119,3 +119,28 @@
   .y2k-redesign .y2k-layer-content{height:225px}
   .y2k-redesign .y2k-floating-panel{width:59%;right:7px;bottom:9px;padding:8px}
 }
+
+
+/* Keep the striped sun and wallpaper headline on separate visual layers. */
+.y2k-redesign .y2k-wallpaper-sun{
+  top:12px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1;
+}
+.y2k-redesign .y2k-layer-wallpaper>span{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:13%;
+  z-index:2;
+  display:block;
+  padding:0 6px;
+  text-align:center;
+  line-height:.9;
+  text-shadow:0 3px 12px #42306c,0 1px 2px #17152a;
+}
+@media(max-width:680px){
+  .y2k-redesign .y2k-wallpaper-sun{top:12px}
+  .y2k-redesign .y2k-layer-wallpaper>span{bottom:12%;font-size:clamp(25px,6.5vw,38px)}
+}
