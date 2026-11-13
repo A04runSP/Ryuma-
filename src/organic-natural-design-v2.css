@@ -68,3 +68,40 @@
 @media(prefers-reduced-motion:reduce){
   .ry-organic .ry-hero-art>img,.ry-organic .ry-study-card img,.ry-organic .ry-rule-list article img,.ry-organic .ry-outro-landscape img{transition:none}
 }
+
+
+/* Organic palette preview refinement: make combination modes visible, not just selectable. */
+.ry-organic .ry-preview-palette{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin:8px 0 18px;
+  position:relative;
+  z-index:3;
+}
+.ry-organic .ry-preview-palette i{
+  display:block;
+  width:clamp(28px,4vw,42px);
+  aspect-ratio:1;
+  border-radius:38% 8% 34% 8%;
+  border:1px solid rgba(32,61,43,.18);
+  box-shadow:0 2px 7px rgba(0,0,0,.08);
+}
+.ry-organic .ry-preview-palette i:nth-child(even){border-radius:8% 38% 8% 34%}
+.ry-organic .ry-live-preview .ry-preview-bottom{margin-top:auto}
+.ry-organic .ry-menu-toggle[aria-expanded="true"]{background:var(--ry-forest);color:var(--ry-paper)}
+.ry-organic .ry-nav-links button:focus-visible,
+.ry-organic .ry-palette-modes button:focus-visible,
+.ry-organic .ry-type-tabs button:focus-visible,
+.ry-organic .ry-weight-row button:focus-visible,
+.ry-organic .ry-practice-tabs button:focus-visible{
+  outline:2px solid var(--ry-terra);
+  outline-offset:4px;
+}
+@media(max-width:600px){
+  .ry-organic .ry-preview-palette{gap:6px;margin:12px 0 18px}
+  .ry-organic .ry-preview-palette i{width:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ry-organic .ry-nav-links button:after{transition:none}
+}
