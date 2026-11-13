@@ -1,0 +1,175 @@
+/* Editorial specimen — mobile spacing refinement
+   Keeps the existing visual language; only adjusts vertical rhythm and text grouping. */
+@media (max-width: 680px) {
+  .eds-section-heading {
+    gap: 24px;
+    margin: 42px 0 46px;
+  }
+
+  .eds-section-heading h2 {
+    line-height: .96;
+  }
+
+  .eds-section-heading > p {
+    line-height: 1.9;
+    max-width: 38rem;
+  }
+
+  /* Separate each typographic role so labels, samples and explanations read as units. */
+  .eds-type-specimen {
+    gap: 30px;
+  }
+
+  .eds-type-display {
+    padding-bottom: 28px;
+  }
+
+  .eds-type-big {
+    line-height: .98;
+    margin: 22px 0 26px -8px;
+  }
+
+  .eds-type-display > p {
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .eds-type-row {
+    padding: 24px 0 27px;
+  }
+
+  .eds-type-row > span {
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .eds-type-heading strong,
+  .eds-type-body p,
+  .eds-type-caption p,
+  .eds-type-meta p {
+    line-height: 1.8;
+  }
+
+  /* Give the colour explanation and swatches a clearer separation. */
+  .eds-color-section {
+    padding-bottom: 82px;
+    padding-top: 82px;
+  }
+
+  .eds-color-section .eds-section-heading {
+    margin-bottom: 44px;
+  }
+
+  .eds-color-study {
+    gap: 16px;
+  }
+
+  .eds-color-swatch {
+    min-height: 178px;
+    padding: 17px;
+  }
+
+  .eds-color-swatch > span,
+  .eds-color-swatch > b {
+    line-height: 1.6;
+  }
+
+  .eds-color-swatch > i {
+    line-height: 1.35;
+  }
+
+  /* Improve the reading rhythm inside the CSS-built editorial spread. */
+  .eds-spread-page {
+    padding: 24px 22px;
+  }
+
+  .eds-spread-running {
+    line-height: 1.6;
+    padding-bottom: 14px;
+  }
+
+  .eds-spread-left-content {
+    padding-top: 54px;
+  }
+
+  .eds-spread-left-content > .eds-micro {
+    line-height: 1.7;
+  }
+
+  .eds-spread-left-content h3 {
+    line-height: .98;
+    margin: 28px 0 25px;
+  }
+
+  .eds-spread-deck {
+    line-height: 1.85;
+    margin: 0;
+  }
+
+  .eds-spread-rule {
+    margin: 34px 0;
+  }
+
+  .eds-spread-columns {
+    line-height: 1.9;
+  }
+
+  .eds-spread-columns p {
+    line-height: 1.9;
+  }
+
+  .eds-spread-left-content blockquote {
+    line-height: 1.5;
+    margin: 40px 0 32px;
+  }
+
+  .eds-spread-byline {
+    line-height: 1.7;
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+
+  .eds-spread-art {
+    margin: 34px 0 30px;
+  }
+
+  .eds-spread-annotation {
+    gap: 24px;
+    padding-bottom: 66px;
+  }
+
+  .eds-spread-annotation > div {
+    padding-top: 15px;
+  }
+
+  .eds-spread-annotation p {
+    line-height: 1.8;
+    margin-top: 11px;
+  }
+
+  .eds-spread-key {
+    gap: 16px 22px;
+    line-height: 1.6;
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .eds-section-heading {
+    gap: 21px;
+    margin: 36px 0 40px;
+  }
+
+  .eds-type-row {
+    padding: 22px 0 24px;
+  }
+
+  .eds-color-swatch {
+    min-height: 164px;
+    padding: 14px;
+  }
+
+  .eds-spread-left-content {
+    padding-top: 46px;
+  }
+}
