@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import './editorial-design-specimen.css';
+import './editorial-design-spacing.css';
 
 const gridOptions = [12, 6, 4];
 
