@@ -71,6 +71,14 @@ const rules = [
   ['04','Create rhythm through variation','Shift scale, crop and spacing while keeping a clear hierarchy.'],
   ['05','Design for human experience','Keep contrast, legibility and interaction ahead of decoration.']
 ];
+function DesignSpecimen({kind}) {
+ if(kind==="abstraction") return <svg viewBox="0 0 320 210" role="img" aria-label="Abstract overlapping organic forms"><path d="M18 120C22 50 92 18 143 54C190 87 159 145 111 169C67 191 14 173 18 120Z" fill="#6F855D"/><path d="M116 36C172 1 255 28 275 83C292 131 238 165 194 139C158 118 158 70 116 36Z" fill="#C16B49"/><path d="M128 117C154 76 212 78 235 118C253 150 224 193 178 190C139 188 111 155 128 117Z" fill="#D8B95F"/><path d="M32 22C62 4 97 12 111 38C123 61 99 83 74 76C50 69 26 49 32 22Z" fill="#203D2B"/></svg>;
+ if(kind==="geometry") return <svg viewBox="0 0 320 210" role="img" aria-label="Soft organic geometry"><path d="M30 72C30 37 65 22 95 31C128 40 137 78 115 104C92 131 49 119 35 97C31 90 30 81 30 72Z" fill="#A8B69A"/><circle cx="171" cy="79" r="48" fill="#D8B95F"/><path d="M207 133C222 93 272 84 291 115C309 144 283 184 246 184C216 184 195 163 207 133Z" fill="#C16B49"/><rect x="130" y="144" width="47" height="47" rx="17" transform="rotate(-17 130 144)" fill="#203D2B"/></svg>;
+ if(kind==="fluid") return <svg viewBox="0 0 320 210" role="img" aria-label="Fluid contours and movement"><path d="M-8 110C37 7 111 14 135 80C158 145 218 171 331 72V220H-8Z" fill="#6F855D"/><path d="M-8 137C48 39 105 43 137 103C174 174 242 185 331 105" fill="none" stroke="#203D2B" strokeWidth="2"/><path d="M-8 158C47 65 99 71 139 127C183 190 249 198 331 135" fill="none" stroke="#F3EBDD" strokeWidth="2"/><path d="M-8 178C47 92 95 99 141 151C188 207 259 211 331 163" fill="none" stroke="#C16B49" strokeWidth="3"/><circle cx="246" cy="42" r="24" fill="#D8B95F"/></svg>;
+ if(kind==="editorial") return <svg viewBox="0 0 320 210" role="img" aria-label="Organic editorial typography specimen"><rect x="13" y="12" width="294" height="186" fill="#F3EBDD" stroke="#203D2B"/><text x="28" y="42" fontSize="9" letterSpacing="2" fill="#203D2B">FIELD NOTES / 06</text><path d="M27 57H291" stroke="#203D2B" opacity=".35"/><text x="25" y="116" fontFamily="Georgia,serif" fontSize="53" letterSpacing="-3" fill="#203D2B">Soft</text><text x="25" y="159" fontFamily="Georgia,serif" fontSize="53" fontStyle="italic" letterSpacing="-3" fill="#C16B49">forms.</text><path d="M217 165H289M217 174H275M217 183H286" stroke="#203D2B" strokeWidth="2"/></svg>;
+ if(kind==="biomorphic") return <svg viewBox="0 0 320 210" role="img" aria-label="Repeating biomorphic pattern"><defs><pattern id="bioPattern" width="72" height="64" patternUnits="userSpaceOnUse"><path d="M5 31C7 8 31 1 46 13C64 27 55 53 35 58C17 63 3 49 5 31Z" fill="#6F855D" stroke="#203D2B"/><circle cx="36" cy="31" r="8" fill="#D8B95F"/></pattern></defs><rect width="320" height="210" fill="#F3EBDD"/><rect x="12" y="12" width="296" height="186" fill="url(#bioPattern)"/><path d="M12 12H308V198H12Z" fill="none" stroke="#203D2B" strokeWidth="1.5"/></svg>;
+ return <svg viewBox="0 0 320 210" role="img" aria-label="Layered cut paper material composition"><rect x="24" y="24" width="245" height="155" fill="#203D2B"/><path d="M49 36C83 8 133 18 153 51C172 82 149 117 112 124C73 132 36 93 49 36Z" fill="#A8B69A"/><path d="M135 75C165 31 236 43 264 88C287 126 250 171 203 162C158 154 114 111 135 75Z" fill="#C16B49"/><path d="M57 146L112 104L169 146L222 111L264 153" fill="none" stroke="#F3EBDD" strokeWidth="2"/></svg>;
+}
 function Sprig({className=''}) { return <svg className={`ry-sprig ${className}`} viewBox="0 0 180 240" fill="none" aria-hidden="true">
   <path d="M22 226C48 185 76 141 91 102C108 60 125 34 158 12" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"/>
   <g fill="currentColor" stroke="currentColor" strokeWidth="1.1" strokeLinejoin="round">
@@ -140,8 +148,8 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
         <span className="ry-hero-index">FIELD NOTE / 01</span>
       </div>
       <div className="ry-hero-art">
-        <div className="ry-sun-disc"/><div className="ry-terra-shape"/><img src={photos.hero} alt="Layered tropical leaves with natural texture"/>
-        <div className="ry-hero-art-note"><span>BOTANICAL STUDY</span><span>FORM · LIGHT · GROWTH</span></div><Sprig className="ry-hero-sprig"/>
+        <div className="ry-sun-disc"/><div className="ry-terra-shape"/><div className="ry-hero-coded-art" aria-hidden="true"><DesignSpecimen kind="abstraction"/></div>
+        <div className="ry-hero-art-note"><span>ABSTRACT FORM STUDY</span><span>FORM · LIGHT · GROWTH</span></div><Sprig className="ry-hero-sprig"/>
       </div>
       <div className="ry-side-notes"><span>FORMS</span><span>TEXTURES</span><span>COLOURS</span><span>RHYTHMS</span><span>PEOPLE</span><b>01 — 06</b></div>
     </section>
@@ -149,8 +157,8 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
     <OrganicComposition />
 
     <section className="ry-studies" id="ry-studies">
-      <div className="ry-studies-intro"><span className="ry-kicker">03 / 06 · DESIGN STUDIES</span><h2>Anatomy<br/><em>of Nature</em></h2><p>Five visual studies. Select a specimen and explore how nature informs design.</p><button className="ry-light-button" onClick={()=>scrollTo('ry-study-detail')}>Explore studies <ArrowRight size={15}/></button></div>
-      <div className="ry-study-cards">{studies.map((study,i)=><button key={study.no} className={activeStudy===i?'ry-study-card is-active':'ry-study-card'} onClick={()=>{setActiveStudy(i);scrollTo('ry-study-detail')}} aria-pressed={activeStudy===i}><img src={study.image} alt={study.name+' specimen'}/><span className="ry-study-number">{study.no}</span><strong>{study.name}</strong><small>{study.copy}</small><span className="ry-study-arrow"><ArrowRight size={14}/></span></button>)}</div>
+      <div className="ry-studies-intro"><span className="ry-kicker">03 / 06 · DESIGN STUDIES</span><h2>Six ways<br/><em>to go organic</em></h2><p>Six design families. Select a coded specimen to explore a different organic visual approach.</p><button className="ry-light-button" onClick={()=>scrollTo('ry-study-detail')}>Explore studies <ArrowRight size={15}/></button></div>
+      <div className="ry-study-cards">{studies.map((study,i)=><button key={study.no} className={activeStudy===i?'ry-study-card is-active':'ry-study-card'} onClick={()=>{setActiveStudy(i);scrollTo('ry-study-detail')}} aria-pressed={activeStudy===i}><div className="ry-study-art"><DesignSpecimen kind={study.kind}/></div><span className="ry-study-number">{study.no}</span><strong>{study.name}</strong><small>{study.copy}</small><span className="ry-study-arrow"><ArrowRight size={14}/></span></button>)}</div>
       <div className="ry-study-detail" id="ry-study-detail" aria-live="polite"><span>ACTIVE SPECIMEN / {studies[activeStudy].no}</span><div><h3>{studies[activeStudy].name}</h3><p>{studies[activeStudy].detail}</p></div><button onClick={()=>setActiveStudy(v=>(v+1)%studies.length)}>Next specimen <ArrowRight size={14}/></button></div>
     </section>
 
@@ -173,8 +181,8 @@ export default function OrganicNaturalDesignStyle({onNavigate}) {
 
     <section className="ry-rules" id="ry-rules">
       <div className="ry-rules-heading"><span className="ry-kicker">06 / 06 · LIVING RULES</span><h2>The Living<br/><em>Rules</em></h2><p>Practical principles for creating organic, human and expressive designs.</p></div>
-      <div className="ry-rule-list">{rules.map(([no,title,copy],i)=><article key={no}><span>{no}</span><div><h3>{title}</h3><p>{copy}</p></div><img src={[photos.form,photos.texture,photos.colour,photos.rhythm,photos.botany][i]} alt="" loading="lazy"/></article>)}</div>
-      <div className="ry-rules-outro"><span>NATURE IS A PROCESS.<br/>NOT A PERFECT SHAPE.</span><div className="ry-outro-landscape"><img src={photos.stone} alt="Soft natural textures and foliage" loading="lazy"/><span/></div></div>
+      <div className="ry-rule-list">{rules.map(([no,title,copy],i)=><article key={no}><span>{no}</span><div><h3>{title}</h3><p>{copy}</p></div><span className="ry-rule-mark" aria-hidden="true">{["◒","≈","Aa","✳","▧"][i]}</span></article>)}</div>
+      <div className="ry-rules-outro"><span>NATURE IS A PROCESS.<br/>NOT A PERFECT SHAPE.</span><div className="ry-outro-landscape ry-coded-outro" aria-hidden="true"><DesignSpecimen kind="fluid"/></div></div>
     </section>
     <footer className="ry-footer"><div><span className="ry-kicker">RYŪMA / DESIGN ANATOMY</span><h2>Design with<br/><em>a human touch.</em></h2><p>Not a leaf pasted onto a layout. A visual system inspired by the way nature grows.</p></div><button onClick={()=>onNavigate?.('library')}>Back to Design Library <ArrowLeft size={15}/></button><div className="ry-footer-meta"><span>FORM · BOTANY · TEXTURE · COLOUR · RHYTHM</span><span>ORGANIC / NATURAL DESIGN</span></div></footer>
   </main>;
