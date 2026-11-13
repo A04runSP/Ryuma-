@@ -1,0 +1,151 @@
+/* Organic / Natural — approved editorial mockup direction.
+   Scoped to this specimen only; keeps the Ryuma product shell independent. */
+.ry-organic{
+  --ry-ink:#f5f1e8;
+  --ry-paper:#111019;
+  --ry-forest:#203d2b;
+  --ry-moss:#65784b;
+  --ry-sage:#a8b69a;
+  --ry-terra:#c56b3d;
+  --ry-pollen:#d9b85f;
+  --ry-clay:#b58b7a;
+  --ry-stone:#b8b0a0;
+  background:#111019;
+  color:#f5f1e8;
+}
+.ry-organic .ry-nav{
+  background:#111019;
+  color:#f5f1e8;
+  border-bottom:1px solid rgba(245,241,232,.14);
+}
+.ry-organic .ry-wordmark,.ry-organic .ry-nav-links button,.ry-organic .ry-library-link{color:#f5f1e8}
+.ry-organic .ry-nav-links button:hover,.ry-organic .ry-library-link:hover{color:#b388ff}
+.ry-organic .ry-wordmark small{color:rgba(245,241,232,.55)}
+.ry-organic .ry-hero{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,.95fr) 105px;
+  align-items:stretch;
+  gap:26px;
+  min-height:440px;
+  padding:44px clamp(24px,5vw,76px) 38px;
+  background:#111019;
+  border-bottom:1px solid rgba(245,241,232,.14);
+}
+.ry-organic .ry-hero-copy{padding:20px 0 12px;max-width:620px}
+.ry-organic .ry-kicker{color:#c56b3d;letter-spacing:.16em}
+.ry-organic .ry-hero h1{
+  color:#f5f1e8;
+  font:400 clamp(58px,7vw,104px)/.91 'Playfair Display',Georgia,serif;
+  letter-spacing:-.065em;
+  margin:24px 0 18px;
+}
+.ry-organic .ry-hero h1 em{color:#c56b3d}
+.ry-organic .ry-hero-lead{color:#f5f1e8;font-size:clamp(17px,1.7vw,22px);line-height:1.35}
+.ry-organic .ry-hero-body{color:rgba(245,241,232,.7);max-width:570px;line-height:1.7}
+.ry-organic .ry-pill-button{background:#6a2c91;color:#fff;border:1px solid #8a2be2}
+.ry-organic .ry-hero-actions>span,.ry-organic .ry-hero-index{color:rgba(245,241,232,.48)}
+.ry-organic .ry-hero-art{
+  min-height:340px;
+  align-self:center;
+  overflow:hidden;
+  background:#f3ebdd;
+  border-radius:48% 48% 4px 4px;
+  position:relative;
+}
+.ry-organic .ry-hero-art:after{content:"";position:absolute;inset:12px;border:1px solid rgba(32,61,43,.28);pointer-events:none}
+.ry-organic .ry-hero-coded-art{inset:8% 7% 9%;background:#e8dfcf;border-radius:48% 48% 4px 4px}
+.ry-organic .ry-hero-coded-art svg{filter:none}
+.ry-organic .ry-sun-disc{background:#c56b3d}
+.ry-organic .ry-terra-shape{background:#d9b85f}
+.ry-organic .ry-hero-art-note{color:#203d2b}
+.ry-organic .ry-hero-sprig{color:#203d2b}
+.ry-organic .ry-side-notes{
+  display:flex;flex-direction:column;justify-content:center;gap:12px;
+  color:rgba(245,241,232,.76);font-size:10px;letter-spacing:.12em;
+  border-left:1px solid rgba(245,241,232,.18);padding-left:18px;
+}
+.ry-organic .ry-side-notes b{color:#c56b3d;margin-top:18px;font-weight:500}
+.ry-organic-composition{
+  background:#e9dfca;color:#203d2b;
+  padding:70px clamp(20px,5vw,76px);
+}
+.ry-organic .ry-studies{
+  background:#111019;color:#f5f1e8;
+  padding:78px clamp(20px,5vw,76px);
+}
+.ry-organic .ry-studies-intro h2,.ry-organic .ry-colour-heading h2,
+.ry-organic .ry-type-copy h2,.ry-organic .ry-practice-heading h2,
+.ry-organic .ry-rules-heading h2,.ry-organic .ry-footer h2{
+  color:#f5f1e8;
+}
+.ry-organic .ry-studies-intro h2 em,.ry-organic .ry-colour-heading h2 em,
+.ry-organic .ry-type-copy h2 em,.ry-organic .ry-practice-heading h2 em,
+.ry-organic .ry-rules-heading h2 em,.ry-organic .ry-footer h2 em{color:#c56b3d}
+.ry-organic .ry-studies-intro p,.ry-organic .ry-colour-heading p,
+.ry-organic .ry-type-copy p,.ry-organic .ry-practice-heading p{color:rgba(245,241,232,.68)}
+.ry-organic .ry-study-card{
+  position:relative;background:#1b1922;color:#f5f1e8;
+  border:1px solid rgba(245,241,232,.18);
+  border-radius:5px 28px 5px 5px;padding:10px 10px 18px;
+  box-shadow:none;
+}
+.ry-organic .ry-study-card:hover,.ry-organic .ry-study-card.is-active{
+  background:#24202a;border-color:#c56b3d;transform:translateY(-2px)
+}
+.ry-organic .ry-study-art{border-radius:3px;background:#e9dfca}
+.ry-organic .ry-study-card strong{color:#f5f1e8;font:500 22px/1.12 'Playfair Display',Georgia,serif}
+.ry-organic .ry-study-card small{color:rgba(245,241,232,.66);line-height:1.5}
+.ry-organic .ry-study-number{color:#d9b85f}
+.ry-organic .ry-study-arrow{color:#f5f1e8;border-color:rgba(245,241,232,.4)}
+.ry-organic .ry-study-detail{border-top:1px solid rgba(245,241,232,.18);color:#f5f1e8}
+.ry-organic .ry-study-detail p{color:rgba(245,241,232,.68)}
+.ry-organic .ry-study-detail>span{color:#d9b85f}
+.ry-organic .ry-study-detail button{color:#f5f1e8;border-color:rgba(245,241,232,.35)}
+.ry-organic .ry-colour{background:#e9dfca;color:#203d2b;padding:76px clamp(20px,5vw,76px)}
+.ry-organic .ry-colour-heading h2{color:#203d2b}
+.ry-organic .ry-colour-heading h2 em{color:#b96646}
+.ry-organic .ry-colour-heading p{color:#626b58}
+.ry-organic .ry-palette-modes button{border-color:rgba(32,61,43,.28);color:#203d2b}
+.ry-organic .ry-palette-modes button.is-active{background:#203d2b;color:#f3ebdd}
+.ry-organic .ry-swatch{color:#203d2b}
+.ry-organic .ry-live-preview{border-radius:4px;background:#203d2b;color:#f3ebdd!important;box-shadow:none}
+.ry-organic .ry-type{background:#111019;color:#f5f1e8;padding:76px clamp(20px,5vw,76px)}
+.ry-organic .ry-type-lab{background:#1b1922;border:1px solid rgba(245,241,232,.16);box-shadow:none}
+.ry-organic .ry-type-stage{background:#e9dfca;color:#203d2b}
+.ry-organic .ry-type-stage>span{color:#65784b}
+.ry-organic .ry-type-preview{color:#203d2b}
+.ry-organic .ry-type-controls{color:#f5f1e8}
+.ry-organic .ry-type-tabs button,.ry-organic .ry-weight-row button{color:#f5f1e8}
+.ry-organic .ry-type-tabs button.is-active,.ry-organic .ry-weight-row button.is-active{color:#d9b85f;border-color:#d9b85f}
+.ry-organic .ry-practice{background:#e9dfca;color:#203d2b;padding:76px clamp(20px,5vw,76px)}
+.ry-organic .ry-practice-heading h2{color:#203d2b}
+.ry-organic .ry-practice-heading h2 em{color:#b96646}
+.ry-organic .ry-practice-heading p{color:#626b58}
+.ry-organic .ry-brand-composition{box-shadow:none;border:1px solid rgba(32,61,43,.18)}
+.ry-organic .ry-rules{background:#111019;color:#f5f1e8;padding:76px clamp(20px,5vw,76px)}
+.ry-organic .ry-rule-list article{border-color:rgba(245,241,232,.16)}
+.ry-organic .ry-rule-list article h3{color:#f5f1e8}
+.ry-organic .ry-rule-list article p{color:rgba(245,241,232,.66)}
+.ry-organic .ry-rule-list article>span:first-child{color:#d9b85f}
+.ry-organic .ry-footer{background:#17151e;color:#f5f1e8;padding:70px clamp(20px,5vw,76px) 30px}
+.ry-organic .ry-footer p{color:rgba(245,241,232,.68)}
+.ry-organic .ry-footer>button{background:#6a2c91;color:#fff;border:1px solid #8a2be2}
+.ry-organic .ry-footer-meta{border-color:rgba(245,241,232,.16);color:rgba(245,241,232,.5)}
+.ry-organic button:focus-visible,.ry-organic input:focus-visible{outline:2px solid #20e3e6;outline-offset:4px}
+@media(max-width:900px){
+  .ry-organic .ry-hero{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:18px}
+  .ry-organic .ry-side-notes{display:none}
+}
+@media(max-width:680px){
+  .ry-organic .ry-hero{grid-template-columns:1fr;padding:36px 18px 28px;gap:18px}
+  .ry-organic .ry-hero-copy{padding:10px 0}
+  .ry-organic .ry-hero h1{font-size:clamp(56px,15vw,82px)}
+  .ry-organic .ry-hero-art{min-height:260px;width:100%;max-width:520px}
+  .ry-organic .ry-studies,.ry-organic .ry-type,.ry-organic .ry-rules{padding:52px 18px}
+  .ry-organic .ry-colour,.ry-organic .ry-practice{padding:52px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ry-organic .ry-study-card{transition:none}
+  .ry-organic .ry-study-card:hover,.ry-organic .ry-study-card.is-active{transform:none}
+}

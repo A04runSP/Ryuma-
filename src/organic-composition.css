@@ -1,0 +1,160 @@
+/* Organic / Natural — reference-led composition, simplified for maintainability.
+   Inspired by geometric botanical poster systems: modular panels, half-circles,
+   restrained botanical marks, and a limited earth palette. */
+
+.ry-organic-composition{
+  display:grid;
+  grid-template-columns:minmax(190px,.68fr) minmax(0,1.32fr);
+  gap:26px clamp(24px,4vw,64px);
+  padding:76px clamp(20px,5vw,76px) 70px;
+  background:#e9dfca;
+  color:#203d2b;
+  border-block:1px solid rgba(32,61,43,.14);
+}
+.ry-composition-intro{display:flex;flex-direction:column;align-items:flex-start}
+.ry-composition-intro h2{font:400 clamp(48px,5vw,76px)/.88 'Playfair Display',Georgia,serif;letter-spacing:-.065em;margin:20px 0}
+.ry-composition-intro h2 em{color:#b96646;font-weight:400}
+.ry-composition-intro p{max-width:310px;font-size:13px;line-height:1.75;color:#626b58}
+.ry-composition-index{margin-top:auto;padding-top:34px;font-size:8px;letter-spacing:.18em;color:#818674}
+
+.ry-composition-stage{
+  min-width:0;
+  background:#f5efe2;
+  padding:17px 18px 16px;
+  border:1px solid rgba(32,61,43,.13);
+}
+.ry-composition-topline{display:flex;justify-content:space-between;gap:12px;font-size:8px;letter-spacing:.16em;color:#77816e}
+.ry-composition-art{
+  position:relative;
+  isolation:isolate;
+  min-height:360px;
+  margin-top:12px;
+  overflow:hidden;
+  background:#d8dfc7;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:8px;
+  padding:12px;
+}
+.ry-composition-art:before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(32,61,43,.24);
+  pointer-events:none;
+}
+.ry-orbit{display:none}
+.ry-form{position:relative;inset:auto;width:auto;height:auto;transform:none;box-shadow:none}
+.form-sun{
+  grid-column:1;
+  grid-row:1;
+  width:74%;
+  aspect-ratio:1;
+  justify-self:center;
+  align-self:center;
+  border-radius:50%;
+  background:#d8b65f;
+}
+.form-petal{
+  grid-column:2;
+  grid-row:1;
+  width:70%;
+  height:70%;
+  justify-self:center;
+  align-self:center;
+  background:#b96646;
+  border-radius:50% 50% 4px 4px;
+}
+.form-stone{
+  grid-column:1;
+  grid-row:2;
+  width:78%;
+  height:72%;
+  justify-self:center;
+  align-self:center;
+  background:#8d9b78;
+  border-radius:50% 50% 4px 4px;
+}
+.form-leaf{
+  grid-column:2;
+  grid-row:2;
+  width:48%;
+  height:76%;
+  justify-self:center;
+  align-self:center;
+  background:#244a36;
+  border-radius:100% 0 100% 0;
+  transform:rotate(45deg);
+}
+.form-leaf:after{
+  content:"";
+  position:absolute;
+  width:1px;
+  height:82%;
+  left:50%;
+  top:9%;
+  background:rgba(243,235,221,.8);
+  transform:rotate(-45deg);
+}
+.form-leaf span{display:none}
+.form-disc{display:none}
+.ry-art-caption{position:absolute;z-index:3;font-size:8px;letter-spacing:.18em;color:#203d2b}
+.caption-a{left:22px;top:20px}
+.caption-b{right:22px;bottom:20px;color:#203d2b}
+.ry-composition-caption{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding-top:14px}
+.ry-composition-caption strong{font:400 23px/1 'Playfair Display',Georgia,serif}
+.ry-composition-caption span{max-width:270px;text-align:right;font-size:10px;line-height:1.5;color:#6a725e}
+
+.ry-composition-principles{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  border-top:1px solid rgba(32,61,43,.18);
+  margin-top:8px;
+}
+.ry-composition-principles article{
+  position:relative;
+  display:grid;
+  grid-template-columns:30px 1fr 54px;
+  align-items:center;
+  gap:12px;
+  padding:20px 14px 5px 0;
+  border-right:1px solid rgba(32,61,43,.15);
+}
+.ry-composition-principles article+article{padding-left:18px}
+.ry-composition-principles article:last-child{border-right:0}
+.ry-composition-principles article>span{font-size:9px;color:#a16a4f;letter-spacing:.1em;align-self:start;padding-top:4px}
+.ry-composition-principles h3{font:400 21px/1.05 'Playfair Display',Georgia,serif;margin:0 0 6px}
+.ry-composition-principles p{font-size:10px;line-height:1.5;color:#68705e;margin:0;max-width:230px}
+.principle-shape{width:42px;height:42px;display:block;background:#71865d;border-radius:50%}
+.shape-two{background:#c17a59;border-radius:50% 50% 4px 4px}
+.shape-three{background:#d5b75f;border-radius:50% 4px 50% 4px}
+
+@media(max-width:900px){
+  .ry-organic-composition{grid-template-columns:1fr;padding:56px 24px;gap:24px}
+  .ry-composition-intro p{max-width:480px}
+  .ry-composition-index{margin-top:18px}
+  .ry-composition-art{min-height:340px}
+}
+@media(max-width:600px){
+  .ry-organic-composition{padding:44px 16px;gap:20px}
+  .ry-composition-intro h2{font-size:clamp(46px,12vw,62px);margin:16px 0}
+  .ry-composition-intro p{font-size:12px}
+  .ry-composition-stage{padding:12px}
+  .ry-composition-topline{font-size:7px}
+  .ry-composition-art{min-height:260px;gap:6px;padding:9px}
+  .ry-composition-art:before{inset:9px}
+  .ry-composition-caption{display:block}
+  .ry-composition-caption strong{font-size:21px}
+  .ry-composition-caption span{display:block;text-align:left;margin-top:7px;font-size:10px}
+  .ry-composition-principles{grid-template-columns:1fr;margin-top:2px}
+  .ry-composition-principles article,.ry-composition-principles article+article{grid-template-columns:25px 1fr 42px;padding:13px 0;border-right:0;border-bottom:1px solid rgba(32,61,43,.15)}
+  .ry-composition-principles article:last-child{border-bottom:0}
+  .ry-composition-principles h3{font-size:19px}
+  .ry-composition-principles p{font-size:10px}
+  .principle-shape{width:34px;height:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ry-organic-composition *{transition:none!important;animation:none!important}
+}
