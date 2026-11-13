@@ -24,11 +24,11 @@ const studies = [
 {name:"Material-led design",kind:"material",no:"06",copy:"Layered planes, cut-paper edges and tactile surface effects.",detail:"Suggest material through layers, borders, grain and shadow. Keep effects restrained so the interface remains crisp and usable."}
 ];
 const rules = [
-  ['01','Work with natural forms','Use curves, irregular silhouettes and gentle transitions—not a grid of identical boxes.'],
-  ['02','Let texture stay tactile','Bring in paper, bark, stone and grain with restraint.'],
-  ['03','Ground the palette','Pair botanical greens with warm neutrals and one earthy focal accent.'],
-  ['04','Create rhythm through variation','Shift scale, crop and spacing while keeping a clear hierarchy.'],
-  ['05','Design for human experience','Keep contrast, legibility and interaction ahead of decoration.']
+  ['01','Begin with a visual idea','Choose a form, rhythm or material quality before choosing decoration.'],
+  ['02','Balance irregularity with structure','Use grids, alignment and spacing to keep expressive shapes intentional.'],
+  ['03','Let typography set the tone','Pair expressive display type with a clear, highly readable text system.'],
+  ['04','Use repetition with variation','Build pattern and rhythm without making every element identical.'],
+  ['05','Keep effects purposeful','Use texture, layering and motion only when they strengthen hierarchy or meaning.']
 ];
 function DesignSpecimen({kind}) {
  if(kind==="abstraction") return <svg viewBox="0 0 320 210" role="img" aria-label="Abstract overlapping organic forms"><path d="M18 120C22 50 92 18 143 54C190 87 159 145 111 169C67 191 14 173 18 120Z" fill="#6F855D"/><path d="M116 36C172 1 255 28 275 83C292 131 238 165 194 139C158 118 158 70 116 36Z" fill="#C16B49"/><path d="M128 117C154 76 212 78 235 118C253 150 224 193 178 190C139 188 111 155 128 117Z" fill="#D8B95F"/><path d="M32 22C62 4 97 12 111 38C123 61 99 83 74 76C50 69 26 49 32 22Z" fill="#203D2B"/></svg>;
