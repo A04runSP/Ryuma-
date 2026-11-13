@@ -209,8 +209,22 @@ export default function EditorialDesignSpecimen({ onNavigate }) {
         <TypeSpecimen />
       </section>
 
+      <section className="eds-color-section">
+        <SectionLabel number="04">COLOUR / INK, PAPER, SIGNAL</SectionLabel>
+        <div className="eds-section-heading">
+          <h2>Colour gives<br /><em>the page a voice.</em></h2>
+          <p>Editorial palettes often begin with a quiet base, strong text contrast and one deliberate signal colour. The palette should support the story—not compete with it.</p>
+        </div>
+        <div className="eds-color-study">
+          <div className="eds-color-swatch eds-swatch-paper"><span>01 / PAPER</span><b>#F1EEE7</b><i>Canvas</i></div>
+          <div className="eds-color-swatch eds-swatch-ink"><span>02 / INK</span><b>#1D1C19</b><i>Primary text</i></div>
+          <div className="eds-color-swatch eds-swatch-accent"><span>03 / SIGNAL</span><b>#D84A32</b><i>Emphasis</i></div>
+          <div className="eds-color-swatch eds-swatch-muted"><span>04 / RULE</span><b>#C9C3B8</b><i>Structure</i></div>
+        </div>
+      </section>
+
       <section className="eds-spread-section" id="eds-spread">
-        <SectionLabel number="04">COMPOSITION / A TWO-PAGE STUDY</SectionLabel>
+        <SectionLabel number="05">COMPOSITION / A TWO-PAGE STUDY</SectionLabel>
         <div className="eds-section-heading">
           <h2>One story.<br /><em>Many roles.</em></h2>
           <p>This spread is built entirely from HTML and CSS. No photography or decorative image files: the hierarchy, geometry, captions and folios are the specimen.</p>
@@ -225,7 +239,7 @@ export default function EditorialDesignSpecimen({ onNavigate }) {
       </section>
 
       <section className="eds-layout-section">
-        <SectionLabel number="05">LAYOUT / THREE EDITORIAL FORMATS</SectionLabel>
+        <SectionLabel number="06">LAYOUT / THREE EDITORIAL FORMATS</SectionLabel>
         <div className="eds-section-heading">
           <h2>Different formats.<br /><em>Same discipline.</em></h2>
           <p>A cover, contents page and feature essay solve different reading problems. Each uses hierarchy and alignment, but changes the composition to fit its purpose.</p>
