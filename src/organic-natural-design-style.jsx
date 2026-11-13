@@ -4,6 +4,7 @@ import './organic-natural-design-style.css';
 import './organic-natural-design-v2.css';
 import './organic-composition.css';
 import './organic-visual-families.css';
+import './organic-family-layout.css';
 
 const palette = [
   {name:'Forest',hex:'#203D2B',role:'Anchor · depth'},
