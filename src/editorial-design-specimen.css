@@ -256,3 +256,21 @@
 @media (prefers-reduced-motion: reduce) {
   .eds-page *, .eds-page *::before, .eds-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+.eds-color-section { margin: 0 auto; max-width: 1600px; padding: clamp(72px, 9vw, 132px) clamp(22px, 5.5vw, 88px); }
+.eds-color-study { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.eds-color-swatch { display: flex; flex-direction: column; justify-content: space-between; min-height: 205px; padding: 18px; }
+.eds-color-swatch > span, .eds-color-swatch > b { font-family: var(--eds-mono); font-size: 9px; letter-spacing: .08em; }
+.eds-color-swatch > i { font-family: var(--eds-display); font-size: 20px; font-style: italic; }
+.eds-swatch-paper { background: #f1eee7; border: 1px solid var(--eds-line); color: var(--eds-ink); }
+.eds-swatch-ink { background: #1d1c19; color: #fbf9f4; }
+.eds-swatch-accent { background: #d84a32; color: #fffaf4; }
+.eds-swatch-muted { background: #c9c3b8; color: #1d1c19; }
+@media (max-width: 900px) {
+  .eds-color-study { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .eds-color-section { padding-left: 20px; padding-right: 20px; }
+  .eds-color-swatch { min-height: 165px; padding: 14px; }
+  .eds-color-swatch > i { font-size: 17px; }
+}
