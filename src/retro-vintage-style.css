@@ -70,3 +70,95 @@
   .retro-page [data-floating-control],
   .retro-page .retro-floating-control{right:max(12px,env(safe-area-inset-right));}
 }
+
+
+/* RYŪMA / 03.02 — Mid-century travel poster redesign */
+.retro-page{
+  --paper:#F5E6D3;--paper-deep:#E7D1B2;--ink:#172A26;
+  --brick:#C4432E;--mustard:#E6B454;--teal:#2F6F63;
+  --orange:#D8793E;--rose:#B85C52;--olive:#4B3426;
+  background:#102823;color:var(--paper);
+  background-image:radial-gradient(rgba(245,230,211,.13) .65px,transparent .65px);
+  background-size:5px 5px;
+}
+.retro-page:before{position:absolute;opacity:.14;mix-blend-mode:screen;z-index:30}
+.retro-page .retro-nav{background:#102823;color:var(--paper);border-color:rgba(245,230,211,.4)}
+.retro-page .retro-nav button{border-color:var(--paper);color:var(--paper);background:transparent}
+.retro-page .retro-nav button:hover{background:var(--mustard);color:var(--ink)}
+.retro-page .retro-brand b{font-family:Georgia,serif;letter-spacing:-.06em}
+.retro-page .retro-hero{background:#102823;color:var(--paper);min-height:720px;padding:70px 5vw 80px;gap:4vw}
+.retro-page .retro-hero:after{background:var(--teal);width:25%;opacity:.72}
+.retro-page .retro-kicker{color:var(--mustard)}
+.retro-page .retro-hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:900;font-size:clamp(82px,10.5vw,154px);line-height:.78;letter-spacing:-.075em;text-transform:uppercase}
+.retro-page .retro-hero h1 em{color:var(--mustard);font-family:Georgia,serif;text-shadow:4px 4px 0 var(--brick)}
+.retro-page .retro-hero p{font-size:clamp(17px,1.7vw,21px);color:#E9DCC8;max-width:470px}
+.retro-page .retro-stamp{background:var(--mustard);color:var(--ink);border-color:var(--brick);box-shadow:5px 5px 0 var(--brick);right:3%;top:35px}
+.retro-page .retro-road-poster{height:540px;min-height:540px;padding:0;background:#b85a37;border:8px solid var(--paper);box-shadow:14px 14px 0 var(--brick);transform:rotate(1deg)}
+.retro-page .retro-road-poster:before{inset:12px;border:1px solid rgba(245,230,211,.8);z-index:4;pointer-events:none}
+.retro-page .retro-landscape{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.retro-page .retro-road-poster .retro-ticket{z-index:5;left:26px;top:27px;background:var(--paper);color:var(--ink);border:1px dashed var(--brick);transform:rotate(-3deg)}
+.retro-page .retro-road-poster .retro-poster-copy{z-index:5;right:26px;bottom:28px;background:var(--ink);color:var(--paper);padding:10px 12px;line-height:1.5;font-size:10px}
+.retro-page .retro-road-badge{position:absolute;z-index:5;right:26px;top:28px;background:var(--mustard);color:var(--ink);border:2px solid var(--ink);outline:1px dashed var(--paper);padding:13px 15px;font-family:Georgia,serif;font-weight:900;font-size:13px;line-height:1.05;text-align:center;transform:rotate(7deg);box-shadow:5px 5px 0 var(--brick)}
+.retro-page .retro-intro{background:var(--paper);color:var(--ink);border-color:var(--ink)}
+.retro-page .retro-intro .retro-kicker{color:var(--brick)}
+.retro-page .retro-intro h2 em,.retro-page .retro-colour h2 em,.retro-page .retro-type h2 em,.retro-page .retro-texture h2 em,.retro-page .retro-rules h2 em{color:var(--brick)}
+.retro-page .retro-intro strong{color:var(--brick)}
+.retro-page .retro-anatomy{background:var(--mustard);color:var(--ink);border-color:var(--ink)}
+.retro-page .retro-anatomy .retro-section-label,.retro-page .retro-colour .retro-section-label,.retro-page .retro-type .retro-section-label,.retro-page .retro-texture .retro-section-label,.retro-page .retro-rules .retro-section-label{border-color:rgba(23,42,38,.45)}
+.retro-page .retro-anatomy-grid article{background:var(--paper);border-color:var(--ink);box-shadow:6px 6px 0 var(--teal)}
+.retro-page .retro-anatomy-grid article:nth-child(2){box-shadow:6px 6px 0 var(--brick)}
+.retro-page .retro-anatomy-grid article:nth-child(3){box-shadow:6px 6px 0 var(--olive)}
+.retro-page .retro-anatomy-grid article:nth-child(4){box-shadow:6px 6px 0 var(--orange)}
+.retro-page .retro-anatomy-grid article:nth-child(5){box-shadow:6px 6px 0 var(--teal)}
+.retro-page .retro-colour{background:var(--teal);color:var(--paper);border-color:var(--paper)}
+.retro-page .retro-colour .retro-kicker{color:var(--mustard)}
+.retro-page .retro-palette{gap:8px}
+.retro-page .retro-palette>div{border:1px solid rgba(245,230,211,.75);min-height:130px}
+.retro-page .retro-cream{background:var(--paper);color:var(--ink)}
+.retro-page .retro-brick{background:var(--brick)}
+.retro-page .retro-mustard{background:var(--mustard);color:var(--ink)}
+.retro-page .retro-teal{background:#23564E;border:1px solid var(--paper)}
+.retro-page .retro-orange{background:var(--olive);color:var(--paper)}
+.retro-page .retro-type{background:var(--paper);color:var(--ink);border-color:var(--ink)}
+.retro-page .retro-type-poster{background:var(--brick);color:var(--paper);border:2px solid var(--ink);box-shadow:12px 12px 0 var(--mustard);position:relative;overflow:hidden}
+.retro-page .retro-type-poster:before{content:"";position:absolute;inset:14px;border:1px solid rgba(245,230,211,.65);pointer-events:none}
+.retro-page .retro-type-poster strong{text-shadow:4px 4px 0 var(--ink)}
+.retro-page .retro-type-poster b{color:var(--mustard)}
+.retro-page .retro-texture{background:var(--brick);color:var(--paper);border-color:var(--paper)}
+.retro-page .retro-texture-card{background:var(--paper);color:var(--ink);border:2px solid var(--ink);box-shadow:12px 12px 0 var(--mustard);position:relative}
+.retro-page .retro-texture-card:after{content:"";position:absolute;inset:12px;border:1px dashed rgba(23,42,38,.4);pointer-events:none}
+.retro-page .retro-rules{background:var(--mustard);color:var(--ink);border-color:var(--ink)}
+.retro-page .retro-footer{background:#102823;color:var(--paper);border-top:2px solid var(--mustard)}
+.retro-page .retro-footer .retro-kicker{color:var(--mustard)}
+.retro-page .retro-footer em{color:var(--mustard)}
+.retro-page button:focus-visible{outline:3px solid var(--brick);outline-offset:4px}
+@media(max-width:900px){
+ .retro-page .retro-hero{grid-template-columns:minmax(0,1fr) minmax(280px,.95fr);gap:3vw}
+ .retro-page .retro-road-poster{height:470px;min-height:470px}
+ .retro-page .retro-hero h1{font-size:clamp(76px,11vw,112px)}
+ .retro-page .retro-anatomy-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .retro-page .retro-hero{padding:54px 20px 54px;display:block;min-height:0}
+ .retro-page .retro-hero:after{width:35%;height:38%;top:auto;bottom:0}
+ .retro-page .retro-hero h1{font-size:clamp(72px,21vw,112px);line-height:.78;margin:28px 0 22px}
+ .retro-page .retro-hero p{font-size:16px;max-width:330px;line-height:1.5}
+ .retro-page .retro-stamp{top:32px;right:17px;width:66px;height:66px;font-size:10px}
+ .retro-page .retro-road-poster{height:390px;min-height:390px;margin:42px 9px 10px;transform:rotate(.5deg);border-width:6px;box-shadow:8px 8px 0 var(--brick)}
+ .retro-page .retro-road-poster .retro-ticket{top:18px;left:17px;font-size:7px;padding:7px 8px}
+ .retro-page .retro-road-badge{top:18px;right:18px;font-size:10px;padding:9px 10px}
+ .retro-page .retro-road-poster .retro-poster-copy{right:17px;bottom:18px;font-size:8px;padding:7px 9px}
+ .retro-page .retro-intro{padding:55px 20px 58px}
+ .retro-page .retro-anatomy-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+ .retro-page .retro-anatomy-grid article{grid-column:span 5}
+ .retro-page .retro-anatomy-grid article:nth-child(even){grid-column:2 / span 5}
+ .retro-page .retro-anatomy-grid article:nth-child(5){grid-column:1 / -1}
+ .retro-page .retro-palette>div{min-height:110px}
+}
+@media(max-width:380px){
+ .retro-page .retro-road-poster{height:350px;min-height:350px}
+ .retro-page .retro-road-poster .retro-poster-copy{font-size:7px}
+ .retro-page .retro-road-badge{font-size:9px}
+ .retro-page .retro-anatomy-grid article,.retro-page .retro-anatomy-grid article:nth-child(even){grid-column:1 / -1}
+}
+@media(prefers-reduced-motion:reduce){.retro-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
