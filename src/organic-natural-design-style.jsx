@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Copy, RotateCcw, Menu } from 'lucide-react';
 import './organic-natural-design-style.css';
 import './organic-natural-design-v2.css';
+import './organic-composition.css';
 
 // Original vector artwork: illustrated botanical forms, never stock photography.
 const makeArtwork = (kind) => {
