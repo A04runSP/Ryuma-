@@ -48,7 +48,7 @@ export default function RetroVintageStyle({ onNavigate }) {
             <clipPath id="miamiSunClip"><circle cx="326" cy="244" r="116"/></clipPath>
           </defs>
 
-          <!-- Night sky and striped sunset -->
+          
           <rect width="640" height="620" fill="#111630"/>
           <rect width="640" height="390" fill="url(#miamiSky)"/>
           <circle cx="326" cy="244" r="116" fill="#ffb45f"/>
@@ -60,13 +60,13 @@ export default function RetroVintageStyle({ onNavigate }) {
             <rect x="190" y="347" width="272" height="23"/>
           </g>
 
-          <!-- Distant skyline -->
+          
           <path d="M0 344V285H34V250H61V305H89V272H119V326H144V240H170V327H199V278H223V334H252V264H281V335H311V300H337V343H370V278H399V335H425V255H454V329H479V285H508V339H535V265H566V331H590V295H640V370H0Z" fill="#202d59"/>
           <g fill="#ffb16d" opacity=".8">
             <path d="M43 267h5v8h-5zm0 17h5v8h-5zm91-32h5v8h-5zm0 18h5v8h-5zm120 4h5v8h-5zm0 18h5v8h-5zm180-8h5v8h-5zm0 18h5v8h-5zm118-21h5v8h-5zm0 18h5v8h-5z"/>
           </g>
 
-          <!-- Art Deco Ocean Drive hotels -->
+          
           <g stroke="#11152d" strokeWidth="7" strokeLinejoin="round">
             <path d="M420 365V238Q420 218 443 218H505Q529 218 529 242V365Z" fill="#2c7d8c"/>
             <path d="M432 239Q432 229 444 229H503Q516 229 516 242V254H432Z" fill="#f1a1a0"/>
@@ -86,7 +86,7 @@ export default function RetroVintageStyle({ onNavigate }) {
             <path d="M435 225H514" stroke="#ff5a9e" strokeWidth="3"/>
           </g>
 
-          <!-- Palm silhouettes -->
+          
           <g fill="#101a32">
             <path d="M91 414Q100 315 80 229Q75 204 45 184Q82 184 99 213Q92 160 122 120Q130 172 117 215Q151 181 193 184Q159 218 121 237Q139 320 130 414Z"/>
             <path d="M178 415Q183 338 166 279Q158 255 138 241Q170 239 186 264Q185 222 211 192Q218 236 203 271Q236 246 269 257Q241 284 207 294Q220 354 211 415Z"/>
@@ -96,7 +96,7 @@ export default function RetroVintageStyle({ onNavigate }) {
             <path d="M96 222Q45 167 24 175M102 212Q91 150 113 119M112 226Q160 176 194 185M184 278Q144 236 137 242M190 271Q193 221 210 193M199 289Q235 247 268 257"/>
           </g>
 
-          <!-- Wet boulevard and neon reflections -->
+          
           <path d="M0 375Q150 350 300 382T640 364V620H0Z" fill="url(#miamiRoad)"/>
           <path d="M0 410Q130 390 260 414T640 398" fill="none" stroke="#f36b99" strokeWidth="4" opacity=".7"/>
           <path d="M20 445H200M38 463H178M450 445H620M470 465H610" stroke="#40d7d4" strokeWidth="4" opacity=".55"/>
@@ -104,7 +104,7 @@ export default function RetroVintageStyle({ onNavigate }) {
           <path d="M382 620L420 446" stroke="#ff4f93" strokeWidth="9" opacity=".35"/>
           <path d="M458 620L486 450" stroke="#39d7d4" strokeWidth="8" opacity=".32"/>
 
-          <!-- Classic 1980s sports coupe, rear three-quarter view -->
+          
           <g transform="translate(132 348)" stroke="#111326" strokeLinejoin="round" strokeWidth="9">
             <path d="M32 118L61 70Q82 37 137 27L300 25Q343 29 378 78L412 104L422 158L6 158L12 132Z" fill="url(#miamiCar)"/>
             <path d="M98 72L141 20Q154 5 184 5H274Q307 7 337 62Z" fill="url(#miamiGlass)"/>
@@ -123,7 +123,7 @@ export default function RetroVintageStyle({ onNavigate }) {
             <path d="M154 177L140 210M285 178L302 210" stroke="#ff4e96" strokeWidth="7" opacity=".8"/>
           </g>
 
-          <!-- Graphic signage and paper grain -->
+          
           <g transform="translate(30 360)">
             <path d="M0 0H78V42H0Z" fill="#f5e2c3" stroke="#111326" strokeWidth="4"/>
             <text x="39" y="27" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="15" fontWeight="900" fill="#18223b">MIAMI</text>
