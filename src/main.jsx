@@ -10,7 +10,6 @@ import './library.css';
 import './brutalism-style.css';
 import './skeuomorphism-style.css';
 import './aurora-gradient-design-style.css';
-import './aurora-brightness.css';
 import './home-mobile-fix.css';
 import './dark-ui-style.css';
 import './maximalism-style.css';
