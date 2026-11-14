@@ -47,21 +47,22 @@ function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Re
   <path d="M56 111Q56 82 88 82H330Q362 82 373 111L393 290Q396 326 361 334H83Q49 331 48 298Z" fill="#EF3340" stroke="#111827" strokeWidth="12" strokeLinejoin="round"/>
   <path d="M74 112Q74 100 91 100H311Q337 100 345 123L360 282Q363 308 337 311H91Q72 309 70 287Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10"/>
   {/* Screen and halftone field */}
-  <path d="M92 135Q92 119 111 119H286Q318 119 324 148L335 265Q337 286 315 289H111Q94 288 93 269Z" fill="#FFD928" stroke="#111827" strokeWidth="8"/>
-  <path d="M92 135Q92 119 111 119H286Q318 119 324 148L335 265Q337 286 315 289H111Q94 288 93 269Z" fill="url(#paScreenDots)" opacity=".72"/>
+  <path d="M92 135Q92 119 111 119H248Q270 119 276 148L286 265Q288 286 268 289H111Q94 288 93 269Z" fill="#FFD928" stroke="#111827" strokeWidth="8"/>
+  <path d="M92 135Q92 119 111 119H248Q270 119 276 148L286 265Q288 286 268 289H111Q94 288 93 269Z" fill="url(#paScreenDots)" opacity=".72"/>
   {/* Graphic eye icon */}
-  <path d="M122 213Q185 143 278 211Q204 274 122 213Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
-  <path d="M132 209Q193 153 269 207" fill="none" stroke="#111827" strokeWidth="9" strokeLinecap="round"/>
-  <path d="M146 190L137 176M165 177L160 159M187 169L186 149M210 168L215 149M233 177L244 160M253 190L269 177" stroke="#111827" strokeWidth="7" strokeLinecap="round"/>
-  <circle cx="202" cy="210" r="32" fill="#111827"/>
-  <circle cx="202" cy="210" r="12" fill="#FFF3D9"/>
+  <path d="M113 213Q181 157 260 211Q190 266 113 213Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+  <path d="M124 209Q187 164 250 207" fill="none" stroke="#111827" strokeWidth="9" strokeLinecap="round"/>
+  <path d="M139 190L131 178M158 178L153 162M180 171L180 153M201 171L206 153M222 178L233 162M242 190L254 178" stroke="#111827" strokeWidth="7" strokeLinecap="round"/>
+  <circle cx="185" cy="210" r="30" fill="#111827"/>
+  <circle cx="185" cy="210" r="11" fill="#FFF3D9"/>
   {/* TV speaker and controls */}
-  <path d="M338 128Q338 120 347 120H365Q374 120 374 130V274Q374 282 365 282H347Q338 282 338 273Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7"/>
-  <circle cx="356" cy="151" r="10" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/>
-  <path d="M351 146L361 156M361 146L351 156" stroke="#111827" strokeWidth="3.5" strokeLinecap="round"/>
-  <circle cx="356" cy="190" r="10" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/>
-  <path d="M351 190H361M356 185V195" stroke="#111827" strokeWidth="3.5" strokeLinecap="round"/>
-  <path d="M348 226H364M348 237H364M348 248H364" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
+  {/* Dedicated control bay: fully inside the cream bezel with a clear gap from the screen */}
+  <path d="M299 128Q299 119 308 119H337Q346 119 346 129V273Q346 282 337 282H308Q299 282 299 273Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7"/>
+  <circle cx="322.5" cy="151" r="9" fill="#FFF3D9" stroke="#111827" strokeWidth="4.5"/>
+  <path d="M318 146.5L327 155.5M327 146.5L318 155.5" stroke="#111827" strokeWidth="3" strokeLinecap="round"/>
+  <circle cx="322.5" cy="188" r="9" fill="#FFF3D9" stroke="#111827" strokeWidth="4.5"/>
+  <path d="M318 188H327M322.5 183.5V192.5" stroke="#111827" strokeWidth="3" strokeLinecap="round"/>
+  <path d="M314 222H331M314 232H331M314 242H331M314 252H331" stroke="#111827" strokeWidth="3.5" strokeLinecap="round"/>
   {/* feet */}
   <path d="M92 332L102 350H132L140 333M316 333L324 350H353L361 331" fill="#111827"/>
   {/* Comic impact burst */}
