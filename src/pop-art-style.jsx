@@ -56,11 +56,11 @@ function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Re
   <circle cx="202" cy="210" r="32" fill="#111827"/>
   <circle cx="202" cy="210" r="12" fill="#FFF3D9"/>
   {/* TV speaker and controls */}
-  <circle cx="358" cy="151" r="19" fill="#FFF3D9" stroke="#111827" strokeWidth="8"/>
-  <path d="M348 141L368 161M368 141L348 161" stroke="#111827" strokeWidth="5" strokeLinecap="round"/>
-  <circle cx="358" cy="207" r="19" fill="#FFF3D9" stroke="#111827" strokeWidth="8"/>
-  <path d="M348 207H368M358 197V217" stroke="#111827" strokeWidth="5" strokeLinecap="round"/>
-  <path d="M342 250H374M342 262H374M342 274H374" stroke="#111827" strokeWidth="5" strokeLinecap="round"/>
+  <circle cx="350" cy="151" r="14" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/>
+  <path d="M343 144L357 158M357 144L343 158" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
+  <circle cx="350" cy="195" r="14" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/>
+  <path d="M343 195H357M350 188V202" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
+  <path d="M338 235H362M338 245H362M338 255H362" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
   {/* feet */}
   <path d="M92 332L102 350H132L140 333M316 333L324 350H353L361 331" fill="#111827"/>
   {/* Comic impact burst */}
