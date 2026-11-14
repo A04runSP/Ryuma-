@@ -25,61 +25,71 @@ function StudyArt({id}){return <svg viewBox="0 0 220 150" aria-hidden="true" cla
  {id==='serial'&&<><rect width="220" height="150" fill="#70E1D1"/>{['#EF3340','#FFD928','#1455D9','#EF3340'].map((c,i)=><g key={i} transform={'translate('+(i%2*105+5)+' '+(Math.floor(i/2)*72+3)+')'}><circle cx="50" cy="32" r="27" fill={c} stroke="#111827" strokeWidth="3"/><path d="M30 29Q50 9 70 29M38 44Q50 52 62 44" fill="none" stroke="#111827" strokeWidth="4"/><circle cx="41" cy="30" r="3" fill="#111827"/><circle cx="59" cy="30" r="3" fill="#111827"/></g>)}</>}
  {id==='product'&&<><rect width="220" height="150" fill="#FFD928"/><path d="M75 25H145V42L158 52V126H62V52L75 42Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7"/><path d="M65 65H155V97H65Z" fill="#EF3340" stroke="#111827" strokeWidth="4"/><text x="110" y="87" textAnchor="middle" fontSize="17" fontWeight="900" fill="#FFF3D9">POP</text><path d="M82 25V15H138V25" fill="none" stroke="#111827" strokeWidth="6"/></>}
  </svg>}
-function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Constructed 2D Pop Art line illustration of a stylized woman holding a classic glass soda bottle"><svg className="pa-hero-illustration" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Bold 2D Pop Art illustration of a woman astronaut in a large rounded space helmet, with comic-book bursts, stars and halftone print texture"><svg className="pa-hero-illustration" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
  <defs>
-  <pattern id="paDotsRed" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#111827"/></pattern>
-  <pattern id="paDotsBlue" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#111827"/></pattern>
+  <pattern id="paSpaceDots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.2" fill="#111827"/></pattern>
+  <pattern id="paBlueDots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#FFF3D9"/></pattern>
+  <clipPath id="paVisorClip"><path d="M137 105Q142 48 248 42Q359 37 405 118Q439 178 411 273Q384 354 274 364Q166 370 118 294Q80 232 101 160Q111 124 137 105Z"/></clipPath>
  </defs>
- <rect width="700" height="450" fill="#EF3340"/><rect width="700" height="450" fill="url(#paDotsRed)" opacity=".24"/>
- <path d="M535 0H700V450H590Q640 320 535 0Z" fill="#1455D9"/><path d="M535 0H700V450H590Q640 320 535 0Z" fill="url(#paDotsBlue)" opacity=".25"/>
- {/* Impact burst: simple polygon, kept behind the character and bottle */}
- <path d="M414 20L455 66L515 35L510 91L584 83L553 137L625 164L562 195L604 250L533 245L520 308L466 266L422 309L399 250L340 266L359 208L301 184L358 151L340 96L397 112Z" fill="#FFF3D9" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <text x="465" y="153" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="76" fontWeight="900" fontStyle="italic" fill="#EF3340" stroke="#111827" strokeWidth="3" paintOrder="stroke">POP!</text>
- <path d="M367 185L568 158L579 207L376 235Z" fill="#FFD928" stroke="#111827" strokeWidth="6" strokeLinejoin="round"/><text x="470" y="207" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="24" fontWeight="900" fill="#111827" transform="rotate(-8 470 207)">EVERYWHERE</text>
- {/* Hair silhouette behind head: one large shape plus deliberate curved locks */}
- <path d="M18 450Q-8 355 16 236Q-1 115 89 49Q176 -17 276 38Q370 87 369 199Q392 304 344 450Z" fill="#FFD928" stroke="#111827" strokeWidth="12" strokeLinejoin="round"/>
- <path d="M35 179Q23 87 117 47Q211 2 292 70Q336 107 341 163Q293 117 255 132Q224 78 165 91Q99 106 76 178Z" fill="#EF3340" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
- <path d="M56 161Q88 75 172 69Q258 59 306 133Q276 118 252 143Q215 104 171 124Q112 147 56 205Z" fill="#FFD928" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <path d="M24 258Q68 203 105 221Q79 271 37 300M43 355Q93 318 116 347Q93 392 48 405M260 57Q324 74 343 139Q311 120 285 145" fill="none" stroke="#111827" strokeWidth="10" strokeLinecap="round"/>
- {/* Neck and shoulder */}
- <path d="M155 330L151 385Q119 395 76 450H385Q354 392 292 372L280 320Z" fill="#FFE0B8" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
- <path d="M54 450Q89 372 161 378Q234 375 286 450Z" fill="#EF3340" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
- {/* Face: smooth closed curves, flat fill */}
- <path d="M111 153Q132 100 207 103Q292 99 328 165Q353 214 333 289Q315 360 249 375Q174 391 119 335Q75 290 82 222Q85 180 111 153Z" fill="#FFE0B8" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
- {/* Face contour accents */}
- <path d="M104 193Q119 150 148 136M297 145Q324 166 333 203" fill="none" stroke="#E9A98B" strokeWidth="7" strokeLinecap="round"/>
- {/* Eyes and brows, assembled from curves and simple ellipses */}
- <path d="M115 225Q151 191 188 220Q155 250 115 225Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7" strokeLinejoin="round"/>
- <ellipse cx="153" cy="222" rx="11" ry="15" fill="#1455D9"/><circle cx="157" cy="217" r="4" fill="#FFF3D9"/>
- <path d="M215 219Q250 187 285 211Q257 246 215 219Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7" strokeLinejoin="round"/>
- <ellipse cx="250" cy="216" rx="10" ry="14" fill="#1455D9"/><circle cx="254" cy="211" r="4" fill="#FFF3D9"/>
- <path d="M108 202Q147 173 188 199M211 196Q250 169 289 194" fill="none" stroke="#111827" strokeWidth="11" strokeLinecap="round"/>
- <path d="M119 218L106 208M130 211L122 198M173 211L181 201M224 208L216 197M274 202L285 193" fill="none" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
- {/* Nose, smile and lips */}
- <path d="M202 229Q194 256 181 274Q198 283 215 276" fill="none" stroke="#111827" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
- <path d="M168 316Q204 283 245 300Q230 347 190 343Q168 339 168 316Z" fill="#111827" stroke="#111827" strokeWidth="6" strokeLinejoin="round"/>
- <path d="M178 315Q207 297 237 305Q217 322 181 326Z" fill="#EF3340"/><path d="M181 315Q207 305 231 307" fill="none" stroke="#FFF3D9" strokeWidth="6" strokeLinecap="round"/>
- {/* Earring */}
- <circle cx="105" cy="337" r="26" fill="#1455D9" stroke="#111827" strokeWidth="9"/><circle cx="105" cy="337" r="8" fill="#FFF3D9"/>
- {/* Bottle, built from a slim neck, tapered shoulders and narrow glass body */}
- <g transform="translate(91 0) scale(.82 1)">
-  <path d="M486 164L486 135Q486 123 499 123H541Q554 123 554 136V164L571 190Q581 205 581 226V410Q581 432 559 432H455Q433 432 433 410V226Q433 205 446 190Z" fill="#6C321B" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
-  <path d="M486 164V139Q486 129 498 129H542Q554 129 554 139V164L568 191H442Z" fill="#BDE8E8" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
-  <path d="M480 129H548V113Q548 104 539 104H489Q480 104 480 113Z" fill="#EF3340" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
-  <path d="M444 192Q506 207 569 192L579 225H434Z" fill="#8E4B28" stroke="#111827" strokeWidth="6"/>
-  <path d="M437 250Q505 264 577 249V339Q507 354 437 339Z" fill="#EF3340" stroke="#111827" strokeWidth="7"/>
-  <path d="M450 264Q506 274 565 263" fill="none" stroke="#FFF3D9" strokeWidth="4"/>
-  <text x="507" y="317" textAnchor="middle" fontFamily="Georgia,serif" fontSize="42" fontStyle="italic" fontWeight="bold" fill="#FFF3D9">Soda</text>
-  <path d="M447 356Q507 369 567 355V407Q567 421 551 421H462Q447 421 447 407Z" fill="#A85A2E" stroke="#111827" strokeWidth="5"/>
-  <path d="M461 198L469 231M541 199L550 231" stroke="#D8F4EF" strokeWidth="7" strokeLinecap="round"/>
-  <path d="M467 365L470 407M551 365L548 407" stroke="#D8F4EF" strokeWidth="4" opacity=".8"/>
+ <rect width="700" height="450" fill="#1455D9"/>
+ <rect x="0" y="0" width="700" height="450" fill="url(#paBlueDots)" opacity=".18"/>
+ <path d="M0 0H260L180 450H0Z" fill="#EF3340"/>
+ <path d="M0 0H260L180 450H0Z" fill="url(#paSpaceDots)" opacity=".3"/>
+ <path d="M540 0H700V450H590Q633 300 540 0Z" fill="#FFD928"/>
+ <path d="M540 0H700V450H590Q633 300 540 0Z" fill="url(#paSpaceDots)" opacity=".28"/>
+ {/* Comic impact burst behind the helmet */}
+ <path d="M478 22L508 67L565 30L558 89L636 80L596 135L681 165L611 199L658 263L584 253L575 329L515 281L471 337L449 273L380 292L402 222L337 194L402 151L382 85L447 107Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+ <text x="518" y="158" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="67" fontWeight="900" fontStyle="italic" fill="#EF3340" stroke="#111827" strokeWidth="3" paintOrder="stroke">ZAP!</text>
+ <path d="M424 185L617 165L625 207L432 229Z" fill="#FFD928" stroke="#111827" strokeWidth="6"/>
+ <text x="523" y="211" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="20" fontWeight="900" fill="#111827" transform="rotate(-6 523 211)">TO THE STARS</text>
+ {/* Stars and orbit marks */}
+ <path d="M60 65L70 91L97 101L70 111L60 138L50 111L24 101L50 91Z" fill="#FFD928" stroke="#111827" strokeWidth="5"/>
+ <path d="M620 350L629 372L652 381L629 390L620 414L611 390L589 381L611 372Z" fill="#EF3340" stroke="#111827" strokeWidth="5"/>
+ <path d="M36 300Q58 270 88 281M580 38Q620 48 645 76" fill="none" stroke="#FFF3D9" strokeWidth="7" strokeLinecap="round" strokeDasharray="14 13"/>
+ {/* Space suit torso and shoulders */}
+ <path d="M72 450Q91 375 159 353Q219 334 283 353Q360 374 402 450Z" fill="#FFF3D9" stroke="#111827" strokeWidth="12" strokeLinejoin="round"/>
+ <path d="M115 450Q142 389 207 378Q275 367 333 397L367 450Z" fill="#EF3340" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
+ <path d="M182 389L183 450M299 389L319 450" stroke="#111827" strokeWidth="7"/>
+ <rect x="211" y="395" width="70" height="37" rx="5" fill="#FFD928" stroke="#111827" strokeWidth="6"/>
+ <circle cx="246" cy="413" r="8" fill="#1455D9" stroke="#111827" strokeWidth="4"/>
+ {/* Helmet outer shell: broad, rounded, unmistakably space helmet */}
+ <path d="M137 105Q142 48 248 42Q359 37 405 118Q439 178 411 273Q384 354 274 364Q166 370 118 294Q80 232 101 160Q111 124 137 105Z" fill="#FFD928" stroke="#111827" strokeWidth="15" strokeLinejoin="round"/>
+ <path d="M137 105Q142 48 248 42Q359 37 405 118Q439 178 411 273Q384 354 274 364Q166 370 118 294Q80 232 101 160Q111 124 137 105Z" fill="none" stroke="#FFF3D9" strokeWidth="5"/>
+ {/* Visor glass and face, clipped within helmet */}
+ <g clipPath="url(#paVisorClip)">
+  <path d="M92 90H430V370H92Z" fill="#BDE8E8"/>
+  <path d="M92 90H430V370H92Z" fill="url(#paBlueDots)" opacity=".14"/>
+  <path d="M119 125Q178 80 243 94Q316 95 369 145L400 232Q366 319 275 348Q176 358 121 286Q95 218 119 125Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9"/>
+  {/* Hair framing the face */}
+  <path d="M124 180Q122 104 200 89Q275 69 335 116Q360 140 369 181Q322 142 292 155Q260 113 212 132Q163 148 142 204Z" fill="#EF3340" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
+  <path d="M130 180Q159 119 217 116Q277 111 323 151" fill="none" stroke="#FFD928" strokeWidth="12" strokeLinecap="round"/>
+  {/* Face */}
+  <path d="M150 207Q176 176 205 194M264 192Q295 170 322 198" fill="none" stroke="#111827" strokeWidth="10" strokeLinecap="round"/>
+  <path d="M157 224Q184 203 211 225Q184 247 157 224Z" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/>
+  <ellipse cx="185" cy="224" rx="9" ry="13" fill="#1455D9"/><circle cx="188" cy="219" r="4" fill="#FFF3D9"/>
+  <path d="M265 220Q291 199 318 221Q292 245 265 220Z" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/>
+  <ellipse cx="292" cy="220" rx="9" ry="13" fill="#1455D9"/><circle cx="295" cy="215" r="4" fill="#FFF3D9"/>
+  <path d="M235 224Q226 257 212 270Q230 279 246 270" fill="none" stroke="#111827" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M197 307Q237 279 278 301Q260 340 222 338Q199 334 197 307Z" fill="#111827"/>
+  <path d="M207 306Q238 291 270 304Q245 322 210 318Z" fill="#EF3340"/>
+  <path d="M210 306Q239 298 263 305" fill="none" stroke="#FFF3D9" strokeWidth="5" strokeLinecap="round"/>
+  {/* Visor shine */}
+  <path d="M131 145Q157 111 193 104M350 130Q378 157 382 194" fill="none" stroke="#FFF3D9" strokeWidth="9" strokeLinecap="round" opacity=".9"/>
  </g>
- {/* Hand wraps the bottle: palm silhouette and four curved finger strokes */}
- <path d="M395 450Q383 420 391 389Q397 362 416 340Q432 322 447 330Q458 338 449 354L435 374Q459 356 475 365Q488 375 472 393Q496 379 510 392Q520 404 500 421Q526 411 539 430L532 450Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <path d="M425 371Q440 358 454 368M453 393Q470 380 484 393M482 416Q498 404 512 418" fill="none" stroke="#EF3340" strokeWidth="9" strokeLinecap="round"/>
- {/* Foreground label */}
- <rect x="8" y="405" width="265" height="37" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/><text x="22" y="430" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="19" fill="#111827">01 / MASS CULTURE STUDY</text>
- </svg></div>}
+ {/* Helmet rim, bolts and side communication discs */}
+ <path d="M119 295Q159 361 274 364Q385 361 411 273" fill="none" stroke="#111827" strokeWidth="12" strokeLinecap="round"/>
+ <circle cx="111" cy="235" r="28" fill="#EF3340" stroke="#111827" strokeWidth="10"/>
+ <circle cx="111" cy="235" r="10" fill="#FFD928"/>
+ <circle cx="411" cy="235" r="28" fill="#EF3340" stroke="#111827" strokeWidth="10"/>
+ <circle cx="411" cy="235" r="10" fill="#FFD928"/>
+ <path d="M128 113L144 96M383 105L399 124" stroke="#111827" strokeWidth="8" strokeLinecap="round"/>
+ {/* Foreground gloved hand raised in a confident space-explorer gesture */}
+ <path d="M367 450Q359 422 367 400Q374 382 390 374Q402 368 411 378Q419 389 405 405Q431 393 441 408Q448 421 426 436L416 450Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
+ <path d="M390 400Q405 391 417 400M404 421Q420 411 432 421" fill="none" stroke="#EF3340" strokeWidth="7" strokeLinecap="round"/>
+ {/* Caption strip */}
+ <rect x="14" y="405" width="270" height="34" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/>
+ <text x="27" y="428" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="18" fill="#111827">01 / COSMIC POP STUDY</text>
+</svg></div>}
 export default function PopArtStyle({onNavigate}){
  const [menu,setMenu]=useState(false),[activeStudy,setActiveStudy]=useState(0),[headline,setHeadline]=useState('POP\nIS EVERYWHERE'),[shape,setShape]=useState('burst'),[accent,setAccent]=useState('#EF3340'),[dots,setDots]=useState(true),[repeat,setRepeat]=useState(4);
  const lines=useMemo(()=>headline.split('\n').filter(Boolean).slice(0,3),[headline]);
