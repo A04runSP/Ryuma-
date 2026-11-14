@@ -30,3 +30,25 @@
 .fu-art-controls button:focus-visible{outline:2px solid var(--fu-orange);outline-offset:2px}
 @media(max-width:360px){.fu-art-controls{left:12px;right:12px;max-width:none;justify-content:center}.fu-art-controls button{font-size:7px;padding:5px 6px}}
 @media(prefers-reduced-motion:reduce){.fu-art-layer{transition:none}}
+
+
+/* Focused mobile layer explorer: artwork, selector, then explanation */
+.fu-hero-mark .fu-art-layer{opacity:.10;filter:saturate(.45);transition:opacity .22s ease,filter .22s ease}
+.fu-hero-mark .fu-art-layer.is-active{opacity:1;filter:saturate(1) drop-shadow(0 0 5px #ffedd033)}
+.fu-hero-mark .fu-art-energy.is-active circle{stroke:#ffedd0;stroke-width:3}
+.fu-hero-mark .fu-art-velocity.is-active path{stroke:#ffedd0;stroke-width:3}
+.fu-hero-mark .fu-art-force.is-active path{filter:drop-shadow(0 0 3px #ffedd0)}
+.fu-hero-mark .fu-art-anchor.is-active path:first-child{stroke:#00C2A8;stroke-width:8}
+.fu-hero-mark .fu-art-rhythm.is-active path{stroke:#FF6A08;stroke-width:7;opacity:1}
+.fu-motion-explorer{margin-top:-10px;padding:12px 0 15px;border-top:1px solid #081e3b44;border-bottom:1px solid #081e3b44}
+.fu-motion-tabs{display:flex;gap:6px;overflow-x:auto;padding:3px 2px 10px;scrollbar-width:thin;scroll-snap-type:x mandatory}
+.fu-motion-tabs button{flex:0 0 auto;display:flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid #081e3b66;background:transparent;color:var(--fu-indigo);font:800 11px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.045em;scroll-snap-align:start}
+.fu-motion-tabs button span{font:8px 'DM Mono',monospace;color:#496B8A}
+.fu-motion-tabs button.is-active{background:var(--fu-indigo);border-color:var(--fu-indigo);color:var(--fu-ivory)}
+.fu-motion-tabs button.is-active span{color:var(--fu-cyan)}
+.fu-motion-caption{display:grid;grid-template-columns:1fr;gap:4px;padding:4px 2px 0;min-height:68px}
+.fu-motion-caption>span{font:8px 'DM Mono',monospace;letter-spacing:.12em;color:#496B8A}
+.fu-motion-caption>strong{font:800 18px 'Barlow Condensed',sans-serif;text-transform:uppercase;color:var(--fu-indigo)}
+.fu-motion-caption>p{font-size:11px;line-height:1.55;color:#46596c;margin:0;max-width:560px}
+@media(min-width:600px){.fu-motion-explorer{margin:0 0 0 auto;max-width:580px;width:100%;grid-column:2;grid-row:2}.fu-motion-tabs{flex-wrap:wrap;overflow:visible}.fu-motion-caption{min-height:78px}}
+@media(prefers-reduced-motion:reduce){.fu-hero-mark .fu-art-layer{transition:none}}
