@@ -39,15 +39,54 @@ const motionLayers = [
  {id:'rhythm',label:'Rhythm',detail:'Repeated rhythm',hint:'Bars repeat with progressively changing lengths and intervals, creating a visible cadence.'},
 ];
 function MotionMark({activeLayer}){
- const all=activeLayer==='all';
+ if(activeLayer==='all') return <svg className="fu-hero-mark fu-full-composition" viewBox="0 0 560 420" role="img" aria-label="Complete Futurist composition showing a focal energy disc, a streamlined machine, directional force lines and repeated rhythm marks">
+  <defs>
+   <clipPath id="fuFullClip"><rect x="16" y="16" width="528" height="388"/></clipPath>
+   <linearGradient id="fuDisc" x1="0" x2="1" y1="0" y2="1"><stop stopColor="#FF6A08"/><stop offset="1" stopColor="#D94708"/></linearGradient>
+  </defs>
+  <rect x="16" y="16" width="528" height="388" fill="none" stroke="#FFEDD066"/>
+  <g clipPath="url(#fuFullClip)">
+   <circle cx="390" cy="145" r="100" fill="url(#fuDisc)"/>
+   <circle cx="390" cy="145" r="118" fill="none" stroke="#FFEDD0" strokeWidth="2" strokeDasharray="5 9"/>
+   <g stroke="#FFEDD0" strokeWidth="5" opacity=".9">
+    <path d="M32 100H190M32 125H145"/>
+    <path d="M410 320H530M445 342H530"/>
+   </g>
+   <g fill="none" stroke="#496B8A" strokeWidth="9" opacity=".95">
+    <path d="M15 340L195 160L230 195L360 65"/>
+    <path d="M45 385L225 205L260 240L390 110"/>
+   </g>
+   <g fill="none" stroke="#FFEDD0" strokeWidth="13" strokeLinecap="square">
+    <path d="M20 300L185 135L220 170L345 45"/>
+   </g>
+   <g fill="none" stroke="#00C2A8" strokeWidth="18" strokeLinejoin="miter">
+    <path d="M-5 365L165 195L205 235L330 110"/>
+    <path d="M135 420L285 270L325 310L475 160"/>
+   </g>
+   <g transform="translate(130 210)">
+    <path d="M30 95L70 40H235L290 95L270 125H48Z" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5" strokeLinejoin="round"/>
+    <path d="M95 42L125 8H205L235 42Z" fill="#496B8A" stroke="#FFEDD0" strokeWidth="4"/>
+    <path d="M165 9V42" stroke="#FFEDD0" strokeWidth="3"/>
+    <circle cx="92" cy="124" r="23" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5"/>
+    <circle cx="92" cy="124" r="9" fill="#00C2A8"/>
+    <circle cx="235" cy="124" r="23" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5"/>
+    <circle cx="235" cy="124" r="9" fill="#00C2A8"/>
+    <path d="M25 91H-8M12 108H-25" stroke="#FF6A08" strokeWidth="6"/>
+   </g>
+   <g stroke="#FF6A08" strokeWidth="8">
+    <path d="M35 55H155"/><path d="M35 72H120"/>
+   </g>
+   <path d="M40 390H520" stroke="#FFEDD0" strokeWidth="2" opacity=".65"/>
+  </g>
+ </svg>;
  return <svg className="fu-hero-mark" viewBox="0 0 560 420" role="img" aria-label={motionLayers.find(x=>x.id===activeLayer)?.detail||'Futurist visual study'}>
  <rect x="15" y="15" width="530" height="390" fill="none" stroke="#FFEDD066" strokeWidth="1"/>
- {(all||activeLayer==='energy')&&<g className="fu-study-energy"><circle cx="280" cy="205" r="112" fill="#FF6A08"/><circle cx="280" cy="205" r="135" fill="none" stroke="#FFEDD0" strokeWidth="3"/><circle cx="280" cy="205" r="158" fill="none" stroke="#FF6A08" strokeWidth="2" strokeDasharray="7 12"/><circle cx="280" cy="205" r="12" fill="#081E3B"/></g>}
- {(all||activeLayer==='velocity')&&<g className="fu-study-velocity" fill="#00C2A8"><path d="M55 330L185 190L185 245L300 110L300 175L430 35L410 150L300 265L300 210L185 345L185 290Z"/><path d="M250 365L365 250L365 295L490 170L470 275L365 390L365 345Z" opacity=".72"/></g>}
- {(all||activeLayer==='force')&&<g className="fu-study-force" fill="none" strokeLinecap="square"><path d="M65 325L310 80" stroke="#FFEDD0" strokeWidth="17"/><path d="M125 355L370 110" stroke="#00C2A8" strokeWidth="12"/><path d="M185 385L430 140" stroke="#496B8A" strokeWidth="8"/><path d="M245 395L490 150" stroke="#FF6A08" strokeWidth="5"/></g>}
- {(all||activeLayer==='anchor')&&<g className="fu-study-anchor"><path d="M280 65L485 340H75Z" fill="#00C2A8" stroke="#FFEDD0" strokeWidth="7" strokeLinejoin="round"/><path d="M280 120L425 315H135Z" fill="#081E3B" stroke="#FFEDD0" strokeWidth="4" strokeLinejoin="round"/><path d="M280 65V340M75 340H485" stroke="#FFEDD0" strokeWidth="4"/><circle cx="280" cy="245" r="26" fill="#FF6A08" stroke="#FFEDD0" strokeWidth="4"/></g>}
- {(all||activeLayer==='rhythm')&&<g className="fu-study-rhythm" fill="#FF6A08"><rect x="75" y="95" width="410" height="22"/><rect x="75" y="145" width="330" height="22"/><rect x="75" y="195" width="250" height="22"/><rect x="75" y="245" width="170" height="22"/><rect x="75" y="295" width="90" height="22"/></g>}
- </svg>
+ {(activeLayer==='energy')&&<g className="fu-study-energy"><circle cx="280" cy="205" r="112" fill="#FF6A08"/><circle cx="280" cy="205" r="135" fill="none" stroke="#FFEDD0" strokeWidth="3"/><circle cx="280" cy="205" r="158" fill="none" stroke="#FF6A08" strokeWidth="2" strokeDasharray="7 12"/><circle cx="280" cy="205" r="12" fill="#081E3B"/></g>}
+ {(activeLayer==='velocity')&&<g className="fu-study-velocity" fill="#00C2A8"><path d="M55 330L185 190L185 245L300 110L300 175L430 35L410 150L300 265L300 210L185 345L185 290Z"/><path d="M250 365L365 250L365 295L490 170L470 275L365 390L365 345Z" opacity=".72"/></g>}
+ {(activeLayer==='force')&&<g className="fu-study-force" fill="none" strokeLinecap="square"><path d="M65 325L310 80" stroke="#FFEDD0" strokeWidth="17"/><path d="M125 355L370 110" stroke="#00C2A8" strokeWidth="12"/><path d="M185 385L430 140" stroke="#496B8A" strokeWidth="8"/><path d="M245 395L490 150" stroke="#FF6A08" strokeWidth="5"/></g>}
+ {(activeLayer==='anchor')&&<g className="fu-study-anchor"><path d="M280 65L485 340H75Z" fill="#00C2A8" stroke="#FFEDD0" strokeWidth="7" strokeLinejoin="round"/><path d="M280 120L425 315H135Z" fill="#081E3B" stroke="#FFEDD0" strokeWidth="4" strokeLinejoin="round"/><path d="M280 65V340M75 340H485" stroke="#FFEDD0" strokeWidth="4"/><circle cx="280" cy="245" r="26" fill="#FF6A08" stroke="#FFEDD0" strokeWidth="4"/></g>}
+ {(activeLayer==='rhythm')&&<g className="fu-study-rhythm" fill="#FF6A08"><rect x="75" y="95" width="410" height="22"/><rect x="75" y="145" width="330" height="22"/><rect x="75" y="195" width="250" height="22"/><rect x="75" y="245" width="170" height="22"/><rect x="75" y="295" width="90" height="22"/></g>}
+ </svg>;
 }
 function Shape({kind,fill,index=0}){const style={'--fu-index':index,'--fu-fill':fill,background:kind==='triangle'?'transparent':fill};if(kind==='circle')return <span className="fu-shape fu-circle" style={style}/>;if(kind==='bar')return <span className="fu-shape fu-bar" style={style}/>;if(kind==='triangle')return <span className="fu-shape fu-triangle" style={style}/>;return <span className="fu-shape fu-square" style={style}/>;}
 export default function FuturismStyle({onNavigate}){
