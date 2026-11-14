@@ -647,3 +647,79 @@
     transform:none !important;
   }
 }
+
+
+/* Uniform live-preview cards: preserve one card footprint across every design. */
+.home-shell .preview-stage{
+  overflow:hidden;
+}
+.home-shell .preview-card{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) !important;
+  grid-template-rows:minmax(0,1fr) 150px !important;
+  height:100% !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+}
+.home-shell .preview-card .preview-art{
+  grid-row:1 !important;
+  grid-column:1 !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  max-height:none !important;
+}
+.home-shell .preview-card .preview-demo-wrap{
+  grid-row:1 !important;
+  grid-column:1 !important;
+  align-self:end !important;
+  position:relative !important;
+  z-index:4 !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 6% 5% !important;
+  box-sizing:border-box !important;
+  background:transparent !important;
+}
+.home-shell .preview-card .preview-demo{
+  position:relative !important;
+  inset:auto !important;
+  width:100% !important;
+  min-height:0 !important;
+  max-width:none !important;
+  margin:0 !important;
+  transform:none !important;
+  box-sizing:border-box !important;
+}
+.home-shell .preview-card .preview-caption{
+  grid-row:2 !important;
+  grid-column:1 !important;
+  min-height:150px !important;
+  height:150px !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+@media(max-width:680px){
+  .home-shell .preview-card{
+    grid-template-rows:minmax(0,1fr) 132px !important;
+  }
+  .home-shell .preview-card .preview-caption{
+    min-height:132px !important;
+    height:132px !important;
+    padding:16px 17px !important;
+    justify-content:center !important;
+    gap:8px !important;
+  }
+  .home-shell .preview-card .preview-caption h3{
+    font-size:clamp(22px,6vw,30px) !important;
+    line-height:1.05 !important;
+  }
+  .home-shell .preview-card .preview-caption p{
+    max-width:100% !important;
+    text-align:left !important;
+    margin:0 !important;
+  }
+  .home-shell .preview-card .preview-demo-wrap{
+    padding:0 5% 5% !important;
+  }
+}
