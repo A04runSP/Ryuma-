@@ -63,15 +63,23 @@ function MotionMark({activeLayer}){
     <path d="M-5 365L165 195L205 235L330 110"/>
     <path d="M135 420L285 270L325 310L475 160"/>
    </g>
-   <g transform="translate(130 210)">
-    <path d="M30 95L70 40H235L290 95L270 125H48Z" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5" strokeLinejoin="round"/>
-    <path d="M95 42L125 8H205L235 42Z" fill="#496B8A" stroke="#FFEDD0" strokeWidth="4"/>
-    <path d="M165 9V42" stroke="#FFEDD0" strokeWidth="3"/>
-    <circle cx="92" cy="124" r="23" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5"/>
-    <circle cx="92" cy="124" r="9" fill="#00C2A8"/>
-    <circle cx="235" cy="124" r="23" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5"/>
-    <circle cx="235" cy="124" r="9" fill="#00C2A8"/>
-    <path d="M25 91H-8M12 108H-25" stroke="#FF6A08" strokeWidth="6"/>
+   <g transform="translate(92 220)" strokeLinejoin="round">
+    <path d="M24 105L55 73L125 60L166 18Q180 5 202 5H292Q315 5 330 23L370 70L420 88Q434 94 438 111L433 127H398Q390 98 361 98Q332 98 324 127H145Q137 98 108 98Q79 98 71 127H29Q10 127 10 115Z" fill="#00A995" stroke="#FFEDD0" strokeWidth="7"/>
+    <path d="M170 18Q181 12 202 12H288Q307 12 319 28L347 66H137Z" fill="#082A43" stroke="#FFEDD0" strokeWidth="5"/>
+    <path d="M236 13V66M315 24L340 66" stroke="#FFEDD0" strokeWidth="5"/>
+    <path d="M26 88L80 76L137 69H347L411 91L423 105H380Q365 86 342 91H129Q104 85 83 105H20Z" fill="#08233F" stroke="#FFEDD0" strokeWidth="3"/>
+    <path d="M178 80L225 72L255 72L208 83ZM267 78L304 71L325 73L285 84Z" fill="#FF6A08" stroke="#FF6A08" strokeWidth="3"/>
+    <path d="M15 115H435" stroke="#FFEDD0" strokeWidth="5"/>
+    <g fill="#08233F" stroke="#FFEDD0" strokeWidth="7">
+     <circle cx="108" cy="127" r="30"/><circle cx="361" cy="127" r="30"/>
+    </g>
+    <g fill="#00C2A8" stroke="#FFEDD0" strokeWidth="4">
+     <path d="M108 105L130 127L108 149L86 127Z"/><path d="M361 105L383 127L361 149L339 127Z"/>
+    </g>
+    <g fill="#08233F" stroke="#FFEDD0" strokeWidth="3">
+     <path d="M108 115L120 127L108 139L96 127Z"/><path d="M361 115L373 127L361 139L349 127Z"/>
+    </g>
+    <path d="M0 92H-35M5 107H-48M445 94H480" stroke="#FF6A08" strokeWidth="7"/>
    </g>
    <g stroke="#FF6A08" strokeWidth="8">
     <path d="M35 55H155"/><path d="M35 72H120"/>
