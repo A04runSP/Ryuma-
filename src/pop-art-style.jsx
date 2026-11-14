@@ -25,29 +25,59 @@ function StudyArt({id}){return <svg viewBox="0 0 220 150" aria-hidden="true" cla
  {id==='serial'&&<><rect width="220" height="150" fill="#70E1D1"/>{['#EF3340','#FFD928','#1455D9','#EF3340'].map((c,i)=><g key={i} transform={'translate('+(i%2*105+5)+' '+(Math.floor(i/2)*72+3)+')'}><circle cx="50" cy="32" r="27" fill={c} stroke="#111827" strokeWidth="3"/><path d="M30 29Q50 9 70 29M38 44Q50 52 62 44" fill="none" stroke="#111827" strokeWidth="4"/><circle cx="41" cy="30" r="3" fill="#111827"/><circle cx="59" cy="30" r="3" fill="#111827"/></g>)}</>}
  {id==='product'&&<><rect width="220" height="150" fill="#FFD928"/><path d="M75 25H145V42L158 52V126H62V52L75 42Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7"/><path d="M65 65H155V97H65Z" fill="#EF3340" stroke="#111827" strokeWidth="4"/><text x="110" y="87" textAnchor="middle" fontSize="17" fontWeight="900" fill="#FFF3D9">POP</text><path d="M82 25V15H138V25" fill="none" stroke="#111827" strokeWidth="6"/></>}
  </svg>}
-function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="1990s Pop Art comic illustration of a woman holding a classic glass soda bottle"><svg className="pa-hero-illustration" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
- <defs><pattern id="paDotsRed" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.2" fill="#111827"/></pattern><pattern id="paDotsBlue" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#111827"/></pattern></defs>
- <rect width="700" height="450" fill="#EF3340"/><rect width="700" height="450" fill="url(#paDotsRed)" opacity=".5"/><path d="M535 0H700V450H590Q650 320 535 0Z" fill="#1455D9"/><path d="M535 0H700V450H590Q650 320 535 0Z" fill="url(#paDotsBlue)" opacity=".55"/>
- <path d="M380 18L415 62L470 25L474 78L545 66L522 118L588 147L535 180L576 229L505 230L494 286L444 250L407 291L380 238L327 258L343 204L290 179L345 151L324 96L376 111Z" fill="#FFF3D9" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
- <text x="440" y="151" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="78" fontWeight="900" fontStyle="italic" fill="#EF3340" stroke="#111827" strokeWidth="3" paintOrder="stroke">POP!</text><path d="M350 185L560 157L570 205L361 236Z" fill="#FFD928" stroke="#111827" strokeWidth="5"/><text x="457" y="207" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="25" fontWeight="900" fill="#111827" transform="rotate(-8 457 207)">EVERYWHERE</text>
- <path d="M-24 450V112Q-5 7 135 0Q290 -8 365 104L402 260L335 450Z" fill="#FFD928" stroke="#111827" strokeWidth="11" strokeLinejoin="round"/>
- <path d="M17 154Q-1 69 73 20Q153 -28 246 25Q315 63 339 133Q293 99 258 111Q224 57 165 72Q111 92 91 143Z" fill="#111827" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
- <path d="M12 144Q32 48 122 31Q221 13 298 103Q319 127 328 165Q284 133 252 142Q218 92 167 107Q100 127 75 178Z" fill="#FFD928" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <path d="M43 111Q98 45 179 61Q238 72 286 122L260 153Q217 112 175 125Q112 148 65 181Z" fill="#EF3340" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
- <path d="M78 132Q112 86 177 105Q237 116 275 165Q311 221 285 306Q260 382 176 396Q91 397 54 320Q26 245 46 181Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <path d="M61 170Q83 134 120 125M224 127Q257 137 278 171" fill="none" stroke="#F3B98D" strokeWidth="7" strokeLinecap="round"/>
- <path d="M55 164Q104 110 165 120Q212 125 247 158" fill="none" stroke="#EF3340" strokeWidth="7" strokeDasharray="4 9"/>
- <path d="M68 205Q109 169 153 198Q116 231 68 205Z" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/><ellipse cx="112" cy="201" rx="12" ry="15" fill="#1455D9"/><circle cx="116" cy="197" r="5" fill="#FFF3D9"/><path d="M72 199L62 190M82 190L75 178M94 185L91 173" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
- <path d="M177 194Q214 165 252 190Q215 225 177 194Z" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/><ellipse cx="217" cy="190" rx="10" ry="13" fill="#1455D9"/><circle cx="220" cy="186" r="4" fill="#FFF3D9"/><path d="M246 184L258 175M235 178L242 166" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
- <path d="M67 177Q110 139 154 170M176 165Q219 136 257 168" fill="none" stroke="#111827" strokeWidth="12" strokeLinecap="round"/>
- <path d="M160 217Q151 239 147 258L177 265" fill="none" stroke="#111827" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/><path d="M146 272Q158 265 171 273" fill="none" stroke="#D18B70" strokeWidth="4" strokeLinecap="round"/>
- <path d="M143 298Q178 268 221 285Q206 326 164 330Q144 322 143 298Z" fill="#111827" stroke="#111827" strokeWidth="7"/><path d="M153 299Q182 282 213 292Q194 306 160 309Z" fill="#EF3340"/><path d="M158 298Q183 288 207 294" stroke="#FFF3D9" strokeWidth="6" fill="none" strokeLinecap="round"/><path d="M166 316Q187 321 202 310" stroke="#F48B8B" strokeWidth="5" fill="none" strokeLinecap="round"/>
- <path d="M30 343Q52 313 78 324Q94 330 102 352M251 332Q278 312 292 284" fill="none" stroke="#111827" strokeWidth="9" strokeLinecap="round"/>
- <path d="M16 369Q39 348 55 355M277 361Q299 339 310 313" fill="none" stroke="#FFD928" strokeWidth="12" strokeLinecap="round"/>
- <path d="M0 382Q74 350 142 383L196 450H0Z" fill="#EF3340" stroke="#111827" strokeWidth="9"/><circle cx="65" cy="339" r="25" fill="#1455D9" stroke="#111827" strokeWidth="8"/><circle cx="65" cy="339" r="7" fill="#FFF3D9"/>
- <path d="M300 450Q320 373 361 322Q390 285 435 280L525 300Q556 322 583 450Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9"/>
- <g transform="rotate(12 510 325)"><path d="M462 165Q465 144 486 144H536Q557 144 560 165L567 192L579 225L579 417Q579 438 558 438H440Q419 438 419 417V225L432 192Z" fill="#6C321B" stroke="#111827" strokeWidth="10"/><path d="M462 165Q465 144 486 144H536Q557 144 560 165L567 192H432L439 165Z" fill="#D7E5E2" stroke="#111827" strokeWidth="8"/><path d="M449 194H550L560 226H439Z" fill="#8E4B28"/><path d="M423 259Q499 245 575 259V344Q499 357 423 344Z" fill="#EF3340" stroke="#111827" strokeWidth="7"/><path d="M432 270Q499 259 565 270" stroke="#FFF3D9" strokeWidth="4" fill="none"/><text x="500" y="316" textAnchor="middle" fontFamily="Georgia,serif" fontStyle="italic" fontWeight="bold" fontSize="43" fill="#FFF3D9">Soda</text><path d="M442 359H557V410Q557 424 542 424H457Q442 424 442 410Z" fill="#A85A2E"/><path d="M455 202L465 234M538 205L548 232" stroke="#FFF3D9" strokeWidth="6" opacity=".8"/></g>
- <path d="M380 346Q410 315 431 324Q445 331 438 347L421 371Q449 356 468 366Q481 376 466 392Q496 377 510 392Q519 408 498 419Q528 411 538 429L525 450H379Q355 419 380 346Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9"/><path d="M415 366Q434 355 447 365M447 392Q465 381 478 391M477 415Q494 404 506 414" fill="none" stroke="#EF3340" strokeWidth="9" strokeLinecap="round"/>
+function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Constructed 2D Pop Art line illustration of a stylized woman holding a classic glass soda bottle"><svg className="pa-hero-illustration" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <defs>
+  <pattern id="paDotsRed" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#111827"/></pattern>
+  <pattern id="paDotsBlue" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#111827"/></pattern>
+ </defs>
+ <rect width="700" height="450" fill="#EF3340"/><rect width="700" height="450" fill="url(#paDotsRed)" opacity=".24"/>
+ <path d="M535 0H700V450H590Q640 320 535 0Z" fill="#1455D9"/><path d="M535 0H700V450H590Q640 320 535 0Z" fill="url(#paDotsBlue)" opacity=".25"/>
+ <!-- Impact burst: simple polygon, kept behind the character and bottle -->
+ <path d="M414 20L455 66L515 35L510 91L584 83L553 137L625 164L562 195L604 250L533 245L520 308L466 266L422 309L399 250L340 266L359 208L301 184L358 151L340 96L397 112Z" fill="#FFF3D9" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
+ <text x="465" y="153" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="76" fontWeight="900" fontStyle="italic" fill="#EF3340" stroke="#111827" strokeWidth="3" paintOrder="stroke">POP!</text>
+ <path d="M367 185L568 158L579 207L376 235Z" fill="#FFD928" stroke="#111827" strokeWidth="6" strokeLinejoin="round"/><text x="470" y="207" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="24" fontWeight="900" fill="#111827" transform="rotate(-8 470 207)">EVERYWHERE</text>
+ <!-- Hair silhouette behind head: one large shape plus deliberate curved locks -->
+ <path d="M18 450Q-8 355 16 236Q-1 115 89 49Q176 -17 276 38Q370 87 369 199Q392 304 344 450Z" fill="#FFD928" stroke="#111827" strokeWidth="12" strokeLinejoin="round"/>
+ <path d="M35 179Q23 87 117 47Q211 2 292 70Q336 107 341 163Q293 117 255 132Q224 78 165 91Q99 106 76 178Z" fill="#EF3340" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+ <path d="M56 161Q88 75 172 69Q258 59 306 133Q276 118 252 143Q215 104 171 124Q112 147 56 205Z" fill="#FFD928" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
+ <path d="M24 258Q68 203 105 221Q79 271 37 300M43 355Q93 318 116 347Q93 392 48 405M260 57Q324 74 343 139Q311 120 285 145" fill="none" stroke="#111827" strokeWidth="10" strokeLinecap="round"/>
+ <!-- Neck and shoulder -->
+ <path d="M155 330L151 385Q119 395 76 450H385Q354 392 292 372L280 320Z" fill="#FFE0B8" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+ <path d="M54 450Q89 372 161 378Q234 375 286 450Z" fill="#EF3340" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+ <!-- Face: smooth closed curves, flat fill -->
+ <path d="M111 153Q132 100 207 103Q292 99 328 165Q353 214 333 289Q315 360 249 375Q174 391 119 335Q75 290 82 222Q85 180 111 153Z" fill="#FFE0B8" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+ <!-- Face contour accents -->
+ <path d="M104 193Q119 150 148 136M297 145Q324 166 333 203" fill="none" stroke="#E9A98B" strokeWidth="7" strokeLinecap="round"/>
+ <!-- Eyes and brows, assembled from curves and simple ellipses -->
+ <path d="M115 225Q151 191 188 220Q155 250 115 225Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7" strokeLinejoin="round"/>
+ <ellipse cx="153" cy="222" rx="11" ry="15" fill="#1455D9"/><circle cx="157" cy="217" r="4" fill="#FFF3D9"/>
+ <path d="M215 219Q250 187 285 211Q257 246 215 219Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7" strokeLinejoin="round"/>
+ <ellipse cx="250" cy="216" rx="10" ry="14" fill="#1455D9"/><circle cx="254" cy="211" r="4" fill="#FFF3D9"/>
+ <path d="M108 202Q147 173 188 199M211 196Q250 169 289 194" fill="none" stroke="#111827" strokeWidth="11" strokeLinecap="round"/>
+ <path d="M119 218L106 208M130 211L122 198M173 211L181 201M224 208L216 197M274 202L285 193" fill="none" stroke="#111827" strokeWidth="4" strokeLinecap="round"/>
+ <!-- Nose, smile and lips -->
+ <path d="M202 229Q194 256 181 274Q198 283 215 276" fill="none" stroke="#111827" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+ <path d="M168 316Q204 283 245 300Q230 347 190 343Q168 339 168 316Z" fill="#111827" stroke="#111827" strokeWidth="6" strokeLinejoin="round"/>
+ <path d="M178 315Q207 297 237 305Q217 322 181 326Z" fill="#EF3340"/><path d="M181 315Q207 305 231 307" fill="none" stroke="#FFF3D9" strokeWidth="6" strokeLinecap="round"/>
+ <!-- Earring -->
+ <circle cx="105" cy="337" r="26" fill="#1455D9" stroke="#111827" strokeWidth="9"/><circle cx="105" cy="337" r="8" fill="#FFF3D9"/>
+ <!-- Bottle, built from a neck, shoulders, body and label -->
+ <g>
+  <path d="M486 164L486 135Q486 123 499 123H541Q554 123 554 136V164L571 190Q581 205 581 226V410Q581 432 559 432H455Q433 432 433 410V226Q433 205 446 190Z" fill="#6C321B" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+  <path d="M486 164V139Q486 129 498 129H542Q554 129 554 139V164L568 191H442Z" fill="#BDE8E8" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
+  <path d="M480 129H548V113Q548 104 539 104H489Q480 104 480 113Z" fill="#EF3340" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
+  <path d="M444 192Q506 207 569 192L579 225H434Z" fill="#8E4B28" stroke="#111827" strokeWidth="6"/>
+  <path d="M437 250Q505 264 577 249V339Q507 354 437 339Z" fill="#EF3340" stroke="#111827" strokeWidth="7"/>
+  <path d="M450 264Q506 274 565 263" fill="none" stroke="#FFF3D9" strokeWidth="4"/>
+  <text x="507" y="317" textAnchor="middle" fontFamily="Georgia,serif" fontSize="42" fontStyle="italic" fontWeight="bold" fill="#FFF3D9">Soda</text>
+  <path d="M447 356Q507 369 567 355V407Q567 421 551 421H462Q447 421 447 407Z" fill="#A85A2E" stroke="#111827" strokeWidth="5"/>
+  <path d="M461 198L469 231M541 199L550 231" stroke="#D8F4EF" strokeWidth="7" strokeLinecap="round"/>
+  <path d="M467 365L470 407M551 365L548 407" stroke="#D8F4EF" strokeWidth="4" opacity=".8"/>
+ </g>
+ <!-- Hand wraps the bottle: palm silhouette and four curved finger strokes -->
+ <path d="M395 450Q383 420 391 389Q397 362 416 340Q432 322 447 330Q458 338 449 354L435 374Q459 356 475 365Q488 375 472 393Q496 379 510 392Q520 404 500 421Q526 411 539 430L532 450Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
+ <path d="M425 371Q440 358 454 368M453 393Q470 380 484 393M482 416Q498 404 512 418" fill="none" stroke="#EF3340" strokeWidth="9" strokeLinecap="round"/>
+ <!-- Foreground label -->
  <rect x="8" y="405" width="265" height="37" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/><text x="22" y="430" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="19" fill="#111827">01 / MASS CULTURE STUDY</text>
  </svg></div>}
 export default function PopArtStyle({onNavigate}){
