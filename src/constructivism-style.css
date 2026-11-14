@@ -36,3 +36,9 @@
 /* Footer display type: add tracking so the condensed words remain distinct on mobile. */
 .cv-footer h2{letter-spacing:.035em}
 .cv-footer h2 i{letter-spacing:.035em}
+
+/* Hero wordmark: keep CONSTRUCTIVISM intact on one line at phone widths. */
+.cv-hero h1{white-space:nowrap;overflow:visible;font-size:clamp(43px,13.2vw,104px);letter-spacing:-.045em;line-height:.9}
+.cv-hero h1 .cv-title-accent{color:var(--cv-red)}
+@media(min-width:600px){.cv-hero h1{font-size:clamp(68px,8.6vw,112px)}}
+@media(min-width:900px){.cv-hero h1{font-size:clamp(92px,8.5vw,140px)}}
