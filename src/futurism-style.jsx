@@ -63,6 +63,19 @@ function MotionMark({activeLayer}){
     <path d="M-5 365L165 195L205 235L330 110"/>
     <path d="M135 420L285 270L325 310L475 160"/>
    </g>
+   {/* Rearward velocity: trails terminate at the car's rear and extend left, clarifying forward travel. */}
+   <g className="fu-rear-velocity" fill="none" strokeLinecap="square">
+    <path d="M18 270H138L164 258" stroke="#FFEDD0" strokeWidth="9"/>
+    <path d="M42 292H132L158 280" stroke="#00C2A8" strokeWidth="13"/>
+    <path d="M12 316H124L151 304" stroke="#496B8A" strokeWidth="7"/>
+    <path d="M48 339H132L156 328" stroke="#FF6A08" strokeWidth="8"/>
+    <path d="M24 360H116L142 349" stroke="#FFEDD0" strokeWidth="4"/>
+   </g>
+   <g className="fu-rear-rhythm" fill="#FF6A08">
+    <path d="M28 238H94L82 245H28Z"/>
+    <path d="M48 251H105L94 258H48Z"/>
+    <path d="M22 374H88L77 381H22Z"/>
+   </g>
    <g transform="translate(92 220)" strokeLinejoin="round">
     <path d="M24 105L55 73L125 60L166 18Q180 5 202 5H292Q315 5 330 23L370 70L420 88Q434 94 438 111L433 127H398Q390 98 361 98Q332 98 324 127H145Q137 98 108 98Q79 98 71 127H29Q10 127 10 115Z" fill="#00A995" stroke="#FFEDD0" strokeWidth="7"/>
     <path d="M170 18Q181 12 202 12H288Q307 12 319 28L347 66H137Z" fill="#082A43" stroke="#FFEDD0" strokeWidth="5"/>
