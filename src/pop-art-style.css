@@ -29,3 +29,18 @@
  .pa-type h2{line-height:1.02;letter-spacing:0}
  .pa-thesis h2{line-height:1.08}
 }
+
+/* Mobile readability: open up the two display statements called out in review */
+.pa-thesis h2,
+.pa-section-head h2{
+  letter-spacing:.025em;
+  line-height:1.08;
+  word-spacing:.035em;
+  text-wrap:balance;
+}
+.pa-thesis h2{font-size:clamp(34px,9vw,48px)}
+.pa-section-head h2{letter-spacing:.02em}
+@media(max-width:420px){
+  .pa-thesis h2,.pa-section-head h2{letter-spacing:.025em;line-height:1.1}
+}
+/* TV controls now sit on a dedicated inset control strip, clear of the screen bezel */
