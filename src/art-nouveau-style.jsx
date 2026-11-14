@@ -54,6 +54,24 @@ function Flower({className=''}) {
   </svg>;
 }
 
+
+function BotanicalPlant({className=''}) {
+  return <svg className={className} viewBox="0 0 360 500" fill="none" aria-hidden="true">
+    <path d="M175 492C170 424 194 365 180 300C167 239 143 177 105 112C89 85 72 58 49 30" stroke="#C49A52" strokeWidth="5" strokeLinecap="round"/>
+    <path d="M177 421C128 398 87 363 62 313C111 318 154 354 177 421Z" fill="#78845A" stroke="#D7C18F" strokeWidth="3"/>
+    <path d="M180 354C224 322 255 276 260 224C212 244 181 291 180 354Z" fill="#9AA176" stroke="#D7C18F" strokeWidth="3"/>
+    <path d="M157 278C106 257 75 214 68 163C119 183 153 224 157 278Z" fill="#A9AE7C" stroke="#D7C18F" strokeWidth="3"/>
+    <path d="M173 213C198 160 241 124 293 110C276 165 235 205 173 213Z" fill="#78845A" stroke="#D7C18F" strokeWidth="3"/>
+    <path d="M117 137C75 126 43 96 28 54C76 61 108 91 117 137Z" fill="#9AA176" stroke="#D7C18F" strokeWidth="3"/>
+    <path d="M177 421L75 330M180 354L249 246M157 278L80 181M173 213L277 124M117 137L43 69" stroke="#E9DFC9" strokeWidth="2" opacity=".8"/>
+    <path d="M175 492C196 451 213 414 242 383" stroke="#C49A52" strokeWidth="3" strokeLinecap="round"/>
+    <path d="M225 405C245 365 280 345 319 344C300 385 267 408 225 405Z" fill="#B66F55" stroke="#D7C18F" strokeWidth="3"/>
+    <path d="M49 30C66 35 78 48 88 64" stroke="#F4EBD8" strokeWidth="2"/>
+    <circle cx="49" cy="30" r="10" fill="#C49A52" stroke="#F4EBD8" strokeWidth="2"/>
+    <path d="M44 19C42 7 50 2 58 7C62 15 57 21 49 26" stroke="#78845A" strokeWidth="3" strokeLinecap="round"/>
+  </svg>;
+}
+
 export default function ArtNouveauStyle({onNavigate}) {
   const [activeStudy,setActiveStudy] = useState(0);
   const [selected,setSelected] = useState(palette[0]);
@@ -97,7 +115,7 @@ export default function ArtNouveauStyle({onNavigate}) {
         <span className="an-hero-index">01 / A STUDY IN LINE, FORM & ORNAMENT</span>
       </div>
       <div className="an-hero-art">
-        <div className="an-arch"><div className="an-arch-inner"><div className="an-sun-disc"/><Flower className="an-hero-flower"/><Sprig className="an-hero-sprig"/><div className="an-figure"><span>✳</span></div></div></div>
+        <div className="an-arch"><div className="an-arch-inner"><div className="an-sun-disc"/><BotanicalPlant className="an-hero-plant"/><Flower className="an-hero-bloom"/></div></div>
         <span className="an-art-caption">PLATE 01 / BOTANICAL STUDY</span>
       </div>
       <div className="an-hero-bottom"><span>OBSERVE / INTERPRET / ORNAMENT</span><span>SCROLL TO EXPLORE ↓</span></div>
@@ -153,7 +171,7 @@ export default function ArtNouveauStyle({onNavigate}) {
           <label className="an-toggle"><input type="checkbox" checked={ornament} onChange={e=>setOrnament(e.target.checked)}/><span>Show ornament</span></label>
           <div className="an-lab-actions"><button onClick={reset}><RotateCcw size={14}/> Reset</button><button className="an-export" onClick={exportPoster}>Export SVG <ArrowUpRight size={14}/></button></div>
         </div>
-        <div className="an-poster-preview"><div className="an-poster-frame">{ornament&&<Flower className="an-poster-flower"/>}<span>RYŪMA / ART NOUVEAU</span><strong>{lines.map((line,i)=><i key={i}>{line}</i>)}</strong><small>LINE · NATURE · ORNAMENT</small></div></div>
+        <div className="an-poster-preview"><div className="an-poster-frame">{ornament&&<BotanicalPlant className="an-poster-plant"/>}<span>RYŪMA / ART NOUVEAU</span><strong>{lines.map((line,i)=><i key={i}>{line}</i>)}</strong><small>LINE · NATURE · ORNAMENT</small></div></div>
       </div>
     </section>
 
