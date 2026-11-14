@@ -25,71 +25,54 @@ function StudyArt({id}){return <svg viewBox="0 0 220 150" aria-hidden="true" cla
  {id==='serial'&&<><rect width="220" height="150" fill="#70E1D1"/>{['#EF3340','#FFD928','#1455D9','#EF3340'].map((c,i)=><g key={i} transform={'translate('+(i%2*105+5)+' '+(Math.floor(i/2)*72+3)+')'}><circle cx="50" cy="32" r="27" fill={c} stroke="#111827" strokeWidth="3"/><path d="M30 29Q50 9 70 29M38 44Q50 52 62 44" fill="none" stroke="#111827" strokeWidth="4"/><circle cx="41" cy="30" r="3" fill="#111827"/><circle cx="59" cy="30" r="3" fill="#111827"/></g>)}</>}
  {id==='product'&&<><rect width="220" height="150" fill="#FFD928"/><path d="M75 25H145V42L158 52V126H62V52L75 42Z" fill="#FFF3D9" stroke="#111827" strokeWidth="7"/><path d="M65 65H155V97H65Z" fill="#EF3340" stroke="#111827" strokeWidth="4"/><text x="110" y="87" textAnchor="middle" fontSize="17" fontWeight="900" fill="#FFF3D9">POP</text><path d="M82 25V15H138V25" fill="none" stroke="#111827" strokeWidth="6"/></>}
  </svg>}
-function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Bold 2D Pop Art illustration of a woman astronaut in a large rounded space helmet, with comic-book bursts, stars and halftone print texture"><svg className="pa-hero-illustration" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
- <defs>
-  <pattern id="paSpaceDots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.2" fill="#111827"/></pattern>
-  <pattern id="paBlueDots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#FFF3D9"/></pattern>
-  <clipPath id="paVisorClip"><path d="M137 105Q142 48 248 42Q359 37 405 118Q439 178 411 273Q384 354 274 364Q166 370 118 294Q80 232 101 160Q111 124 137 105Z"/></clipPath>
- </defs>
- <rect width="700" height="450" fill="#1455D9"/>
- <rect x="0" y="0" width="700" height="450" fill="url(#paBlueDots)" opacity=".18"/>
- <path d="M0 0H260L180 450H0Z" fill="#EF3340"/>
- <path d="M0 0H260L180 450H0Z" fill="url(#paSpaceDots)" opacity=".3"/>
- <path d="M540 0H700V450H590Q633 300 540 0Z" fill="#FFD928"/>
- <path d="M540 0H700V450H590Q633 300 540 0Z" fill="url(#paSpaceDots)" opacity=".28"/>
- {/* Comic impact burst behind the helmet */}
- <path d="M478 22L508 67L565 30L558 89L636 80L596 135L681 165L611 199L658 263L584 253L575 329L515 281L471 337L449 273L380 292L402 222L337 194L402 151L382 85L447 107Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
- <text x="518" y="158" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="67" fontWeight="900" fontStyle="italic" fill="#EF3340" stroke="#111827" strokeWidth="3" paintOrder="stroke">ZAP!</text>
- <path d="M424 185L617 165L625 207L432 229Z" fill="#FFD928" stroke="#111827" strokeWidth="6"/>
- <text x="523" y="211" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="20" fontWeight="900" fill="#111827" transform="rotate(-6 523 211)">TO THE STARS</text>
- {/* Stars and orbit marks */}
- <path d="M60 65L70 91L97 101L70 111L60 138L50 111L24 101L50 91Z" fill="#FFD928" stroke="#111827" strokeWidth="5"/>
- <path d="M620 350L629 372L652 381L629 390L620 414L611 390L589 381L611 372Z" fill="#EF3340" stroke="#111827" strokeWidth="5"/>
- <path d="M36 300Q58 270 88 281M580 38Q620 48 645 76" fill="none" stroke="#FFF3D9" strokeWidth="7" strokeLinecap="round" strokeDasharray="14 13"/>
- {/* Space suit torso and shoulders */}
- <path d="M72 450Q91 375 159 353Q219 334 283 353Q360 374 402 450Z" fill="#FFF3D9" stroke="#111827" strokeWidth="12" strokeLinejoin="round"/>
- <path d="M115 450Q142 389 207 378Q275 367 333 397L367 450Z" fill="#EF3340" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <path d="M182 389L183 450M299 389L319 450" stroke="#111827" strokeWidth="7"/>
- <rect x="211" y="395" width="70" height="37" rx="5" fill="#FFD928" stroke="#111827" strokeWidth="6"/>
- <circle cx="246" cy="413" r="8" fill="#1455D9" stroke="#111827" strokeWidth="4"/>
- {/* Helmet outer shell: broad, rounded, unmistakably space helmet */}
- <path d="M137 105Q142 48 248 42Q359 37 405 118Q439 178 411 273Q384 354 274 364Q166 370 118 294Q80 232 101 160Q111 124 137 105Z" fill="#FFD928" stroke="#111827" strokeWidth="15" strokeLinejoin="round"/>
- <path d="M137 105Q142 48 248 42Q359 37 405 118Q439 178 411 273Q384 354 274 364Q166 370 118 294Q80 232 101 160Q111 124 137 105Z" fill="none" stroke="#FFF3D9" strokeWidth="5"/>
- {/* Visor glass and face, clipped within helmet */}
- <g clipPath="url(#paVisorClip)">
-  <path d="M92 90H430V370H92Z" fill="#BDE8E8"/>
-  <path d="M92 90H430V370H92Z" fill="url(#paBlueDots)" opacity=".14"/>
-  <path d="M119 125Q178 80 243 94Q316 95 369 145L400 232Q366 319 275 348Q176 358 121 286Q95 218 119 125Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9"/>
-  {/* Hair framing the face */}
-  <path d="M124 180Q122 104 200 89Q275 69 335 116Q360 140 369 181Q322 142 292 155Q260 113 212 132Q163 148 142 204Z" fill="#EF3340" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
-  <path d="M130 180Q159 119 217 116Q277 111 323 151" fill="none" stroke="#FFD928" strokeWidth="12" strokeLinecap="round"/>
-  {/* Face */}
-  <path d="M150 207Q176 176 205 194M264 192Q295 170 322 198" fill="none" stroke="#111827" strokeWidth="10" strokeLinecap="round"/>
-  <path d="M157 224Q184 203 211 225Q184 247 157 224Z" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/>
-  <ellipse cx="185" cy="224" rx="9" ry="13" fill="#1455D9"/><circle cx="188" cy="219" r="4" fill="#FFF3D9"/>
-  <path d="M265 220Q291 199 318 221Q292 245 265 220Z" fill="#FFF3D9" stroke="#111827" strokeWidth="6"/>
-  <ellipse cx="292" cy="220" rx="9" ry="13" fill="#1455D9"/><circle cx="295" cy="215" r="4" fill="#FFF3D9"/>
-  <path d="M235 224Q226 257 212 270Q230 279 246 270" fill="none" stroke="#111827" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
-  <path d="M197 307Q237 279 278 301Q260 340 222 338Q199 334 197 307Z" fill="#111827"/>
-  <path d="M207 306Q238 291 270 304Q245 322 210 318Z" fill="#EF3340"/>
-  <path d="M210 306Q239 298 263 305" fill="none" stroke="#FFF3D9" strokeWidth="5" strokeLinecap="round"/>
-  {/* Visor shine */}
-  <path d="M131 145Q157 111 193 104M350 130Q378 157 382 194" fill="none" stroke="#FFF3D9" strokeWidth="9" strokeLinecap="round" opacity=".9"/>
- </g>
- {/* Helmet rim, bolts and side communication discs */}
- <path d="M119 295Q159 361 274 364Q385 361 411 273" fill="none" stroke="#111827" strokeWidth="12" strokeLinecap="round"/>
- <circle cx="111" cy="235" r="28" fill="#EF3340" stroke="#111827" strokeWidth="10"/>
- <circle cx="111" cy="235" r="10" fill="#FFD928"/>
- <circle cx="411" cy="235" r="28" fill="#EF3340" stroke="#111827" strokeWidth="10"/>
- <circle cx="411" cy="235" r="10" fill="#FFD928"/>
- <path d="M128 113L144 96M383 105L399 124" stroke="#111827" strokeWidth="8" strokeLinecap="round"/>
- {/* Foreground gloved hand raised in a confident space-explorer gesture */}
- <path d="M367 450Q359 422 367 400Q374 382 390 374Q402 368 411 378Q419 389 405 405Q431 393 441 408Q448 421 426 436L416 450Z" fill="#FFE0B8" stroke="#111827" strokeWidth="9" strokeLinejoin="round"/>
- <path d="M390 400Q405 391 417 400M404 421Q420 411 432 421" fill="none" stroke="#EF3340" strokeWidth="7" strokeLinecap="round"/>
- {/* Caption strip */}
- <rect x="14" y="405" width="270" height="34" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/>
- <text x="27" y="428" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="18" fill="#111827">01 / COSMIC POP STUDY</text>
-</svg></div>}
+function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Retro Pop Art television with a halftone eye on its screen and a bold POP comic burst">
+ <svg className="pa-hero-illustration" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+   <pattern id="paTvDots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.1" fill="#111827"/></pattern>
+   <pattern id="paScreenDots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.8" fill="#EF3340"/></pattern>
+  </defs>
+  <rect width="700" height="400" fill="#1455D9"/>
+  <path d="M0 0H420L300 400H0Z" fill="#EF3340"/>
+  <path d="M0 0H420L300 400H0Z" fill="url(#paTvDots)" opacity=".58"/>
+  <path d="M0 300L700 250V400H0Z" fill="#FFD928"/>
+  <path d="M0 300L700 250V400H0Z" fill="url(#paTvDots)" opacity=".48"/>
+  <path d="M420 0H700V260L300 400L420 0Z" fill="#1455D9"/>
+  <path d="M420 0H700V260L300 400L420 0Z" fill="url(#paTvDots)" opacity=".28"/>
+  {/* Television aerial */}
+  <path d="M176 86L130 24M253 82L302 22" fill="none" stroke="#111827" strokeWidth="17" strokeLinecap="round"/>
+  <path d="M176 86L130 24M253 82L302 22" fill="none" stroke="#FFF3D9" strokeWidth="7" strokeLinecap="round"/>
+  <circle cx="128" cy="22" r="14" fill="#FFF3D9" stroke="#111827" strokeWidth="8"/>
+  <circle cx="304" cy="20" r="14" fill="#FFF3D9" stroke="#111827" strokeWidth="8"/>
+  {/* TV body */}
+  <path d="M56 111Q56 82 88 82H330Q362 82 373 111L393 290Q396 326 361 334H83Q49 331 48 298Z" fill="#EF3340" stroke="#111827" strokeWidth="12" strokeLinejoin="round"/>
+  <path d="M74 112Q74 100 91 100H311Q337 100 345 123L360 282Q363 308 337 311H91Q72 309 70 287Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10"/>
+  {/* Screen and halftone field */}
+  <path d="M92 135Q92 119 111 119H286Q318 119 324 148L335 265Q337 286 315 289H111Q94 288 93 269Z" fill="#FFD928" stroke="#111827" strokeWidth="8"/>
+  <path d="M92 135Q92 119 111 119H286Q318 119 324 148L335 265Q337 286 315 289H111Q94 288 93 269Z" fill="url(#paScreenDots)" opacity=".72"/>
+  {/* Graphic eye icon */}
+  <path d="M122 213Q185 143 278 211Q204 274 122 213Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+  <path d="M132 209Q193 153 269 207" fill="none" stroke="#111827" strokeWidth="9" strokeLinecap="round"/>
+  <path d="M146 190L137 176M165 177L160 159M187 169L186 149M210 168L215 149M233 177L244 160M253 190L269 177" stroke="#111827" strokeWidth="7" strokeLinecap="round"/>
+  <circle cx="202" cy="210" r="32" fill="#111827"/>
+  <circle cx="202" cy="210" r="12" fill="#FFF3D9"/>
+  {/* TV speaker and controls */}
+  <circle cx="358" cy="151" r="19" fill="#FFF3D9" stroke="#111827" strokeWidth="8"/>
+  <path d="M348 141L368 161M368 141L348 161" stroke="#111827" strokeWidth="5" strokeLinecap="round"/>
+  <circle cx="358" cy="207" r="19" fill="#FFF3D9" stroke="#111827" strokeWidth="8"/>
+  <path d="M348 207H368M358 197V217" stroke="#111827" strokeWidth="5" strokeLinecap="round"/>
+  <path d="M342 250H374M342 262H374M342 274H374" stroke="#111827" strokeWidth="5" strokeLinecap="round"/>
+  {/* feet */}
+  <path d="M92 332L102 350H132L140 333M316 333L324 350H353L361 331" fill="#111827"/>
+  {/* Comic impact burst */}
+  <path d="M486 27L508 72L554 36L550 91L616 77L585 128L673 151L606 182L653 231L587 228L585 284L530 250L492 298L471 245L409 265L429 205L377 178L432 142L416 87L465 108Z" fill="#FFF3D9" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
+  <text x="520" y="167" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="76" fontWeight="900" fontStyle="italic" fill="#EF3340" stroke="#111827" strokeWidth="4" paintOrder="stroke">POP!</text>
+  <path d="M430 190L614 169L621 210L438 233Z" fill="#FFD928" stroke="#111827" strokeWidth="6"/>
+  <text x="525" y="215" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="18" fontWeight="900" fill="#111827" transform="rotate(-6 525 215)">CULTURE EVERYWHERE</text>
+  {/* Caption */}
+  <rect x="14" y="356" width="264" height="34" fill="#FFF3D9" stroke="#111827" strokeWidth="5"/>
+  <text x="27" y="380" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="17" fill="#111827">01 / MASS CULTURE STUDY</text>
+ </svg>
+</div>}
 export default function PopArtStyle({onNavigate}){
  const [menu,setMenu]=useState(false),[activeStudy,setActiveStudy]=useState(0),[headline,setHeadline]=useState('POP\nIS EVERYWHERE'),[shape,setShape]=useState('burst'),[accent,setAccent]=useState('#EF3340'),[dots,setDots]=useState(true),[repeat,setRepeat]=useState(4);
  const lines=useMemo(()=>headline.split('\n').filter(Boolean).slice(0,3),[headline]);
