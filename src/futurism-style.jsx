@@ -31,25 +31,27 @@ const studies = [
   {name:'Machine anatomy',kind:'INDUSTRY / FORM',mark:'✳',copy:'Mechanical parts and geometric structures become expressive visual elements.'},
 ];
 const motionLayers = [
- {id:'energy',label:'Energy',detail:'Focal energy',hint:'The orange circle creates a visual centre and a sense of concentrated power.'},
- {id:'velocity',label:'Velocity',detail:'Directional movement',hint:'The cyan forms sweep diagonally across the frame, pulling the eye forward.'},
- {id:'force',label:'Force lines',detail:'Force and direction',hint:'Ivory and steel-blue strokes reinforce trajectory, tension and speed.'},
- {id:'anchor',label:'Anchor',detail:'Geometric anchor',hint:'The central geometric form stabilises the composition against its motion.'},
- {id:'rhythm',label:'Rhythm',detail:'Repeated rhythm',hint:'Repeated horizontal marks establish cadence and visual timing.'},
+ {id:'all',label:'Full composition',detail:'Five forces together',hint:'Energy, direction, force, stability and rhythm combine to create one dynamic visual field.'},
+ {id:'energy',label:'Energy',detail:'Focal energy',hint:'A strong central form attracts attention. The surrounding rings show energy radiating from one focal point.'},
+ {id:'velocity',label:'Velocity',detail:'Directional movement',hint:'Repeated arrow-like forms travel from lower left to upper right. Their direction pulls the eye forward.'},
+ {id:'force',label:'Force lines',detail:'Force and direction',hint:'Parallel strokes share a clear direction. Their spacing and length create acceleration and tension.'},
+ {id:'anchor',label:'Anchor',detail:'Geometric anchor',hint:'A symmetrical triangle and central axis create a stable point inside a dynamic composition.'},
+ {id:'rhythm',label:'Rhythm',detail:'Repeated rhythm',hint:'Bars repeat with progressively changing lengths and intervals, creating a visible cadence.'},
 ];
 function MotionMark({activeLayer}){
- return <svg className="fu-hero-mark" viewBox="0 0 560 420" role="img" aria-label="Futurist abstract composition with energy, velocity, force lines, geometric anchor and rhythm">
- <defs><clipPath id="fuClip"><rect x="15" y="15" width="530" height="390"/></clipPath></defs><g clipPath="url(#fuClip)">
- <g className={'fu-art-layer fu-art-energy '+(activeLayer==='energy'?'is-active':'')}><circle cx="350" cy="160" r="112" fill="#FF6A08"/></g>
- <g className={'fu-art-layer fu-art-velocity '+(activeLayer==='velocity'?'is-active':'')}><path d="M-20 340L240 35L190 210L420 -10L270 260L590 90L330 410Z" fill="#00C2A8"/></g>
- <g className={'fu-art-layer fu-art-force '+(activeLayer==='force'?'is-active':'')}><path d="M-30 390L215 115L180 260L460 35L300 300L590 190" fill="none" stroke="#FFEDD0" strokeWidth="14"/><path d="M70 345L270 115L240 250L445 80" fill="none" stroke="#496B8A" strokeWidth="9"/></g>
- <g className={'fu-art-layer fu-art-anchor '+(activeLayer==='anchor'?'is-active':'')}><path d="M180 315L295 185L410 315L295 350Z" fill="#081E3B" stroke="#FFEDD0" strokeWidth="5"/><circle cx="295" cy="265" r="34" fill="#FFEDD0"/><path d="M295 225V305M255 265H335" stroke="#081E3B" strokeWidth="7"/></g>
- <g className={'fu-art-layer fu-art-rhythm '+(activeLayer==='rhythm'?'is-active':'')}><path d="M35 60H210M20 90H160M400 360H550" stroke="#FFEDD0" strokeWidth="4" opacity=".8"/></g>
- </g></svg>
+ const all=activeLayer==='all';
+ return <svg className="fu-hero-mark" viewBox="0 0 560 420" role="img" aria-label={motionLayers.find(x=>x.id===activeLayer)?.detail||'Futurist visual study'}>
+ <rect x="15" y="15" width="530" height="390" fill="none" stroke="#FFEDD066" strokeWidth="1"/>
+ {(all||activeLayer==='energy')&&<g className="fu-study-energy"><circle cx="280" cy="205" r="112" fill="#FF6A08"/><circle cx="280" cy="205" r="135" fill="none" stroke="#FFEDD0" strokeWidth="3"/><circle cx="280" cy="205" r="158" fill="none" stroke="#FF6A08" strokeWidth="2" strokeDasharray="7 12"/><circle cx="280" cy="205" r="12" fill="#081E3B"/></g>}
+ {(all||activeLayer==='velocity')&&<g className="fu-study-velocity" fill="#00C2A8"><path d="M55 330L185 190L185 245L300 110L300 175L430 35L410 150L300 265L300 210L185 345L185 290Z"/><path d="M250 365L365 250L365 295L490 170L470 275L365 390L365 345Z" opacity=".72"/></g>}
+ {(all||activeLayer==='force')&&<g className="fu-study-force" fill="none" strokeLinecap="square"><path d="M65 325L310 80" stroke="#FFEDD0" strokeWidth="17"/><path d="M125 355L370 110" stroke="#00C2A8" strokeWidth="12"/><path d="M185 385L430 140" stroke="#496B8A" strokeWidth="8"/><path d="M245 395L490 150" stroke="#FF6A08" strokeWidth="5"/></g>}
+ {(all||activeLayer==='anchor')&&<g className="fu-study-anchor"><path d="M280 65L485 340H75Z" fill="#00C2A8" stroke="#FFEDD0" strokeWidth="7" strokeLinejoin="round"/><path d="M280 120L425 315H135Z" fill="#081E3B" stroke="#FFEDD0" strokeWidth="4" strokeLinejoin="round"/><path d="M280 65V340M75 340H485" stroke="#FFEDD0" strokeWidth="4"/><circle cx="280" cy="245" r="26" fill="#FF6A08" stroke="#FFEDD0" strokeWidth="4"/></g>}
+ {(all||activeLayer==='rhythm')&&<g className="fu-study-rhythm" fill="#FF6A08"><rect x="75" y="95" width="410" height="22"/><rect x="75" y="145" width="330" height="22"/><rect x="75" y="195" width="250" height="22"/><rect x="75" y="245" width="170" height="22"/><rect x="75" y="295" width="90" height="22"/></g>}
+ </svg>
 }
 function Shape({kind,fill,index=0}){const style={'--fu-index':index,'--fu-fill':fill,background:kind==='triangle'?'transparent':fill};if(kind==='circle')return <span className="fu-shape fu-circle" style={style}/>;if(kind==='bar')return <span className="fu-shape fu-bar" style={style}/>;if(kind==='triangle')return <span className="fu-shape fu-triangle" style={style}/>;return <span className="fu-shape fu-square" style={style}/>;}
 export default function FuturismStyle({onNavigate}){
- const [activeMotion,setActiveMotion]=useState('velocity'),[activeStudy,setActiveStudy]=useState(0),[headline,setHeadline]=useState('SPEED\nBECOMES\nFORM'),[shape,setShape]=useState('triangle'),[accent,setAccent]=useState('#00C2A8'),[angle,setAngle]=useState(28),[repeats,setRepeats]=useState(4),[showGrid,setShowGrid]=useState(true),[menu,setMenu]=useState(false),[copied,setCopied]=useState('');
+ const [activeMotion,setActiveMotion]=useState('all'),[activeStudy,setActiveStudy]=useState(0),[headline,setHeadline]=useState('SPEED\nBECOMES\nFORM'),[shape,setShape]=useState('triangle'),[accent,setAccent]=useState('#00C2A8'),[angle,setAngle]=useState(28),[repeats,setRepeats]=useState(4),[showGrid,setShowGrid]=useState(true),[menu,setMenu]=useState(false),[copied,setCopied]=useState('');
  const lines=useMemo(()=>headline.split('\n').filter(Boolean).slice(0,3),[headline]);
  const scrollTo=id=>{document.getElementById(id)?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});setMenu(false)};
  const reset=()=>{setHeadline('SPEED\nBECOMES\nFORM');setShape('triangle');setAccent('#00C2A8');setAngle(28);setRepeats(4);setShowGrid(true)};
