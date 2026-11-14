@@ -18,8 +18,8 @@
 
 /* Refinement pass: keep geometry mathematically clean and protect typographic contrast. */
 .cv-app-poster{isolation:isolate}
-.cv-app-poster>b{font-size:clamp(48px,9vw,60px);letter-spacing:-.035em;line-height:.82;max-width:78%;z-index:3}
-.cv-app-poster .cv-triangle{z-index:1;right:2%;bottom:0;width:39%;height:auto;aspect-ratio:1.155/1;border:0;background:var(--shape-fill)!important;clip-path:polygon(50% 0,100% 100%,0 100%);transform:none}
+.cv-app-poster>b{font-size:clamp(48px,9vw,60px);letter-spacing:-.035em;line-height:.82;max-width:62%;z-index:3}
+.cv-app-poster .cv-triangle{z-index:1;right:1%;bottom:0;width:34%;height:auto;aspect-ratio:1.155/1;border:0;background:var(--shape-fill)!important;clip-path:polygon(50% 0,100% 100%,0 100%);transform:none}
 .cv-app-photo{isolation:isolate}
 .cv-photo-disc{width:min(42%,160px);height:auto;aspect-ratio:1;right:4%;top:9%;z-index:0}
 .cv-app-photo:after{z-index:1;left:18%;bottom:-30px}
@@ -28,7 +28,7 @@
 .cv-thesis-mark .cv-triangle{width:32px;height:auto;aspect-ratio:1.155/1;flex:0 0 32px}
 .cv-poster-geometry .cv-triangle{width:78%;height:auto;aspect-ratio:1.155/1;border:0;background:var(--shape-fill)!important;clip-path:polygon(50% 0,100% 100%,0 100%)}
 @media(max-width:390px){
-  .cv-app-poster>b{font-size:clamp(43px,12vw,52px);max-width:82%}
-  .cv-app-poster .cv-triangle{width:36%;right:1%}
+  .cv-app-poster>b{font-size:clamp(43px,12vw,52px);max-width:66%}
+  .cv-app-poster .cv-triangle{width:32%;right:1%}
   .cv-app-photo>b{width:51%;font-size:30px}
 }
