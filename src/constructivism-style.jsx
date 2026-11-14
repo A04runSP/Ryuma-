@@ -89,7 +89,7 @@ export default function ConstructivismStyle({onNavigate}) {
     <section className="cv-hero">
       <div className="cv-hero-copy">
         <span className="cv-kicker"><i/> DESIGN MOVEMENTS / 1910s–1920s</span>
-        <h1>CONSTRUC<span>T</span><br/>IVISM<span className="cv-period">.</span></h1>
+        <h1>CONSTRUCT<span className="cv-title-accent">IVISM</span></h1>
         <div className="cv-hero-sub">DESIGN FOR A<br/><b>NEW SOCIETY</b></div>
         <p>A design movement that brought art, industry and social purpose into one language of geometry, typography and construction.</p>
         <div className="cv-hero-actions"><button className="cv-primary" onClick={()=>scrollTo('cv-principles')}>Explore anatomy <ArrowDown size={15}/></button><button className="cv-secondary" onClick={()=>scrollTo('cv-studies')}>View studies <ArrowUpRight size={15}/></button></div>
