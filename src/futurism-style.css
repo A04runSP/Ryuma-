@@ -78,3 +78,22 @@
  .fu-motion-explorer{grid-column:1/-1;max-width:100%}
  .fu-strip{grid-column:1/-1}
 }
+
+
+/* Clear, purpose-built Futurist visual studies */
+.fu-hero-art{background:#081E3B;aspect-ratio:1.5/1;min-height:0;padding:12px}
+.fu-hero-mark{display:block;width:100%;height:100%;max-width:100%;position:relative;z-index:1}
+.fu-hero-mark .fu-study-energy,.fu-hero-mark .fu-study-velocity,.fu-hero-mark .fu-study-force,.fu-hero-mark .fu-study-anchor,.fu-hero-mark .fu-study-rhythm{opacity:1;filter:none}
+.fu-motion-explorer{margin:0;padding:14px 0 16px;min-width:0}
+.fu-motion-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;overflow:visible;padding:0 0 12px}
+.fu-motion-tabs button{min-width:0;white-space:normal;justify-content:flex-start;text-align:left;min-height:42px;font-size:12px}
+.fu-motion-tabs button:last-child:nth-child(odd){grid-column:1/-1}
+.fu-motion-tabs button.is-active{box-shadow:inset 4px 0 0 var(--fu-orange)}
+.fu-motion-caption{padding:10px 12px;background:#dce6e4;border-left:4px solid var(--fu-orange);min-height:96px;gap:5px}
+.fu-motion-caption>strong{font-size:21px}
+.fu-motion-caption>p{font-size:12px;line-height:1.6}
+@media(min-width:600px){
+ .fu-hero-art{aspect-ratio:1.5/1;min-height:0}
+ .fu-motion-explorer{grid-column:1/-1;max-width:100%}
+ .fu-motion-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
