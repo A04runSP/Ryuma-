@@ -32,3 +32,7 @@
   .cv-app-poster .cv-triangle{width:32%;right:1%}
   .cv-app-photo>b{width:51%;font-size:30px}
 }
+
+/* Footer display type: add tracking so the condensed words remain distinct on mobile. */
+.cv-footer h2{letter-spacing:.035em}
+.cv-footer h2 i{letter-spacing:.035em}
