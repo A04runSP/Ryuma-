@@ -61,8 +61,8 @@ function HeroArt(){return <div className="pa-hero-art" role="img" aria-label="Co
  <path d="M178 315Q207 297 237 305Q217 322 181 326Z" fill="#EF3340"/><path d="M181 315Q207 305 231 307" fill="none" stroke="#FFF3D9" strokeWidth="6" strokeLinecap="round"/>
  {/* Earring */}
  <circle cx="105" cy="337" r="26" fill="#1455D9" stroke="#111827" strokeWidth="9"/><circle cx="105" cy="337" r="8" fill="#FFF3D9"/>
- {/* Bottle, built from a neck, shoulders, body and label */}
- <g>
+ {/* Bottle, built from a slim neck, tapered shoulders and narrow glass body */}
+ <g transform="translate(91 0) scale(.82 1)">
   <path d="M486 164L486 135Q486 123 499 123H541Q554 123 554 136V164L571 190Q581 205 581 226V410Q581 432 559 432H455Q433 432 433 410V226Q433 205 446 190Z" fill="#6C321B" stroke="#111827" strokeWidth="10" strokeLinejoin="round"/>
   <path d="M486 164V139Q486 129 498 129H542Q554 129 554 139V164L568 191H442Z" fill="#BDE8E8" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
   <path d="M480 129H548V113Q548 104 539 104H489Q480 104 480 113Z" fill="#EF3340" stroke="#111827" strokeWidth="8" strokeLinejoin="round"/>
