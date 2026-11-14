@@ -6,7 +6,7 @@ const groups = [
   { id:'01', title:'Foundation', subtitle:'The building blocks of visual language.', styles:['Minimalism','Glassmorphism','Neumorphism','Brutalism','Skeuomorphism'] },
   { id:'02', title:'Modern Digital', subtitle:'Design languages shaped by digital tools and interfaces.', styles:['Flat Design','Material Design','Fluent Design','Claymorphism','Aurora Gradient Design','Dark UI'] },
   { id:'03', title:'Expressive / Creative', subtitle:'Styles built around personality, abundance and visual expression.', styles:['Maximalism','Retro / Vintage','Y2K','Memphis Design','Editorial Design','Organic / Natural Design','Art Deco'] },
-  { id:'04', title:'Advanced / Specialized', subtitle:'Distinct systems with strong historical or specialized identities.', styles:['Swiss / International Style','Bauhaus','Cyberpunk','Art Nouveau','Constructivism'] },
+  { id:'04', title:'Advanced / Specialized', subtitle:'Distinct systems with strong historical or specialized identities.', styles:['Swiss / International Style','Bauhaus','Cyberpunk','Art Nouveau','Constructivism','Futurism'] },
 ];
 
 export default function Library({ onNavigate }) {
