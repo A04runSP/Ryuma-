@@ -15,3 +15,20 @@
 @media(min-width:600px){.cv-hero{padding:55px 6vw 24px;grid-template-columns:1fr 1fr;align-items:center;gap:24px}.cv-hero-art{min-height:380px}.cv-hero-mark{height:380px}.cv-hero-strip{grid-column:1/-1}.cv-thesis{padding:35px 6vw}.cv-section-head{padding-left:6vw;padding-right:6vw}.cv-principle-list,.cv-timeline{margin-left:6vw;margin-right:6vw}.cv-study-grid{grid-template-columns:repeat(4,minmax(0,1fr));padding:0 4vw}.cv-study-detail{margin-left:4vw;margin-right:4vw}.cv-type-specimen{margin:0 4vw}.cv-swatches{grid-template-columns:repeat(5,minmax(0,1fr))}.cv-palette{padding:0 4vw}.cv-application-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 4vw}.cv-lab-layout{display:grid;grid-template-columns:.85fr 1fr;align-items:start;padding:0 4vw}}
 @media(min-width:900px){.cv-nav{padding:0 5vw}.cv-menu{display:none}.cv-links{display:flex;position:static;padding:0;background:none;border:0;grid-template-columns:none;align-items:center;gap:18px}.cv-links button{font-size:10px;padding:10px 3px}.cv-links .cv-library{border:1px solid #f1e5cc66;padding:9px 12px}.cv-hero{padding:80px 8vw 30px;grid-template-columns:.9fr 1.1fr;gap:5vw}.cv-hero h1{font-size:clamp(105px,13vw,170px)}.cv-hero-art{min-height:550px}.cv-hero-mark{height:550px}.cv-section-head{max-width:1200px;margin:auto;padding-left:8vw;padding-right:8vw}.cv-principle-list,.cv-timeline{max-width:1000px;margin:0 auto}.cv-study-grid{max-width:1100px;margin:auto}.cv-study-detail{max-width:1020px;margin:12px auto 0}.cv-type-specimen{max-width:900px;margin:auto}.cv-palette{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.cv-swatches{grid-template-columns:repeat(3,minmax(0,1fr))}.cv-application-grid{max-width:1100px;margin:auto;grid-template-columns:repeat(3,minmax(0,1fr))}.cv-lab-layout{max-width:1100px;margin:auto}}
 @media(prefers-reduced-motion:reduce){.cv-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Refinement pass: keep geometry mathematically clean and protect typographic contrast. */
+.cv-app-poster{isolation:isolate}
+.cv-app-poster>b{font-size:clamp(48px,9vw,60px);letter-spacing:-.035em;line-height:.82;max-width:78%;z-index:3}
+.cv-app-poster .cv-triangle{z-index:1;right:2%;bottom:0;width:39%;height:auto;aspect-ratio:1.155/1;border:0;background:var(--shape-fill)!important;clip-path:polygon(50% 0,100% 100%,0 100%);transform:none}
+.cv-app-photo{isolation:isolate}
+.cv-photo-disc{width:min(42%,160px);height:auto;aspect-ratio:1;right:4%;top:9%;z-index:0}
+.cv-app-photo:after{z-index:1;left:18%;bottom:-30px}
+.cv-app-photo>b{left:14px;bottom:14px;z-index:3;width:48%;padding:10px 11px;background:var(--cv-black);color:var(--cv-paper);font-size:clamp(30px,7vw,42px);line-height:.84;letter-spacing:-.025em}
+.cv-shape.cv-triangle{width:0;height:0;border:0;background:var(--shape-fill)!important;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.cv-thesis-mark .cv-triangle{width:32px;height:auto;aspect-ratio:1.155/1;flex:0 0 32px}
+.cv-poster-geometry .cv-triangle{width:78%;height:auto;aspect-ratio:1.155/1;border:0;background:var(--shape-fill)!important;clip-path:polygon(50% 0,100% 100%,0 100%)}
+@media(max-width:390px){
+  .cv-app-poster>b{font-size:clamp(43px,12vw,52px);max-width:82%}
+  .cv-app-poster .cv-triangle{width:36%;right:1%}
+  .cv-app-photo>b{width:51%;font-size:30px}
+}
