@@ -17,3 +17,16 @@
 @media(min-width:900px){.fu-nav{padding:0 5vw}.fu-menu{display:none}.fu-links{display:flex;position:static;padding:0;background:none;border:0;grid-template-columns:none;align-items:center;gap:18px}.fu-links button{font-size:10px;padding:10px 3px}.fu-links .fu-library{border:1px solid #ffedd066;padding:9px 12px}.fu-hero{padding:80px 8vw 30px;grid-template-columns:.9fr 1.1fr;gap:5vw}.fu-hero h1{font-size:clamp(100px,13vw,165px)}.fu-hero-art{min-height:540px}.fu-hero-mark{height:540px}.fu-section-head{max-width:1200px;margin:auto;padding-left:8vw;padding-right:8vw}.fu-principle-list,.fu-timeline{max-width:1000px;margin:0 auto}.fu-study-grid{max-width:1100px;margin:auto}.fu-study-detail{max-width:1020px;margin:12px auto 0}.fu-type-specimen{max-width:900px;margin:auto}.fu-swatches{max-width:1050px;margin:auto}.fu-application-grid{max-width:1100px;margin:auto;grid-template-columns:repeat(3,minmax(0,1fr))}.fu-lab-layout{max-width:1100px;margin:auto}}
 @media(max-width:599px){.fu-hero h1{font-size:clamp(54px,14.5vw,104px);letter-spacing:.006em}}@media(max-width:360px){.fu-hero h1{font-size:clamp(48px,13.8vw,56px);letter-spacing:0}.fu-strip{font-size:8px}.fu-study{min-height:145px}.fu-study b{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.fu-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* Interactive hero artwork layers */
+.fu-art-layer{opacity:.48;cursor:pointer;transition:opacity .18s ease,filter .18s ease;outline:none}
+.fu-art-layer.is-active{opacity:1;filter:drop-shadow(0 0 8px #00C2A877)}
+.fu-art-layer:focus-visible{filter:drop-shadow(0 0 9px #FF6A08)}
+.fu-active-layer{top:34px;right:17px;color:var(--fu-cyan);text-transform:uppercase}
+.fu-art-controls{position:absolute;z-index:5;right:12px;bottom:38px;display:flex;justify-content:flex-end;flex-wrap:wrap;gap:4px;max-width:76%}
+.fu-art-controls button{padding:6px 7px;border:1px solid #ffedd077;background:#081e3bcc;color:var(--fu-ivory);font:8px 'DM Mono',monospace;letter-spacing:.06em}
+.fu-art-controls button.is-active{background:var(--fu-cyan);border-color:var(--fu-cyan);color:var(--fu-indigo);font-weight:700}
+.fu-art-controls button:focus-visible{outline:2px solid var(--fu-orange);outline-offset:2px}
+@media(max-width:360px){.fu-art-controls{left:12px;right:12px;max-width:none;justify-content:center}.fu-art-controls button{font-size:7px;padding:5px 6px}}
+@media(prefers-reduced-motion:reduce){.fu-art-layer{transition:none}}
